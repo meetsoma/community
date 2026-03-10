@@ -1,0 +1,29 @@
+name: Community PR Review
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'protocols/**'
+      - 'muscles/**'
+      - 'skills/**'
+      - 'templates/**'
+
+jobs:
+  validate:
+    name: Format & Safety Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate frontmatter
+        run: bash .github/scripts/validate-frontmatter.sh
+
+      - name: Privacy scan
+        run: bash .github/scripts/privacy-scan.sh
+
+      - name: Injection scan
+        run: bash .github/scripts/injection-scan.sh
+
+      - name: Format compliance
+        run: bash .github/scripts/format-check.sh
