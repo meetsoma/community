@@ -42,6 +42,25 @@ Each destination has different characteristics:
 | **Protocol** | The pattern becomes a behavioral *rule*. Skipping it causes mistakes. | How to *be*. Mandatory. |
 | **Skill** | The pattern is domain knowledge. It teaches, doesn't enforce. | How to *know*. On-demand. |
 | **Ritual** | The pattern is a multi-step workflow. It sequences actions. | How to *do*. Triggered. |
+| **Script** | The pattern is automated — the protocol becomes executable. | How to *enforce*. Automatic. |
+
+### The Full Evolution Path
+
+```
+observation → muscle → protocol → script
+                  ↘ skill (knowledge, on-demand)
+                  ↘ ritual (workflow, triggered)
+```
+
+Scripts are the final crystallization — what was once a behavioral rule the agent followed manually becomes code that runs automatically. But **the protocol doesn't disappear** when a script exists. The protocol explains *why*. The script enforces *how*. An agent with the script but without the protocol can run the automation but can't reason about edge cases, adapt to new situations, or know when to break the rule.
+
+### Skills: The Universal Building Block
+
+Skills are unique in the hierarchy — they're **framework-agnostic knowledge sets**. A skill from Claude Code, Cursor, or any agent framework works in Soma without modification. Skills are plug-and-play.
+
+What makes Soma different: **muscles and protocols refine skills**. A logo design skill teaches the technique. A muscle learns *your* logo preferences. A protocol enforces *your* brand standards. The skill provides raw expertise; Soma's layers personalize and improve it through use — without the user ever asking.
+
+This is the key differentiator: other systems have skills. Soma has skills that get better every time they're used, because muscles notice what worked and protocols enforce what matters.
 
 The muscle doesn't choose its destination consciously. It becomes whatever it naturally is. A testing pattern that you must always follow → protocol. A logo design technique you sometimes need → skill. A publish workflow you repeat every release → ritual.
 
