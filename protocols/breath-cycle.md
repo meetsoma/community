@@ -5,11 +5,13 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Sessions have 3 phases: inhale (boot, load identity + memory + protocols), hold (work, track context), exhale (flush state, update heat, write preload). Never skip exhale."
-author: Soma Team
+author: meetsoma
 license: MIT
 version: 1.0.0
+tier: core
+tags: [session, memory, continuity]
 created: 2026-03-09
-updated: 2026-03-09
+updated: 2026-03-10
 ---
 
 # Breath Cycle Protocol

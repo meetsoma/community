@@ -5,11 +5,13 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system."
-author: Soma Team
+author: meetsoma
 license: MIT
 version: 1.0.0
+tier: core
+tags: [learning, patterns, growth]
 created: 2026-03-09
-updated: 2026-03-09
+updated: 2026-03-10
 ---
 
 # Pattern Evolution Protocol

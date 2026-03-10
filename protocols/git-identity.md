@@ -5,11 +5,13 @@ status: active
 heat-default: warm
 applies-to: [git]
 breadcrumb: "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them."
-author: Soma Team
+author: meetsoma
 license: MIT
 version: 1.0.0
+tier: core
+tags: [git, attribution, identity]
 created: 2026-03-09
-updated: 2026-03-09
+updated: 2026-03-10
 ---
 
 # Git Identity Protocol

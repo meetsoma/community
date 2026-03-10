@@ -5,11 +5,13 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Protocols have temperature: cold (not loaded), warm (breadcrumb in prompt), hot (full in prompt). Heat rises on use (+1/+2), decays per session if unused (-1). Thresholds configurable."
-author: Soma Team
+author: meetsoma
 license: MIT
 version: 1.0.0
+tier: core
+tags: [memory, loading, performance]
 created: 2026-03-09
-updated: 2026-03-09
+updated: 2026-03-10
 ---
 
 # Heat Tracking Protocol
