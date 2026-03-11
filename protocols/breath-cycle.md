@@ -71,7 +71,7 @@ The extension sends you structured instructions:
 - `.soma/` internal: `cd .soma && git add -A && git commit -m "checkpoint: <timestamp>"`
 - Project code: review uncommitted changes, checkpoint if meaningful
 
-**Step 2: Write preload** (`<.soma>/memory/preload-next.md`)
+**Step 2: Write preload** (`<.soma>/memory/preload-<sessionId>.md`)
 Follow the preload format — this IS your continuation for the next session:
 - What shipped (with file paths)
 - Key decisions (with rationale)
