@@ -28,9 +28,13 @@
       "role": "owner",
       "display_name": "Curtis Mercier"
     },
-    "meetsoma[bot]": {
+    "meetsoma": {
       "role": "maintainer",
       "display_name": "Soma"
+    },
+    "meetsoma[bot]": {
+      "role": "maintainer",
+      "display_name": "Soma Bot"
     }
   },
   "defaults": {

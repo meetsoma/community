@@ -10,7 +10,7 @@ All community content must pass `scripts/validate-frontmatter.sh` before merge.
 ---
 type: protocol
 name: kebab-case-name              # matches filename
-status: active                     # active | draft | archived | deprecated
+status: active                     # draft | active | stable | dormant | archived | deprecated
 heat-default: warm                 # cold | warm | hot — initial system prompt tier
 applies-to: [always]               # signal matching: always, git, typescript, python, etc.
 breadcrumb: "One-liner TL;DR..."   # QUOTED — used for warm injection + hub card
@@ -37,7 +37,7 @@ breadcrumb: "One-liner TL;DR..."   # QUOTED — hub card description
 tier: core                         # core | official | community | pro
 topic: [design, icons]             # canonical tags — agent + website both read this
 keywords: [icon-audit, svg]        # agent search terms (finer grain)
-status: active                     # active | dormant | retired
+status: active                     # draft | active | stable | dormant | archived | deprecated
 heat: 0                            # numeric 0-15 — agent runtime tracks this
 heat-default: warm                 # cold | warm | hot — initial tier + website display
 loads: 0                           # boot load counter — agent runtime tracks this
@@ -115,7 +115,7 @@ Same schema as Skill. Type is `extension` or `script`.
 |-------|----------|--------|-------|
 | `type` | ✅ | `protocol`, `muscle`, `skill`, `extension`, `script`, `identity` | Always first field |
 | `name` | ✅ | kebab-case | Matches filename |
-| `status` | ✅ | `active`, `draft`, `dormant`, `retired`, `archived`, `deprecated` | |
+| `status` | ✅ | `draft`, `active`, `stable`, `dormant`, `archived`, `deprecated` | |
 | `breadcrumb` | ✅* | Quoted string | *Not required for identity files |
 | `version` | ✅ | semver | |
 | `author` | ✅ | Name or handle | |

@@ -28,8 +28,8 @@ get_field() {
   awk -v f="$field" '/^---$/{c++;next} c==1 && $0 ~ "^"f":"{gsub("^"f":[[:space:]]*", ""); print; exit} c>=2{exit}' "$file"
 }
 
-VALID_STATUSES="active draft stable stale archived deprecated blocked review dormant retired"
-VALID_TIERS="core official community pro free enterprise"
+VALID_STATUSES="draft active stable dormant archived deprecated"
+VALID_TIERS="core official community pro"
 VALID_HEAT="cold warm hot"
 
 # === Common fields for all .md content ===

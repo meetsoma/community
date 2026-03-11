@@ -65,10 +65,10 @@ MUSCLE_REQUIRED=(heat-default breadcrumb tier topic keywords heat loads)
 # Templates use template.json for most metadata — identity.md has minimal frontmatter
 
 # Per-type valid statuses
-VALID_STATUSES="active draft stable stale archived deprecated blocked review dormant retired"
+VALID_STATUSES="draft active stable dormant archived deprecated"
 
 # Valid tiers
-VALID_TIERS="core official community pro free enterprise"
+VALID_TIERS="core official community pro"
 
 # Valid heat-defaults
 VALID_HEAT_DEFAULTS="cold warm hot"
@@ -225,7 +225,7 @@ while IFS= read -r f; do
   [[ "$(basename "$f")" == "CONTRIBUTING.md" ]] && continue
   [[ "$(basename "$f")" == "AGENTS.md" ]] && continue
   validate_file "$f"
-done < <(find "$SCAN_DIR" -name '*.md' -not -path '*/.git/*' -not -path '*/node_modules/*' 2>/dev/null | sort)
+done < <(find "$SCAN_DIR" -name '*.md' -not -path '*/.git/*' -not -path '*/node_modules/*' -not -name 'FRONTMATTER.md' -not -name 'CONTRIBUTING.md' -not -name 'README.md' -not -name 'CHANGELOG.md' 2>/dev/null | sort)
 
 # Validate template.json files
 while IFS= read -r f; do

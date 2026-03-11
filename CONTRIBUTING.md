@@ -62,7 +62,7 @@ All six must pass. Trusted contributors auto-merge. New contributors are labeled
 ---
 type: protocol
 name: my-protocol           # kebab-case, unique
-status: active              # draft | active | stable | deprecated
+status: active              # draft | active | stable | dormant | archived | deprecated
 heat-default: warm          # cold | warm | hot
 applies-to: [always]        # [always] | [git] | [writing] | custom
 breadcrumb: "One-sentence summary loaded when warm."
