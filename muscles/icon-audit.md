@@ -1,11 +1,16 @@
 ---
 type: muscle
-status: active
+name: icon-audit
+breadcrumb: "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review."
+description: "A learned workflow for auditing and selecting icons using browser tools and vision AI."
+tier: core
+tags: [design, icons, visual-audit, browser-tools]
 topic: [design, icons, visual-audit, browser-tools]
 keywords: [icon-audit, svg, lucide, phosphor, comparison, visual-review, icon-library]
-heat: 0
+status: active
+heat-default: warm
 loads: 0
-author: Soma Team
+author: Soma's Maker
 license: MIT
 version: 1.0.0
 created: 2026-03-11

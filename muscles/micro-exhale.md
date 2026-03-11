@@ -1,11 +1,16 @@
 ---
 type: muscle
-status: active
+name: micro-exhale
+breadcrumb: "Write workflow summaries to daily log after major completions — one file per day, always append."
+description: "A learned workflow for capturing session progress as structured daily log entries."
+tier: core
+tags: [memory, workflow, logging, sessions]
 topic: [memory, workflow, logging, sessions]
 keywords: [micro-exhale, daily-log, workflow-summary, session-memory]
-heat: 0
+status: active
+heat-default: hot
 loads: 0
-author: Soma Team
+author: Soma's Maker
 license: MIT
 version: 1.0.0
 created: 2026-03-10
