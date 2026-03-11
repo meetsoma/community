@@ -1,16 +1,17 @@
 ---
-name: tool-discipline
 type: protocol
-status: stable
+name: tool-discipline
+status: active
 heat-default: warm
-scope: shared
-tier: free
 applies-to: [always]
 breadcrumb: "Read before edit (never cat/sed). Prefer grep/find/ls over bash for exploration. Edit for surgical changes, write only for new files. Batch independent calls. Output plain text — don't cat/bash to display results."
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
+tier: core
+tags: [tools, workflow, discipline]
 created: 2026-03-10
 updated: 2026-03-10
-author: Soma
 ---
 
 # Tool Discipline

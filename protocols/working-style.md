@@ -1,16 +1,17 @@
 ---
-name: working-style
 type: protocol
-status: stable
+name: working-style
+status: active
 heat-default: warm
-scope: shared
-tier: free
 applies-to: [always]
 breadcrumb: "Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context."
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
+tier: core
+tags: [workflow, style, communication]
 created: 2026-03-10
 updated: 2026-03-10
-author: Soma
 ---
 
 # Working Style

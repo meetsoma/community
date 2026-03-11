@@ -2,15 +2,14 @@
 type: muscle
 name: icon-audit
 breadcrumb: "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review."
-description: "A learned workflow for auditing and selecting icons using browser tools and vision AI."
 tier: core
-tags: [design, icons, visual-audit, browser-tools]
 topic: [design, icons, visual-audit, browser-tools]
 keywords: [icon-audit, svg, lucide, phosphor, comparison, visual-review, icon-library]
 status: active
+heat: 0
 heat-default: warm
 loads: 0
-author: Soma's Maker
+author: Curtis Mercier
 license: MIT
 version: 1.0.0
 created: 2026-03-11

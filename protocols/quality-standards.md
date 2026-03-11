@@ -1,16 +1,17 @@
 ---
-name: quality-standards
 type: protocol
-status: stable
+name: quality-standards
+status: active
 heat-default: warm
-scope: shared
-tier: free
 applies-to: [always]
 breadcrumb: "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each."
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
+tier: core
+tags: [quality, safety, git, workflow]
 created: 2026-03-10
 updated: 2026-03-10
-author: Soma
 ---
 
 # Quality Standards
