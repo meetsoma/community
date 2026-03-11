@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-11T23:56:15.610Z",
-  "count": 17,
+  "generated": "2026-03-11T23:57:47.321Z",
+  "count": 16,
   "items": [
     {
       "slug": "breath-cycle",
@@ -279,29 +279,6 @@
       "status": "active",
       "created": "2026-03-10",
       "updated": "2026-03-10"
-    },
-    {
-      "slug": "pipeline-test",
-      "name": "pipeline-test",
-      "type": "muscle",
-      "description": "Test muscle for verifying the hub live-loading pipeline. Safe to delete after verification.",
-      "author": "Curtis Mercier",
-      "version": "0.0.1",
-      "breadcrumb": "Test muscle for verifying the hub live-loading pipeline. Safe to delete after verification.",
-      "heatDefault": "cold",
-      "tier": "core",
-      "topic": [
-        "testing",
-        "pipeline"
-      ],
-      "keywords": [
-        "pipeline-test",
-        "e2e",
-        "hub-index"
-      ],
-      "status": "draft",
-      "created": "2026-03-11",
-      "updated": "2026-03-11"
     },
     {
       "slug": "architect",
