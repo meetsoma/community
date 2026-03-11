@@ -1,0 +1,34 @@
+name: Build Hub Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'protocols/**'
+      - 'muscles/**'
+      - 'skills/**'
+      - 'templates/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build hub-index.json
+        run: node scripts/build-hub-index.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "meetsoma[bot]"
+          git config user.email "meetsoma[bot]@users.noreply.github.com"
+          git add hub-index.json
+          git diff --cached --quiet || git commit -m "chore: rebuild hub-index.json [skip ci]"
+          git push

@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "generated": "2026-03-11T23:16:30.287Z",
+  "count": 16,
+  "items": [
+    {
+      "slug": "breath-cycle",
+      "name": "breath-cycle",
+      "type": "protocol",
+      "description": "Sessions have 3 phases: inhale (automated boot), hold (work — context monitored automatically), exhale (write preload, commit, say FLUSH COMPLETE → system offers auto-continue). Never skip exhale.",
+      "author": "Curtis Mercier",
+      "version": "1.2.0",
+      "breadcrumb": "Sessions have 3 phases: inhale (automated boot), hold (work — context monitored automatically), exhale (write preload, commit, say FLUSH COMPLETE → system offers auto-continue). Never skip exhale.",
+      "heatDefault": "hot",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "session",
+        "memory",
+        "continuity"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "community-safe",
+      "name": "community-safe",
+      "type": "protocol",
+      "description": "Community assets must never contain private data. No emails, paths, secrets, tokens, user-specific references. Private data belongs in USER.md, .env, .soma/secrets/, project memory. Muscles encode patterns, not personal context.",
+      "author": "Curtis Mercier",
+      "version": "1.1.0",
+      "breadcrumb": "Community assets must never contain private data. No emails, paths, secrets, tokens, user-specific references. Private data belongs in USER.md, .env, .soma/secrets/, project memory. Muscles encode patterns, not personal context.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "safety",
+        "privacy",
+        "sharing"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "frontmatter-standard",
+      "name": "frontmatter-standard",
+      "type": "protocol",
+      "description": "All .md files get YAML frontmatter: type, status, created, updated. 8 statuses: draft/active/stable/stale/archived/deprecated/blocked/review. 12 types: plan/spec/note/index/memory/muscle/protocol/decision/log/template/identity/config.",
+      "author": "Curtis Mercier",
+      "version": "1.1.0",
+      "breadcrumb": "All .md files get YAML frontmatter: type, status, created, updated. 8 statuses: draft/active/stable/stale/archived/deprecated/blocked/review. 12 types: plan/spec/note/index/memory/muscle/protocol/decision/log/template/identity/config.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "structure",
+        "metadata",
+        "organization"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "git-identity",
+      "name": "git-identity",
+      "type": "protocol",
+      "description": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
+      "author": "Curtis Mercier",
+      "version": "1.1.0",
+      "breadcrumb": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "git"
+      ],
+      "tier": "core",
+      "tags": [
+        "git",
+        "attribution",
+        "identity"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "heat-tracking",
+      "name": "heat-tracking",
+      "type": "protocol",
+      "description": "Protocols have temperature: cold (0-2, not loaded), warm (3-7, breadcrumb in prompt), hot (8+, full in prompt). Heat auto-detected from tool results. Manual: /pin (hot), /kill (cold). Decays -1 per unused session.",
+      "author": "Curtis Mercier",
+      "version": "1.2.0",
+      "breadcrumb": "Protocols have temperature: cold (0-2, not loaded), warm (3-7, breadcrumb in prompt), hot (8+, full in prompt). Heat auto-detected from tool results. Manual: /pin (hot), /kill (cold). Decays -1 per unused session.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "memory",
+        "loading",
+        "performance"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "pattern-evolution",
+      "name": "pattern-evolution",
+      "type": "protocol",
+      "description": "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
+      "author": "Curtis Mercier",
+      "version": "1.1.0",
+      "breadcrumb": "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "learning",
+        "patterns",
+        "growth"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "quality-standards",
+      "name": "quality-standards",
+      "type": "protocol",
+      "description": "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "quality",
+        "safety",
+        "git",
+        "workflow"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "session-checkpoints",
+      "name": "session-checkpoints",
+      "type": "protocol",
+      "description": "Two-track version control: .soma/ is committed every exhale (local-only git), project code gets lightweight checkpoints (local commits/tags, never pushed raw). Ship by squashing checkpoints into clean commits. On inhale, diff both tracks to see what changed.",
+      "author": "Curtis Mercier",
+      "version": "1.1.0",
+      "breadcrumb": "Two-track version control: .soma/ is committed every exhale (local-only git), project code gets lightweight checkpoints (local commits/tags, never pushed raw). Ship by squashing checkpoints into clean commits. On inhale, diff both tracks to see what changed.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "session",
+        "git",
+        "workflow",
+        "continuity"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "tool-discipline",
+      "name": "tool-discipline",
+      "type": "protocol",
+      "description": "Read before edit (never cat/sed). Prefer grep/find/ls over bash for exploration. Edit for surgical changes, write only for new files. Batch independent calls. Output plain text — don't cat/bash to display results.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Read before edit (never cat/sed). Prefer grep/find/ls over bash for exploration. Edit for surgical changes, write only for new files. Batch independent calls. Output plain text — don't cat/bash to display results.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "tools",
+        "workflow",
+        "discipline"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "working-style",
+      "name": "working-style",
+      "type": "protocol",
+      "description": "Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "workflow",
+        "style",
+        "communication"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "icon-audit",
+      "name": "icon-audit",
+      "type": "muscle",
+      "description": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
+      "heatDefault": "warm",
+      "tier": "core",
+      "topic": [
+        "design",
+        "icons",
+        "visual-audit",
+        "browser-tools"
+      ],
+      "keywords": [
+        "icon-audit",
+        "svg",
+        "lucide",
+        "phosphor",
+        "comparison",
+        "visual-review",
+        "icon-library"
+      ],
+      "status": "active",
+      "created": "2026-03-11",
+      "updated": "2026-03-11"
+    },
+    {
+      "slug": "micro-exhale",
+      "name": "micro-exhale",
+      "type": "muscle",
+      "description": "Write workflow summaries to daily log after major completions — one file per day, always append.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Write workflow summaries to daily log after major completions — one file per day, always append.",
+      "heatDefault": "hot",
+      "tier": "core",
+      "topic": [
+        "memory",
+        "workflow",
+        "logging",
+        "sessions"
+      ],
+      "keywords": [
+        "micro-exhale",
+        "daily-log",
+        "workflow-summary",
+        "session-memory"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "architect",
+      "name": "architect",
+      "type": "template",
+      "description": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "breath-cycle",
+          "frontmatter-standard",
+          "git-identity",
+          "heat-tracking"
+        ],
+        "muscles": [],
+        "skills": []
+      },
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "core",
+      "name": "core",
+      "type": "template",
+      "description": "Default Soma setup — breath cycle, heat tracking, and clean memory structure. What every agent starts with.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "core",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "breath-cycle",
+          "heat-tracking",
+          "frontmatter-standard"
+        ],
+        "muscles": [],
+        "skills": []
+      },
+      "updated": "2026-03-11"
+    },
+    {
+      "slug": "devops",
+      "name": "devops",
+      "type": "template",
+      "description": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "breath-cycle",
+          "git-identity",
+          "frontmatter-standard"
+        ],
+        "muscles": [],
+        "skills": []
+      },
+      "updated": "2026-03-10"
+    },
+    {
+      "slug": "writer",
+      "name": "writer",
+      "type": "template",
+      "description": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "breath-cycle",
+          "frontmatter-standard"
+        ],
+        "muscles": [],
+        "skills": []
+      },
+      "updated": "2026-03-10"
+    }
+  ]
+}
