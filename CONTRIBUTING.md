@@ -106,7 +106,7 @@ Required: `<!-- digest:start -->` / `<!-- digest:end -->` markers near the top
 
 ```
 skills/your-skill/
-├── SKILL.md          # name, description, version, instructions
+├── SKILL.md          # frontmatter + instructions (see FRONTMATTER.md for full schema)
 └── (supporting files)
 ```
 
