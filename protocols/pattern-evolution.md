@@ -2,7 +2,7 @@
 type: protocol
 name: pattern-evolution
 status: active
-heat-default: hot
+heat-default: warm
 applies-to: [always]
 breadcrumb: "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system."
 author: Curtis Mercier

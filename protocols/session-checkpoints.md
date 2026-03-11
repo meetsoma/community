@@ -2,7 +2,7 @@
 type: protocol
 name: session-checkpoints
 status: active
-heat-default: hot
+heat-default: warm
 applies-to: [always]
 breadcrumb: "Two-track version control: .soma/ is committed every exhale (local-only git), project code gets lightweight checkpoints (local commits/tags, never pushed raw). Ship by squashing checkpoints into clean commits. On inhale, diff both tracks to see what changed."
 author: Curtis Mercier

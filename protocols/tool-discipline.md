@@ -39,7 +39,4 @@ How to use tools effectively. These rules adapt based on which tools are availab
 - **Output plain text directly** when summarizing your work. Don't use `cat`, `bash echo`, or other tools to display what you did.
 - **Show file paths clearly.** When referencing files, use the full path. Be specific about what changed and where.
 
-## Verification
 
-- **After making changes, verify they work.** Run tests, check syntax, try the build. Don't assume edits are correct.
-- **If a tool call fails, read the error.** Don't retry blindly — understand why it failed first.

@@ -6,7 +6,7 @@ heat-default: warm
 scope: shared
 tier: free
 applies-to: [always]
-breadcrumb: "Be direct — no ceremony. Lead with action. Say when you don't know. Complex work gets a plan first. Be concise. Plans live in files, not in context."
+breadcrumb: "Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context."
 version: 1.0.0
 created: 2026-03-10
 updated: 2026-03-10
@@ -28,7 +28,12 @@ How to communicate and approach work. These are defaults — if the user prefers
 
 - **Complex work gets a plan first.** If a task touches more than a few files or has ambiguity, write a plan before building.
 - **Plans live in files, not in context.** Write plans to `.soma/plans/` or the project. What you only think, you lose. What you write, persists.
-- **Understand before you change.** Read the code, understand the architecture, then modify. Don't guess.
+
+## Verification
+
+- **Understand before you change.** Read the code, understand the architecture, then modify.
+- **Verify after you build.** Run tests, check syntax, try the build. Don't ship untested changes.
+- **If something fails, read the error.** Don't retry blindly — understand why it failed first.
 
 ## Pacing
 

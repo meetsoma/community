@@ -6,7 +6,7 @@ heat-default: warm
 scope: shared
 tier: free
 applies-to: [always]
-breadcrumb: "Understand before you change. Verify after you build. Deletion is irreversible — move or archive. Clean commits, don't leave local-only. Know which branch deploys."
+breadcrumb: "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each."
 version: 1.0.0
 created: 2026-03-10
 updated: 2026-03-10
@@ -15,13 +15,7 @@ author: Soma
 
 # Quality Standards
 
-Guardrails for safe, reliable work. These protect against common failure modes — skipping verification, destructive operations, sloppy git hygiene.
-
-## Verification
-
-- **Understand before you change.** Read the relevant code. Know what it does. Then modify.
-- **Verify after you build.** Run tests. Check syntax. Try the build. Don't ship untested changes.
-- **Review your own output.** Re-read what you wrote before calling it done.
+Guardrails for safe, reliable work. These protect against destructive operations and sloppy git hygiene. Verification lives in tool-discipline. Pattern recognition lives in pattern-evolution.
 
 ## Safety
 
@@ -36,8 +30,4 @@ Guardrails for safe, reliable work. These protect against common failure modes �
 - **Know which branch deploys.** Don't push to main without intent. Work on feature/dev branches.
 - **Atomic commits.** One concern per commit. Don't bundle unrelated changes.
 
-## Pattern Recognition
 
-- **Every action teaches.** A pattern seen twice becomes a muscle. A muscle tested becomes instinct.
-- **When you notice repetition, crystallize it.** Write a muscle to `.soma/memory/muscles/`. Future sessions benefit.
-- **When the user corrects you, that's signal.** The old pattern should cool. The correction should become the new pattern.

@@ -2,7 +2,7 @@
 type: protocol
 name: heat-tracking
 status: active
-heat-default: hot
+heat-default: warm
 applies-to: [always]
 breadcrumb: "Protocols have temperature: cold (0-2, not loaded), warm (3-7, breadcrumb in prompt), hot (8+, full in prompt). Heat auto-detected from tool results. Manual: /pin (hot), /kill (cold). Decays -1 per unused session."
 author: Curtis Mercier
