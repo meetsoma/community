@@ -81,6 +81,10 @@ Follow the preload format — this IS your continuation for the next session:
 - What NOT to re-read
 
 **Step 3: Daily log** (append to `sessions/YYYY-MM-DD.md`)
+- One file per day per workspace — always append, never overwrite
+- Each entry gets a `## HH:MM` timestamp header
+- Multiple sessions on the same day produce multiple sections in the same file
+- Also write "micro-exhales" here after completing major workflows — structured summaries that bank as persistent memory for later changelog generation, commit messages, or historical queries
 
 **Step 4: Signal completion** — say "FLUSH COMPLETE" (or "BREATHE COMPLETE" for `/breathe`)
 
