@@ -58,11 +58,13 @@ Muscles come from **gaps** — not from planning sessions.
 
 **Key insight:** The user's repeated behaviors are the richest source. When you notice a pattern — how they like PRs structured, a testing sequence they always follow — that's a muscle waiting to be written.
 
-## Burst Heat
+## Burst Heat *(aspirational — not yet implemented)*
 
 Standard: +1 applied in action, +2 explicitly referenced.
 
 **Burst modifier:** 3+ uses in one session → +3 bonus heat. Intense repetition in a short window builds muscle memory faster than occasional use over months.
+
+> **Implementation status:** Heat auto-detection exists but is limited to specific tool result patterns. Burst counting and the +2 "explicit reference" detection are not yet coded. See heat-tracking protocol for what's actually automated.
 
 ## Evolution Triggers
 

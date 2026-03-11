@@ -94,6 +94,8 @@ Use the project's git repo, but keep checkpoint commits local.
 
 Checkpoint styles: `commit` (default), `tag`, `stash`.
 
+> **Note:** `autoCommit` and `autoCheckpoint` control whether the exhale message **suggests** the commit commands — the extension does not auto-execute them. The agent runs the commands.
+
 ## When to Apply
 
 Every exhale and inhale. This protocol is the persistence layer — it's what makes session continuity work.
