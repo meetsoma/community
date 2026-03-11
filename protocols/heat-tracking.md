@@ -5,8 +5,8 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Protocols have temperature: cold (not loaded), warm (breadcrumb in prompt), hot (full in prompt). Heat rises on use (+1/+2), decays per session if unused (-1). Thresholds configurable."
-author: meetsoma
-license: MIT
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
 tier: core
 tags: [memory, loading, performance]

@@ -13,21 +13,24 @@ Shared protocols, muscles, skills, and templates for [Soma](https://soma.gravici
 
 ## Install
 
+From within a Soma session:
+
 ```bash
-# Install a single protocol
-soma community install protocol code-review
+# Install a protocol
+/install protocol breath-cycle
 
 # Install a muscle
-soma community install muscle docker-deploy
+/install muscle docker-deploy
 
 # Install a skill
-soma community install skill logo-creator
+/install skill logo-creator
+
+# Browse what's available
+/list remote
 
 # Bootstrap from a template
 soma init --template devops
 ```
-
-> `soma community` commands are coming soon. For now, copy files manually into your `.soma/` directory.
 
 ## Using Manually
 
@@ -75,4 +78,8 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for format requirements and submission 
 
 ## License
 
-Community contributions are MIT licensed unless otherwise specified in the file.
+Core protocols and conceptual frameworks are **CC BY 4.0** — original work by [Curtis Mercier](https://github.com/curtismercier). Attribution is required when redistributing or building upon these designs.
+
+Community contributions follow the same CC BY 4.0 license unless the contributor specifies otherwise in their file's frontmatter.
+
+The Soma agent software itself (meetsoma/soma-agent, meetsoma/cli) is MIT licensed separately. See [LICENSE](./LICENSE) for details.

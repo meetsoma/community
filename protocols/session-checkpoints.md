@@ -5,8 +5,8 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Two-track version control: .soma/ is committed every exhale (local-only git), project code gets lightweight checkpoints (local commits/tags, never pushed raw). Ship by squashing checkpoints into clean commits. On inhale, diff both tracks to see what changed."
-author: meetsoma
-license: MIT
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
 tier: core
 tags: [session, git, workflow, continuity]

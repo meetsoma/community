@@ -5,8 +5,8 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Sessions have 3 phases: inhale (boot, load identity + memory + protocols), hold (work, track context), exhale (flush state, update heat, write preload). Never skip exhale."
-author: meetsoma
-license: MIT
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
 tier: core
 tags: [session, memory, continuity]

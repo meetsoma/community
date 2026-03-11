@@ -5,8 +5,8 @@ status: active
 heat-default: hot
 applies-to: [always]
 breadcrumb: "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system."
-author: meetsoma
-license: MIT
+author: Curtis Mercier
+license: CC BY 4.0
 version: 1.0.0
 tier: core
 tags: [learning, patterns, growth]
