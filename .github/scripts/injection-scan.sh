@@ -2,7 +2,7 @@
 # Scan for prompt injection techniques in community submissions.
 # Community assets are loaded into agent context — they must not contain
 # hidden instructions, system overrides, or manipulation patterns.
-set -euo pipefail
+set -uo pipefail
 
 FAIL=0
 FILES=$(find protocols/ muscles/ skills/ templates/ -name "*.md" -type f 2>/dev/null)

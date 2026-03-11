@@ -18,6 +18,14 @@ updated: 2026-03-10
 
 Guardrails for safe, reliable work. These protect against destructive operations and sloppy git hygiene. Verification lives in tool-discipline. Pattern recognition lives in pattern-evolution.
 
+## TL;DR
+
+Never delete — move or archive. Clean atomic commits with descriptive messages. Push when ready. Know which branch deploys. Confirm before touching critical files.
+
+## When to Apply
+
+Every session, every commit. These are baseline guardrails — not optional refinements.
+
 ## Safety
 
 - **Deletion is irreversible.** Move to an archive directory, rename with a prefix, or ask — don't destroy.

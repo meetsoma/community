@@ -125,7 +125,7 @@ This muscle requires `browser-tools` (puppeteer-based):
 - `browser-screenshot.js` — takes screenshots
 - `browser-xray.js` — page diagnostics + labeled screenshots
 
-Location: `~/.pi/agent/skills/pi-skills/browser-tools/`
+Location: `<agent-skills>/pi-skills/browser-tools/`
 
 If browser tools aren't available, fall back to:
 1. Download SVGs from icon library CDN/GitHub directly

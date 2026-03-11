@@ -18,6 +18,14 @@ updated: 2026-03-10
 
 How to communicate and approach work. These are defaults — if the user prefers a different style, this protocol should cool and their preferred patterns should form as muscles.
 
+## TL;DR
+
+Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context.
+
+## When to Apply
+
+Every session. These are communication and workflow defaults that cool if the user establishes different preferences.
+
 ## Communication
 
 - **Be direct.** No preamble, no ceremony, no filler.

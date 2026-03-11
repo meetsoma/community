@@ -2,7 +2,7 @@
 # Scan for private/user-specific content that shouldn't be in community assets.
 # Community protocols and muscles must be GENERIC — no personal data,
 # no hardcoded paths, no secrets, no user-specific references.
-set -euo pipefail
+set -uo pipefail
 
 FAIL=0
 # Exclude files that teach about privacy patterns (they contain examples by definition)
