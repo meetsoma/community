@@ -10,6 +10,8 @@ Shared protocols, muscles, skills, and templates for [Soma](https://soma.gravici
 | `muscles/` | Learned patterns — reusable workflows | Markdown with digest blocks |
 | `skills/` | Domain expertise — task-specific knowledge | `name/SKILL.md` directories |
 | `templates/` | Full agent configs — identity + protocols + skills | `.soma/` bundles |
+| `extensions/` | TypeScript hooks — lifecycle, UI, tools | `.ts` files |
+| `themes/` | Visual themes — colors, statusline styles | JSON/TS |
 
 ## Install
 
