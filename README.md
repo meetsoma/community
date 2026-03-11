@@ -45,6 +45,10 @@ cp community/muscles/docker-deploy.md your-project/.soma/memory/muscles/
 cp -r community/skills/logo-creator ~/.soma/skills/
 ```
 
+## Specifications
+
+Community protocols are operational derivatives of formal specifications in [curtismercier/protocols](https://github.com/curtismercier/protocols). Each protocol's `spec-ref` field links to its source specification for the full rationale and design decisions.
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for format requirements and submission guidelines.

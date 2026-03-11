@@ -7,9 +7,10 @@ applies-to: [git]
 breadcrumb: "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them."
 author: Curtis Mercier
 license: CC BY 4.0
-version: 1.0.0
+version: 1.1.0
 tier: core
 tags: [git, attribution, identity]
+spec-ref: curtismercier/protocols/git-identity (v0.2)
 created: 2026-03-09
 updated: 2026-03-10
 ---

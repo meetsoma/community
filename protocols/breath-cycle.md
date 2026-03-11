@@ -7,9 +7,10 @@ applies-to: [always]
 breadcrumb: "Sessions have 3 phases: inhale (boot, load identity + memory + protocols), hold (work, track context), exhale (flush state, update heat, write preload). Never skip exhale."
 author: Curtis Mercier
 license: CC BY 4.0
-version: 1.0.0
+version: 1.1.0
 tier: core
 tags: [session, memory, continuity]
+spec-ref: curtismercier/protocols/breath-cycle (v0.2)
 created: 2026-03-09
 updated: 2026-03-10
 ---
@@ -48,12 +49,6 @@ Every agent session follows three phases. No exceptions.
 3. Update protocol heat — heat up used protocols, decay unused
 4. Update muscle frontmatter if muscles were referenced
 5. Note any patterns worth crystallizing (muscle candidates)
-
-### Pre-Publish Gate
-Before any public push or release:
-1. **Default is preservation.** Archive, move, gitignore — deletion requires justification.
-2. Every file being removed: `grep -rn` tests and imports for references first.
-3. Run all test suites after any removal. Count should not silently drop.
 
 ## Critical Rule
 

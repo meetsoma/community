@@ -7,9 +7,10 @@ applies-to: [always]
 breadcrumb: "Protocols have temperature: cold (not loaded), warm (breadcrumb in prompt), hot (full in prompt). Heat rises on use (+1/+2), decays per session if unused (-1). Thresholds configurable."
 author: Curtis Mercier
 license: CC BY 4.0
-version: 1.0.0
+version: 1.1.0
 tier: core
 tags: [memory, loading, performance]
+spec-ref: curtismercier/protocols/amp (v0.2, §5)
 created: 2026-03-09
 updated: 2026-03-10
 ---
