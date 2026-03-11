@@ -9,12 +9,18 @@ on:
       - 'skills/**'
       - 'templates/**'
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   validate:
-    name: Format & Safety Check
+    name: Safety & Format Checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Validate frontmatter
         run: bash .github/scripts/validate-frontmatter.sh
@@ -27,3 +33,67 @@ jobs:
 
       - name: Format compliance
         run: bash .github/scripts/format-check.sh
+
+      - name: Tier guard
+        run: bash .github/scripts/tier-guard.sh
+        env:
+          GITHUB_ACTOR: ${{ github.event.pull_request.user.login }}
+
+      - name: Attribution check
+        run: bash .github/scripts/attribution-check.sh
+        env:
+          GITHUB_ACTOR: ${{ github.event.pull_request.user.login }}
+
+  auto-merge:
+    name: Auto-Merge (Trusted)
+    needs: validate
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check auto-merge eligibility
+        id: check
+        run: |
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          ROLE=$(jq -r --arg a "$AUTHOR" '.members[$a].role // .defaults.role' MAINTAINERS.json)
+          ELIGIBLE=$(jq -r --arg r "$ROLE" '.roles[$r].auto_merge' MAINTAINERS.json)
+          echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+          echo "role=$ROLE" >> $GITHUB_OUTPUT
+          echo "eligible=$ELIGIBLE" >> $GITHUB_OUTPUT
+          echo "Author: $AUTHOR, Role: $ROLE, Auto-merge: $ELIGIBLE"
+
+      - name: Generate app token
+        if: steps.check.outputs.eligible == 'true'
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: 3043971
+          private-key: ${{ secrets.SOMA_APP_PEM }}
+
+      - name: Approve and merge
+        if: steps.check.outputs.eligible == 'true'
+        run: |
+          gh pr review ${{ github.event.pull_request.number }} --approve \
+            --body "σ All checks passed. Auto-merging for trusted ${{ steps.check.outputs.role }}: ${{ steps.check.outputs.author }}"
+          gh pr merge ${{ github.event.pull_request.number }} --squash --auto
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+
+      - name: Label for manual review
+        if: steps.check.outputs.eligible != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              labels: ['needs-review']
+            });
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: 'σ All automated checks passed. Waiting for maintainer review.\n\nAuthor: `${{ steps.check.outputs.author }}` (role: `${{ steps.check.outputs.role }}`)'
+            });
