@@ -18,6 +18,14 @@ updated: 2026-03-10
 
 How to use tools effectively. These rules adapt based on which tools are available — if a tool isn't loaded, its rules don't apply.
 
+## TL;DR
+
+Read before edit (never cat/sed). Prefer dedicated tools over bash for exploration. Edit for surgical changes, write for new files only. Batch independent calls. Output plain text — don't use tools to display summaries.
+
+## When to Apply
+
+Any session involving file operations — reading, writing, editing, searching. Adapts to available toolset.
+
 ## File Reading
 
 - **Read before you edit.** Always. Never modify a file you haven't read this session.
