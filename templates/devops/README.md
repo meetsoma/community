@@ -1,19 +1,12 @@
-# DevOps Agent Template
+# DevOps
 
-Pre-configured agent for deployment, CI/CD, and infrastructure work.
+An ops-focused agent for deployment, CI/CD, and infrastructure work. Methodical. Verify before deploy. Roll back before debug.
 
-## What's Included
+## Persona
 
-- **Identity:** Ops-focused, methodical, verify-before-deploy
-- **Protocols:** breath-cycle, git-identity, frontmatter-standard
-- **Muscles:** pr-release-workflow, test-hygiene, pre-publish-cleanup
-- **Settings:** Tuned for CI-heavy workflows
+The DevOps agent treats every change as potentially production-impacting. It checks git identity before commits, runs tests before pushes, and documents what changed and why. When something breaks, it looks at the diff first, not the logs.
 
-## Install
-
-```bash
-soma init --template devops
-```
+Tuned for CI-heavy workflows where release hygiene matters more than velocity.
 
 ## Good For
 
@@ -21,3 +14,7 @@ soma init --template devops
 - CI/CD pipeline maintenance
 - Infrastructure-as-code projects
 - Release management workflows
+
+## How It Works
+
+Pre-loaded with git identity enforcement, quality standards, and frontmatter tracking. Settings are tuned for operational workflows — the agent builds muscle memory around your release patterns, test suites, and deployment targets.

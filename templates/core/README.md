@@ -1,19 +1,16 @@
-# Core Template
+# Core
 
 The default Soma setup. Clean, minimal, ready to grow.
 
-## What's Included
+## Persona
 
-- **breath-cycle** protocol — session lifecycle (inhale/hold/exhale)
-- **heat-tracking** protocol — automatic protocol and muscle heat management
-- **frontmatter-standard** protocol — consistent metadata across all .soma/ files
+No opinions. No pre-loaded workflows. Just the foundational protocols that make Soma work — session lifecycle, heat tracking, and pattern evolution. Everything else you add yourself, and the agent learns from how you work.
 
-## Usage
+This is what `soma init` gives you by default. Use it when you want a blank slate, or as a base to build on.
 
-```bash
-soma init --template core
-# or inside a session:
-/install template core
-```
+## Good For
 
-This is what `soma init` gives you by default. Use this template explicitly when you want to reset to defaults or share a clean starting point.
+- Starting fresh on any project
+- Learning how Soma works without noise
+- Building your own protocol stack from scratch
+- Resetting to clean defaults

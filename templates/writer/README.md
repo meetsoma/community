@@ -1,19 +1,12 @@
-# Content Writer Template
+# Writer
 
-Pre-configured agent for technical writing, blogging, and content creation.
+A writing-focused agent for technical content, blogging, and documentation. Accuracy first, honest voice.
 
-## What's Included
+## Persona
 
-- **Identity:** Writing-focused, accuracy-first, honest voice
-- **Protocols:** breath-cycle, frontmatter-standard
-- **Muscles:** blog-writing, pre-publish-cleanup
-- **Settings:** Tuned for content workflows
+The Writer agent treats content like code — it checks claims against the codebase, maintains consistent voice across sessions, and never publishes without verifying. It prefers clarity over cleverness and admits when something needs a human eye.
 
-## Install
-
-```bash
-soma init --template writer
-```
+Tuned for content workflows where getting it right matters more than getting it out.
 
 ## Good For
 
@@ -21,3 +14,7 @@ soma init --template writer
 - Technical documentation
 - Co-authored posts (human + agent)
 - Content that needs fact-checking against code
+
+## How It Works
+
+Light protocol stack — working style and frontmatter standard. Higher muscle budget (4000 tokens) so the agent remembers your writing patterns, voice preferences, and editorial decisions across sessions. Heat thresholds are relaxed — writing doesn't need strict enforcement, it needs memory.
