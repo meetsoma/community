@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-11T23:57:47.321Z",
-  "count": 16,
+  "generated": "2026-03-12T00:39:07.951Z",
+  "count": 17,
   "items": [
     {
       "slug": "breath-cycle",
@@ -281,6 +281,37 @@
       "updated": "2026-03-10"
     },
     {
+      "slug": "test-hygiene",
+      "name": "test-hygiene",
+      "type": "muscle",
+      "description": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
+      "heatDefault": "warm",
+      "tier": "core",
+      "topic": [
+        "testing",
+        "ci",
+        "code-quality",
+        "maintenance"
+      ],
+      "keywords": [
+        "test",
+        "stale",
+        "dead-code",
+        "cleanup",
+        "validation",
+        "ci",
+        "suite",
+        "coverage",
+        "hygiene"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-11"
+    },
+    {
       "slug": "architect",
       "name": "architect",
       "type": "template",
@@ -299,7 +330,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-11"
+      "updated": "2026-03-12"
     },
     {
       "slug": "core",
@@ -319,7 +350,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-11"
+      "updated": "2026-03-12"
     },
     {
       "slug": "devops",
@@ -339,7 +370,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-11"
+      "updated": "2026-03-12"
     },
     {
       "slug": "writer",
@@ -358,7 +389,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-11"
+      "updated": "2026-03-12"
     }
   ]
 }
