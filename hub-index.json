@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-12T00:51:30.341Z",
+  "generated": "2026-03-12T01:00:11.523Z",
   "count": 17,
   "items": [
     {
@@ -117,10 +117,10 @@
       "slug": "pattern-evolution",
       "name": "pattern-evolution",
       "type": "protocol",
-      "description": "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
+      "description": "Patterns mature through AMPS layers: Skills → Muscles → Protocols → Automations. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
       "author": "Curtis Mercier",
-      "version": "1.1.0",
-      "breadcrumb": "Patterns mature: observation → muscle → muscle memory → protocol/skill/ritual. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
+      "version": "1.2.0",
+      "breadcrumb": "Patterns mature through AMPS layers: Skills → Muscles → Protocols → Automations. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -133,7 +133,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-10"
+      "updated": "2026-03-12"
     },
     {
       "slug": "quality-standards",
