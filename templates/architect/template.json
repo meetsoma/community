@@ -2,12 +2,13 @@
   "name": "architect",
   "description": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
   "author": "meetsoma",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "tier": "official",
   "requires": {
-    "protocols": ["breath-cycle", "frontmatter-standard", "git-identity", "heat-tracking"],
+    "protocols": ["tool-discipline", "working-style", "quality-standards", "git-identity", "frontmatter-standard"],
     "muscles": [],
-    "skills": []
+    "skills": [],
+    "automations": []
   },
   "settings": {
     "protocols": {

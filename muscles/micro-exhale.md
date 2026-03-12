@@ -3,6 +3,7 @@ type: muscle
 name: micro-exhale
 breadcrumb: "Write workflow summaries to daily log after major completions — one file per day, always append."
 tier: core
+scope: hub
 topic: [memory, workflow, logging, sessions]
 keywords: [micro-exhale, daily-log, workflow-summary, session-memory]
 status: active

@@ -10,6 +10,7 @@ author: Curtis Mercier
 license: CC BY 4.0
 version: 1.0.0
 tier: core
+scope: hub
 topic: [testing, ci, code-quality, maintenance]
 keywords: [test, stale, dead-code, cleanup, validation, ci, suite, coverage, hygiene]
 created: 2026-03-09

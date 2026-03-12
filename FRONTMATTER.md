@@ -155,6 +155,7 @@ Extensions are TypeScript hooks into the agent lifecycle. They are framework-spe
 | `heat` | muscles only | numeric 0-15 | Runtime-managed |
 | `loads` | muscles only | numeric | Runtime-managed |
 | `applies-to` | protocols | Array of signals | `always`, `git`, `typescript`, etc. |
+| `scope` | optional | `bundled`, `hub` | Distribution scope (default: `hub`) |
 | `depends-on` | optional | Object | Cross-type dependencies (see below) |
 
 ## Validation
@@ -169,6 +170,21 @@ Extensions are TypeScript hooks into the agent lifecycle. They are framework-spe
 # Show fix suggestions
 ./scripts/validate-frontmatter.sh --fix
 ```
+
+## Distribution Scope (`scope`)
+
+Controls where content is distributed:
+
+| Scope | Meaning | Who gets it |
+|-------|---------|-------------|
+| `bundled` | Ships with `meetsoma` npm package | Every Soma install |
+| `hub` | Available on SomaHub | Users who `/install` it |
+
+Default is `hub`. Only `tier: core` content can be `scope: bundled`.
+
+Bundled content is Soma's DNA — the minimum set that makes the system work. Everything else lives on the hub and can be installed via templates or `/install`.
+
+> **Note:** `workspace` and `internal` scopes exist conceptually but aren't used in the community repo — workspace content lives in project `.soma/` directories, internal content lives in Gravicity's private tooling.
 
 ## Dependencies (`depends-on`)
 
@@ -192,3 +208,4 @@ depends-on:
 - **`topic` not `tags` for muscles** — agent runtime reads `topic`. Website falls back to it. Single source of truth.
 - **`heat` (numeric) + `heat-default` (string) coexist** — `heat` is runtime state, `heat-default` is the initial/display value.
 - **`tier` vocabulary differs by context** — community hub uses `core`/`official`/`community`/`pro`. Agent runtime uses `free`/`enterprise`. The hub tiers describe authorship; runtime tiers describe access.
+- **`scope` vs `tier`** — `tier` = who wrote it (trust). `scope` = where it ships (distribution). A `tier: core` protocol can be `scope: hub` (Gravicity-authored but not bundled). Only bundled content ships in the npm package.

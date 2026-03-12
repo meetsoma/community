@@ -2,11 +2,13 @@
   "name": "core",
   "description": "Default Soma setup — breath cycle, heat tracking, and clean memory structure. What every agent starts with.",
   "author": "meetsoma",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "tier": "core",
   "requires": {
-    "protocols": ["breath-cycle", "heat-tracking", "frontmatter-standard"],
+    "protocols": [],
     "muscles": [],
-    "skills": []
-  }
+    "skills": [],
+    "automations": []
+  },
+  "notes": "Bundled protocols (breath-cycle, heat-tracking, session-checkpoints, pattern-evolution) ship with meetsoma — no install needed."
 }

@@ -2,12 +2,13 @@
   "name": "devops",
   "description": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
   "author": "meetsoma",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "tier": "official",
   "requires": {
-    "protocols": ["breath-cycle", "git-identity", "frontmatter-standard"],
+    "protocols": ["git-identity", "tool-discipline", "quality-standards"],
     "muscles": [],
-    "skills": []
+    "skills": [],
+    "automations": []
   },
   "settings": {
     "protocols": {

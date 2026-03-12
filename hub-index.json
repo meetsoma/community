@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-12T01:00:31.339Z",
-  "count": 17,
+  "generated": "2026-03-12T01:19:56.147Z",
+  "count": 18,
   "items": [
     {
       "slug": "breath-cycle",
@@ -46,6 +46,28 @@
       "status": "active",
       "created": "2026-03-09",
       "updated": "2026-03-10"
+    },
+    {
+      "slug": "content-triage",
+      "name": "content-triage",
+      "type": "protocol",
+      "description": "New AMPS content gets classified: bundled (ships with Soma), hub (on SomaHub), workspace (project-local), or internal (dev tooling). Scope determines distribution. Tier determines trust.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "New AMPS content gets classified: bundled (ships with Soma), hub (on SomaHub), workspace (project-local), or internal (dev tooling). Scope determines distribution. Tier determines trust.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "content",
+        "distribution",
+        "amps"
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "frontmatter-standard",
@@ -317,18 +339,20 @@
       "type": "template",
       "description": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
-          "breath-cycle",
-          "frontmatter-standard",
+          "tool-discipline",
+          "working-style",
+          "quality-standards",
           "git-identity",
-          "heat-tracking"
+          "frontmatter-standard"
         ],
         "muscles": [],
-        "skills": []
+        "skills": [],
+        "automations": []
       },
       "updated": "2026-03-12"
     },
@@ -338,17 +362,14 @@
       "type": "template",
       "description": "Default Soma setup — breath cycle, heat tracking, and clean memory structure. What every agent starts with.",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tier": "core",
       "tags": [],
       "requires": {
-        "protocols": [
-          "breath-cycle",
-          "heat-tracking",
-          "frontmatter-standard"
-        ],
+        "protocols": [],
         "muscles": [],
-        "skills": []
+        "skills": [],
+        "automations": []
       },
       "updated": "2026-03-12"
     },
@@ -358,17 +379,18 @@
       "type": "template",
       "description": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
-          "breath-cycle",
           "git-identity",
-          "frontmatter-standard"
+          "tool-discipline",
+          "quality-standards"
         ],
         "muscles": [],
-        "skills": []
+        "skills": [],
+        "automations": []
       },
       "updated": "2026-03-12"
     },
@@ -378,16 +400,17 @@
       "type": "template",
       "description": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
-          "breath-cycle",
+          "working-style",
           "frontmatter-standard"
         ],
         "muscles": [],
-        "skills": []
+        "skills": [],
+        "automations": []
       },
       "updated": "2026-03-12"
     }

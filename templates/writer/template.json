@@ -2,12 +2,13 @@
   "name": "writer",
   "description": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice",
   "author": "meetsoma",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "tier": "official",
   "requires": {
-    "protocols": ["breath-cycle", "frontmatter-standard"],
+    "protocols": ["working-style", "frontmatter-standard"],
     "muscles": [],
-    "skills": []
+    "skills": [],
+    "automations": []
   },
   "settings": {
     "protocols": {
