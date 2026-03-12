@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generated": "2026-03-12T15:18:37.568Z",
+  "generated": "2026-03-12T15:18:56.276Z",
   "count": 22,
   "items": [
     {
       "slug": "breath-cycle",
       "name": "breath-cycle",
       "type": "protocol",
-      "description": "## TL;DR - Three phases: **inhale** (boot — automated), **hold** (work — monitored), **exhale** (flush — agent-driven) - **Inhale is automated:** identity, preload, protocols, muscles, scripts, git co",
+      "description": "Sessions have 3 phases: inhale (automated boot), hold (work — context monitored automatically), exhale (write preload, commit, say FLUSH COMPLETE → system offers auto-continue). Never skip exhale.",
       "author": "Curtis Mercier",
       "version": "1.2.0",
-      "breadcrumb": "## TL;DR - Three phases: **inhale** (boot — automated), **hold** (work — monitored), **exhale** (flush — agent-driven) - **Inhale is automated:** iden",
+      "breadcrumb": "Sessions have 3 phases: inhale (automated boot), hold (work — context monitored automatically), exhale (write preload, commit, say FLUSH COMPLETE → system offers auto-continue). Never skip exhale.",
       "heatDefault": "hot",
       "appliesTo": [
         "always"
@@ -20,16 +20,19 @@
         "session",
         "memory",
         "continuity"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-12"
     },
     {
       "slug": "community-safe",
       "name": "community-safe",
       "type": "protocol",
-      "description": "## TL;DR - Community protocols, muscles, skills, and templates must be **generic and reusable** - **Never include:** emails, home paths, API keys, tokens, secrets, hardcoded usernames, org-specific UR",
+      "description": "Community assets must never contain private data. No emails, paths, secrets, tokens, user-specific references. Private data belongs in USER.md, .env, .soma/secrets/, project memory. Muscles encode patterns, not personal context.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
-      "breadcrumb": "## TL;DR - Community protocols, muscles, skills, and templates must be **generic and reusable** - **Never include:** emails, home paths, API keys, tok",
+      "breadcrumb": "Community assets must never contain private data. No emails, paths, secrets, tokens, user-specific references. Private data belongs in USER.md, .env, .soma/secrets/, project memory. Muscles encode patterns, not personal context.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -39,16 +42,19 @@
         "safety",
         "privacy",
         "sharing"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
     },
     {
       "slug": "content-triage",
       "name": "content-triage",
       "type": "protocol",
-      "description": "## TL;DR - Every new muscle, protocol, automation, or skill gets a **scope** (where it lives) and **tier** (who wrote it) - **scope: bundled** = ships with `meetsoma` npm. Only for Soma's DNA (breath-",
+      "description": "New AMPS content gets classified: bundled (ships with Soma), hub (on SomaHub), workspace (project-local), or internal (dev tooling). Scope determines distribution. Tier determines trust.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "## TL;DR - Every new muscle, protocol, automation, or skill gets a **scope** (where it lives) and **tier** (who wrote it) - **scope: bundled** = ships",
+      "breadcrumb": "New AMPS content gets classified: bundled (ships with Soma), hub (on SomaHub), workspace (project-local), or internal (dev tooling). Scope determines distribution. Tier determines trust.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -58,56 +64,57 @@
         "content",
         "distribution",
         "amps"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "correction-capture",
       "name": "correction-capture",
       "type": "protocol",
       "description": "When the user corrects you, capture the learning immediately. Don't let it evaporate into conversation.",
-      "author": "Curtis Mercier",
+      "author": "Unknown",
       "version": "1.0.0",
-      "breadcrumb": "When the user corrects you, capture the learning immediately. Don't let it evaporate into conversation.",
       "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
       "tier": "core",
       "tags": [
         "learning",
         "self-improvement",
         "memory",
         "corrections"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "detection-triggers",
       "name": "detection-triggers",
       "type": "protocol",
       "description": "Know when to capture a learning. Don't rely on discipline alone — recognize the moments.",
-      "author": "Curtis Mercier",
+      "author": "Unknown",
       "version": "1.0.0",
-      "breadcrumb": "Know when to capture a learning. Don't rely on discipline alone — recognize the moments.",
       "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
       "tier": "core",
       "tags": [
         "learning",
         "self-improvement",
         "memory",
         "awareness"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "frontmatter-standard",
       "name": "frontmatter-standard",
       "type": "protocol",
-      "description": "## TL;DR - Every `.md` file gets YAML frontmatter: `type`, `status`, `created`, `updated` (required) - 12 types: plan · spec · note · index · memory · muscle · protocol · decision · log · template · i",
+      "description": "All .md files get YAML frontmatter: type, status, created, updated. 8 statuses: draft/active/stable/stale/archived/deprecated/blocked/review. 12 types: plan/spec/note/index/memory/muscle/protocol/decision/log/template/identity/config.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
-      "breadcrumb": "## TL;DR - Every `.md` file gets YAML frontmatter: `type`, `status`, `created`, `updated` (required) - 12 types: plan · spec · note · index · memory ·",
+      "breadcrumb": "All .md files get YAML frontmatter: type, status, created, updated. 8 statuses: draft/active/stable/stale/archived/deprecated/blocked/review. 12 types: plan/spec/note/index/memory/muscle/protocol/decision/log/template/identity/config.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -117,35 +124,41 @@
         "structure",
         "metadata",
         "organization"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
     },
     {
       "slug": "git-identity",
       "name": "git-identity",
       "type": "protocol",
-      "description": "## TL;DR - Define identity zones: **personal**, **business**, **agent** — each maps to a name/email - Check `git config user.email` before first commit in any repo - Human drives → human identity. Age",
+      "description": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
-      "breadcrumb": "## TL;DR - Define identity zones: **personal**, **business**, **agent** — each maps to a name/email - Check `git config user.email` before first commi",
+      "breadcrumb": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
       "heatDefault": "warm",
       "appliesTo": [
-        "always"
+        "git"
       ],
       "tier": "official",
       "tags": [
         "git",
         "attribution",
         "identity"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
     },
     {
       "slug": "heat-tracking",
       "name": "heat-tracking",
       "type": "protocol",
-      "description": "## TL;DR - Three temperatures: **cold** (0-2, name only), **warm** (3-7, breadcrumb in prompt), **hot** (8+, full body in prompt) - **Auto-detection is limited:** only specific tool results trigger he",
+      "description": "Protocols have temperature: cold (0-2, not loaded), warm (3-7, breadcrumb in prompt), hot (8+, full in prompt). Heat auto-detected from tool results. Manual: /pin (hot), /kill (cold). Decays -1 per unused session.",
       "author": "Curtis Mercier",
       "version": "1.2.0",
-      "breadcrumb": "## TL;DR - Three temperatures: **cold** (0-2, name only), **warm** (3-7, breadcrumb in prompt), **hot** (8+, full body in prompt) - **Auto-detection i",
+      "breadcrumb": "Protocols have temperature: cold (0-2, not loaded), warm (3-7, breadcrumb in prompt), hot (8+, full in prompt). Heat auto-detected from tool results. Manual: /pin (hot), /kill (cold). Decays -1 per unused session.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -155,16 +168,19 @@
         "memory",
         "loading",
         "performance"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-10"
     },
     {
       "slug": "pattern-evolution",
       "name": "pattern-evolution",
       "type": "protocol",
-      "description": "## TL;DR - Patterns evolve through **AMPS layers**: **Skills** (knowledge) → **Muscles** (learned patterns) → **Protocols** (behavioral rules) → **Automations** (executable) - Muscles are born from **",
+      "description": "Patterns mature through AMPS layers: Skills → Muscles → Protocols → Automations. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
       "author": "Curtis Mercier",
       "version": "1.2.0",
-      "breadcrumb": "## TL;DR - Patterns evolve through **AMPS layers**: **Skills** (knowledge) → **Muscles** (learned patterns) → **Protocols** (behavioral rules) → **Aut",
+      "breadcrumb": "Patterns mature through AMPS layers: Skills → Muscles → Protocols → Automations. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -174,16 +190,19 @@
         "learning",
         "patterns",
         "growth"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-12"
     },
     {
       "slug": "quality-standards",
       "name": "quality-standards",
       "type": "protocol",
-      "description": "Guardrails for safe, reliable work. These protect against destructive operations and sloppy git hygiene. Verification lives in tool-discipline. Pattern recognition lives in pattern-evolution.",
+      "description": "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "Guardrails for safe, reliable work. These protect against destructive operations and sloppy git hygiene. Verification lives in tool-discipline. Patter",
+      "breadcrumb": "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -194,16 +213,19 @@
         "safety",
         "git",
         "workflow"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
     },
     {
       "slug": "session-checkpoints",
       "name": "session-checkpoints",
       "type": "protocol",
-      "description": "## TL;DR",
+      "description": "Two-track version control: .soma/ is committed every exhale (local-only git), project code gets lightweight checkpoints (local commits/tags, never pushed raw). Ship by squashing checkpoints into clean commits. On inhale, diff both tracks to see what changed.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
-      "breadcrumb": "## TL;DR",
+      "breadcrumb": "Two-track version control: .soma/ is committed every exhale (local-only git), project code gets lightweight checkpoints (local commits/tags, never pushed raw). Ship by squashing checkpoints into clean commits. On inhale, diff both tracks to see what changed.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -214,16 +236,19 @@
         "git",
         "workflow",
         "continuity"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
     },
     {
       "slug": "task-tracking",
       "name": "task-tracking",
       "type": "protocol",
-      "description": "A live kanban board that moves with you across sessions. The board is the single source of truth for what's happening, what's done, and what's waiting. It's updated as you work — not reconstructed aft",
+      "description": "Keep a live kanban in .soma/_kanban.md. Move cards as you work — not after. On exhale, the board should reflect reality: what's active, what shipped, what's parked. A stale board is worse than no board.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "A live kanban board that moves with you across sessions. The board is the single source of truth for what's happening, what's done, and what's waiting",
+      "breadcrumb": "Keep a live kanban in .soma/_kanban.md. Move cards as you work — not after. On exhale, the board should reflect reality: what's active, what shipped, what's parked. A stale board is worse than no board.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -234,16 +259,19 @@
         "planning",
         "continuity",
         "kanban"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "tool-discipline",
       "name": "tool-discipline",
       "type": "protocol",
-      "description": "How to use tools effectively. These rules adapt based on which tools are available — if a tool isn't loaded, its rules don't apply.",
+      "description": "Read before edit (never cat/sed). Prefer grep/find/ls over bash for exploration. Edit for surgical changes, write only for new files. Batch independent calls. Output plain text — don't cat/bash to display results.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "How to use tools effectively. These rules adapt based on which tools are available — if a tool isn't loaded, its rules don't apply.",
+      "breadcrumb": "Read before edit (never cat/sed). Prefer grep/find/ls over bash for exploration. Edit for surgical changes, write only for new files. Batch independent calls. Output plain text — don't cat/bash to display results.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -253,19 +281,22 @@
         "tools",
         "workflow",
         "discipline"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
     },
     {
       "slug": "workflow",
       "name": "workflow",
       "type": "protocol",
-      "description": "A disciplined loop for shipping code safely: test → commit → push. Every step has a reason. Skipping one creates risk that compounds silently.",
+      "description": "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "A disciplined loop for shipping code safely: test → commit → push. Every step has a reason. Skipping one creates risk that compounds silently.",
+      "breadcrumb": "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished.",
       "heatDefault": "warm",
       "appliesTo": [
-        "always"
+        "git"
       ],
       "tier": "community",
       "tags": [
@@ -273,16 +304,19 @@
         "git",
         "testing",
         "deployment"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "working-style",
       "name": "working-style",
       "type": "protocol",
-      "description": "How to communicate and approach work. These are defaults — if the user prefers a different style, this protocol should cool and their preferred patterns should form as muscles.",
+      "description": "Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "How to communicate and approach work. These are defaults — if the user prefers a different style, this protocol should cool and their preferred patter",
+      "breadcrumb": "Be direct — no ceremony. Lead with action. Understand before you change, verify after you build. Complex work gets a plan first. Plans live in files, not in context.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -292,52 +326,96 @@
         "workflow",
         "style",
         "communication"
-      ]
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
     },
     {
       "slug": "icon-audit",
       "name": "icon-audit",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. > - Uses browser-tools (puppeteer) to navigate icon libr",
+      "description": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "<!-- digest:start --> > **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. > - Us",
+      "breadcrumb": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
       "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
       "tier": "official",
-      "tags": []
+      "topic": [
+        "design",
+        "icons",
+        "visual-audit",
+        "browser-tools"
+      ],
+      "keywords": [
+        "icon-audit",
+        "svg",
+        "lucide",
+        "phosphor",
+        "comparison",
+        "visual-review",
+        "icon-library"
+      ],
+      "status": "active",
+      "created": "2026-03-11",
+      "updated": "2026-03-11"
     },
     {
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Micro-Exhale** — write workflow summaries to daily log after major completions. > - After completing a significant workflow, append a structured summary to `.soma/memory/logs",
+      "description": "Write workflow summaries to daily log after major completions — one file per day, always append.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "<!-- digest:start --> > **Micro-Exhale** — write workflow summaries to daily log after major completions. > - After completing a significant workflow,",
+      "breadcrumb": "Write workflow summaries to daily log after major completions — one file per day, always append.",
       "heatDefault": "hot",
-      "appliesTo": [
-        "always"
-      ],
       "tier": "official",
-      "tags": []
+      "topic": [
+        "memory",
+        "workflow",
+        "logging",
+        "sessions"
+      ],
+      "keywords": [
+        "micro-exhale",
+        "daily-log",
+        "workflow-summary",
+        "session-memory"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-10"
     },
     {
       "slug": "test-hygiene",
       "name": "test-hygiene",
       "type": "muscle",
-      "description": "<!-- digest:start --> Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — ",
+      "description": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "<!-- digest:start --> Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check ",
+      "breadcrumb": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
       "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
       "tier": "official",
-      "tags": []
+      "topic": [
+        "testing",
+        "ci",
+        "code-quality",
+        "maintenance"
+      ],
+      "keywords": [
+        "test",
+        "stale",
+        "dead-code",
+        "cleanup",
+        "validation",
+        "ci",
+        "suite",
+        "coverage",
+        "hygiene"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-11"
     },
     {
       "slug": "architect",
@@ -346,13 +424,21 @@
       "description": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
       "author": "meetsoma",
       "version": "1.1.0",
-      "breadcrumb": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
-      "tier": "community",
-      "tags": []
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "tool-discipline",
+          "working-style",
+          "quality-standards",
+          "git-identity",
+          "frontmatter-standard"
+        ],
+        "muscles": [],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-03-12"
     },
     {
       "slug": "core",
@@ -361,13 +447,15 @@
       "description": "Default Soma setup — breath cycle, heat tracking, and clean memory structure. What every agent starts with.",
       "author": "meetsoma",
       "version": "1.1.0",
-      "breadcrumb": "Default Soma setup — breath cycle, heat tracking, and clean memory structure. What every agent starts with.",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
-      "tier": "community",
-      "tags": []
+      "tier": "core",
+      "tags": [],
+      "requires": {
+        "protocols": [],
+        "muscles": [],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-03-12"
     },
     {
       "slug": "devops",
@@ -376,13 +464,19 @@
       "description": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
       "author": "meetsoma",
       "version": "1.1.0",
-      "breadcrumb": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
-      "tier": "community",
-      "tags": []
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "git-identity",
+          "tool-discipline",
+          "quality-standards"
+        ],
+        "muscles": [],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-03-12"
     },
     {
       "slug": "writer",
@@ -391,13 +485,18 @@
       "description": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice",
       "author": "meetsoma",
       "version": "1.1.0",
-      "breadcrumb": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
-      "tier": "community",
-      "tags": []
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "working-style",
+          "frontmatter-standard"
+        ],
+        "muscles": [],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-03-12"
     }
   ]
 }
