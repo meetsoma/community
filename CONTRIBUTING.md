@@ -166,6 +166,21 @@ If you're an AI agent submitting content:
 4. PRs touching `tier: core` or `tier: official` content require maintainer review (contributions welcome)
 5. Set `heat: 0` and `loads: 0` — users control their own usage stats
 
+## Cross-Repo Changes
+
+Most AMPS PRs are self-contained — just markdown. But sometimes a contribution needs a code change in [soma-agent](https://github.com/meetsoma/soma-agent):
+
+| Scenario | What to do |
+|----------|-----------|
+| New protocol using existing features | PR here only ✓ |
+| Protocol that needs a new `settings.*` field | Agent PR first (add field), then PR here |
+| New content type (beyond protocol/muscle/skill/automation) | Agent PR first (add `ContentType` + install path), then PR here |
+| Updating a `scope: bundled` protocol | PR here — this repo is canonical. Bundled content syncs to CLI at publish. |
+
+If your change spans repos, open the agent PR first and link it. Code lands before content — the runtime can support a feature with zero content, but content referencing missing code breaks.
+
+For core contributions (TypeScript), see [soma-agent/CONTRIBUTING.md](https://github.com/meetsoma/soma-agent/blob/dev/CONTRIBUTING.md).
+
 ## Updates
 
 To update an existing contribution: open a PR against the file, bump the `version` field, explain what changed in the PR description.
