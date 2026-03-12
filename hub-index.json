@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-12T00:39:07.951Z",
+  "generated": "2026-03-12T00:51:30.341Z",
   "count": 17,
   "items": [
     {
@@ -330,7 +330,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-10"
     },
     {
       "slug": "core",
@@ -350,7 +350,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-11"
     },
     {
       "slug": "devops",
@@ -370,7 +370,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-10"
     },
     {
       "slug": "writer",
@@ -389,7 +389,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-10"
     }
   ]
 }

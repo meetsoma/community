@@ -62,6 +62,7 @@ SHARED_REQUIRED=(type name status version author license created updated)
 # Per-type required fields
 PROTOCOL_REQUIRED=(heat-default breadcrumb applies-to tier tags)
 MUSCLE_REQUIRED=(heat-default breadcrumb tier topic keywords heat loads)
+AUTOMATION_REQUIRED=(breadcrumb tier topic)
 # Templates use template.json for most metadata — identity.md has minimal frontmatter
 
 # Per-type valid statuses
@@ -152,6 +153,13 @@ validate_file() {
       if [[ -n "$heat_val" ]] && ! [[ "$heat_val" =~ ^[0-9]+$ ]]; then
         error "heat must be numeric, got: '${heat_val}'"
       fi
+      ;;
+    automation)
+      for field in "${AUTOMATION_REQUIRED[@]}"; do
+        if ! has_field "$file" "$field"; then
+          error "automation missing: ${field}"
+        fi
+      done
       ;;
     identity)
       # Template identity files are install-time placeholders — different schema

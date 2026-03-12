@@ -185,6 +185,7 @@ const outputPath = outputArg !== -1 ? process.argv[outputArg + 1] : DEFAULT_OUTP
 const items = [
 	...loadMarkdownDir("protocol", "protocols"),
 	...loadMarkdownDir("muscle", "muscles"),
+	...loadMarkdownDir("automation", "automations"),
 	...loadSkills(),
 	...loadTemplates(),
 ];

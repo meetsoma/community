@@ -1,6 +1,6 @@
 # Contributing to SomaHub
 
-Community-contributed protocols, muscles, skills, and templates for Soma agents. This content is loaded into AI agent context at runtime — treat it like code.
+Community **AMPS** — **A**utomations, **M**uscles, **P**rotocols, **S**kills — plus Templates for Soma agents. This content is loaded into AI agent context at runtime — treat it like code.
 
 ## Quick Path (Soma Users)
 
@@ -13,7 +13,7 @@ Soma validates, strips private data, and opens a PR. Trusted contributors auto-m
 ## Manual Path (GitHub)
 
 1. **Fork** this repository
-2. **Add content** to the right directory (`protocols/`, `muscles/`, `skills/`, `templates/`)
+2. **Add content** to the right directory (`protocols/`, `muscles/`, `skills/`, `automations/`, `templates/`)
 3. **Validate** frontmatter against [FRONTMATTER.md](FRONTMATTER.md)
 4. **Test** by copying into a real `.soma/` directory and booting Soma
 5. **Open a PR** — CI runs six automated checks
@@ -109,6 +109,27 @@ skills/your-skill/
 ├── SKILL.md          # frontmatter + instructions (see FRONTMATTER.md for full schema)
 └── (supporting files)
 ```
+
+### Automations
+
+```yaml
+---
+type: automation
+name: my-automation
+status: active
+breadcrumb: "What this automation does."
+topic: [workflow, hooks]
+keywords: [pre-commit, validation]
+author: Your Name
+tier: community
+license: MIT
+version: 1.0.0
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+---
+```
+
+Automations are executable community content — workflows, hooks, and rituals. They run without thinking once installed. Unlike protocols (behavioral rules) or muscles (learned patterns), automations are direct action.
 
 ### Templates
 
