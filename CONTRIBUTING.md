@@ -27,7 +27,7 @@ Soma validates, strips private data, and opens a PR. Trusted contributors auto-m
 | `core` | Gravicity team | Verified via MAINTAINERS.json |
 | `pro` | Gravicity premium | Separate repo (future) |
 
-Claiming a tier you're not authorized for **fails CI**. If `tier:` is missing, it defaults to `community`.
+If `tier:` is missing, it defaults to `community`. Contributions to `core` or `official` content are welcome — they won't fail CI, but they'll be flagged for maintainer review. If merged, you'll be credited in the version notes.
 
 ## Attribution
 
@@ -142,7 +142,7 @@ If you're an AI agent submitting content:
 1. Run pre-submit validation before opening a PR
 2. Include the validation report in the PR description
 3. Do **not** modify: `MAINTAINERS.json`, `CONTRIBUTING.md`, `CODEOWNERS`, `.github/`
-4. Do **not** claim `tier: core` or `tier: official` unless your principal is authorized
+4. PRs touching `tier: core` or `tier: official` content require maintainer review (contributions welcome)
 5. Set `heat: 0` and `loads: 0` — users control their own usage stats
 
 ## Updates

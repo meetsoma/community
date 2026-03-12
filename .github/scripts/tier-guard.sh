@@ -81,20 +81,22 @@ for file in $CHANGED; do
   if echo "$ALLOWED_TIERS" | grep -qw "$TIER"; then
     echo "✓ $file — tier: $TIER (authorized)"
   else
-    echo "FAIL: $file — tier: $TIER (not authorized for role: $ROLE)"
-    echo "  Allowed tiers: $(echo $ALLOWED_TIERS | tr '\n' ', ')"
-    FAIL=1
+    echo "⚠ $file — tier: $TIER (above role: $ROLE)"
+    echo "  This will require maintainer review"
+    NEEDS_REVIEW=1
   fi
 done
 
 echo ""
 echo "Checked $CHECKED files"
 
-if [ "$FAIL" -eq 1 ]; then
+if [ "${NEEDS_REVIEW:-0}" -eq 1 ]; then
   echo ""
-  echo "Tier guard failed. You cannot claim a tier above your role."
-  echo "Community contributors may only use tier: community."
-  exit 1
+  echo "⚠ Tier review needed — PR touches content above author's tier."
+  echo "Contributions to core/official are welcome but require maintainer approval."
+  echo "TIER_REVIEW_NEEDED=true"
+  # Exit 0 — don't block the PR, just flag it
+  exit 0
 fi
 
 echo "✓ Tier guard passed"

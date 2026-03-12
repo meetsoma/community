@@ -17,6 +17,8 @@ jobs:
   validate:
     name: Safety & Format Checks
     runs-on: ubuntu-latest
+    outputs:
+      tier_review_needed: ${{ steps.tier.outputs.review_needed }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,7 +37,13 @@ jobs:
         run: bash .github/scripts/format-check.sh
 
       - name: Tier guard
-        run: bash .github/scripts/tier-guard.sh
+        id: tier
+        run: |
+          OUTPUT=$(bash .github/scripts/tier-guard.sh)
+          echo "$OUTPUT"
+          if echo "$OUTPUT" | grep -q "TIER_REVIEW_NEEDED=true"; then
+            echo "review_needed=true" >> $GITHUB_OUTPUT
+          fi
         env:
           GITHUB_ACTOR: ${{ github.event.pull_request.user.login }}
 
@@ -72,7 +80,7 @@ jobs:
           private-key: ${{ secrets.SOMA_APP_PEM }}
 
       - name: Approve and merge
-        if: steps.check.outputs.eligible == 'true'
+        if: steps.check.outputs.eligible == 'true' && needs.validate.outputs.tier_review_needed != 'true'
         run: |
           gh pr review ${{ github.event.pull_request.number }} --approve \
             --body "σ All checks passed. Auto-merging for trusted ${{ steps.check.outputs.role }}: ${{ steps.check.outputs.author }}"
@@ -85,15 +93,24 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const labels = ['needs-review'];
+            const tierReview = '${{ needs.validate.outputs.tier_review_needed }}' === 'true';
+            if (tierReview) labels.push('tier-review');
+            
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
-              labels: ['needs-review']
+              labels
             });
+            
+            const tierNote = tierReview
+              ? '\n\n⚠️ **This PR modifies core/official content.** Contributions are welcome — a maintainer will review and credit you if merged.'
+              : '';
+            
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
-              body: 'σ All automated checks passed. Waiting for maintainer review.\n\nAuthor: `${{ steps.check.outputs.author }}` (role: `${{ steps.check.outputs.role }}`)'
+              body: `σ All automated checks passed. Waiting for maintainer review.${tierNote}\n\nAuthor: \`${{ steps.check.outputs.author }}\` (role: \`${{ steps.check.outputs.role }}\`)`
             });
