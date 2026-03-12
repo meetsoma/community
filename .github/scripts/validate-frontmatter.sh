@@ -33,7 +33,7 @@ VALID_TIERS="core official community pro"
 VALID_HEAT="cold warm hot"
 
 # === Common fields for all .md content ===
-for f in protocols/*.md muscles/*.md; do
+for f in protocols/*.md muscles/*.md automations/*.md; do
   [ -f "$f" ] || continue
 
   # Must have frontmatter
@@ -86,6 +86,13 @@ for f in muscles/*.md; do
   fi
 done
 
+# === Automation-specific ===
+for f in automations/*.md; do
+  [ -f "$f" ] || continue
+  check_field "$f" "breadcrumb"
+  check_field "$f" "topic"
+done
+
 # === Skills ===
 for d in skills/*/; do
   [ -d "$d" ] || continue
@@ -112,7 +119,7 @@ for d in templates/*/; do
 done
 
 # === File naming: kebab-case ===
-for f in protocols/*.md muscles/*.md; do
+for f in protocols/*.md muscles/*.md automations/*.md; do
   [ -f "$f" ] || continue
   basename=$(basename "$f" .md)
   if echo "$basename" | grep -qE '[A-Z_ ]'; then
