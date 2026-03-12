@@ -2,7 +2,7 @@
 type: muscle
 name: icon-audit
 breadcrumb: "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review."
-tier: core
+tier: official
 scope: hub
 topic: [design, icons, visual-audit, browser-tools]
 keywords: [icon-audit, svg, lucide, phosphor, comparison, visual-review, icon-library]

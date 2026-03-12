@@ -8,7 +8,7 @@ breadcrumb: "Read before edit (never cat/sed). Prefer grep/find/ls over bash for
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.0.0
-tier: core
+tier: official
 scope: hub
 tags: [tools, workflow, discipline]
 created: 2026-03-10

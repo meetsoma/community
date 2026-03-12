@@ -8,7 +8,7 @@ breadcrumb: "Deletion is irreversible — move or archive. Protect critical file
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.0.0
-tier: core
+tier: official
 scope: hub
 tags: [quality, safety, git, workflow]
 created: 2026-03-10

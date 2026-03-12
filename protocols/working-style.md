@@ -8,7 +8,7 @@ breadcrumb: "Be direct — no ceremony. Lead with action. Understand before you 
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.0.0
-tier: core
+tier: official
 scope: hub
 tags: [workflow, style, communication]
 created: 2026-03-10

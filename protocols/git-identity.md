@@ -8,7 +8,7 @@ breadcrumb: "Commits must be attributed correctly. Check git config user.email b
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.1.0
-tier: core
+tier: official
 scope: hub
 tags: [git, attribution, identity]
 spec-ref: curtismercier/protocols/git-identity (v0.2)

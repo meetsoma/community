@@ -9,7 +9,7 @@ breadcrumb: "Validate tests aren't stale after any code removal, rename, or rest
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.0.0
-tier: core
+tier: official
 scope: hub
 topic: [testing, ci, code-quality, maintenance]
 keywords: [test, stale, dead-code, cleanup, validation, ci, suite, coverage, hygiene]

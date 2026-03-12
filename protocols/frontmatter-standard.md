@@ -8,7 +8,7 @@ breadcrumb: "All .md files get YAML frontmatter: type, status, created, updated.
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.1.0
-tier: core
+tier: official
 scope: hub
 tags: [structure, metadata, organization]
 spec-ref: curtismercier/protocols/atlas (v0.1)

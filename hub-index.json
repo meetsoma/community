@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-12T01:20:11.968Z",
+  "generated": "2026-03-12T01:38:07.078Z",
   "count": 18,
   "items": [
     {
@@ -37,7 +37,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "safety",
         "privacy",
@@ -59,7 +59,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "content",
         "distribution",
@@ -81,7 +81,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "structure",
         "metadata",
@@ -103,7 +103,7 @@
       "appliesTo": [
         "git"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "git",
         "attribution",
@@ -169,7 +169,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "quality",
         "safety",
@@ -215,7 +215,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "tools",
         "workflow",
@@ -237,7 +237,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "core",
+      "tier": "official",
       "tags": [
         "workflow",
         "style",
@@ -256,7 +256,7 @@
       "version": "1.0.0",
       "breadcrumb": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
       "heatDefault": "warm",
-      "tier": "core",
+      "tier": "official",
       "topic": [
         "design",
         "icons",
@@ -285,7 +285,7 @@
       "version": "1.0.0",
       "breadcrumb": "Write workflow summaries to daily log after major completions — one file per day, always append.",
       "heatDefault": "hot",
-      "tier": "core",
+      "tier": "official",
       "topic": [
         "memory",
         "workflow",
@@ -311,7 +311,7 @@
       "version": "1.0.0",
       "breadcrumb": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
       "heatDefault": "warm",
-      "tier": "core",
+      "tier": "official",
       "topic": [
         "testing",
         "ci",

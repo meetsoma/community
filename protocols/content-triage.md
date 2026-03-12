@@ -8,7 +8,7 @@ breadcrumb: "New AMPS content gets classified: bundled (ships with Soma), hub (o
 author: Curtis Mercier
 license: CC BY 4.0
 version: 1.0.0
-tier: core
+tier: official
 scope: hub
 tags: [content, distribution, amps]
 created: 2026-03-12
