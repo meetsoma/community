@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-12T13:35:31.181Z",
-  "count": 18,
+  "generated": "2026-03-12T14:05:26.283Z",
+  "count": 19,
   "items": [
     {
       "slug": "breath-cycle",
@@ -224,6 +224,29 @@
       "status": "active",
       "created": "2026-03-10",
       "updated": "2026-03-10"
+    },
+    {
+      "slug": "workflow",
+      "name": "workflow",
+      "type": "protocol",
+      "description": "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "git"
+      ],
+      "tier": "community",
+      "tags": [
+        "workflow",
+        "git",
+        "testing",
+        "deployment"
+      ],
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-12"
     },
     {
       "slug": "working-style",
