@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-12T15:20:00.389Z",
+  "generated": "2026-03-12T17:14:26.269Z",
   "count": 22,
   "items": [
     {
@@ -73,9 +73,10 @@
       "slug": "correction-capture",
       "name": "correction-capture",
       "type": "protocol",
-      "description": "When the user corrects you, capture the learning immediately. Don't let it evaporate into conversation.",
-      "author": "Unknown",
+      "description": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity.",
+      "author": "Curtis Mercier",
       "version": "1.0.0",
+      "breadcrumb": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity.",
       "heatDefault": "warm",
       "tier": "core",
       "tags": [
@@ -92,9 +93,10 @@
       "slug": "detection-triggers",
       "name": "detection-triggers",
       "type": "protocol",
-      "description": "Know when to capture a learning. Don't rely on discipline alone — recognize the moments.",
-      "author": "Unknown",
+      "description": "Recognize capture moments: corrections/preferences/repeated patterns → muscle. Knowledge gaps/errors → session log. One-time instructions and transient state are NOT worth capturing. Bubble-up: log → muscle → protocol → core.",
+      "author": "Curtis Mercier",
       "version": "1.0.0",
+      "breadcrumb": "Recognize capture moments: corrections/preferences/repeated patterns → muscle. Knowledge gaps/errors → session log. One-time instructions and transient state are NOT worth capturing. Bubble-up: log → muscle → protocol → core.",
       "heatDefault": "warm",
       "tier": "core",
       "tags": [
