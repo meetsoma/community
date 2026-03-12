@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-12T01:40:11.906Z",
+  "generated": "2026-03-12T13:35:31.181Z",
   "count": 18,
   "items": [
     {
@@ -23,7 +23,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-10"
+      "updated": "2026-03-12"
     },
     {
       "slug": "community-safe",
