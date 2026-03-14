@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-14T07:35:35.193Z",
-  "count": 22,
+  "generated": "2026-03-14T07:45:04.182Z",
+  "count": 21,
   "items": [
     {
       "slug": "breath-cycle",
@@ -46,28 +46,6 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-14"
-    },
-    {
-      "slug": "content-triage",
-      "name": "content-triage",
-      "type": "protocol",
-      "description": "New AMPS content gets classified: bundled (ships with Soma), hub (on SomaHub), workspace (project-local), or internal (dev tooling). Scope determines distribution. Tier determines trust.",
-      "author": "Curtis Mercier",
-      "version": "1.0.0",
-      "breadcrumb": "New AMPS content gets classified: bundled (ships with Soma), hub (on SomaHub), workspace (project-local), or internal (dev tooling). Scope determines distribution. Tier determines trust.",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
-      "tier": "official",
-      "tags": [
-        "content",
-        "distribution",
-        "amps"
-      ],
-      "status": "active",
-      "created": "2026-03-12",
       "updated": "2026-03-14"
     },
     {
