@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-14T20:28:06.834Z",
-  "count": 29,
+  "generated": "2026-03-14T20:30:32.927Z",
+  "count": 30,
   "items": [
     {
       "slug": "breath-cycle",
@@ -182,6 +182,19 @@
       "status": "active",
       "created": "2026-03-09",
       "updated": "2026-03-14"
+    },
+    {
+      "slug": "pre-flight",
+      "name": "pre-flight",
+      "type": "protocol",
+      "description": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
+      "heatDefault": "8",
+      "tier": "core",
+      "status": "active",
+      "updated": "2026-03-13"
     },
     {
       "slug": "quality-standards",
