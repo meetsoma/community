@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-14T05:04:12.829Z",
+  "generated": "2026-03-14T05:18:35.532Z",
   "count": 22,
   "items": [
     {
@@ -187,10 +187,10 @@
       "slug": "pattern-evolution",
       "name": "pattern-evolution",
       "type": "protocol",
-      "description": "Patterns mature through AMPS layers: Skills → Muscles → Protocols → Automations. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
+      "description": "Patterns mature through layers: Skills (knowledge) → Muscles (learned) → Protocols (rules) → Automations (executable). Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
       "author": "Curtis Mercier",
-      "version": "1.2.0",
-      "breadcrumb": "Patterns mature through AMPS layers: Skills → Muscles → Protocols → Automations. Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
+      "version": "1.3.0",
+      "breadcrumb": "Patterns mature through layers: Skills (knowledge) → Muscles (learned) → Protocols (rules) → Automations (executable). Muscles grow from gaps noticed during work. Repetition builds heat fast. Mature patterns crystallize into the system.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -448,7 +448,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     },
     {
       "slug": "core",
@@ -465,7 +465,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     },
     {
       "slug": "devops",
@@ -486,7 +486,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     },
     {
       "slug": "writer",
@@ -506,7 +506,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     }
   ]
 }
