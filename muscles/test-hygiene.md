@@ -7,7 +7,7 @@ heat: 0
 loads: 0
 breadcrumb: "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests."
 author: meetsoma
-license: CC BY 4.0
+license: MIT
 version: 1.0.0
 tier: official
 scope: hub

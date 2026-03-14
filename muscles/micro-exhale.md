@@ -21,7 +21,7 @@ updated: 2026-03-14
 
 <!-- digest:start -->
 > **Micro-Exhale** — write workflow summaries to daily log after major completions.
-> - After completing a significant workflow, append a structured summary to `.soma/memory/logs/YYYY-MM-DD.md`.
+> - After completing a significant workflow, append a structured summary to `.soma/memory/sessions/YYYY-MM-DD.md`.
 > - One file per day. Always read first, then append a `## HH:MM` section. Never overwrite.
 > - Summaries include: what changed, which files, key decisions, commits.
 > - Banks persistent memory — feeds changelogs, preloads, roadmap updates, historical queries.
@@ -61,7 +61,7 @@ updated: 2026-03-14
    created: YYYY-MM-DD
    ---
    ```
-2. **One file per day** — `YYYY-MM-DD.md` in `.soma/memory/logs/`
+2. **One file per day** — `YYYY-MM-DD.md` in `.soma/memory/sessions/`
 3. **Never overwrite** — always append new `## HH:MM` sections
 4. **Be concrete** — file paths, commit hashes, exact decisions. No prose summaries.
 5. **Keep it fast** — 2-5 minutes max. If it takes longer, you're writing a preload, not a micro-exhale.
