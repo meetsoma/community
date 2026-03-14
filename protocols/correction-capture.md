@@ -3,12 +3,13 @@ type: protocol
 name: correction-capture
 status: active
 heat-default: warm
+applies-to: [always]
 version: 1.0.0
 created: 2026-03-12
-updated: 2026-03-12
+updated: 2026-03-14
 tags: [learning, self-improvement, memory, corrections]
 tier: core
-scope: bundled
+version: 1.0.0scope: bundled
 appliesTo: [always]
 breadcrumb: "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity."
 author: Curtis Mercier
@@ -61,3 +62,10 @@ When triggered:
 - ❌ Logging the correction but not changing behavior
 - ❌ Over-apologizing instead of just fixing it
 - ❌ Forgetting by next session — that's what muscles are for
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Author: Curtis Mercier
+-->

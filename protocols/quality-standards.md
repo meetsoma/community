@@ -12,7 +12,7 @@ tier: official
 scope: hub
 tags: [quality, safety, git, workflow]
 created: 2026-03-10
-updated: 2026-03-10
+updated: 2026-03-14
 ---
 
 # Quality Standards
@@ -41,3 +41,10 @@ Every session, every commit. These are baseline guardrails — not optional refi
 - **Atomic commits.** One concern per commit. Don't bundle unrelated changes.
 
 
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Author: Curtis Mercier
+-->

@@ -12,7 +12,7 @@ tier: official
 scope: hub
 tags: [content, distribution, amps]
 created: 2026-03-12
-updated: 2026-03-12
+updated: 2026-03-14
 ---
 
 # Content Triage Protocol
@@ -91,3 +91,10 @@ Currently bundled: breath-cycle, heat-tracking, session-checkpoints, pattern-evo
 - Changing bundled content = version bump required (affects every install)
 - Changing hub content = no version bump (users pull on `/install`)
 - Scope changes (hub→bundled or bundled→hub) = minor version bump
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Author: Curtis Mercier
+-->

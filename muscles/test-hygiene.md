@@ -6,7 +6,7 @@ heat-default: warm
 heat: 0
 loads: 0
 breadcrumb: "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests."
-author: Curtis Mercier
+author: meetsoma
 license: CC BY 4.0
 version: 1.0.0
 tier: official
@@ -14,7 +14,7 @@ scope: hub
 topic: [testing, ci, code-quality, maintenance]
 keywords: [test, stale, dead-code, cleanup, validation, ci, suite, coverage, hygiene]
 created: 2026-03-09
-updated: 2026-03-11
+updated: 2026-03-14
 ---
 
 # Test Hygiene

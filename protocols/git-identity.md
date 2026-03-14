@@ -13,7 +13,7 @@ scope: hub
 tags: [git, attribution, identity]
 spec-ref: curtismercier/protocols/git-identity (v0.2)
 created: 2026-03-09
-updated: 2026-03-10
+updated: 2026-03-14
 ---
 
 # Git Identity Protocol
@@ -65,3 +65,11 @@ After push: `git filter-branch` + force-push (solo repos only — never on share
 
 - Third-party repos where you're using their contribution identity
 - Forks where upstream expects a specific email
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Original: https://github.com/curtismercier/protocols/tree/main/git-identity
+Author: Curtis Mercier
+-->

@@ -10,11 +10,11 @@ status: active
 heat: 0
 heat-default: warm
 loads: 0
-author: Curtis Mercier
+author: meetsoma
 license: MIT
 version: 1.0.0
 created: 2026-03-11
-updated: 2026-03-11
+updated: 2026-03-14
 ---
 
 # Icon Audit — Muscle

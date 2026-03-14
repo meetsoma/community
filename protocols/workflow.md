@@ -12,7 +12,7 @@ tier: community
 scope: hub
 tags: [workflow, git, testing, deployment]
 created: 2026-03-12
-updated: 2026-03-12
+updated: 2026-03-14
 ---
 
 # Workflow Protocol
@@ -87,3 +87,10 @@ Small iterations. Each commit should be a coherent, tested unit. If you can't de
 - **"I'll push at the end of the day"** — and then you forget, and tomorrow starts with a stale remote.
 - **"It works on my machine"** — push it, let CI confirm. Local-only verification is half the story.
 - **Committing directly to the deploy branch** — use feature branches. The deploy branch is for reviewed, tested code.
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Author: Curtis Mercier
+-->

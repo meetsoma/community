@@ -13,7 +13,7 @@ scope: hub
 tags: [structure, metadata, organization]
 spec-ref: curtismercier/protocols/atlas (v0.1)
 created: 2026-03-09
-updated: 2026-03-10
+updated: 2026-03-14
 ---
 
 # Frontmatter Standard Protocol
@@ -67,3 +67,10 @@ Every Markdown document in an agent-managed workspace MUST have YAML frontmatter
 - README.md in public repos (conventional format, no frontmatter expected)
 - Third-party docs or generated files
 - Files explicitly marked as frontmatter-exempt
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Author: Curtis Mercier
+-->

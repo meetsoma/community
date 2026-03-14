@@ -12,7 +12,7 @@ tier: official
 scope: hub
 tags: [workflow, style, communication]
 created: 2026-03-10
-updated: 2026-03-10
+updated: 2026-03-14
 ---
 
 # Working Style
@@ -50,3 +50,10 @@ Every session. These are communication and workflow defaults that cool if the us
 - **Large tasks need multiple turns.** Don't try to do everything in one response.
 - **Finish what you start.** Don't leave half-done work without documenting where you stopped.
 - **One concern at a time.** When multiple things need fixing, address them sequentially with clear commits, not one giant change.
+
+---
+
+<!--
+Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Author: Curtis Mercier
+-->

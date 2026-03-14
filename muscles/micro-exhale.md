@@ -10,11 +10,11 @@ status: active
 heat: 0
 heat-default: hot
 loads: 0
-author: Curtis Mercier
+author: meetsoma
 license: MIT
 version: 1.0.0
 created: 2026-03-10
-updated: 2026-03-10
+updated: 2026-03-14
 ---
 
 # Micro-Exhale — Muscle

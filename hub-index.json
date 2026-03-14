@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-14T04:30:28.741Z",
+  "generated": "2026-03-14T05:04:00.440Z",
   "count": 22,
   "items": [
     {
@@ -8,7 +8,7 @@
       "name": "breath-cycle",
       "type": "protocol",
       "description": "Soma manages sessions in three phases: inhale (boot — automatic), hold (work — context monitored), exhale (save state — agent-driven). Context thresholds, rotation, and preload injection are all configurable.",
-      "author": "Unknown",
+      "author": "Curtis Mercier",
       "version": "2.0.0",
       "breadcrumb": "Soma manages sessions in three phases: inhale (boot — automatic), hold (work — context monitored), exhale (save state — agent-driven). Context thresholds, rotation, and preload injection are all configurable.",
       "heatDefault": "warm",
@@ -31,7 +31,7 @@
       "name": "community-safe",
       "type": "protocol",
       "description": "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol covers the judgment — what to keep private, where it belongs.",
-      "author": "Unknown",
+      "author": "Curtis Mercier",
       "version": "2.0.0",
       "breadcrumb": "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol covers the judgment — what to keep private, where it belongs.",
       "heatDefault": "warm",
@@ -68,7 +68,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "correction-capture",
@@ -76,9 +76,12 @@
       "type": "protocol",
       "description": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity.",
       "author": "Curtis Mercier",
-      "version": "1.0.0",
+      "version": "1.0.0scope: bundled",
       "breadcrumb": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity.",
       "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
       "tier": "core",
       "tags": [
         "learning",
@@ -88,7 +91,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "detection-triggers",
@@ -96,9 +99,12 @@
       "type": "protocol",
       "description": "Recognize capture moments: corrections/preferences/repeated patterns → muscle. Knowledge gaps/errors → session log. One-time instructions and transient state are NOT worth capturing. Bubble-up: log → muscle → protocol → core.",
       "author": "Curtis Mercier",
-      "version": "1.0.0",
+      "version": "1.0.0scope: bundled",
       "breadcrumb": "Recognize capture moments: corrections/preferences/repeated patterns → muscle. Knowledge gaps/errors → session log. One-time instructions and transient state are NOT worth capturing. Bubble-up: log → muscle → protocol → core.",
       "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
       "tier": "core",
       "tags": [
         "learning",
@@ -108,7 +114,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "frontmatter-standard",
@@ -130,7 +136,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-10"
+      "updated": "2026-03-14"
     },
     {
       "slug": "git-identity",
@@ -152,14 +158,14 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-10"
+      "updated": "2026-03-14"
     },
     {
       "slug": "heat-tracking",
       "name": "heat-tracking",
       "type": "protocol",
       "description": "Soma loads protocols and muscles by temperature: cold (skip), warm (breadcrumb), hot (full). Heat auto-adjusts from usage patterns and decays when idle. /pin and /kill for manual control.",
-      "author": "Unknown",
+      "author": "Curtis Mercier",
       "version": "2.0.0",
       "breadcrumb": "Soma loads protocols and muscles by temperature: cold (skip), warm (breadcrumb), hot (full). Heat auto-adjusts from usage patterns and decays when idle. /pin and /kill for manual control.",
       "heatDefault": "warm",
@@ -197,7 +203,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "quality-standards",
@@ -220,14 +226,14 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-10"
+      "updated": "2026-03-14"
     },
     {
       "slug": "session-checkpoints",
       "name": "session-checkpoints",
       "type": "protocol",
       "description": "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never pushed) and project code (squash before push).",
-      "author": "Unknown",
+      "author": "Curtis Mercier",
       "version": "2.0.0",
       "breadcrumb": "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never pushed) and project code (squash before push).",
       "heatDefault": "warm",
@@ -266,14 +272,14 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "tool-discipline",
       "name": "tool-discipline",
       "type": "protocol",
       "description": "Read before edit. grep/find for exploration. Edit for surgical changes. The guard extension blocks dangerous bash commands based on your guard settings.",
-      "author": "Unknown",
+      "author": "Curtis Mercier",
       "version": "2.0.0",
       "breadcrumb": "Read before edit. grep/find for exploration. Edit for surgical changes. The guard extension blocks dangerous bash commands based on your guard settings.",
       "heatDefault": "warm",
@@ -311,7 +317,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "working-style",
@@ -333,14 +339,14 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-10"
+      "updated": "2026-03-14"
     },
     {
       "slug": "icon-audit",
       "name": "icon-audit",
       "type": "muscle",
       "description": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
-      "author": "Curtis Mercier",
+      "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
       "heatDefault": "warm",
@@ -362,14 +368,14 @@
       ],
       "status": "active",
       "created": "2026-03-11",
-      "updated": "2026-03-11"
+      "updated": "2026-03-14"
     },
     {
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
       "description": "Write workflow summaries to daily log after major completions — one file per day, always append.",
-      "author": "Curtis Mercier",
+      "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Write workflow summaries to daily log after major completions — one file per day, always append.",
       "heatDefault": "hot",
@@ -388,14 +394,14 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-10"
+      "updated": "2026-03-14"
     },
     {
       "slug": "test-hygiene",
       "name": "test-hygiene",
       "type": "muscle",
       "description": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
-      "author": "Curtis Mercier",
+      "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
       "heatDefault": "warm",
@@ -419,7 +425,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-11"
+      "updated": "2026-03-14"
     },
     {
       "slug": "architect",
@@ -442,7 +448,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     },
     {
       "slug": "core",
@@ -459,7 +465,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     },
     {
       "slug": "devops",
@@ -480,7 +486,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     },
     {
       "slug": "writer",
@@ -500,7 +506,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-12"
     }
   ]
 }
