@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-14T07:28:34.869Z",
+  "generated": "2026-03-14T07:32:02.520Z",
   "count": 22,
   "items": [
     {
@@ -431,9 +431,9 @@
       "slug": "architect",
       "name": "architect",
       "type": "template",
-      "description": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
+      "description": "Structure-focused agent for engineering teams — code review, standards enforcement, verification-first workflow",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "2.0.0",
       "tier": "official",
       "tags": [],
       "requires": {
@@ -442,7 +442,10 @@
           "working-style",
           "quality-standards",
           "git-identity",
-          "frontmatter-standard"
+          "frontmatter-standard",
+          "pre-flight",
+          "pattern-evolution",
+          "correction-capture"
         ],
         "muscles": [],
         "skills": [],
@@ -454,9 +457,9 @@
       "slug": "core",
       "name": "core",
       "type": "template",
-      "description": "Default Soma setup — breath cycle, heat tracking, and clean memory structure. What every agent starts with.",
+      "description": "Default Soma setup — breath cycle, heat tracking, learning protocols, and clean memory structure. What every agent starts with.",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "2.0.0",
       "tier": "core",
       "tags": [],
       "requires": {
@@ -471,16 +474,18 @@
       "slug": "devops",
       "name": "devops",
       "type": "template",
-      "description": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
+      "description": "Ops-focused agent for deployment, CI/CD, and infrastructure — verify before deploy, maintain tooling, automate everything",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "2.0.0",
       "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
           "git-identity",
           "tool-discipline",
-          "quality-standards"
+          "quality-standards",
+          "working-style",
+          "pre-flight"
         ],
         "muscles": [],
         "skills": [],
@@ -492,15 +497,17 @@
       "slug": "writer",
       "name": "writer",
       "type": "template",
-      "description": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice",
+      "description": "Writing-focused agent for technical content, blogging, and documentation — accuracy first, honest voice, learns your style",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "2.0.0",
       "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
           "working-style",
-          "frontmatter-standard"
+          "frontmatter-standard",
+          "correction-capture",
+          "detection-triggers"
         ],
         "muscles": [],
         "skills": [],

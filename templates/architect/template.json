@@ -1,11 +1,11 @@
 {
   "name": "architect",
-  "description": "Structure-focused agent for engineering teams — code review, standards enforcement, documentation-first",
+  "description": "Structure-focused agent for engineering teams — code review, standards enforcement, verification-first workflow",
   "author": "meetsoma",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "tier": "official",
   "requires": {
-    "protocols": ["tool-discipline", "working-style", "quality-standards", "git-identity", "frontmatter-standard"],
+    "protocols": ["tool-discipline", "working-style", "quality-standards", "git-identity", "frontmatter-standard", "pre-flight", "pattern-evolution", "correction-capture"],
     "muscles": [],
     "skills": [],
     "automations": []
@@ -31,5 +31,6 @@
       "autoDetectBump": 1,
       "pinBump": 5
     }
-  }
+  },
+  "notes": "Heavier protocol load for architecture work — lower warm threshold (2) means protocols activate faster. pre-flight prevents duplicate work. pattern-evolution helps the agent grow project-specific knowledge. correction-capture learns team standards."
 }

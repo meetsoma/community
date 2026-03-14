@@ -1,11 +1,11 @@
 {
   "name": "devops",
-  "description": "Ops-focused agent for deployment, CI/CD, and infrastructure work — verify before deploy, automate everything",
+  "description": "Ops-focused agent for deployment, CI/CD, and infrastructure — verify before deploy, maintain tooling, automate everything",
   "author": "meetsoma",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "tier": "official",
   "requires": {
-    "protocols": ["git-identity", "tool-discipline", "quality-standards"],
+    "protocols": ["git-identity", "tool-discipline", "quality-standards", "working-style", "pre-flight"],
     "muscles": [],
     "skills": [],
     "automations": []
@@ -31,5 +31,6 @@
       "autoDetectBump": 2,
       "pinBump": 5
     }
-  }
+  },
+  "notes": "working-style v1.1.0 includes 'verify after ship' and 'maintain the tools' — critical for ops. pre-flight catches before you deploy something that already exists. Higher auto-detect bump (2) because ops patterns are high-signal."
 }
