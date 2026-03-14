@@ -6,7 +6,7 @@
   "tier": "official",
   "requires": {
     "protocols": ["git-identity", "tool-discipline", "quality-standards", "working-style", "pre-flight"],
-    "muscles": [],
+    "muscles": ["safe-file-ops", "task-tooling", "test-hygiene"],
     "skills": [],
     "automations": []
   },
@@ -32,5 +32,10 @@
       "pinBump": 5
     }
   },
-  "notes": "working-style v1.1.0 includes 'verify after ship' and 'maintain the tools' — critical for ops. pre-flight catches before you deploy something that already exists. Higher auto-detect bump (2) because ops patterns are high-signal."
+  "heatPresets": {
+    "safe-file-ops": 8,
+    "task-tooling": 5,
+    "test-hygiene": 5
+  },
+  "notes": "working-style v1.1.0 includes 'verify after ship' and 'maintain the tools' — critical for ops. pre-flight catches before you deploy something that already exists. Higher auto-detect bump (2) because ops patterns are high-signal. safe-file-ops starts hot — ops can't afford accidental deletes or overwrites."
 }

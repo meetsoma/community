@@ -6,7 +6,7 @@
   "tier": "official",
   "requires": {
     "protocols": ["tool-discipline", "working-style", "quality-standards", "git-identity", "frontmatter-standard", "pre-flight", "pattern-evolution", "correction-capture"],
-    "muscles": [],
+    "muscles": ["precision-edit", "task-tooling", "incremental-refactor", "doc-hygiene"],
     "skills": [],
     "automations": []
   },
@@ -32,5 +32,11 @@
       "pinBump": 5
     }
   },
-  "notes": "Heavier protocol load for architecture work — lower warm threshold (2) means protocols activate faster. pre-flight prevents duplicate work. pattern-evolution helps the agent grow project-specific knowledge. correction-capture learns team standards."
+  "heatPresets": {
+    "precision-edit": 8,
+    "task-tooling": 5,
+    "incremental-refactor": 5,
+    "doc-hygiene": 3
+  },
+  "notes": "Heavier protocol load for architecture work — lower warm threshold (2) means protocols activate faster. pre-flight prevents duplicate work. pattern-evolution helps the agent grow project-specific knowledge. correction-capture learns team standards. Now includes muscles: precision-edit (hot), task-tooling, incremental-refactor, doc-hygiene."
 }

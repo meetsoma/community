@@ -6,7 +6,7 @@
   "tier": "official",
   "requires": {
     "protocols": ["working-style", "frontmatter-standard", "correction-capture", "detection-triggers"],
-    "muscles": [],
+    "muscles": ["precision-edit", "doc-hygiene", "micro-exhale"],
     "skills": [],
     "automations": []
   },
@@ -32,5 +32,10 @@
       "pinBump": 5
     }
   },
-  "notes": "correction-capture and detection-triggers help the agent learn your writing preferences over time. Higher muscle budget (4000 tokens) because writers benefit from loaded context."
+  "heatPresets": {
+    "precision-edit": 8,
+    "doc-hygiene": 5,
+    "micro-exhale": 5
+  },
+  "notes": "correction-capture and detection-triggers help the agent learn your writing preferences over time. Higher muscle budget (4000 tokens) because writers benefit from loaded context. precision-edit starts hot — writers need exact control over text changes. doc-hygiene keeps drafts and plans from rotting."
 }
