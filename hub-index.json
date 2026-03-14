@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-14T20:19:42.827Z",
-  "count": 25,
+  "generated": "2026-03-14T20:20:54.985Z",
+  "count": 26,
   "items": [
     {
       "slug": "breath-cycle",
@@ -317,6 +317,35 @@
       ],
       "status": "active",
       "created": "2026-03-10",
+      "updated": "2026-03-14"
+    },
+    {
+      "slug": "doc-hygiene",
+      "name": "doc-hygiene",
+      "type": "muscle",
+      "description": "Plans rot — update remaining on every touch. Stale docs poison future sessions. After shipping, scan for overlapping/outdated docs and archive or update.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Plans rot — update remaining on every touch. Stale docs poison future sessions. After shipping, scan for overlapping/outdated docs and archive or update.",
+      "heatDefault": "warm",
+      "tier": "official",
+      "topic": [
+        "documentation",
+        "maintenance",
+        "plans",
+        "staleness"
+      ],
+      "keywords": [
+        "doc-hygiene",
+        "plans-rot",
+        "stale-docs",
+        "context-hygiene",
+        "plan-lifecycle",
+        "archive",
+        "remaining"
+      ],
+      "status": "active",
+      "created": "2026-03-14",
       "updated": "2026-03-14"
     },
     {
