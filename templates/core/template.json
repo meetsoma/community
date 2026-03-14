@@ -10,5 +10,5 @@
     "skills": [],
     "automations": []
   },
-  "notes": "15 bundled protocols ship with meetsoma — no install needed. Includes: breath-cycle, heat-tracking, session-checkpoints, pattern-evolution, working-style, quality-standards, tool-discipline, correction-capture, detection-triggers, pre-flight, frontmatter-standard, git-identity, content-triage, community-safe, task-tracking. Hub protocols (e.g. workflow) can be added via `soma install protocol <name>`."
+  "notes": "13 bundled protocols ship with meetsoma — no install needed. Includes: breath-cycle, heat-tracking, session-checkpoints, pattern-evolution, working-style, quality-standards, tool-discipline, correction-capture, detection-triggers, pre-flight, frontmatter-standard, git-identity, task-tracking. Hub protocols (e.g. workflow, community-safe) can be added via `soma install protocol <name>`."
 }
