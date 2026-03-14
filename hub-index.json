@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-14T20:03:04.297Z",
-  "count": 21,
+  "generated": "2026-03-14T20:17:59.425Z",
+  "count": 25,
   "items": [
     {
       "slug": "breath-cycle",
@@ -349,6 +349,34 @@
       "updated": "2026-03-14"
     },
     {
+      "slug": "incremental-refactor",
+      "name": "incremental-refactor",
+      "type": "muscle",
+      "description": "Never refactor blind. Scan deps first, plan changes, execute one file at a time, keep old paths working during transition, verify after each step.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Never refactor blind. Scan deps first, plan changes, execute one file at a time, keep old paths working during transition, verify after each step.",
+      "heatDefault": "warm",
+      "tier": "official",
+      "topic": [
+        "refactoring",
+        "safety",
+        "workflow",
+        "code-quality"
+      ],
+      "keywords": [
+        "refactor",
+        "incremental",
+        "dependencies",
+        "backward-compatible",
+        "scan",
+        "migration"
+      ],
+      "status": "active",
+      "created": "2026-03-14",
+      "updated": "2026-03-14"
+    },
+    {
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
@@ -372,6 +400,90 @@
       ],
       "status": "active",
       "created": "2026-03-10",
+      "updated": "2026-03-14"
+    },
+    {
+      "slug": "precision-edit",
+      "name": "precision-edit",
+      "type": "muscle",
+      "description": "Before editing: grep -n to locate, read --offset to see exact whitespace, plan edits as a checklist, then execute. Never edit blind.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Before editing: grep -n to locate, read --offset to see exact whitespace, plan edits as a checklist, then execute. Never edit blind.",
+      "heatDefault": "warm",
+      "tier": "official",
+      "topic": [
+        "editing",
+        "tools",
+        "reliability",
+        "workflow"
+      ],
+      "keywords": [
+        "edit",
+        "precision",
+        "whitespace",
+        "grep",
+        "line-numbers",
+        "read-before-write"
+      ],
+      "status": "active",
+      "created": "2026-03-14",
+      "updated": "2026-03-14"
+    },
+    {
+      "slug": "safe-file-ops",
+      "name": "safe-file-ops",
+      "type": "muscle",
+      "description": "Check before write, never delete without backup, scope your searches, check for existing content before creating.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Check before write, never delete without backup, scope your searches, check for existing content before creating.",
+      "heatDefault": "warm",
+      "tier": "official",
+      "topic": [
+        "safety",
+        "files",
+        "tools",
+        "workflow"
+      ],
+      "keywords": [
+        "safe-file-ops",
+        "write",
+        "delete",
+        "find",
+        "duplicate",
+        "overwrite"
+      ],
+      "status": "active",
+      "created": "2026-03-14",
+      "updated": "2026-03-14"
+    },
+    {
+      "slug": "task-tooling",
+      "name": "task-tooling",
+      "type": "muscle",
+      "description": "Before starting any task, map which scripts, muscles, and tools apply. Name the tool for each phase. When a gap exists, say so explicitly.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Before starting any task, map which scripts, muscles, and tools apply. Name the tool for each phase. When a gap exists, say so explicitly.",
+      "heatDefault": "warm",
+      "tier": "official",
+      "topic": [
+        "workflow",
+        "awareness",
+        "planning",
+        "tools"
+      ],
+      "keywords": [
+        "task-tooling",
+        "map-tools",
+        "situational-awareness",
+        "scripts",
+        "muscles",
+        "gaps"
+      ],
+      "status": "active",
+      "created": "2026-03-14",
       "updated": "2026-03-14"
     },
     {
