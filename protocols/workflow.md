@@ -5,8 +5,8 @@ status: active
 heat-default: warm
 applies-to: [git]
 breadcrumb: "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished."
-author: Curtis Mercier
-license: CC BY 4.0
+author: meetsoma
+license: MIT
 version: 1.0.0
 tier: community
 scope: hub
@@ -89,8 +89,3 @@ Small iterations. Each commit should be a coherent, tested unit. If you can't de
 - **Committing directly to the deploy branch** — use feature branches. The deploy branch is for reviewed, tested code.
 
 ---
-
-<!--
-Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Author: Curtis Mercier
--->

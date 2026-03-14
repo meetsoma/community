@@ -11,8 +11,8 @@ scope: bundled
 tags: [privacy, safety, self-awareness]
 created: 2026-03-10
 updated: 2026-03-14
-author: Curtis Mercier
-license: CC BY 4.0
+author: meetsoma
+license: MIT
 ---
 # Community Safe
 
@@ -55,8 +55,3 @@ The script catches obvious leaks. These need your awareness:
 - PII audit: `scripts/soma-audit.sh` → PII check
 
 ---
-
-<!--
-Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Author: Curtis Mercier
--->
