@@ -7,7 +7,7 @@ applies-to: [always]
 breadcrumb: "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol covers the judgment — what to keep private, where it belongs."
 version: 2.0.0
 tier: core
-scope: bundled
+scope: hub
 tags: [privacy, safety, self-awareness]
 created: 2026-03-10
 updated: 2026-03-14
