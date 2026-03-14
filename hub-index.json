@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-14T04:26:41.651Z",
+  "generated": "2026-03-14T04:30:28.741Z",
   "count": 22,
   "items": [
     {
@@ -442,7 +442,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "core",
@@ -459,7 +459,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "devops",
@@ -480,7 +480,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "writer",
@@ -500,7 +500,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-12"
+      "updated": "2026-03-14"
     }
   ]
 }
