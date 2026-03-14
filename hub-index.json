@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-14T19:58:45.179Z",
+  "generated": "2026-03-14T20:03:04.297Z",
   "count": 21,
   "items": [
     {
@@ -54,7 +54,7 @@
       "type": "protocol",
       "description": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity.",
       "author": "meetsoma",
-      "version": "1.0.0scope: bundled",
+      "version": "1.0.0",
       "breadcrumb": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on same thing → escalate to protocol or identity.",
       "heatDefault": "warm",
       "appliesTo": [
