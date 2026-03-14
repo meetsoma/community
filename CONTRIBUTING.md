@@ -141,6 +141,28 @@ templates/your-template/
 └── README.md         # hub display page
 ```
 
+## Forking Existing Content
+
+Want to create your own version of an existing protocol or muscle? Fork it:
+
+1. Copy the original to a **new filename** (e.g., `breath-cycle-minimal.md`)
+2. Add a `forked-from` field to your frontmatter:
+   ```yaml
+   forked-from:
+     slug: breath-cycle
+     type: protocol
+     author: Curtis Mercier
+     version: 2.0.0
+   ```
+3. Change `author` to your name, set your own `version: 1.0.0`
+4. Submit as a normal PR
+
+**Rules:**
+- Your fork is yours — full creative control, no obligation to track upstream
+- `forked-from` is permanent — CI rejects PRs that remove it
+- The hub shows lineage: your page links to the original, the original lists known forks
+- Slugs must be unique (you can't overwrite someone else's content)
+
 ## Naming
 
 - **kebab-case only**: `code-review`, not `codeReview` or `Code Review`

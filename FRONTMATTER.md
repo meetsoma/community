@@ -157,6 +157,8 @@ Extensions are TypeScript hooks into the agent lifecycle. They are framework-spe
 | `applies-to` | protocols | Array of signals | `always`, `git`, `typescript`, etc. |
 | `scope` | optional | `bundled`, `hub` | Distribution scope (default: `hub`) |
 | `depends-on` | optional | Object | Cross-type dependencies (see below) |
+| `forked-from` | optional | Object | Lineage tracking for forks (see below) |
+| `contributors` | optional | Array | Attribution for accepted contributions (see below) |
 
 ## Validation
 
@@ -201,6 +203,41 @@ depends-on:
 - Only list the types you depend on (empty arrays can be omitted)
 - `install` resolves dependencies automatically; missing deps trigger a warning
 - Circular dependencies are rejected
+
+## Forks (`forked-from`)
+
+When you create a variant of existing hub content, declare the lineage:
+
+```yaml
+forked-from:
+  slug: breath-cycle
+  type: protocol
+  author: Curtis Mercier
+  version: 2.0.0
+```
+
+- **Your fork is yours.** You own the version, the content, the direction. No obligation to merge upstream changes.
+- **Lineage is permanent.** CI rejects PRs that remove an existing `forked-from` field. Git history is the backstop, but the frontmatter makes it visible on the hub.
+- **Slugs must be unique.** If you fork `breath-cycle`, your version needs a different slug (e.g., `breath-cycle-minimal`, `breath-cycle-strict`).
+- **The hub shows the family tree.** The original item's page lists known forks. Fork pages link back to the original with the version they branched from.
+
+## Contributors (`contributors`)
+
+When a PR to core/official content is accepted, the contributor is credited:
+
+```yaml
+contributors:
+  - name: janedoe
+    version: 2.1.0
+    contribution: "Added Python signal matching examples"
+  - name: another-user
+    version: 2.2.0
+    contribution: "Fixed settings reference for session.rotation"
+```
+
+- The `author` field stays the same (the original creator).
+- Contributors appear on the hub page in the version history section.
+- Each entry records the version where the contribution landed and a brief description.
 
 ## Key Design Decisions
 

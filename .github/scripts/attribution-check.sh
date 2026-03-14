@@ -102,10 +102,36 @@ done
 echo ""
 echo "Checked $CHECKED files ($WARN warnings)"
 
+# ---------------------------------------------------------------------------
+# Fork lineage protection — forked-from cannot be removed once set
+# ---------------------------------------------------------------------------
+if [ -n "${GITHUB_BASE_REF:-}" ]; then
+  FORK_FAIL=0
+  for file in $CHANGED; do
+    [ -f "$file" ] || continue
+    case "$file" in *.md) ;; *) continue ;; esac
+
+    # Check if base version had forked-from
+    BASE_HAS_FORK=$(git show "origin/${GITHUB_BASE_REF}:${file}" 2>/dev/null | grep -c "^forked-from:" || true)
+    HEAD_HAS_FORK=$(grep -c "^forked-from:" "$file" 2>/dev/null || true)
+
+    if [ "$BASE_HAS_FORK" -gt 0 ] && [ "$HEAD_HAS_FORK" -eq 0 ]; then
+      echo "FAIL: $file — forked-from field was removed. Fork lineage is permanent."
+      echo "  The forked-from field preserves attribution to the original author."
+      echo "  You may update the content, but not remove the lineage."
+      FORK_FAIL=1
+      FAIL=1
+    fi
+  done
+
+  if [ "$FORK_FAIL" -eq 0 ]; then
+    echo "✓ Fork lineage intact"
+  fi
+fi
+
 if [ "$FAIL" -eq 1 ]; then
   echo ""
-  echo "Attribution check failed. Author field must match your GitHub identity."
-  echo "See CONTRIBUTING.md for naming rules."
+  echo "Attribution check failed. See CONTRIBUTING.md for rules."
   exit 1
 fi
 
