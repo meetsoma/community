@@ -14,18 +14,13 @@ author: meetsoma
 license: MIT
 version: 1.0.0
 created: 2026-03-11
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Icon Audit — Muscle
 
 <!-- digest:start -->
-> **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review.
-> - Uses browser-tools (puppeteer) to navigate icon libraries and extract SVG markup programmatically.
-> - Builds a local HTML comparison page: current icons vs candidates, grouped by concept, clearly numbered.
-> - Screenshots the page for vision AI to evaluate side-by-side. Numbers enable precise selection ("use #14 for skills").
-> - Works with any SVG icon library (Lucide, Phosphor, Heroicons, Tabler, etc).
-> - Requires: `browser-start.js` running, puppeteer connection on `:9222`.
+> **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc).
 <!-- digest:end -->
 
 ## Workflow

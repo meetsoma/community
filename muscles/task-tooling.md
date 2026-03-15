@@ -14,13 +14,13 @@ scope: hub
 topic: [workflow, awareness, planning, tools]
 keywords: [task-tooling, map-tools, situational-awareness, scripts, muscles, gaps]
 created: 2026-03-14
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Task Tooling
 
 <!-- digest:start -->
-> **Task Tooling** — before starting any task, map which scripts, muscles, and tools apply to each phase. Name them. When a gap exists (no tool covers a phase), say so explicitly. This is situational awareness — not waiting to be reminded, but already knowing what tools you'll reach for and where the gaps are.
+> **Task Tooling** — before starting any task, map which scripts and muscles apply. Name the tools per phase. When a gap exists, say so explicitly.
 <!-- digest:end -->
 
 ## The Pattern

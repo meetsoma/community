@@ -10,7 +10,7 @@ tier: core
 scope: bundled
 tags: [session, memory, continuity, self-awareness]
 created: 2026-03-09
-updated: 2026-03-14
+updated: 2026-03-15
 author: Curtis Mercier
 license: CC BY 4.0
 ---
@@ -19,7 +19,7 @@ license: CC BY 4.0
 > How Soma manages session lifecycle. This behavior is built into the boot extension — this protocol helps you understand what's happening and how to change it.
 
 ## TL;DR
-Three phases: inhale (boot — auto), hold (work — context monitored), exhale (save — agent-driven). Auto-breathe thresholds: `triggerAt` (50%) starts wrap-up, `rotateAt` (70%) writes preload + countdown to rotation, 85% emergency safety net. `graceTurns` (default 2) gives user time to interject before rotation. Commands: `/exhale` (end), `/breathe` (rotate), `/rest` (AFK), `/inhale` (load preload). Settings in `breathe` block. Preload quality matters: include resume point, what shipped, orient from targets, do-not-re-read list, actionable next steps.
+Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. Write preload with resume point + orient targets before rotating.
 
 ## How It Works
 

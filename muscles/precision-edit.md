@@ -14,13 +14,13 @@ scope: hub
 topic: [editing, tools, reliability, workflow]
 keywords: [edit, precision, whitespace, grep, line-numbers, read-before-write]
 created: 2026-03-14
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Precision Edit
 
 <!-- digest:start -->
-> **Precision Edit** — before editing any file, locate content with exact line numbers first. (1) `grep -n` the target patterns to find line numbers. (2) `read --offset --limit` the exact ranges to see surrounding whitespace. (3) Plan all edits as a numbered checklist before touching anything. (4) Edit with exact whitespace matches from step 2. (5) Re-read to verify. Never `edit` blind — the match must be verified by `read` first.
+> **Precision Edit** — `grep -n` to locate → `read --offset --limit` to see context → plan edits → match exact whitespace → re-read to verify. Never edit blind.
 <!-- digest:end -->
 
 ## The Pattern

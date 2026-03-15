@@ -13,17 +13,13 @@ scope: hub
 tags: [structure, metadata, organization]
 spec-ref: curtismercier/protocols/atlas (v0.1)
 created: 2026-03-09
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Frontmatter Standard Protocol
 
 ## TL;DR
-- Every `.md` file gets YAML frontmatter: `type`, `status`, `created`, `updated` (required)
-- 12 types: plan · spec · note · index · memory · muscle · protocol · decision · log · template · identity · config
-- 8 statuses: draft · active · stable · stale · archived · deprecated · blocked · review
-- Optional fields: `tags`, `related`, `owner`, `priority` — powers search/scan tooling
-- `## TL;DR` section for protocols; `<!-- digest:start/end -->` for muscles
+Every `.md` file needs YAML frontmatter: `type`, `status`, `created`, `updated`. Protocols get `## TL;DR`; muscles get `<!-- digest:start/end -->`.
 
 ## Rule
 

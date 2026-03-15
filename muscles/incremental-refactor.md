@@ -14,13 +14,13 @@ scope: hub
 topic: [refactoring, safety, workflow, code-quality]
 keywords: [refactor, incremental, dependencies, backward-compatible, scan, migration]
 created: 2026-03-14
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Incremental Refactor
 
 <!-- digest:start -->
-> **Incremental Refactor** — never refactor blind. (1) Scan → map all dependencies and references before touching anything. (2) Plan → write a change list with exact file targets. (3) Execute → one file at a time, keeping old paths working during transition. (4) Verify → run tests after each file change, not just at the end. (5) Commit → atomic commit per logical unit. Keep old names/paths alive until everything is migrated. Delete old only after full verification.
+> **Incremental Refactor** — never refactor blind. Scan deps → plan changes → execute one file at a time → verify after each → atomic commits. Keep old paths alive until fully migrated.
 <!-- digest:end -->
 
 ## The Phases

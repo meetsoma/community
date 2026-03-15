@@ -14,18 +14,13 @@ author: meetsoma
 license: MIT
 version: 1.0.0
 created: 2026-03-10
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Micro-Exhale — Muscle
 
 <!-- digest:start -->
-> **Micro-Exhale** — write workflow summaries to daily log after major completions.
-> - After completing a significant workflow, append a structured summary to `.soma/memory/sessions/YYYY-MM-DD.md`.
-> - One file per day. Always read first, then append a `## HH:MM` section. Never overwrite.
-> - Summaries include: what changed, which files, key decisions, commits.
-> - Banks persistent memory — feeds changelogs, preloads, roadmap updates, historical queries.
-> - NOT a replacement for the full exhale preload — it's a checkpoint within the session.
+> **Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.
 <!-- digest:end -->
 
 ## When to Write

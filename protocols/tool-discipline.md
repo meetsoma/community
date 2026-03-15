@@ -10,7 +10,7 @@ tier: core
 scope: bundled
 tags: [tools, safety, self-awareness]
 created: 2026-03-10
-updated: 2026-03-14
+updated: 2026-03-15
 author: meetsoma
 license: MIT
 ---
@@ -19,7 +19,7 @@ license: MIT
 > How Soma uses tools safely. The guard extension enforces some of these mechanically — this protocol covers both the automated safety net and the craft practices.
 
 ## TL;DR
-Guard extension auto-blocks dangerous bash (rm -rf, force push, credential exposure). Three levels: `allow` (power user), `warn` (flag + confirm), `block` (require override). Craft rules: read before edit, grep/find for exploration, `edit` for surgical changes, `write` for new files only, batch independent calls. Settings: `guard.bashCommands` and `guard.coreFiles`.
+Guard auto-blocks dangerous bash. Three levels: allow, warn, block. Read before edit, `edit` for surgical changes, `write` for new files only.
 
 ## What the Guard Handles (Automatic)
 

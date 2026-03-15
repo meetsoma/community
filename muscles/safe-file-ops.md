@@ -14,13 +14,13 @@ scope: hub
 topic: [safety, files, tools, workflow]
 keywords: [safe-file-ops, write, delete, find, duplicate, overwrite]
 created: 2026-03-14
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Safe File Operations
 
 <!-- digest:start -->
-> **Safe File Ops** — four rules: (1) Never `write` without checking if the file exists first — `write` overwrites silently. Use `ls` or `read`, then decide: `edit`, append, or create new. (2) Never `find ~` or broad find without a timeout — stalls on large dirs. Use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never delete without confirming — move to archive or rename with a prefix instead. (4) Never create a new file without checking the directory first — duplicates create false context that poisons future sessions.
+> **Safe File Ops** — check before write (overwrites silently), never broad `find ~` (use `ls`/`grep`), never delete (archive instead), check dir before creating (prevent duplicates).
 <!-- digest:end -->
 
 ## The Rules

@@ -14,13 +14,13 @@ scope: hub
 topic: [documentation, maintenance, plans, staleness]
 keywords: [doc-hygiene, plans-rot, stale-docs, context-hygiene, plan-lifecycle, archive, remaining]
 created: 2026-03-14
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Doc Hygiene
 
 <!-- digest:start -->
-> **Doc Hygiene** — plans rot and stale docs poison future sessions. Every plan has a `remaining` list in frontmatter — update it on every touch. Empty remaining → mark complete and archive. After shipping a feature, scan for overlapping or outdated docs: archive stale ones, extract surviving ideas first. Before referencing any doc, verify it matches current code. A doc that describes yesterday's architecture is worse than no doc — it creates false confidence.
+> **Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.
 <!-- digest:end -->
 
 ## Plan Lifecycle
