@@ -4,7 +4,7 @@ name: breath-cycle
 status: active
 heat-default: warm
 applies-to: [always]
-breadcrumb: "Soma manages sessions in three phases: inhale (boot — automatic), hold (work — context monitored), exhale (save state — agent-driven). Context thresholds, rotation, and preload injection are all configurable."
+breadcrumb: "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: /exhale, /breathe, /rest, /inhale."
 version: 2.0.0
 tier: core
 scope: bundled

@@ -4,7 +4,7 @@ name: working-style
 status: active
 heat-default: warm
 applies-to: [always]
-breadcrumb: "Be direct — no ceremony. Lead with action. Know your tools before starting — name them, note gaps. Understand before you change, verify after you build AND after you ship. Maintain the tools — when code changes, verify scripts still produce correct output. Plans live in files, not in context."
+breadcrumb: "Be direct. Lead with action. Know your tools. Understand before you change, verify after you build. Plans live in files, not context."
 author: meetsoma
 license: MIT
 version: 1.1.0
@@ -12,7 +12,7 @@ tier: official
 scope: hub
 tags: [workflow, style, communication]
 created: 2026-03-10
-updated: 2026-03-14
+updated: 2026-03-15
 ---
 
 # Working Style
