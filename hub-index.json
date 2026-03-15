@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-14T20:30:32.927Z",
+  "generated": "2026-03-15T13:38:55.562Z",
   "count": 30,
   "items": [
     {
@@ -24,7 +24,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "community-safe",
@@ -92,7 +92,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "frontmatter-standard",
@@ -114,7 +114,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "git-identity",
@@ -136,7 +136,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "heat-tracking",
@@ -159,7 +159,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "pattern-evolution",
@@ -181,7 +181,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "pre-flight",
@@ -240,7 +240,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "task-tracking",
@@ -263,7 +263,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "tool-discipline",
@@ -285,7 +285,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "workflow",
@@ -359,7 +359,7 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "icon-audit",
@@ -388,7 +388,7 @@
       ],
       "status": "active",
       "created": "2026-03-11",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "incremental-refactor",
@@ -416,7 +416,7 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "micro-exhale",
@@ -442,7 +442,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "precision-edit",
@@ -470,7 +470,7 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "safe-file-ops",
@@ -498,7 +498,7 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "task-tooling",
@@ -526,7 +526,7 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "test-hygiene",
@@ -588,7 +588,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "core",
@@ -605,7 +605,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "devops",
@@ -632,7 +632,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "fullstack",
@@ -665,7 +665,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "maintainer",
@@ -695,7 +695,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "refactorer",
@@ -723,7 +723,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     },
     {
       "slug": "writer",
@@ -749,7 +749,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-15"
     }
   ]
 }
