@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-15T13:40:43.030Z",
+  "generated": "2026-03-18T19:52:56.557Z",
   "count": 30,
   "items": [
     {
@@ -114,7 +114,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "git-identity",
@@ -136,7 +136,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "heat-tracking",
@@ -217,7 +217,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-14"
+      "updated": "2026-03-18"
     },
     {
       "slug": "session-checkpoints",
@@ -330,7 +330,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "doc-hygiene",
@@ -588,7 +588,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "core",
@@ -605,7 +605,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "devops",
@@ -632,7 +632,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "fullstack",
@@ -665,7 +665,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "maintainer",
@@ -695,7 +695,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "refactorer",
@@ -723,7 +723,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     },
     {
       "slug": "writer",
@@ -749,7 +749,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-15"
+      "updated": "2026-03-18"
     }
   ]
 }
