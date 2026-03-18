@@ -9,11 +9,11 @@ author: meetsoma
 license: MIT
 version: 1.1.0
 tier: official
-scope: hub
+scope: bundled
 tags: [structure, metadata, organization]
 spec-ref: curtismercier/protocols/atlas (v0.1)
 created: 2026-03-09
-updated: 2026-03-15
+updated: 2026-03-18
 ---
 
 # Frontmatter Standard Protocol

@@ -9,10 +9,10 @@ author: meetsoma
 license: MIT
 version: 1.0.0
 tier: official
-scope: hub
+scope: bundled
 tags: [quality, safety, git, workflow]
 created: 2026-03-10
-updated: 2026-03-14
+updated: 2026-03-18
 ---
 
 # Quality Standards

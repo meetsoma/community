@@ -9,11 +9,11 @@ author: Curtis Mercier
 license: CC BY 4.0
 version: 1.1.0
 tier: official
-scope: hub
+scope: bundled
 tags: [git, attribution, identity]
 spec-ref: curtismercier/protocols/git-identity (v0.2)
 created: 2026-03-09
-updated: 2026-03-15
+updated: 2026-03-18
 ---
 
 # Git Identity Protocol

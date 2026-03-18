@@ -9,10 +9,10 @@ author: meetsoma
 license: MIT
 version: 1.1.0
 tier: official
-scope: hub
+scope: bundled
 tags: [workflow, style, communication]
 created: 2026-03-10
-updated: 2026-03-15
+updated: 2026-03-18
 ---
 
 # Working Style
