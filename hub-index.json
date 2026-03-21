@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-18T19:52:56.557Z",
-  "count": 30,
+  "generated": "2026-03-21T06:38:33.598Z",
+  "count": 31,
   "items": [
     {
       "slug": "breath-cycle",
@@ -588,7 +588,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     },
     {
       "slug": "core",
@@ -605,7 +605,35 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
+    },
+    {
+      "slug": "default",
+      "name": "default",
+      "type": "template",
+      "description": "Standard Soma setup — core protocols for session management, heat tracking, and workflow.",
+      "author": "meetsoma",
+      "version": "0.6.2",
+      "tier": "community",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "breath-cycle",
+          "frontmatter-standard",
+          "heat-tracking",
+          "session-checkpoints",
+          "correction-capture",
+          "detection-triggers",
+          "pattern-evolution",
+          "quality-standards",
+          "working-style",
+          "tool-discipline",
+          "git-identity"
+        ],
+        "muscles": [],
+        "skills": []
+      },
+      "updated": "2026-03-21"
     },
     {
       "slug": "devops",
@@ -632,7 +660,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     },
     {
       "slug": "fullstack",
@@ -665,7 +693,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     },
     {
       "slug": "maintainer",
@@ -695,7 +723,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     },
     {
       "slug": "refactorer",
@@ -723,7 +751,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     },
     {
       "slug": "writer",
@@ -749,7 +777,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     }
   ]
 }
