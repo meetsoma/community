@@ -17,7 +17,7 @@ heat-default: warm                 # cold | warm | hot — initial system prompt
 applies-to: [always]               # signal matching: always, git, typescript, python, etc.
 breadcrumb: "One-liner TL;DR..."   # QUOTED — used for warm injection + hub card
 author: Curtis Mercier
-license: CC BY 4.0
+license: MIT
 version: 1.0.0
 tier: core                         # core | official | community | pro
 tags: [workflow, memory]           # hub card tags + search
