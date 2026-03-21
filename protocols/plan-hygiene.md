@@ -4,11 +4,11 @@ name: plan-hygiene
 version: 1.0.0
 tier: official
 author: Curtis Mercier
-license: CC BY 4.0
+license: MIT
 heat-default: warm
 status: active
 created: 2026-03-12
-updated: 2026-03-12
+updated: 2026-03-21
 breadcrumb: "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale."
 applies-to: [always]
 ---
