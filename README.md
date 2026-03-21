@@ -1,92 +1,64 @@
-# Soma Community
+<div align="center">
 
-Shared protocols, muscles, skills, and templates for [Soma](https://soma.gravicity.ai) agents.
+<br>
+
+### σ Community
+
+*Shared patterns from real workflows.*
+
+<br>
+
+Protocols, muscles, skills, and templates for [Soma](https://soma.gravicity.ai) agents.
+
+</div>
+
+---
 
 ## What's Here
 
-| Directory | What | Format |
-|-----------|------|--------|
-| `protocols/` | Behavioral rules — how your agent *acts* | Markdown with YAML frontmatter |
-| `muscles/` | Learned patterns — reusable workflows | Markdown with digest blocks |
-| `skills/` | Domain expertise — task-specific knowledge | `name/SKILL.md` directories |
-| `templates/` | Full agent configs — identity + protocols + skills | `.soma/` bundles |
-| `extensions/` | TypeScript hooks — lifecycle, UI, tools | `.ts` files |
-| `themes/` | Visual themes — colors, statusline styles | JSON/TS |
-
-## Install
-
-From within a Soma session:
+| Directory | What | How it loads |
+|---|---|---|
+| `protocols/` | Behavioral rules | `/install protocol <name>` |
+| `muscles/` | Learned patterns | `/install muscle <name>` |
+| `skills/` | Domain expertise | `/install skill <name>` |
+| `templates/` | Full agent configs | `soma init --template <name>` |
 
 ```bash
-# Install a protocol
+# From inside a Soma session:
 /install protocol breath-cycle
-
-# Install a muscle
 /install muscle docker-deploy
-
-# Install a skill
-/install skill logo-creator
-
-# Browse what's available
-/list remote
-
-# Bootstrap from a template
-soma init --template devops
+/list remote                      # browse everything
 ```
-
-## Using Manually
-
-```bash
-# Protocol → .soma/protocols/
-cp community/protocols/code-review.md your-project/.soma/protocols/
-
-# Muscle → .soma/memory/muscles/
-cp community/muscles/docker-deploy.md your-project/.soma/memory/muscles/
-
-# Skill → ~/.soma/skills/ (global) or .soma/skills/ (project)
-cp -r community/skills/logo-creator ~/.soma/skills/
-```
-
-## Specifications
-
-Community protocols are operational derivatives of formal specifications in [curtismercier/protocols](https://github.com/curtismercier/protocols). Each protocol's `spec-ref` field links to its source specification for the full rationale and design decisions.
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for format requirements and submission guidelines.
+1. Fork → add your protocol/muscle/skill → open a PR
+2. Follow the format below — CI validates frontmatter automatically
 
-### Quick Start
+### Format
 
-1. Fork this repo
-2. Add your protocol/muscle/skill/template
-3. Ensure frontmatter follows the [format guide](#format-requirements)
-4. Open a PR with a description of what it does and why it's useful
+**Protocols** need: `type: protocol`, `name`, `heat-default`, `breadcrumb`, `applies-to`, a `## TL;DR` section.
 
-### Format Requirements
+**Muscles** need: `type: muscle`, `status: active`, `triggers`, `tags`, `<!-- digest:start/end -->` markers, `heat: 0`.
 
-**Protocols** must have:
-- `type: protocol`, `name`, `heat-default`, `breadcrumb`, `applies-to` in frontmatter
-- A `## TL;DR` section
-- Clear `## When to Apply` and `## When NOT to Apply` sections
+**Skills** need: a `SKILL.md` with `name`, `description`, `version`, `author`, `keywords`. Self-contained.
 
-**Muscles** must have:
-- `type: muscle`, `status: active`, `triggers`, `tags` in frontmatter
-- `<!-- digest:start -->` / `<!-- digest:end -->` markers
-- `heat` set to `0` (users control their own heat)
-- `triggers` is the single activation list (merged from old `triggers` + `keywords` + `topic`)
+> `triggers` is the single activation list — merged from old `triggers` + `keywords` + `topic` as of v0.6.2.
 
-**Skills** must have:
-- A `SKILL.md` file with `name`, `description`, `version`, `author`, `keywords`
-- Self-contained — no external dependencies beyond standard tools
+## Specifications
 
-**Templates** must have:
-- A `README.md` explaining what the template sets up
-- A `.soma/` directory with identity, settings, and any bundled protocols/muscles
+Community protocols are operational derivatives of formal specs in [curtismercier/protocols](https://github.com/curtismercier/protocols). Each protocol's `spec-ref` links to its source.
 
 ## License
 
-Core protocols and conceptual frameworks are **CC BY 4.0** — original work by [Curtis Mercier](https://github.com/curtismercier). Attribution is required when redistributing or building upon these designs.
+Protocols and concepts: **CC BY 4.0** — [Curtis Mercier](https://github.com/curtismercier).
+<br>
+Community contributions follow CC BY 4.0 unless specified otherwise in frontmatter.
 
-Community contributions follow the same CC BY 4.0 license unless the contributor specifies otherwise in their file's frontmatter.
+---
 
-The Soma agent software itself (meetsoma/soma-agent, meetsoma/cli) is MIT licensed separately. See [LICENSE](./LICENSE) for details.
+<div align="center">
+
+<sub>BSL 1.1 © Curtis Mercier — open source 2030</sub>
+
+</div>
