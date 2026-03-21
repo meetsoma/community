@@ -59,6 +59,6 @@ Community contributions follow CC BY 4.0 unless specified otherwise in frontmatt
 
 <div align="center">
 
-<sub>BSL 1.1 © Curtis Mercier — open source 2030</sub>
+<sub>BSL 1.1 © Curtis Mercier — open source 2027</sub>
 
 </div>
