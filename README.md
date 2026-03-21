@@ -70,9 +70,10 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for format requirements and submission 
 - Clear `## When to Apply` and `## When NOT to Apply` sections
 
 **Muscles** must have:
-- `type: muscle`, `status: active`, `topic`, `keywords` in frontmatter
+- `type: muscle`, `status: active`, `triggers`, `tags` in frontmatter
 - `<!-- digest:start -->` / `<!-- digest:end -->` markers
 - `heat` set to `0` (users control their own heat)
+- `triggers` is the single activation list (merged from old `triggers` + `keywords` + `topic`)
 
 **Skills** must have:
 - A `SKILL.md` file with `name`, `description`, `version`, `author`, `keywords`
