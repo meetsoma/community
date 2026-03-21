@@ -4,7 +4,7 @@ name: soma-scrape
 version: 1.0.0
 status: active
 author: meetsoma
-license: BSL 1.1
+license: MIT
 language: bash
 description: Intelligent doc discovery and scraping for SDK research
 tags: [documentation, scraping, research, sdk, npm, github]

@@ -4,7 +4,7 @@ name: soma-spell
 version: 1.0.0
 status: active
 author: meetsoma
-license: BSL 1.1
+license: MIT
 language: bash
 description: Canadian English spelling checker and fixer with project dictionary
 tags: [spelling, grammar, docs, canadian-english, writing]

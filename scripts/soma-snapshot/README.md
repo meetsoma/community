@@ -4,7 +4,7 @@ name: soma-snapshot
 version: 1.0.0
 status: active
 author: meetsoma
-license: BSL 1.1
+license: MIT
 language: bash
 description: Rolling zip snapshots of project directories with automatic cleanup
 tags: [backup, snapshot, archive, zip]

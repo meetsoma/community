@@ -10,9 +10,9 @@ tier: core
 scope: bundled
 tags: [session, memory, continuity, self-awareness]
 created: 2026-03-09
-updated: 2026-03-15
+updated: 2026-03-21
 author: Curtis Mercier
-license: CC BY 4.0
+license: MIT
 ---
 # Breath Cycle
 

@@ -4,7 +4,7 @@ name: soma-code
 version: 1.0.0
 status: active
 author: meetsoma
-license: BSL 1.1
+license: MIT
 language: bash
 description: Fast codebase navigator — find, map, refs, structure, and more
 tags: [navigation, search, code, grep, map, refactor]

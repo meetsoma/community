@@ -4,7 +4,7 @@ name: git-identity-hook
 version: 1.0.0
 status: active
 author: meetsoma
-license: BSL 1.1
+license: MIT
 language: bash
 description: Pre-commit hook that validates git identity before allowing commits
 tags: [git, hooks, identity, security, pre-commit]

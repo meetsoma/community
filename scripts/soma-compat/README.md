@@ -4,7 +4,7 @@ name: soma-compat
 version: 1.0.0
 status: active
 author: meetsoma
-license: BSL 1.1
+license: MIT
 language: bash
 description: Check AMPS content for compatibility conflicts and redundancy
 tags: [validation, compatibility, protocols, muscles, audit]
