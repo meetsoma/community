@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-21T06:38:33.598Z",
+  "generated": "2026-03-21T06:46:23.339Z",
   "count": 31,
   "items": [
     {
@@ -269,10 +269,10 @@
       "slug": "tool-discipline",
       "name": "tool-discipline",
       "type": "protocol",
-      "description": "Read before edit. grep/find for exploration. Edit for surgical changes. The guard extension blocks dangerous bash commands based on your guard settings.",
+      "description": "Scripts first, then raw commands. Read before edit. Check .soma/amps/scripts/ before writing grep/find. Build a script when you do the same thing twice.",
       "author": "meetsoma",
-      "version": "2.0.0",
-      "breadcrumb": "Read before edit. grep/find for exploration. Edit for surgical changes. The guard extension blocks dangerous bash commands based on your guard settings.",
+      "version": "3.0.0",
+      "breadcrumb": "Scripts first, then raw commands. Read before edit. Check .soma/amps/scripts/ before writing grep/find. Build a script when you do the same thing twice.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -281,11 +281,12 @@
       "tags": [
         "tools",
         "safety",
-        "self-awareness"
+        "self-awareness",
+        "scripts"
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "workflow",
