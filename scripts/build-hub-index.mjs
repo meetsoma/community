@@ -3,7 +3,7 @@
 /**
  * build-hub-index.mjs — Generate hub-index.json from community content.
  *
- * Parses protocols, muscles, skills, and templates into a single JSON file
+ * Parses protocols, muscles, scripts, skills, and templates into a single JSON file
  * that the website can fetch client-side for near-instant content updates.
  *
  * Usage: node scripts/build-hub-index.mjs [--output path]
@@ -116,6 +116,42 @@ function loadSkills() {
 	return items;
 }
 
+function loadScripts() {
+	const dir = path.join(ROOT, "scripts");
+	if (!fs.existsSync(dir)) return [];
+
+	const items = [];
+
+	for (const entry of fs.readdirSync(dir)) {
+		const scriptDir = path.join(dir, entry);
+		if (!fs.statSync(scriptDir).isDirectory()) continue;
+
+		const readme = path.join(scriptDir, "README.md");
+		if (!fs.existsSync(readme)) continue;
+
+		const content = fs.readFileSync(readme, "utf-8");
+		const { meta, body } = parseFrontmatter(content);
+
+		items.push({
+			slug: entry,
+			name: meta.name || entry,
+			type: "script",
+			description: meta.description || extractDescription(body),
+			author: meta.author || "Unknown",
+			version: meta.version || "1.0.0",
+			tier: meta.tier || "community",
+			tags: Array.isArray(meta.tags) ? meta.tags : undefined,
+			language: meta.language || "bash",
+			requires: Array.isArray(meta.requires) ? meta.requires : undefined,
+			status: meta.status || "active",
+			created: meta.created || undefined,
+			updated: meta.updated || undefined,
+		});
+	}
+
+	return items;
+}
+
 function loadTemplates() {
 	const dir = path.join(ROOT, "templates");
 	if (!fs.existsSync(dir)) return [];
@@ -186,6 +222,7 @@ const items = [
 	...loadMarkdownDir("protocol", "protocols"),
 	...loadMarkdownDir("muscle", "muscles"),
 	...loadMarkdownDir("automation", "automations"),
+	...loadScripts(),
 	...loadSkills(),
 	...loadTemplates(),
 ];
