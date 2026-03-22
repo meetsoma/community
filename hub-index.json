@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T11:12:28.205Z",
+  "generated": "2026-03-22T11:14:35.762Z",
   "count": 40,
   "items": [
     {
@@ -151,7 +151,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "official---",
+      "tier": "official",
       "tags": [
         "workflow",
         "process",
@@ -193,10 +193,17 @@
       "author": "Curtis Mercier",
       "version": "1.0.0",
       "breadcrumb": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
+      "heatDefault": "warm",
       "appliesTo": [
         "always"
       ],
       "tier": "official",
+      "tags": [
+        "plans",
+        "hygiene",
+        "maintenance",
+        "lifecycle"
+      ],
       "status": "active",
       "created": "2026-03-12",
       "updated": "2026-03-22"
@@ -205,11 +212,24 @@
       "slug": "pre-flight",
       "name": "pre-flight",
       "type": "protocol",
-      "description": "Before building anything new, check if it exists. Grep codebase, scan `.soma/`, verify need. Catch duplication before executing.",
-      "author": "Unknown",
+      "description": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
+      "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
-      "status": "active"
+      "breadcrumb": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "pre-flight",
+        "verify",
+        "check",
+        "before-building"
+      ],
+      "status": "active",
+      "created": "2026-03-10",
+      "updated": "2026-03-22"
     },
     {
       "slug": "quality-standards",
@@ -246,7 +266,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "officialversion: 1.0.0",
+      "tier": "official",
       "tags": [
         "communication",
         "formatting",
