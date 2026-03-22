@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-22T04:29:32.497Z",
-  "count": 36,
+  "generated": "2026-03-22T07:53:15.996Z",
+  "count": 39,
   "items": [
     {
       "slug": "breath-cycle",
@@ -485,6 +485,70 @@
       "status": "active",
       "created": "2026-03-09",
       "updated": "2026-03-21"
+    },
+    {
+      "slug": "debug",
+      "name": "debug",
+      "type": "automation",
+      "description": "Systematic approach to finding and fixing bugs. Optimized to avoid common agent traps: guessing, naive text analysis, and chasing false leads.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "debug",
+        "error",
+        "bug",
+        "broken",
+        "failed",
+        "crash",
+        "workflow"
+      ],
+      "status": "active",
+      "created": "2026-03-16",
+      "updated": "2026-03-22"
+    },
+    {
+      "slug": "refactor",
+      "name": "refactor",
+      "type": "automation",
+      "description": "Extract, move, or restructure code safely. Follows an incremental pattern — scan first, plan the blast radius, execute one concern at a time, verify after every change.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "refactor",
+        "extract",
+        "move",
+        "split",
+        "rename",
+        "restructure",
+        "code-quality"
+      ],
+      "status": "active",
+      "created": "2026-03-16",
+      "updated": "2026-03-22"
+    },
+    {
+      "slug": "visual-gap-analysis",
+      "name": "visual-gap-analysis",
+      "type": "automation",
+      "description": "Map any workflow end-to-end as an ASCII diagram. Identify every handoff, every external dependency, every place where things can fail. Then TEST it — diagrams find bugs, E2E tests prove fixes.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "gap-analysis",
+        "flow",
+        "e2e",
+        "diagram",
+        "audit",
+        "edge-case",
+        "integration",
+        "testing"
+      ],
+      "status": "active",
+      "created": "2026-03-19",
+      "updated": "2026-03-22"
     },
     {
       "slug": "soma-code",
