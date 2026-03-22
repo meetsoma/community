@@ -121,3 +121,7 @@ Run `bash .soma/scripts/plan-audit.sh` at least once per major session. It check
 | Kanban item "Done" but feature has a bug | Move back to Active. Done means done. |
 | Changelog entry for unreleased version | Keep in [Unreleased] section. Move to version header only on publish. |
 | Writing the changelog BEFORE writing the code | Invert: code → commit → changelog. |
+
+## When to Apply
+
+At session end (exhale), when creating plans, when reviewing existing plans for staleness.
