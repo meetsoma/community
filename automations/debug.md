@@ -4,7 +4,7 @@ name: debug
 status: active
 description: "Systematic bug hunting — contain, scope, locate, fix, verify. Avoids common agent traps: guessing, naive text analysis, chasing false leads."
 author: meetsoma
-version: 1.0.0
+version: 1.1.0
 license: MIT
 tier: official
 tags: [debug, error, bug, broken, failed, crash, workflow]
@@ -80,3 +80,9 @@ Before closing the debug session:
 - [ ] All test suites pass
 - [ ] Committed and pushed
 - [ ] Session log has: error, cause, fix, wasted-time notes
+
+## See Also
+
+- `/hub install automation debug` — install this workflow
+- `refactor` automation — safe code restructuring
+- `visual-gap-analysis` automation — flow diagramming + E2E
