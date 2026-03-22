@@ -7,16 +7,31 @@ FAIL=0
 # === Protocols must have TL;DR section ===
 for f in protocols/*.md; do
   [ -f "$f" ] || continue
-  if ! grep -q "^## TL;DR" "$f"; then
-    echo "FAIL: $f — missing ## TL;DR section"
-    FAIL=1
-  fi
-  if ! grep -q "^## When to Apply" "$f"; then
-    echo "FAIL: $f — missing ## When to Apply section"
-    FAIL=1
-  fi
-  if ! grep -q "^## When NOT to Apply" "$f"; then
-    echo "WARN: $f — missing ## When NOT to Apply section (recommended)"
+  # scope:core protocols are documentation of coded behavior — different format
+  is_core=$(head -20 "$f" | grep -c "^scope: core" || true)
+  if [ "$is_core" -gt 0 ]; then
+    # Core protocols need TL;DR but use "How It Works" instead of "When to Apply"
+    if ! grep -q "^## TL;DR" "$f"; then
+      echo "FAIL: $f — missing ## TL;DR section"
+      FAIL=1
+    fi
+    # "How It Works" or "When to Apply" — either is fine for core
+    if ! grep -qE "^## (How It Works|When to Apply|When This Fires)" "$f"; then
+      echo "WARN: $f — core protocol missing ## How It Works section (recommended)"
+    fi
+  else
+    # Behavioral protocols need both TL;DR and When to Apply
+    if ! grep -q "^## TL;DR" "$f"; then
+      echo "FAIL: $f — missing ## TL;DR section"
+      FAIL=1
+    fi
+    if ! grep -qE "^## (When to Apply|When This Fires)" "$f"; then
+      echo "FAIL: $f — missing ## When to Apply section"
+      FAIL=1
+    fi
+    if ! grep -q "^## When NOT to Apply" "$f"; then
+      echo "WARN: $f — missing ## When NOT to Apply section (recommended)"
+    fi
   fi
 done
 

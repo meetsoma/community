@@ -151,3 +151,7 @@ MAPS are the connective tissue. They don't add new knowledge — they organize e
 ---
 
 *© Curtis Mercier. Licensed under MIT.*
+
+## When to Apply
+
+Before starting any task — check if a MAP exists. After completing a repeated task twice — build a MAP.
