@@ -2,15 +2,15 @@
 type: protocol
 name: response-style
 status: active
-heat-default: 5
+heat-default: warm
 author: meetsoma
 license: MIT
-version: 1.0.0
+tier: officialversion: 1.0.0
 applies-to: [always]
 breadcrumb: "Prefer prose over bullets. Minimum formatting for the content. One question per response max. No hollow social scripts."
 tags: [communication, formatting, ux]
 created: 2026-03-15
-updated: 2026-03-15
+updated: 2026-03-22
 ---
 
 # Response Style
