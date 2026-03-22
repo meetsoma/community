@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T09:05:41.574Z",
+  "generated": "2026-03-22T09:34:46.773Z",
   "count": 40,
   "items": [
     {
@@ -210,19 +210,19 @@
       "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
-      "heatDefault": "8",
+      "heatDefault": "5",
       "tier": "core",
       "status": "active",
-      "updated": "2026-03-13"
+      "updated": "2026-03-22"
     },
     {
       "slug": "quality-standards",
       "name": "quality-standards",
       "type": "protocol",
-      "description": "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each.",
+      "description": "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — find every caller, test, and doc. Atomic commits — one concern each.",
       "author": "meetsoma",
       "version": "1.0.0",
-      "breadcrumb": "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each.",
+      "breadcrumb": "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — find every caller, test, and doc. Atomic commits — one concern each.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -236,7 +236,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-18"
+      "updated": "2026-03-22"
     },
     {
       "slug": "response-style",
@@ -327,7 +327,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "workflow",
