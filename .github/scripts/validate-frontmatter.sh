@@ -66,10 +66,21 @@ done
 # === Muscle-specific ===
 for f in muscles/*.md; do
   [ -f "$f" ] || continue
-  check_field "$f" "topic"
-  check_field "$f" "keywords"
+  # triggers replaces topic+keywords (v0.6.2+), accept either
+  has_triggers=$(head -40 "$f" | grep -c "^triggers:" || true)
+  has_topic=$(head -40 "$f" | grep -c "^topic:" || true)
+  if [ "$has_triggers" -eq 0 ] && [ "$has_topic" -eq 0 ]; then
+    echo "FAIL: $f — missing triggers: (or legacy topic:) field"
+    FAIL=1
+  fi
   check_field "$f" "heat-default"
-  check_field "$f" "breadcrumb"
+  # breadcrumb OR description — accept either
+  has_breadcrumb=$(head -40 "$f" | grep -c "^breadcrumb:" || true)
+  has_description=$(head -40 "$f" | grep -c "^description:" || true)
+  if [ "$has_breadcrumb" -eq 0 ] && [ "$has_description" -eq 0 ]; then
+    echo "FAIL: $f — missing breadcrumb: or description: field"
+    FAIL=1
+  fi
 
   # Heat must be 0 in community (users control their own)
   heat=$(get_field "$f" "heat")
@@ -89,8 +100,20 @@ done
 # === Automation-specific ===
 for f in automations/*.md; do
   [ -f "$f" ] || continue
-  check_field "$f" "breadcrumb"
-  check_field "$f" "topic"
+  # breadcrumb OR description — accept either
+  has_breadcrumb=$(head -40 "$f" | grep -c "^breadcrumb:" || true)
+  has_description=$(head -40 "$f" | grep -c "^description:" || true)
+  if [ "$has_breadcrumb" -eq 0 ] && [ "$has_description" -eq 0 ]; then
+    echo "FAIL: $f — missing breadcrumb: or description: field"
+    FAIL=1
+  fi
+  # triggers OR topic — accept either
+  has_triggers=$(head -40 "$f" | grep -c "^triggers:" || true)
+  has_topic=$(head -40 "$f" | grep -c "^topic:" || true)
+  if [ "$has_triggers" -eq 0 ] && [ "$has_topic" -eq 0 ]; then
+    echo "FAIL: $f — missing triggers: (or legacy topic:) field"
+    FAIL=1
+  fi
 done
 
 # === Skills ===

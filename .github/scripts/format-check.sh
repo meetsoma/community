@@ -46,8 +46,17 @@ for f in muscles/*.md; do
   fi
 done
 
+# === Automations must have a title ===
+for f in automations/*.md; do
+  [ -f "$f" ] || continue
+  if ! grep -q "^# " "$f"; then
+    echo "FAIL: $f — missing # Title section"
+    FAIL=1
+  fi
+done
+
 # === File naming convention: kebab-case ===
-for f in protocols/*.md muscles/*.md; do
+for f in protocols/*.md muscles/*.md automations/*.md; do
   [ -f "$f" ] || continue
   basename=$(basename "$f" .md)
   if echo "$basename" | grep -qE '[A-Z_ ]'; then
