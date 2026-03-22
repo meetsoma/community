@@ -20,11 +20,16 @@ author: Curtis Mercier
 license: MIT
 version: 1.0.0
 tier: core                         # core | official | community | pro
+scope: bundled                     # bundled | hub | core (see Scope section)
 tags: [workflow, memory]           # hub card tags + search
+requires:                          # optional — dependencies auto-installed
+  scripts: [soma-code]
 created: 2026-03-10
 updated: 2026-03-10
 ---
 ```
+
+**Required sections:** `## TL;DR`, `## When to Apply`
 
 **Agent runtime reads:** `name`, `breadcrumb`, `heat-default`, `applies-to`, `scope`, `tier`
 **Website hub reads:** `name`, `breadcrumb`, `tier`, `tags`, `heat-default`, `author`, `version`
@@ -35,26 +40,53 @@ updated: 2026-03-10
 ---
 type: muscle
 name: kebab-case-name              # matches filename
-breadcrumb: "One-liner TL;DR..."   # QUOTED — hub card description
-tier: core                         # core | official | community | pro
-topic: [design, icons]             # canonical tags — agent + website both read this
-keywords: [icon-audit, svg]        # agent search terms (finer grain)
 status: active                     # draft | active | stable | dormant | archived | deprecated
-heat: 0                            # numeric 0-15 — agent runtime tracks this
 heat-default: warm                 # cold | warm | hot — initial tier + website display
-loads: 0                           # boot load counter — agent runtime tracks this
-author: Curtis Mercier
+breadcrumb: "One-liner TL;DR..."   # QUOTED — hub card description (or use description:)
+triggers: [specific, search, terms] # agent search + activation keywords
+tags: [broad, categories]          # hub card tags
+heat: 0                            # numeric 0-15 — always 0 in community repo
+loads: 0                           # boot load counter — always 0 in community repo
+author: Your Name
 license: MIT
 version: 1.0.0
+tier: community                    # core | official | community | pro
+requires:                          # optional — dependencies auto-installed
+  scripts: [soma-code]
 created: 2026-03-10
 updated: 2026-03-10
 ---
 ```
 
-**Agent runtime reads:** `topic`, `keywords`, `heat`, `loads`, `status`
-**Website hub reads:** `name`, `breadcrumb`, `tier`, `topic` (as tag fallback), `heat-default`, `author`, `version`
+**Body convention:** Muscles use `<!-- digest:start/end -->` for a blockquote TL;DR (agent-facing digest). Keep under 10 lines.
 
-**Body convention:** Muscles use `<!-- digest:start/end -->` for a blockquote TL;DR (agent-facing digest).
+**Note:** `triggers` replaces the older `topic` + `keywords` fields (v0.6.2+). CI accepts either format.
+
+### Automation (MAP)
+
+```yaml
+---
+type: automation
+name: kebab-case-name
+status: active
+description: "One-liner for hub card"  # or use breadcrumb:
+triggers: [keywords, that, activate]   # agent search + activation
+tags: [workflow, category]
+estimated-turns: 5-15                  # helps users know time commitment
+requires: [what the user needs]        # plain text prerequisites
+produces: [what the workflow outputs]   # plain text outputs
+author: Your Name
+license: MIT
+version: 1.0.0
+tier: community
+created: 2026-03-10
+updated: 2026-03-10
+---
+```
+
+Use `## Phase` or `## Step` headers for workflow stages.
+
+**Note:** `description` and `breadcrumb` are interchangeable — CI accepts either. `triggers` replaces the older `topic` + `keywords` (v0.6.2+).
 
 ### Template
 
@@ -71,6 +103,7 @@ Templates use **two files**:
   "requires": {
     "protocols": ["breath-cycle"],
     "muscles": [],
+    "scripts": [],
     "skills": []
   }
 }
@@ -87,36 +120,32 @@ created: "{{DATE}}"
 ---
 ```
 
-### Skill (planned)
+### Script
+
+Scripts live in folders: `scripts/{name}/{name}.sh` + `README.md`.
+
+**Script file** uses `# ---` comment headers:
+```bash
+# ---
+# name: soma-code
+# description: Fast codebase navigator
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [navigation, search, code]
+# ---
+```
+
+**README.md** uses standard YAML frontmatter for hub display.
+
+### Skill
 
 ```yaml
 ---
 type: skill
 name: skill-name
-breadcrumb: "One-liner..."
-tier: community
-topic: [topic1, topic2]
-keywords: [keyword1, keyword2]
-status: active
-heat-default: warm
-author: Author Name
-license: MIT
-version: 1.0.0
-created: 2026-03-10
-updated: 2026-03-10
----
-```
-
-### Automation
-
-```yaml
----
-type: automation
-name: automation-name
-breadcrumb: "One-liner..."
-tier: community
-topic: [workflow, ci]
-keywords: [hook, pre-commit]
+description: "One-liner..."
+tags: [topic1, topic2]
 status: active
 author: Author Name
 license: MIT
@@ -126,22 +155,16 @@ updated: 2026-03-10
 ---
 ```
 
-Automations are executable community content — workflows, hooks, and rituals that run without thinking. Unlike scripts (internal enforcement) or extensions (framework hooks), automations are shareable hub content triggered by slash commands.
-
-**No heat system** — automations are always available when installed (they don't fade in/out of context like muscles/protocols).
-
-### Extension (internal)
-
-Extensions are TypeScript hooks into the agent lifecycle. They are framework-specific runtime code, not hub content. Type is `extension`.
+Skills live in folders: `skills/{name}/SKILL.md` + supporting files.
 
 ## Field Reference
 
 | Field | Required | Values | Notes |
 |-------|----------|--------|-------|
-| `type` | ✅ | `protocol`, `muscle`, `skill`, `automation`, `extension`, `identity` | Always first field |
+| `type` | ✅ | `protocol`, `muscle`, `skill`, `automation`, `identity` | Always first field |
 | `name` | ✅ | kebab-case | Matches filename |
 | `status` | ✅ | `draft`, `active`, `stable`, `dormant`, `archived`, `deprecated` | |
-| `breadcrumb` | ✅* | Quoted string | *Not required for identity files |
+| `breadcrumb` | ✅* | Quoted string | *Or `description:` — CI accepts either |
 | `version` | ✅ | semver | |
 | `author` | ✅ | Name or handle | |
 | `license` | ✅ | SPDX identifier | |
@@ -149,64 +172,51 @@ Extensions are TypeScript hooks into the agent lifecycle. They are framework-spe
 | `updated` | ✅ | YYYY-MM-DD | Change with every meaningful edit |
 | `tier` | ✅ | `core`, `official`, `community`, `pro` | |
 | `tags` | protocols | Array | Hub card tags |
-| `topic` | muscles | Array | Canonical tags for muscles |
-| `keywords` | optional | Array | Finer-grain search terms |
+| `triggers` | muscles, automations | Array | Agent search + activation (replaces `topic`/`keywords`) |
 | `heat-default` | protocols + muscles | `cold`, `warm`, `hot` | Initial system prompt tier |
-| `heat` | muscles only | numeric 0-15 | Runtime-managed |
-| `loads` | muscles only | numeric | Runtime-managed |
+| `heat` | muscles only | numeric 0-15 | Must be 0 in community repo |
+| `loads` | muscles only | numeric | Must be 0 in community repo |
 | `applies-to` | protocols | Array of signals | `always`, `git`, `typescript`, etc. |
-| `scope` | optional | `bundled`, `hub` | Distribution scope (default: `hub`) |
-| `depends-on` | optional | Object | Cross-type dependencies (see below) |
-| `forked-from` | optional | Object | Lineage tracking for forks (see below) |
-| `contributors` | optional | Array | Attribution for accepted contributions (see below) |
-
-## Validation
-
-```bash
-# Validate all content
-./scripts/validate-frontmatter.sh
-
-# Validate specific directory
-./scripts/validate-frontmatter.sh protocols/
-
-# Show fix suggestions
-./scripts/validate-frontmatter.sh --fix
-```
+| `scope` | optional | `bundled`, `hub`, `core` | See Scope section below |
+| `requires` | optional | Object or Array | Dependencies — see Dependencies section |
+| `forked-from` | optional | Object | Lineage tracking — see Forks section |
+| `contributors` | optional | Array | Attribution — see Contributors section |
 
 ## Distribution Scope (`scope`)
 
-Controls where content is distributed:
+| Scope | Meaning | Loads into prompt? |
+|-------|---------|-------------------|
+| `bundled` | Ships with `meetsoma` npm package | Yes — via heat system |
+| `hub` | Available on SomaHub (default) | Yes — via heat system |
+| `core` | Built-in behavior documented as protocol | No — readable on demand only |
 
-| Scope | Meaning | Who gets it |
-|-------|---------|-------------|
-| `bundled` | Ships with `meetsoma` npm package | Every Soma install |
-| `hub` | Available on SomaHub | Users who `/install` it |
+**`core` scope** is for protocols whose behavior is coded in TypeScript extensions. The protocol exists so users can understand and configure the system, but editing the `.md` file won't change how it works. Examples: `breath-cycle`, `heat-tracking`, `git-identity`.
 
-Default is `hub`. Only `tier: core` content can be `scope: bundled`.
+Core protocols:
+- Can't be `/pin`'d — the agent explains they're built-in
+- Are listed as "Core Protocol references" alongside Soma docs
+- Can be read on demand when the user asks about configuration
+- Save ~2000 tokens by not loading documentation into the prompt every turn
 
-Bundled content is Soma's DNA — the minimum set that makes the system work. Everything else lives on the hub and can be installed via templates or `/install`.
-
-> **Note:** `workspace` and `internal` scopes exist conceptually but aren't used in the community repo — workspace content lives in project `.soma/` directories, internal content lives in Gravicity's private tooling.
-
-## Dependencies (`depends-on`)
+## Dependencies (`requires`)
 
 Any AMPS content can declare dependencies on other hub content:
 
 ```yaml
-depends-on:
+requires:
   protocols: [breath-cycle]
-  muscles: [micro-exhale]
-  automations: [frontmatter-date-hook]
-  skills: []
+  muscles: [incremental-refactor]
+  scripts: [soma-code]
+  automations: []
 ```
 
-- Only list the types you depend on (empty arrays can be omitted)
-- `install` resolves dependencies automatically; missing deps trigger a warning
-- Circular dependencies are rejected
+- Only list the types you depend on (empty types can be omitted)
+- `/hub install` resolves dependencies automatically — missing deps are installed alongside the content
+- Templates use the same `requires` field in `template.json`
 
 ## Forks (`forked-from`)
 
-When you create a variant of existing hub content, declare the lineage:
+When you create a variant of existing hub content:
 
 ```yaml
 forked-from:
@@ -216,33 +226,31 @@ forked-from:
   version: 2.0.0
 ```
 
-- **Your fork is yours.** You own the version, the content, the direction. No obligation to merge upstream changes.
-- **Lineage is permanent.** CI rejects PRs that remove an existing `forked-from` field. Git history is the backstop, but the frontmatter makes it visible on the hub.
-- **Slugs must be unique.** If you fork `breath-cycle`, your version needs a different slug (e.g., `breath-cycle-minimal`, `breath-cycle-strict`).
-- **The hub shows the family tree.** The original item's page lists known forks. Fork pages link back to the original with the version they branched from.
+- **Your fork is yours.** Full creative control, no obligation to track upstream.
+- **Lineage is permanent.** CI rejects PRs that remove `forked-from`.
+- **Slugs must be unique.** Fork `breath-cycle` → name it `breath-cycle-minimal`.
+- **Hub shows the family tree.** Original lists forks, forks link to original.
 
 ## Contributors (`contributors`)
 
-When a PR to core/official content is accepted, the contributor is credited:
+When a PR to core/official content is accepted:
 
 ```yaml
 contributors:
   - name: janedoe
     version: 2.1.0
     contribution: "Added Python signal matching examples"
-  - name: another-user
-    version: 2.2.0
-    contribution: "Fixed settings reference for session.rotation"
 ```
 
-- The `author` field stays the same (the original creator).
-- Contributors appear on the hub page in the version history section.
-- Each entry records the version where the contribution landed and a brief description.
+The `author` field stays the same. Contributors appear on the hub page.
 
-## Key Design Decisions
+## Validation
 
-- **`breadcrumb` not `description`** — one field for both warm prompt injection AND hub card display. No duplication.
-- **`topic` not `tags` for muscles** — agent runtime reads `topic`. Website falls back to it. Single source of truth.
-- **`heat` (numeric) + `heat-default` (string) coexist** — `heat` is runtime state, `heat-default` is the initial/display value.
-- **`tier` vocabulary differs by context** — community hub uses `core`/`official`/`community`/`pro`. Agent runtime uses `free`/`enterprise`. The hub tiers describe authorship; runtime tiers describe access.
-- **`scope` vs `tier`** — `tier` = who wrote it (trust). `scope` = where it ships (distribution). A `tier: core` protocol can be `scope: hub` (Gravicity-authored but not bundled). Only bundled content ships in the npm package.
+```bash
+# Validate all content
+./scripts/validate-frontmatter.sh
+
+# Run all CI checks locally
+./scripts/validate-frontmatter.sh && ./scripts/privacy-scan.sh && \
+./scripts/injection-scan.sh && ./scripts/format-check.sh
+```
