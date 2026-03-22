@@ -6,7 +6,7 @@ set -uo pipefail
 
 FAIL=0
 # Exclude files that teach about privacy patterns (they contain examples by definition)
-FILES=$(find protocols/ muscles/ skills/ templates/ -name "*.md" -type f 2>/dev/null | grep -v "community-safe")
+FILES=$(find protocols/ muscles/ skills/ templates/ automations/ -name "*.md" -type f 2>/dev/null | grep -v "community-safe")
 
 if [ -z "$FILES" ]; then
   echo "✓ No files to scan"
