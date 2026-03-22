@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T09:34:46.773Z",
+  "generated": "2026-03-22T09:36:46.217Z",
   "count": 40,
   "items": [
     {
@@ -24,7 +24,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "community-safe",
@@ -137,7 +137,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "maps",
@@ -265,7 +265,7 @@
       "name": "session-checkpoints",
       "type": "protocol",
       "description": "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never pushed) and project code (squash before push).",
-      "author": "meetsoma",
+      "author": "Curtis Mercier",
       "version": "2.0.0",
       "breadcrumb": "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never pushed) and project code (squash before push).",
       "heatDefault": "warm",
@@ -281,7 +281,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-15"
+      "updated": "2026-03-22"
     },
     {
       "slug": "task-tracking",
