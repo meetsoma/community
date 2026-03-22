@@ -1211,38 +1211,35 @@ cmd_search() {
 # ── Usage ──────────────────────────────────────────────────────────────────
 
 usage() {
-  cat << 'EOF'
-soma-scrape — intelligent doc discovery and scraping
-
-Usage:
-  soma-scrape.sh <command> <name> [options]
-
-Commands:
-  resolve <name>            Find repo + list available doc sources
-  pull <name> [--full]      Download docs locally (--full = no file limit)
-  update <name>             Re-pull latest docs for existing source
-  list                      Show all scraped sources
-  show <name>               Show files we have for a source
-  search <name> <query>     Search within scraped docs
-  discover <topic>          Broad search across GitHub, npm, MDN, CSS specs
-  pull-item <n>[,n,n]       Pull items from last discover results
-
-Options:
-  --full           Pull all doc files (no limit)
-  --provider <p>   Filter discover to: all, github, npm, mdn, css, code
-  --verbose        Show debug info
-  --help           This message
-
-Examples:
-  soma-scrape.sh resolve cmux
-  soma-scrape.sh pull niri --full
-  soma-scrape.sh search cmux "surface"
-  soma-scrape.sh discover "css container queries"
-  soma-scrape.sh discover "spring physics" --provider npm
-  soma-scrape.sh discover "ResizeObserver" --provider mdn
-  soma-scrape.sh pull-item 1,3,5
-  soma-scrape.sh list
-EOF
+  echo ""
+  echo -e "  ${SOMA_CYAN}σ${SOMA_NC} ${SOMA_BOLD}soma-scrape${SOMA_NC} ${SOMA_DIM}— intelligent doc discovery and scraping${SOMA_NC}"
+  echo -e "  ${SOMA_DIM}──────────────────────────────────────${SOMA_NC}"
+  echo ""
+  echo -e "  ${SOMA_GREEN}resolve${SOMA_NC} <name>            ${SOMA_DIM}Find repo + list available doc sources${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}pull${SOMA_NC} <name> [--full]      ${SOMA_DIM}Download docs locally (--full = no limit)${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}update${SOMA_NC} <name>             ${SOMA_DIM}Re-pull latest docs for existing source${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}list${SOMA_NC}                      ${SOMA_DIM}Show all scraped sources${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}show${SOMA_NC} <name>               ${SOMA_DIM}Show files we have for a source${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}search${SOMA_NC} <name> <query>     ${SOMA_DIM}Search within scraped docs${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}discover${SOMA_NC} <topic>          ${SOMA_DIM}Broad search: GitHub, npm, MDN, CSS specs${SOMA_NC}"
+  echo -e "  ${SOMA_GREEN}pull-item${SOMA_NC} <n>[,n,n]       ${SOMA_DIM}Pull items from last discover results${SOMA_NC}"
+  echo ""
+  echo -e "  ${SOMA_DIM}Options:${SOMA_NC}"
+  echo -e "    --full           ${SOMA_DIM}Pull all doc files (no limit)${SOMA_NC}"
+  echo -e "    --provider <p>   ${SOMA_DIM}Filter: all, github, npm, mdn, css, code${SOMA_NC}"
+  echo -e "    --verbose        ${SOMA_DIM}Show debug info${SOMA_NC}"
+  echo -e "    --help           ${SOMA_DIM}This message${SOMA_NC}"
+  echo ""
+  echo -e "  ${SOMA_DIM}Examples:${SOMA_NC}"
+  echo -e "    ${SOMA_BOLD}soma-scrape.sh resolve${SOMA_NC} cmux"
+  echo -e "    ${SOMA_BOLD}soma-scrape.sh pull${SOMA_NC} niri --full"
+  echo -e "    ${SOMA_BOLD}soma-scrape.sh search${SOMA_NC} cmux \"surface\""
+  echo -e "    ${SOMA_BOLD}soma-scrape.sh discover${SOMA_NC} \"css container queries\""
+  echo -e "    ${SOMA_BOLD}soma-scrape.sh pull-item${SOMA_NC} 1,3,5"
+  echo -e "    ${SOMA_BOLD}soma-scrape.sh list${SOMA_NC}"
+  echo ""
+  echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
+  echo ""
   exit 0
 }
 

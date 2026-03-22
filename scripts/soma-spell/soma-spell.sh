@@ -228,17 +228,20 @@ case "${1:-help}" in
   fix)    shift; cmd_fix "$@" ;;
   rules)  cmd_rules ;;
   help|--help|-h|*)
-    echo "soma-spell — Canadian English spelling checker + fixer"
     echo ""
-    echo "Commands:"
-    echo "  check <file-or-dir>    Check for American spellings"
-    echo "  fix <file-or-dir>      Fix American → Canadian"
-    echo "  rules                  Show all spelling rules"
+    echo -e "  ${SOMA_CYAN}σ${SOMA_NC} ${SOMA_BOLD}soma-spell${SOMA_NC} ${SOMA_DIM}— Canadian English spelling checker + fixer${SOMA_NC}"
+    echo -e "  ${SOMA_DIM}──────────────────────────────────────${SOMA_NC}"
     echo ""
-    echo "Examples:"
-    echo "  soma-spell.sh check docs/"
-    echo "  soma-spell.sh fix src/content/blog/"
-    echo "  soma-spell.sh check --all"
-    echo "  soma-spell.sh rules"
+    echo -e "  ${SOMA_GREEN}check${SOMA_NC} <file-or-dir>    ${SOMA_DIM}Check for American spellings${SOMA_NC}"
+    echo -e "  ${SOMA_GREEN}fix${SOMA_NC} <file-or-dir>      ${SOMA_DIM}Fix American → Canadian${SOMA_NC}"
+    echo -e "  ${SOMA_GREEN}rules${SOMA_NC}                  ${SOMA_DIM}Show all spelling rules${SOMA_NC}"
+    echo ""
+    echo -e "  ${SOMA_DIM}Examples:${SOMA_NC}"
+    echo -e "    ${SOMA_BOLD}soma-spell.sh check${SOMA_NC} docs/"
+    echo -e "    ${SOMA_BOLD}soma-spell.sh fix${SOMA_NC} src/content/blog/"
+    echo -e "    ${SOMA_BOLD}soma-spell.sh check${SOMA_NC} --all"
+    echo ""
+    echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
+    echo ""
     ;;
 esac
