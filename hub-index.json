@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T09:36:46.217Z",
+  "generated": "2026-03-22T11:12:28.205Z",
   "count": 40,
   "items": [
     {
@@ -151,7 +151,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "community",
+      "tier": "official---",
       "tags": [
         "workflow",
         "process",
@@ -161,7 +161,7 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "pattern-evolution",
@@ -193,27 +193,23 @@
       "author": "Curtis Mercier",
       "version": "1.0.0",
       "breadcrumb": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
-      "heatDefault": "warm",
       "appliesTo": [
         "always"
       ],
       "tier": "official",
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "pre-flight",
       "name": "pre-flight",
       "type": "protocol",
-      "description": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
-      "author": "meetsoma",
+      "description": "Before building anything new, check if it exists. Grep codebase, scan `.soma/`, verify need. Catch duplication before executing.",
+      "author": "Unknown",
       "version": "1.0.0",
-      "breadcrumb": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
-      "heatDefault": "5",
-      "tier": "core",
-      "status": "active",
-      "updated": "2026-03-22"
+      "tier": "community",
+      "status": "active"
     },
     {
       "slug": "quality-standards",
@@ -246,11 +242,11 @@
       "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Prefer prose over bullets. Minimum formatting for the content. One question per response max. No hollow social scripts.",
-      "heatDefault": "5",
+      "heatDefault": "warm",
       "appliesTo": [
         "always"
       ],
-      "tier": "community",
+      "tier": "officialversion: 1.0.0",
       "tags": [
         "communication",
         "formatting",
@@ -258,7 +254,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-03-15"
+      "updated": "2026-03-22"
     },
     {
       "slug": "session-checkpoints",
