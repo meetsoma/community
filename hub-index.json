@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T11:29:15.808Z",
+  "generated": "2026-03-22T15:34:30.435Z",
   "count": 40,
   "items": [
     {
@@ -216,20 +216,10 @@
       "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them.",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "always"
-      ],
+      "heatDefault": "5",
       "tier": "core",
-      "tags": [
-        "pre-flight",
-        "verify",
-        "check",
-        "before-building"
-      ],
       "status": "active",
-      "created": "2026-03-10",
-      "updated": "2026-03-22"
+      "updated": "2026-03-13"
     },
     {
       "slug": "quality-standards",
@@ -698,21 +688,26 @@
       "type": "template",
       "description": "Standard Soma setup — core protocols for session management, heat tracking, and workflow.",
       "author": "meetsoma",
-      "version": "0.6.2",
+      "version": "0.6.3",
       "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
           "breath-cycle",
-          "frontmatter-standard",
-          "heat-tracking",
-          "session-checkpoints",
           "correction-capture",
           "detection-triggers",
+          "frontmatter-standard",
+          "heat-tracking",
+          "maps",
           "pattern-evolution",
+          "plan-hygiene",
+          "pre-flight",
           "quality-standards",
-          "working-style",
-          "tool-discipline"
+          "response-style",
+          "session-checkpoints",
+          "task-tracking",
+          "tool-discipline",
+          "working-style"
         ],
         "muscles": [],
         "skills": []
