@@ -5,7 +5,7 @@
 set -uo pipefail
 
 FAIL=0
-FILES=$(find protocols/ muscles/ skills/ templates/ -name "*.md" -type f 2>/dev/null)
+FILES=$(find protocols/ muscles/ skills/ templates/ automations/ -name "*.md" -type f 2>/dev/null)
 
 if [ -z "$FILES" ]; then
   echo "✓ No files to scan"
