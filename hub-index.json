@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T11:19:37.902Z",
+  "generated": "2026-03-22T11:24:26.731Z",
   "count": 40,
   "items": [
     {
@@ -46,7 +46,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "correction-capture",
@@ -69,7 +69,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "detection-triggers",
@@ -92,7 +92,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-15"
+      "updated": "2026-03-22"
     },
     {
       "slug": "frontmatter-standard",
