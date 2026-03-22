@@ -69,13 +69,18 @@ for file in $CHANGED; do
     continue
   fi
 
-  # Case 2: Known member — author must match display_name
+  # Case 2: Known member — author must match display_name or org identity
   if [ -n "$DISPLAY_NAME" ]; then
+    # Get member's role to check if they can submit as org
+    ROLE=$(jq -r --arg a "$AUTHOR" '.members[$a].role // "contributor"' "$MAINTAINERS")
+    # Owners and maintainers can submit as "meetsoma" (org identity)
     if [ "$FILE_AUTHOR" = "$DISPLAY_NAME" ]; then
       echo "✓ $file — author: $FILE_AUTHOR (matches registered name)"
+    elif [ "$FILE_AUTHOR" = "meetsoma" ] && { [ "$ROLE" = "owner" ] || [ "$ROLE" = "maintainer" ]; }; then
+      echo "✓ $file — author: meetsoma (org identity, permitted for $ROLE)"
     else
       echo "FAIL: $file — author: '$FILE_AUTHOR' does not match registered name: '$DISPLAY_NAME'"
-      echo "  Registered members must use their display_name from MAINTAINERS.json"
+      echo "  Registered members must use their display_name or 'meetsoma' (owners/maintainers only)"
       FAIL=1
     fi
     continue
