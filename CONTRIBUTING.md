@@ -5,10 +5,21 @@ Community **AMPS** — **A**utomations, **M**uscles, **P**rotocols, **S**kills �
 ## Quick Path (Soma Users)
 
 ```
-/share muscle my-pattern
+/hub share muscle my-pattern
 ```
 
-Soma validates, strips private data, and opens a PR. Trusted contributors auto-merge. New contributors get reviewed.
+Soma validates your content before submitting:
+
+1. **Finds the file** — searches your `.soma/amps/` directory (including `_public/` staging)
+2. **Parses metadata** — extracts frontmatter or script headers
+3. **Privacy scan** — blocks personal paths, API keys, secrets
+4. **Quality check** — scores 0-100%, flags missing fields, missing `--help` for scripts, missing `## TL;DR` for protocols, missing digest blocks for muscles
+5. **Strips runtime data** — removes `heat:` and `loads:` values (users set their own)
+6. **Opens a PR** — pushes a branch and creates a PR via `gh` CLI
+
+If quality is low, Soma shows the issues so you can fix them before submitting. If `gh` CLI isn't installed, Soma generates the files locally and shows manual PR instructions.
+
+**Trusted contributors auto-merge.** New contributors get reviewed.
 
 ## Manual Path (GitHub)
 
@@ -86,9 +97,9 @@ type: muscle
 name: my-muscle
 status: active
 heat-default: warm
-breadcrumb: "What this muscle teaches."
-topic: [broad, categories]
-keywords: [specific, search, terms]
+breadcrumb: "What this muscle teaches — loaded into system prompt when warm."
+triggers: [specific, search, terms, that, activate, this, muscle]
+tags: [broad, categories]
 heat: 0                     # always 0 in community repo
 loads: 0                    # always 0 in community repo
 author: Your Name
@@ -100,7 +111,8 @@ updated: YYYY-MM-DD
 ---
 ```
 
-Required: `<!-- digest:start -->` / `<!-- digest:end -->` markers near the top
+Required: `<!-- digest:start -->` / `<!-- digest:end -->` markers near the top.
+The digest block is what loads into the system prompt — keep it under 10 lines.
 
 ### Skills
 
@@ -110,16 +122,19 @@ skills/your-skill/
 └── (supporting files)
 ```
 
-### Automations
+### Automations (MAPs)
 
 ```yaml
 ---
 type: automation
-name: my-automation
+name: my-workflow
 status: active
-breadcrumb: "What this automation does."
-topic: [workflow, hooks]
-keywords: [pre-commit, validation]
+description: "What this workflow does — one sentence for hub cards."
+triggers: [keywords, that, activate, this, map]
+tags: [workflow, category]
+estimated-turns: 5-15
+requires: [what the user needs before starting]
+produces: [what the workflow outputs]
 author: Your Name
 tier: community
 license: MIT
@@ -129,7 +144,9 @@ updated: YYYY-MM-DD
 ---
 ```
 
-Automations are executable community content — workflows, hooks, and rituals. They run without thinking once installed. Unlike protocols (behavioral rules) or muscles (learned patterns), automations are direct action.
+Automations are workflow templates (MAPs — My Automation Protocol Scripts). They describe repeatable processes: which steps to follow, what to check at each stage, and what the common traps are. Use `## Phase` or `## Step` headers for the workflow stages.
+
+Unlike protocols (behavioral rules) or muscles (learned patterns), automations are step-by-step guides for specific tasks — debugging, refactoring, releasing, auditing.
 
 ### Templates
 
@@ -177,6 +194,19 @@ Before submitting, ask:
 - [ ] Is the digest/breadcrumb useful on its own (without reading the body)?
 - [ ] Have I removed all project-specific paths and personal references?
 - [ ] Does it work when dropped into a fresh `.soma/` directory?
+
+## Soma-Assisted Sharing
+
+When you use `/hub share`, your Soma agent runs quality checks before submitting. This means:
+
+- **Privacy is checked locally** — personal paths and secrets are caught before they leave your machine
+- **Format is validated locally** — missing frontmatter, missing digest blocks, missing TL;DR sections are flagged before CI runs
+- **Quality is scored** — a 0-100% score helps you see what's good and what needs work
+- **Issues are surfaced to your agent** — Soma sees the quality report and can help you fix problems
+
+This makes the submission process collaborative: the tooling does mechanical checks, your agent helps with judgment calls (better descriptions, more useful tags, clearer explanations).
+
+**The CI checks still run on every PR** — they're the safety net. But with Soma handling pre-submit validation, most PRs arrive clean.
 
 ## For AI Agents
 
