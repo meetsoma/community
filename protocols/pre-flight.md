@@ -4,12 +4,15 @@ name: pre-flight
 status: active
 updated: 2026-03-22
 breadcrumb: "Before building anything: check if it exists. Before accepting a request: verify it's needed. Grep for prior art. Catch user mistakes before executing them."
-heat-default: 5
+heat-default: warm
 scope: bundled
 tier: core
 author: meetsoma
 license: MIT
----
+version: 1.0.0
+tags: [pre-flight, verify, check, before-building]
+applies-to: [always]
+created: 2026-03-10---
 
 # Pre-Flight Protocol
 
