@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T11:24:26.731Z",
+  "generated": "2026-03-22T11:29:15.808Z",
   "count": 40,
   "items": [
     {
@@ -508,7 +508,7 @@
       "type": "automation",
       "description": "Systematic approach to finding and fixing bugs. Optimized to avoid common agent traps: guessing, naive text analysis, and chasing false leads.",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tier": "official",
       "tags": [
         "debug",
