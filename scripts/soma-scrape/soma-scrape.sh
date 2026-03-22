@@ -29,6 +29,10 @@
 
 set -o pipefail
 
+# ── Theme ──
+source "$(dirname "$0")/soma-theme.sh" 2>/dev/null || {
+  SOMA_BOLD='\033[1m'; SOMA_DIM='\033[2m'; SOMA_NC='\033[0m'; SOMA_CYAN='\033[0;36m'
+}
 # ── Configurable Variables ──────────────────────────────────────────────────
 
 # Where scraped docs live

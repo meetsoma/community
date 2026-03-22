@@ -4,6 +4,14 @@
 # Usage: bash soma-compat.sh [path-to-soma-dir]
 set -o pipefail
 
+# ── Theme ──
+source "$(dirname "$0")/../soma-theme.sh" 2>/dev/null ||
+source "$(dirname "$0")/soma-theme.sh" 2>/dev/null || {
+  SOMA_BOLD='\033[1m'; SOMA_DIM='\033[2m'; SOMA_NC='\033[0m'
+  SOMA_GREEN='\033[0;32m'; SOMA_YELLOW='\033[0;33m'; SOMA_CYAN='\033[0;36m'
+  SOMA_RED='\033[0;31m'
+}
+
 SOMA_DIR="${1:-$(pwd)/.soma}"
 [ ! -d "$SOMA_DIR" ] && SOMA_DIR="$(pwd)"
 

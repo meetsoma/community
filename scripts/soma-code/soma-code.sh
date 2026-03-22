@@ -28,6 +28,12 @@
 
 set -euo pipefail
 
+# ── Theme ──
+source "$(dirname "$0")/soma-theme.sh" 2>/dev/null || {
+  SOMA_BOLD='\033[1m'; SOMA_DIM='\033[2m'; SOMA_NC='\033[0m'
+  SOMA_GREEN='\033[0;32m'; SOMA_YELLOW='\033[0;33m'; SOMA_CYAN='\033[0;36m'
+}
+
 SHELL_DIR="${SOMA_SHELL_DIR:-$(pwd)}"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -311,19 +317,21 @@ case "$cmd" in
   config)    cmd_config "$@" ;;
   tsc-errors) tsc_errors "$@" ;;
   help|*)
-    echo "soma-code — fast codebase navigator"
     echo ""
-    echo "Commands:"
-    echo "  find <pattern> [path] [ext]  — grep with line:col format"
-    echo "  lines <file> <start> [end]   — show exact lines"
-    echo "  map <file>                   — function/class map"
-    echo "  refs <symbol> [path]         — all references (def vs use)"
-    echo "  replace <file> <ln> <old> <new> — line-specific replace"
-    echo "  structure [path]             — file tree with sizes"
-    echo "  physics [path]               — all physics/animation code"
-    echo "  events [path]                — all event listeners/dispatchers"
-    echo "  css-vars [path]              — CSS custom property audit"
-    echo "  config [path]                — config/options objects"
-    echo "  tsc-errors [path]            — TypeScript errors with code context"
+    echo -e "${SOMA_BOLD}σ soma-code${SOMA_NC} ${SOMA_DIM}— fast codebase navigator${SOMA_NC}"
+    echo ""
+    echo -e "  ${SOMA_BOLD}find${SOMA_NC} <pattern> [path] [ext]  ${SOMA_DIM}grep with line:col format${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}lines${SOMA_NC} <file> <start> [end]   ${SOMA_DIM}show exact lines${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}map${SOMA_NC} <file>                   ${SOMA_DIM}function/class map${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}refs${SOMA_NC} <symbol> [path]         ${SOMA_DIM}all references (def vs use)${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}replace${SOMA_NC} <file> <ln> <old> <new> ${SOMA_DIM}line-specific replace${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}structure${SOMA_NC} [path]             ${SOMA_DIM}file tree with sizes${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}events${SOMA_NC} [path]                ${SOMA_DIM}event listeners/dispatchers${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}css-vars${SOMA_NC} [path]              ${SOMA_DIM}CSS custom property audit${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}config${SOMA_NC} [path]                ${SOMA_DIM}config/options objects${SOMA_NC}"
+    echo -e "  ${SOMA_BOLD}tsc-errors${SOMA_NC} [path]            ${SOMA_DIM}TypeScript errors with context${SOMA_NC}"
+    echo ""
+    echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
+    echo ""
     ;;
 esac
