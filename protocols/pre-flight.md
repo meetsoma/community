@@ -59,12 +59,12 @@ Before building anything new, check if it exists. Grep codebase, scan `.soma/`, 
 
 | Check | Tool | Example |
 |-------|------|---------|
-| Does this already exist? | `soma-code.sh find` | `soma-code.sh find "registerCommand" extensions/` |
-| Search prior art | `soma-query.sh search` | `soma-query.sh search "prompt preview"` |
-| Map a file before editing | `soma-code.sh map` | `soma-code.sh map src/boot.ts` |
-| Find all callers | `soma-code.sh refs` | `soma-code.sh refs "functionName" src/` |
+| Does this already exist? | `soma-code` | `soma-code.sh find "registerCommand" extensions/` |
+| Map a file before editing | `soma-code` | `soma-code.sh map src/boot.ts` |
+| Find all callers | `soma-code` | `soma-code.sh refs "functionName" src/` |
 | Check test coverage | `grep` | `grep -rn "functionName" tests/` |
-| Trace a concept | `soma-seam.sh trace` | `soma-seam.sh trace "preload"` |
+
+Install: `/hub install script soma-code`
 
 ## The Deeper Principle
 

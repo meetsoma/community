@@ -82,20 +82,17 @@ The `soma-guard.ts` extension intercepts bash commands and flags dangerous patte
 
 ## Shipped Tools
 
-These scripts ship with Soma in `.soma/amps/scripts/`:
+Install from the community hub to extend your toolkit:
 
-| Task | Script | Example |
+| Task | Script | Install |
 |------|--------|---------|
-| Navigate codebase | `soma-code.sh` | `soma-code.sh find "pattern"`, `soma-code.sh map file.ts` |
-| Search across ecosystem | `soma-query.sh` | `soma-query.sh search "keyword"` |
-| Trace concepts through memory | `soma-seam.sh` | `soma-seam.sh trace "concept"` |
-| Plan lifecycle management | `soma-plans.sh` | `soma-plans.sh status` |
-| Session pattern mining | `soma-reflect.sh` | `soma-reflect.sh --recurring` |
-| Check for updates | `soma-update-check.sh` | `soma-update-check.sh` |
-| Doc discovery + scraping | `soma-scrape.sh` | `soma-scrape.sh npm express` |
-| Focus priming | `soma-focus.sh` | `soma-focus.sh authentication` |
+| Navigate codebase (find, map, refs, structure) | `soma-code` | `/hub install script soma-code` |
+| Doc discovery + SDK research | `soma-scrape` | `/hub install script soma-scrape` |
+| Spelling + grammar checking | `soma-spell` | `/hub install script soma-spell` |
 
-Run any script with `--help` for full usage.
+Browse all available scripts: `/hub list --remote script`
+
+Run any script with `--help` for full usage. Build your own — drop a `.sh` into `.soma/amps/scripts/` and it's available next session. Drop it into `.soma/amps/scripts/commands/` and it becomes a `/soma <name>` command.
 
 ## Source
 

@@ -50,16 +50,16 @@ Every session, every commit. These are baseline guardrails — not optional refi
 
 ## Shipped Tools
 
-Soma ships scripts that implement these practices. Use them instead of raw commands:
+Install from the hub to extend these practices:
 
-| Practice | Tool | Example |
-|----------|------|---------|
-| Find references (blast radius) | `soma-code.sh find` | `soma-code.sh find "functionName" src/` |
-| Map file structure before editing | `soma-code.sh map` | `soma-code.sh map src/myfile.ts` |
-| Check test coverage exists | `grep` | `grep -rn "functionName" tests/` |
-| Search for prior art | `soma-query.sh search` | `soma-query.sh search "keyword"` |
-| Git identity enforcement | `git-identity-hook.sh` | Install as `.git/hooks/pre-commit` |
-| File tree overview | `soma-code.sh structure` | `soma-code.sh structure src/` |
+| Practice | Tool | Install | Example |
+|----------|------|---------|---------|
+| Find references (blast radius) | `soma-code` | `/hub install script soma-code` | `soma-code.sh find "functionName" src/` |
+| Map file structure before editing | `soma-code` | (same) | `soma-code.sh map src/myfile.ts` |
+| File tree overview | `soma-code` | (same) | `soma-code.sh structure src/` |
+| Doc discovery + SDK research | `soma-scrape` | `/hub install script soma-scrape` | `soma-scrape.sh npm express` |
+| Spelling + grammar | `soma-spell` | `/hub install script soma-spell` | `soma-spell.sh docs/` |
+| Check test coverage exists | `grep` | (built-in) | `grep -rn "functionName" tests/` |
 
 Run any script with `--help` for full options.
 
