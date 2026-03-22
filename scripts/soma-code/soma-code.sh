@@ -341,7 +341,7 @@ case "$cmd" in
     echo -e "  ${SOMA_GREEN}config${SOMA_NC} [path]                   ${SOMA_DIM}config/options objects${SOMA_NC}"
     echo -e "  ${SOMA_GREEN}tsc-errors${SOMA_NC} [path]               ${SOMA_DIM}TypeScript errors with context${SOMA_NC}"
     echo ""
-    echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
+    echo -e "  ${SOMA_DIM}MIT © meetsoma${SOMA_NC}"
     echo ""
     ;;
 esac

@@ -250,7 +250,7 @@ case "${1:-help}" in
     echo -e "    ${SOMA_BOLD}soma-spell.sh fix${SOMA_NC} src/content/blog/"
     echo -e "    ${SOMA_BOLD}soma-spell.sh check${SOMA_NC} --all"
     echo ""
-    echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
+    echo -e "  ${SOMA_DIM}MIT © meetsoma${SOMA_NC}"
     echo ""
     ;;
 esac

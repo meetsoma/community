@@ -1247,7 +1247,7 @@ usage() {
   echo -e "    ${SOMA_BOLD}soma-scrape.sh pull-item${SOMA_NC} 1,3,5"
   echo -e "    ${SOMA_BOLD}soma-scrape.sh list${SOMA_NC}"
   echo ""
-  echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
+  echo -e "  ${SOMA_DIM}MIT © meetsoma${SOMA_NC}"
   echo ""
   exit 0
 }
