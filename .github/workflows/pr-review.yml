@@ -22,7 +22,7 @@ jobs:
     outputs:
       tier_review_needed: ${{ steps.tier.outputs.review_needed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -60,7 +60,7 @@ jobs:
     if: success()
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Check auto-merge eligibility
         id: check
