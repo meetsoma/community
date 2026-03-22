@@ -1,23 +1,28 @@
 {
-  "name": "default",
-  "version": "0.6.2",
-  "description": "Standard Soma setup \u2014 core protocols for session management, heat tracking, and workflow.",
-  "author": "meetsoma",
-  "requires": {
-    "protocols": [
-      "breath-cycle",
-      "frontmatter-standard",
-      "heat-tracking",
-      "session-checkpoints",
-      "correction-capture",
-      "detection-triggers",
-      "pattern-evolution",
-      "quality-standards",
-      "working-style",
-      "tool-discipline"
-    ],
-    "muscles": [],
-    "skills": []
-  },
-  "tier": "official"
+    "name": "default",
+    "version": "0.6.3",
+    "description": "Standard Soma setup \u2014 core protocols for session management, heat tracking, and workflow.",
+    "author": "meetsoma",
+    "requires": {
+        "protocols": [
+            "breath-cycle",
+            "correction-capture",
+            "detection-triggers",
+            "frontmatter-standard",
+            "heat-tracking",
+            "maps",
+            "pattern-evolution",
+            "plan-hygiene",
+            "pre-flight",
+            "quality-standards",
+            "response-style",
+            "session-checkpoints",
+            "task-tracking",
+            "tool-discipline",
+            "working-style"
+        ],
+        "muscles": [],
+        "skills": []
+    },
+    "tier": "official"
 }

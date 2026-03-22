@@ -101,7 +101,3 @@ Run any script with `--help` for full usage. Build your own — drop a `.sh` int
 - Scripts directory: `.soma/amps/scripts/`
 
 ---
-
-## When to Apply
-
-Every session. Before writing raw commands, check if a script handles the task.
