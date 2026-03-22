@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T02:32:19.615Z",
+  "generated": "2026-03-22T04:28:51.280Z",
   "count": 36,
   "items": [
     {
@@ -632,13 +632,12 @@
           "pattern-evolution",
           "quality-standards",
           "working-style",
-          "tool-discipline",
-          "git-identity"
+          "tool-discipline"
         ],
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "devops",
