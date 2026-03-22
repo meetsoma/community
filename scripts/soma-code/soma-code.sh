@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ---
+# name: soma-code
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [navigation, search, code, grep, map, refactor]
+# requires: [bash 4+, grep, sed, awk]
+# description: Fast codebase navigator — find, map, refs, structure, and more
+# ---
 # ═══════════════════════════════════════════════════════════════════════════
 # soma-code — fast codebase navigator for shell projects
 # ═══════════════════════════════════════════════════════════════════════════

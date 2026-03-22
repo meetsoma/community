@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ---
+# name: soma-spell
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [spelling, grammar, docs, canadian-english, writing]
+# requires: [bash 4+, grep, sed]
+# description: Canadian English spelling checker and fixer with project dictionary
+# ---
 # ═══════════════════════════════════════════════════════════════════════════
 # soma-spell.sh — Canadian/British English spelling checker + fixer
 # ═══════════════════════════════════════════════════════════════════════════

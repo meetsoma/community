@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ---
+# name: soma-compat
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [validation, compatibility, protocols, muscles, audit]
+# requires: [bash 4+, grep]
+# description: Check AMPS content for compatibility conflicts and redundancy
+# ---
 # σ Soma Compatibility Check
 # Detects overlap, redundancy, and conflicting directives across protocols + muscles.
 # Usage: bash soma-compat.sh [path-to-soma-dir]

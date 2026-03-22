@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ---
+# name: soma-scrape
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [documentation, scraping, research, sdk, npm, github]
+# requires: [bash 4+, curl, jq]
+# description: Intelligent doc discovery and scraping for SDK research
+# ---
 #
 # soma-scrape — intelligent doc discovery and scraping
 #

@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ---
+# name: git-identity-hook
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [git, hooks, identity, security, pre-commit]
+# requires: [bash 4+, git]
+# description: Pre-commit hook that validates git identity before allowing commits
+# ---
 # Soma — Git Identity Pre-Commit Hook
 #
 # Validates git user.email before allowing commits.

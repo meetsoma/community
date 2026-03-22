@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ---
+# name: soma-snapshot
+# author: meetsoma
+# version: 1.0.0
+# license: MIT
+# tags: [backup, snapshot, archive, zip]
+# requires: [bash 4+, zip]
+# description: Rolling zip snapshots of project directories with automatic cleanup
+# ---
 # soma-snapshot.sh — Rolling zip snapshots of project directories
 #
 # Usage:
