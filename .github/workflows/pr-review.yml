@@ -9,6 +9,7 @@ on:
       - 'skills/**'
       - 'scripts/**'
       - 'templates/**'
+      - 'automations/**'
 
 permissions:
   contents: read
