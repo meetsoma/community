@@ -40,9 +40,5 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Trigger website rebuild
-        if: steps.commit.outputs.changed == 'true' && env.VERCEL_DEPLOY_HOOK != ''
-        env:
-          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
-        run: |
-          curl -s -X POST "$VERCEL_DEPLOY_HOOK" && echo "✅ Deploy hook triggered"
+      # Deploy hook removed — hub pages are now dynamic (HubDetail.tsx fetches
+      # from GitHub raw at runtime). No website rebuild needed for new content.
