@@ -1,7 +1,7 @@
 {
   "name": "default",
   "version": "0.6.2",
-  "description": "Standard Soma setup — core protocols for session management, heat tracking, and workflow.",
+  "description": "Standard Soma setup \u2014 core protocols for session management, heat tracking, and workflow.",
   "author": "meetsoma",
   "requires": {
     "protocols": [
@@ -18,5 +18,6 @@
     ],
     "muscles": [],
     "skills": []
-  }
+  },
+  "tier": "official"
 }

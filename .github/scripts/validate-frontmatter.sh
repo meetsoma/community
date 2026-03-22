@@ -134,7 +134,7 @@ for d in templates/*/; do
   fi
   if [ -f "${d}template.json" ]; then
     # Validate tier in template.json
-    tier=$(grep '"tier"' "${d}template.json" 2>/dev/null | head -1 | sed 's/.*"tier"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/')
+    tier=$(grep '"tier"' "${d}template.json" 2>/dev/null | head -1 | sed 's/.*"tier"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/' || true)
     if [ -n "$tier" ]; then
       validate_value "${d}template.json" "tier" "$tier" $VALID_TIERS
     fi
