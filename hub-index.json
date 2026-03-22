@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-22T07:53:15.996Z",
-  "count": 39,
+  "generated": "2026-03-22T09:05:41.574Z",
+  "count": 40,
   "items": [
     {
       "slug": "breath-cycle",
@@ -790,6 +790,22 @@
         ],
         "skills": [],
         "automations": []
+      },
+      "updated": "2026-03-22"
+    },
+    {
+      "slug": "preload-template",
+      "name": "preload-template",
+      "type": "template",
+      "description": "Customize how Soma writes preloads — override the default format with your own sections.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [],
+      "requires": {
+        "protocols": [],
+        "muscles": [],
+        "skills": []
       },
       "updated": "2026-03-22"
     },
