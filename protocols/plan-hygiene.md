@@ -5,7 +5,8 @@ version: 1.0.0
 tier: official
 author: Curtis Mercier
 license: MIT
-tags: [plans, hygiene, maintenance, lifecycle]heat-default: warm
+tags: [plans, hygiene, maintenance, lifecycle]
+heat-default: warm
 status: active
 created: 2026-03-12
 updated: 2026-03-22

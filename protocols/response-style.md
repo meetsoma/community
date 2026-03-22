@@ -5,7 +5,8 @@ status: active
 heat-default: warm
 author: meetsoma
 license: MIT
-tier: officialversion: 1.0.0
+tier: official
+version: 1.0.0
 applies-to: [always]
 breadcrumb: "Prefer prose over bullets. Minimum formatting for the content. One question per response max. No hollow social scripts."
 tags: [communication, formatting, ux]

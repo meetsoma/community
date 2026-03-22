@@ -11,7 +11,7 @@ breadcrumb: "MAPS — My Automation Protocol Scripts. Before any task, check for
 tags: [workflow, process, navigation, amps, efficiency]
 applies-to: [always]
 license: MIT
-tier: official---
+tier: official
 
 # MAPS — My Automation Protocol Scripts
 
