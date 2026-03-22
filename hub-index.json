@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-21T06:46:23.339Z",
-  "count": 31,
+  "generated": "2026-03-22T04:28:51.280Z",
+  "count": 36,
   "items": [
     {
       "slug": "breath-cycle",
@@ -24,7 +24,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "community-safe",
@@ -117,28 +117,6 @@
       "updated": "2026-03-18"
     },
     {
-      "slug": "git-identity",
-      "name": "git-identity",
-      "type": "protocol",
-      "description": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
-      "author": "Curtis Mercier",
-      "version": "1.1.0",
-      "breadcrumb": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "git"
-      ],
-      "tier": "official",
-      "tags": [
-        "git",
-        "attribution",
-        "identity"
-      ],
-      "status": "active",
-      "created": "2026-03-09",
-      "updated": "2026-03-18"
-    },
-    {
       "slug": "heat-tracking",
       "name": "heat-tracking",
       "type": "protocol",
@@ -159,7 +137,31 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
+    },
+    {
+      "slug": "maps",
+      "name": "maps",
+      "type": "protocol",
+      "description": "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use.",
+      "author": "Curtis Mercier",
+      "version": "1.1.0",
+      "breadcrumb": "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "community",
+      "tags": [
+        "workflow",
+        "process",
+        "navigation",
+        "amps",
+        "efficiency"
+      ],
+      "status": "active",
+      "created": "2026-03-16",
+      "updated": "2026-03-21"
     },
     {
       "slug": "pattern-evolution",
@@ -181,7 +183,24 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
+    },
+    {
+      "slug": "plan-hygiene",
+      "name": "plan-hygiene",
+      "type": "protocol",
+      "description": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "official",
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-21"
     },
     {
       "slug": "pre-flight",
@@ -218,6 +237,28 @@
       "status": "active",
       "created": "2026-03-10",
       "updated": "2026-03-18"
+    },
+    {
+      "slug": "response-style",
+      "name": "response-style",
+      "type": "protocol",
+      "description": "Prefer prose over bullets. Minimum formatting for the content. One question per response max. No hollow social scripts.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "breadcrumb": "Prefer prose over bullets. Minimum formatting for the content. One question per response max. No hollow social scripts.",
+      "heatDefault": "5",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "community",
+      "tags": [
+        "communication",
+        "formatting",
+        "ux"
+      ],
+      "status": "active",
+      "created": "2026-03-15",
+      "updated": "2026-03-15"
     },
     {
       "slug": "session-checkpoints",
@@ -343,24 +384,9 @@
       "breadcrumb": "Plans rot — update remaining on every touch. Stale docs poison future sessions. After shipping, scan for overlapping/outdated docs and archive or update.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "documentation",
-        "maintenance",
-        "plans",
-        "staleness"
-      ],
-      "keywords": [
-        "doc-hygiene",
-        "plans-rot",
-        "stale-docs",
-        "context-hygiene",
-        "plan-lifecycle",
-        "archive",
-        "remaining"
-      ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "icon-audit",
@@ -372,24 +398,9 @@
       "breadcrumb": "Browse icon libraries, extract SVGs, build numbered comparison pages, and screenshot for visual AI review.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "design",
-        "icons",
-        "visual-audit",
-        "browser-tools"
-      ],
-      "keywords": [
-        "icon-audit",
-        "svg",
-        "lucide",
-        "phosphor",
-        "comparison",
-        "visual-review",
-        "icon-library"
-      ],
       "status": "active",
       "created": "2026-03-11",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "incremental-refactor",
@@ -401,23 +412,9 @@
       "breadcrumb": "Never refactor blind. Scan deps first, plan changes, execute one file at a time, keep old paths working during transition, verify after each step.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "refactoring",
-        "safety",
-        "workflow",
-        "code-quality"
-      ],
-      "keywords": [
-        "refactor",
-        "incremental",
-        "dependencies",
-        "backward-compatible",
-        "scan",
-        "migration"
-      ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "micro-exhale",
@@ -429,21 +426,9 @@
       "breadcrumb": "Write workflow summaries to daily log after major completions — one file per day, always append.",
       "heatDefault": "hot",
       "tier": "official",
-      "topic": [
-        "memory",
-        "workflow",
-        "logging",
-        "sessions"
-      ],
-      "keywords": [
-        "micro-exhale",
-        "daily-log",
-        "workflow-summary",
-        "session-memory"
-      ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "precision-edit",
@@ -455,23 +440,9 @@
       "breadcrumb": "Before editing: grep -n to locate, read --offset to see exact whitespace, plan edits as a checklist, then execute. Never edit blind.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "editing",
-        "tools",
-        "reliability",
-        "workflow"
-      ],
-      "keywords": [
-        "edit",
-        "precision",
-        "whitespace",
-        "grep",
-        "line-numbers",
-        "read-before-write"
-      ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "safe-file-ops",
@@ -483,23 +454,9 @@
       "breadcrumb": "Check before write, never delete without backup, scope your searches, check for existing content before creating.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "safety",
-        "files",
-        "tools",
-        "workflow"
-      ],
-      "keywords": [
-        "safe-file-ops",
-        "write",
-        "delete",
-        "find",
-        "duplicate",
-        "overwrite"
-      ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "task-tooling",
@@ -511,23 +468,9 @@
       "breadcrumb": "Before starting any task, map which scripts, muscles, and tools apply. Name the tool for each phase. When a gap exists, say so explicitly.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "workflow",
-        "awareness",
-        "planning",
-        "tools"
-      ],
-      "keywords": [
-        "task-tooling",
-        "map-tools",
-        "situational-awareness",
-        "scripts",
-        "muscles",
-        "gaps"
-      ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "test-hygiene",
@@ -539,26 +482,87 @@
       "breadcrumb": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests.",
       "heatDefault": "warm",
       "tier": "official",
-      "topic": [
-        "testing",
-        "ci",
-        "code-quality",
-        "maintenance"
-      ],
-      "keywords": [
-        "test",
-        "stale",
-        "dead-code",
-        "cleanup",
-        "validation",
-        "ci",
-        "suite",
-        "coverage",
-        "hygiene"
-      ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-14"
+      "updated": "2026-03-21"
+    },
+    {
+      "slug": "soma-code",
+      "name": "soma-code",
+      "type": "script",
+      "description": "Fast codebase navigator — find, map, refs, structure, and more",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "navigation",
+        "search",
+        "code",
+        "grep",
+        "map",
+        "refactor"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed",
+        "awk"
+      ],
+      "status": "active",
+      "created": "2026-03-15",
+      "updated": "2026-03-21"
+    },
+    {
+      "slug": "soma-scrape",
+      "name": "soma-scrape",
+      "type": "script",
+      "description": "Intelligent doc discovery and scraping for SDK research",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "documentation",
+        "scraping",
+        "research",
+        "sdk",
+        "npm",
+        "github"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "curl",
+        "jq"
+      ],
+      "status": "active",
+      "created": "2026-03-17",
+      "updated": "2026-03-21"
+    },
+    {
+      "slug": "soma-spell",
+      "name": "soma-spell",
+      "type": "script",
+      "description": "Canadian English spelling checker and fixer with project dictionary",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "spelling",
+        "grammar",
+        "docs",
+        "canadian-english",
+        "writing"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed"
+      ],
+      "status": "active",
+      "created": "2026-03-18",
+      "updated": "2026-03-21"
     },
     {
       "slug": "architect",
@@ -589,7 +593,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     },
     {
       "slug": "core",
@@ -606,7 +610,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     },
     {
       "slug": "default",
@@ -628,13 +632,12 @@
           "pattern-evolution",
           "quality-standards",
           "working-style",
-          "tool-discipline",
-          "git-identity"
+          "tool-discipline"
         ],
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-22"
     },
     {
       "slug": "devops",
@@ -661,7 +664,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     },
     {
       "slug": "fullstack",
@@ -694,7 +697,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     },
     {
       "slug": "maintainer",
@@ -724,7 +727,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     },
     {
       "slug": "refactorer",
@@ -752,7 +755,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     },
     {
       "slug": "writer",
@@ -778,7 +781,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-21"
+      "updated": "2026-03-14"
     }
   ]
 }
