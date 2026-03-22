@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-21T09:37:28.029Z",
-  "count": 40,
+  "generated": "2026-03-22T02:32:19.615Z",
+  "count": 36,
   "items": [
     {
       "slug": "breath-cycle",
@@ -24,7 +24,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "community-safe",
@@ -117,28 +117,6 @@
       "updated": "2026-03-18"
     },
     {
-      "slug": "git-identity",
-      "name": "git-identity",
-      "type": "protocol",
-      "description": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
-      "author": "Curtis Mercier",
-      "version": "1.1.0",
-      "breadcrumb": "Commits must be attributed correctly. Check git config user.email before first commit in any repo. Define identity zones (personal, business, agent) and enforce them.",
-      "heatDefault": "warm",
-      "appliesTo": [
-        "git"
-      ],
-      "tier": "official",
-      "tags": [
-        "git",
-        "attribution",
-        "identity"
-      ],
-      "status": "active",
-      "created": "2026-03-09",
-      "updated": "2026-03-18"
-    },
-    {
       "slug": "heat-tracking",
       "name": "heat-tracking",
       "type": "protocol",
@@ -159,7 +137,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "maps",
@@ -183,7 +161,7 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-03-18"
+      "updated": "2026-03-21"
     },
     {
       "slug": "pattern-evolution",
@@ -205,7 +183,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-15"
+      "updated": "2026-03-21"
     },
     {
       "slug": "plan-hygiene",
@@ -509,30 +487,6 @@
       "updated": "2026-03-21"
     },
     {
-      "slug": "git-identity-hook",
-      "name": "git-identity-hook",
-      "type": "script",
-      "description": "Pre-commit hook that validates git identity before allowing commits",
-      "author": "meetsoma",
-      "version": "1.0.0",
-      "tier": "community",
-      "tags": [
-        "git",
-        "hooks",
-        "identity",
-        "security",
-        "pre-commit"
-      ],
-      "language": "bash",
-      "requires": [
-        "bash 4+",
-        "git"
-      ],
-      "status": "active",
-      "created": "2026-03-14",
-      "updated": "2026-03-21"
-    },
-    {
       "slug": "soma-code",
       "name": "soma-code",
       "type": "script",
@@ -554,30 +508,6 @@
         "grep",
         "sed",
         "awk"
-      ],
-      "status": "active",
-      "created": "2026-03-15",
-      "updated": "2026-03-21"
-    },
-    {
-      "slug": "soma-compat",
-      "name": "soma-compat",
-      "type": "script",
-      "description": "Check AMPS content for compatibility conflicts and redundancy",
-      "author": "meetsoma",
-      "version": "1.0.0",
-      "tier": "community",
-      "tags": [
-        "validation",
-        "compatibility",
-        "protocols",
-        "muscles",
-        "audit"
-      ],
-      "language": "bash",
-      "requires": [
-        "bash 4+",
-        "grep"
       ],
       "status": "active",
       "created": "2026-03-15",
@@ -607,29 +537,6 @@
       ],
       "status": "active",
       "created": "2026-03-17",
-      "updated": "2026-03-21"
-    },
-    {
-      "slug": "soma-snapshot",
-      "name": "soma-snapshot",
-      "type": "script",
-      "description": "Rolling zip snapshots of project directories with automatic cleanup",
-      "author": "meetsoma",
-      "version": "1.0.0",
-      "tier": "community",
-      "tags": [
-        "backup",
-        "snapshot",
-        "archive",
-        "zip"
-      ],
-      "language": "bash",
-      "requires": [
-        "bash 4+",
-        "zip"
-      ],
-      "status": "active",
-      "created": "2026-03-14",
       "updated": "2026-03-21"
     },
     {
