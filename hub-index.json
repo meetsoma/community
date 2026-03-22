@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T04:28:51.280Z",
+  "generated": "2026-03-22T04:29:32.497Z",
   "count": 36,
   "items": [
     {
@@ -593,7 +593,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "core",
@@ -610,7 +610,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "default",
@@ -664,7 +664,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "fullstack",
@@ -697,7 +697,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "maintainer",
@@ -727,7 +727,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "refactorer",
@@ -755,7 +755,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     },
     {
       "slug": "writer",
@@ -781,7 +781,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-03-22"
     }
   ]
 }
