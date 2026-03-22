@@ -4,7 +4,7 @@ name: quality-standards
 status: active
 heat-default: warm
 applies-to: [always]
-breadcrumb: "Deletion is irreversible — move or archive. Protect critical files. Clean commits with descriptive messages. Know which branch deploys. Atomic commits — one concern each."
+breadcrumb: "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — find every caller, test, and doc. Atomic commits — one concern each."
 author: meetsoma
 license: MIT
 version: 1.0.0
@@ -12,7 +12,7 @@ tier: official
 scope: bundled
 tags: [quality, safety, git, workflow]
 created: 2026-03-10
-updated: 2026-03-18
+updated: 2026-03-22
 ---
 
 # Quality Standards
@@ -45,6 +45,22 @@ Every session, every commit. These are baseline guardrails — not optional refi
 
 - **Fix the system, not just the instance.** When you find a bug, ask: what allowed this to happen? Fix the root cause — a missing test, a stale check, a gap in validation.
 - **When code changes, check the tools.** Scripts, verification checks, and tests can go stale when the code they operate on changes. After any structural change, verify that tooling still produces correct results.
-- **Tests match shipped code.** Write tests for what you just committed — same commit or next. Don't write tests for features that don't exist yet. Don't skip tests because "it's just a refactor."
+- **Tests cover new code, not just pass on old.** Every code change must include test assertions for the NEW behavior. Existing tests passing on new code is false confidence — they're checking yesterday's behavior. The test: if you removed your change, would a test fail? If not, you haven't tested it.
+- **Blast radius before editing.** Before changing a function, type, or field: search for every reference. `grep -rn "function_name" src/ tests/ docs/` — find callers, tests, and docs that need updating alongside the code. A code change without test/doc updates is half-shipped.
+
+## Shipped Tools
+
+Soma ships scripts that implement these practices. Use them instead of raw commands:
+
+| Practice | Tool | Example |
+|----------|------|---------|
+| Find references (blast radius) | `soma-code.sh find` | `soma-code.sh find "functionName" src/` |
+| Map file structure before editing | `soma-code.sh map` | `soma-code.sh map src/myfile.ts` |
+| Check test coverage exists | `grep` | `grep -rn "functionName" tests/` |
+| Search for prior art | `soma-query.sh search` | `soma-query.sh search "keyword"` |
+| Git identity enforcement | `git-identity-hook.sh` | Install as `.git/hooks/pre-commit` |
+| File tree overview | `soma-code.sh structure` | `soma-code.sh structure src/` |
+
+Run any script with `--help` for full options.
 
 ---
