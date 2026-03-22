@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-22T11:14:35.762Z",
+  "generated": "2026-03-22T11:19:37.902Z",
   "count": 40,
   "items": [
     {
@@ -699,7 +699,7 @@
       "description": "Standard Soma setup — core protocols for session management, heat tracking, and workflow.",
       "author": "meetsoma",
       "version": "0.6.2",
-      "tier": "community",
+      "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [
@@ -816,7 +816,7 @@
       "description": "Customize how Soma writes preloads — override the default format with your own sections.",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "official",
       "tags": [],
       "requires": {
         "protocols": [],
