@@ -12,7 +12,8 @@ license: MIT
 version: 1.0.0
 tags: [pre-flight, verify, check, before-building]
 applies-to: [always]
-created: 2026-03-10---
+created: 2026-03-10
+---
 
 # Pre-Flight Protocol
 
