@@ -3,20 +3,20 @@ name: safe-file-ops
 type: muscle
 status: active
 description: "Safe file operations — read before write, verify after edit, never delete without scanning dependencies."
-heat: 0
-triggers: [write, delete, file-ops, overwrite, safety, file-operations, workflow, read, edit, archive, backup, guard]
-tags: [safety, files, editing, guard]
+heat: 1
+triggers: [write, delete, file-ops, overwrite, safety, file-operations, read, edit, archive, backup, guard, replace, sed, surgical, precise, oldtext, match, whitespace, precision]
+tags: [safety, files, editing, guard, precision]
 applies-to: [any]
 created: 2026-03-10
 updated: 2026-03-23
-tools: [soma-refactor.sh]
+tools: [soma-refactor.sh, soma-code.sh, soma-verify.sh]
 ---
 
 # Safe File Operations
 
 ## Digest
 <!-- digest:start -->
-Four rules: (1) Never `write` without checking if the file exists first — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never `find ~` or broad find without timeout — stalls on large dirs. Use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never clone to `/tmp/` — check for existing local clones first, clone to permanent workspace location. (4) Never create a muscle, protocol, or spec without `ls`ing the directory first — duplicates rot into false context.
+Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never `find ~` or broad find without timeout — use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never create a file without `ls`ing the directory first — duplicates rot into false context. (4) **Precision edit**: before any multi-line edit, `read` the exact range first, verify whitespace matches, plan edits as a checklist before touching anything. The `edit` tool's `oldText` must match exactly — verify by reading first. (5) Never delete without scanning dependencies — `soma-refactor.sh scan` or `soma-code.sh refs` to check blast radius. (6) After edits, verify — re-run the check that found the issue.
 <!-- digest:end -->
 
 ## Rules

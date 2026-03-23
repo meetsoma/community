@@ -2,9 +2,9 @@
 name: task-tooling
 type: muscle
 status: active
-description: "scripts survive across sessions, memory doesn't."
-heat: 0
-triggers: [dev, soma-dev, refactor, code, scripts, muscles, tools, tooling, plan, implementation, gap, extend, workflow, planning, meta]
+description: "Before touching code, name your tools. Map scripts, muscles, and MAPs for each phase of the task. Gaps are worth building for."
+heat: 8
+triggers: [scripts, muscles, tools, tooling, plan, implementation, gap, extend, planning, meta]
 tags: [workflow, planning, tools, scripts, awareness]
 applies-to: [any]
 created: 2026-03-13
