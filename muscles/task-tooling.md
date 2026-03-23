@@ -3,7 +3,7 @@ name: task-tooling
 type: muscle
 status: active
 description: "Before touching code, name your tools. Map scripts, muscles, and MAPs for each phase of the task. Gaps are worth building for."
-heat: 8
+heat: 9
 triggers: [scripts, muscles, tools, tooling, plan, implementation, gap, extend, planning, meta]
 tags: [workflow, planning, tools, scripts, awareness]
 applies-to: [any]
