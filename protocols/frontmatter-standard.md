@@ -1,19 +1,21 @@
 ---
-type: protocol
 name: frontmatter-standard
+type: protocol
 status: active
+description: "Every .md file needs frontmatter: type, status, created, updated. Protocols get TL;DR; muscles get digest."
 heat-default: warm
-applies-to: [always]
-breadcrumb: "Every .md file needs frontmatter: type, status, created, updated. Protocols get TL;DR; muscles get digest."
-author: meetsoma
-license: MIT
-version: 1.1.0
-tier: official
-scope: bundled
 tags: [structure, metadata, organization]
-spec-ref: curtismercier/protocols/atlas (v0.1)
+applies-to: [always]
+scope: bundled
+tier: core
 created: 2026-03-09
-updated: 2026-03-18
+updated: 2026-03-23
+version: 1.1.0
+author: Curtis Mercier
+license: CC BY 4.0
+upstream: core
+upstream-version: 1.1.0
+spec-ref: curtismercier/protocols/atlas (v0.1)
 ---
 
 # Frontmatter Standard Protocol
@@ -42,10 +44,17 @@ Every Markdown document in an agent-managed workspace MUST have YAML frontmatter
 | `related` | string[] | Links to related docs |
 | `owner` | string | Who owns this doc |
 | `priority` | string | high/medium/low |
+| `scope` | string | `internal` = workspace only, never push to public repos |
 
-### Valid Types (12)
+### Scope: Internal
 
-`plan` · `spec` · `note` · `index` · `memory` · `muscle` · `protocol` · `decision` · `log` · `template` · `identity` · `config`
+Files with `scope: internal` must never be pushed to agent, community, or any public repo. This protects workspace-specific content (private paths, internal workflows, project-specific protocols) from leaking.
+
+The `soma-channel-guard.sh` pre-push hook should check for this. Scripts like `soma-repos.sh drift sync push` should refuse to copy files marked `scope: internal`.
+
+### Valid Types (13)
+
+`plan` · `spec` · `note` · `index` · `memory` · `muscle` · `protocol` · `decision` · `log` · `template` · `identity` · `config` · `map`
 
 ### Valid Statuses (8)
 
@@ -63,5 +72,3 @@ Every Markdown document in an agent-managed workspace MUST have YAML frontmatter
 - README.md in public repos (conventional format, no frontmatter expected)
 - Third-party docs or generated files
 - Files explicitly marked as frontmatter-exempt
-
----
