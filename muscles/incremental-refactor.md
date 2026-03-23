@@ -3,12 +3,12 @@ name: incremental-refactor
 type: muscle
 status: active
 description: "never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabi"
-heat: 10
+heat: 11
 triggers: [migration, paths, rename, dependency, incremental, refactoring, code-quality]
 applies-to: [any]
 created: 2026-03-13
 updated: 2026-03-23
-loads: 46
+loads: 47
 tools: [soma-refactor.sh, soma-code.sh]
 seams: [s01-7631fc, s01-3498d3]
 trust-note: "soma-refactor.sh scan/refs/routes/verify — these are YOUR tools. Use them BEFORE raw grep. Verified working s01-7631fc."
