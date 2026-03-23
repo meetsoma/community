@@ -1,16 +1,16 @@
 ---
-type: protocol
 name: community-safe
+type: protocol
 status: active
+description: "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol covers the judgment — what to keep private, where it belongs."
 heat-default: warm
-applies-to: [always]
-breadcrumb: "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol covers the judgment — what to keep private, where it belongs."
-version: 2.0.0
-tier: core
-scope: hub
 tags: [privacy, safety, self-awareness]
+applies-to: [always]
+scope: hub
+tier: core
 created: 2026-03-10
-updated: 2026-03-22
+updated: 2026-03-23
+version: 2.0.0
 author: meetsoma
 license: MIT
 ---
@@ -18,11 +18,6 @@ license: MIT
 
 > How Soma keeps private data out of public content. The channel-guard script catches leaks mechanically — this protocol covers the judgment that prevents creating them.
 
-## TL;DR
-Community content must be generic — no personal data, paths, or secrets. The channel-guard catches leaks pre-push. This protocol covers the judgment.
-
-## When to Apply
-When sharing content to the community hub, syncing to _public, or reviewing PRs.
 ## What's Automated
 
 **`soma-channel-guard.sh`** — pre-push hook that scans for:

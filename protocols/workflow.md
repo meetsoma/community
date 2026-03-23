@@ -1,18 +1,18 @@
 ---
-type: protocol
 name: workflow
+type: protocol
 status: active
+description: "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished."
 heat-default: warm
+tags: [workflow, git, testing, deployment]
 applies-to: [git]
-breadcrumb: "Test before commit, commit before moving on, push before walking away. Know your deploy branch. Unpushed work is invisible — treat it as unfinished."
+scope: hub
+tier: community
+created: 2026-03-12
+updated: 2026-03-23
+version: 1.0.0
 author: meetsoma
 license: MIT
-version: 1.0.0
-tier: community
-scope: hub
-tags: [workflow, git, testing, deployment]
-created: 2026-03-12
-updated: 2026-03-14
 ---
 
 # Workflow Protocol
