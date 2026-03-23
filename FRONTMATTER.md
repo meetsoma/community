@@ -15,7 +15,7 @@ name: kebab-case-name              # matches filename
 status: active                     # draft | active | stable | dormant | archived | deprecated
 heat-default: warm                 # cold | warm | hot — initial system prompt tier
 applies-to: [always]               # signal matching: always, git, typescript, python, etc.
-breadcrumb: "One-liner TL;DR..."   # QUOTED — used for warm injection + hub card
+description: "One-liner TL;DR..."   # QUOTED — used for warm injection + hub card
 author: Curtis Mercier
 license: MIT
 version: 1.0.0
@@ -31,8 +31,8 @@ updated: 2026-03-10
 
 **Required sections:** `## TL;DR`, `## When to Apply`
 
-**Agent runtime reads:** `name`, `breadcrumb`, `heat-default`, `applies-to`, `scope`, `tier`
-**Website hub reads:** `name`, `breadcrumb`, `tier`, `tags`, `heat-default`, `author`, `version`
+**Agent runtime reads:** `name`, `description`, `heat-default`, `applies-to`, `scope`, `tier`
+**Website hub reads:** `name`, `description`, `tier`, `tags`, `heat-default`, `author`, `version`
 
 ### Muscle
 
@@ -42,7 +42,7 @@ type: muscle
 name: kebab-case-name              # matches filename
 status: active                     # draft | active | stable | dormant | archived | deprecated
 heat-default: warm                 # cold | warm | hot — initial tier + website display
-breadcrumb: "One-liner TL;DR..."   # QUOTED — hub card description (or use description:)
+description: "One-liner TL;DR..."   # QUOTED — hub card description
 triggers: [specific, search, terms] # agent search + activation keywords
 tags: [broad, categories]          # hub card tags
 heat: 0                            # numeric 0-15 — always 0 in community repo
@@ -69,7 +69,7 @@ updated: 2026-03-10
 type: automation
 name: kebab-case-name
 status: active
-description: "One-liner for hub card"  # or use breadcrumb:
+description: "One-liner for hub card"
 triggers: [keywords, that, activate]   # agent search + activation
 tags: [workflow, category]
 estimated-turns: 5-15                  # helps users know time commitment
@@ -86,7 +86,7 @@ updated: 2026-03-10
 
 Use `## Phase` or `## Step` headers for workflow stages.
 
-**Note:** `description` and `breadcrumb` are interchangeable — CI accepts either. `triggers` replaces the older `topic` + `keywords` (v0.6.2+).
+**Note:** `description` replaces `breadcrumb` — CI accepts either. `triggers` replaces the older `topic` + `keywords` (v0.6.2+).
 
 ### Template
 
@@ -164,7 +164,7 @@ Skills live in folders: `skills/{name}/SKILL.md` + supporting files.
 | `type` | ✅ | `protocol`, `muscle`, `skill`, `automation`, `identity` | Always first field |
 | `name` | ✅ | kebab-case | Matches filename |
 | `status` | ✅ | `draft`, `active`, `stable`, `dormant`, `archived`, `deprecated` | |
-| `breadcrumb` | ✅* | Quoted string | *Or `description:` — CI accepts either |
+| `description` | ✅* | Quoted string | Quoted one-liner for hub card + skill loader |
 | `version` | ✅ | semver | |
 | `author` | ✅ | Name or handle | |
 | `license` | ✅ | SPDX identifier | |
