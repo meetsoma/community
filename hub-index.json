@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-23T16:06:32.106Z",
+  "generated": "2026-03-23T17:18:45.552Z",
   "count": 40,
   "items": [
     {
@@ -454,7 +454,7 @@
       "slug": "safe-file-ops",
       "name": "safe-file-ops",
       "type": "muscle",
-      "description": "## Digest <!-- digest:start --> Four rules: (1) Never `write` without checking if the file exists first — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2)",
+      "description": "## Digest <!-- digest:start --> Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never ",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -465,7 +465,8 @@
         "safety",
         "files",
         "editing",
-        "guard"
+        "guard",
+        "precision"
       ],
       "status": "active",
       "created": "2026-03-10",
