@@ -3,13 +3,11 @@ type: protocol
 name: plan-hygiene
 version: 1.0.0
 tier: official
-author: Curtis Mercier
-license: MIT
-tags: [plans, hygiene, maintenance, lifecycle]
 heat-default: warm
 status: active
 created: 2026-03-12
-updated: 2026-03-22
+updated: 2026-03-28
+scope: bundled
 breadcrumb: "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale."
 applies-to: [always]
 ---
@@ -35,6 +33,7 @@ type: plan
 status: active          # draft | active | blocked | complete | archived
 created: 2026-03-13
 updated: 2026-03-14     # always update on any change
+scope: bundled
 owner: curtis + soma
 scope: [auto-breathe, notifications]
 remaining:              # brief list of what's left — empty when complete
@@ -121,7 +120,3 @@ Run `bash .soma/scripts/plan-audit.sh` at least once per major session. It check
 | Kanban item "Done" but feature has a bug | Move back to Active. Done means done. |
 | Changelog entry for unreleased version | Keep in [Unreleased] section. Move to version header only on publish. |
 | Writing the changelog BEFORE writing the code | Invert: code → commit → changelog. |
-
-## When to Apply
-
-At session end (exhale), when creating plans, when reviewing existing plans for staleness.

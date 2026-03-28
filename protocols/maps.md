@@ -5,13 +5,13 @@ version: 1.1.0
 status: active
 heat-default: warm
 created: 2026-03-16
-updated: 2026-03-22
+updated: 2026-03-28
 author: Curtis Mercier
 breadcrumb: "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use."
 tags: [workflow, process, navigation, amps, efficiency]
 applies-to: [always]
-license: MIT
-tier: official
+scope: bundled
+---
 
 # MAPS — My Automation Protocol Scripts
 
@@ -86,8 +86,8 @@ name: <map-name>
 status: active
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-license: MIT
-tier: officialtriggers: [keyword1, keyword2]
+scope: bundled
+triggers: [keyword1, keyword2]
 reads:
   muscles: [relevant-muscles]
   protocols: [relevant-protocols]
@@ -150,8 +150,4 @@ MAPS are the connective tissue. They don't add new knowledge — they organize e
 
 ---
 
-*© Curtis Mercier. Licensed under MIT.*
-
-## When to Apply
-
-Before starting any task — check if a MAP exists. After completing a repeated task twice — build a MAP.
+*© Curtis Mercier. Licensed under CC BY 4.0.*
