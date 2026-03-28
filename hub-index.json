@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-03-23T19:12:28.156Z",
+  "generated": "2026-03-28T13:26:41.030Z",
   "count": 40,
   "items": [
     {
@@ -23,7 +23,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "community-safe",
@@ -88,7 +88,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "frontmatter-standard",
@@ -109,7 +109,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "heat-tracking",
@@ -131,7 +131,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "maps",
@@ -145,7 +145,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "official",
+      "tier": "community",
       "tags": [
         "workflow",
         "process",
@@ -155,7 +155,7 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-03-22"
+      "updated": "2026-03-28"
     },
     {
       "slug": "pattern-evolution",
@@ -176,14 +176,14 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "plan-hygiene",
       "name": "plan-hygiene",
       "type": "protocol",
       "description": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
-      "author": "Curtis Mercier",
+      "author": "Unknown",
       "version": "1.0.0",
       "breadcrumb": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
       "heatDefault": "warm",
@@ -191,15 +191,9 @@
         "always"
       ],
       "tier": "official",
-      "tags": [
-        "plans",
-        "hygiene",
-        "maintenance",
-        "lifecycle"
-      ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-22"
+      "updated": "2026-03-28"
     },
     {
       "slug": "pre-flight",
@@ -220,7 +214,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "quality-standards",
@@ -242,7 +236,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "response-style",
@@ -252,11 +246,11 @@
       "author": "meetsoma",
       "version": "1.0.0",
       "breadcrumb": "Prefer prose over bullets. Minimum formatting for the content. One question per response max. No hollow social scripts.",
-      "heatDefault": "warm",
+      "heatDefault": "5",
       "appliesTo": [
         "always"
       ],
-      "tier": "official",
+      "tier": "core",
       "tags": [
         "communication",
         "formatting",
@@ -264,7 +258,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-03-22"
+      "updated": "2026-03-28"
     },
     {
       "slug": "session-checkpoints",
@@ -286,7 +280,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "task-tracking",
@@ -308,7 +302,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "tool-discipline",
@@ -330,7 +324,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "workflow",
@@ -678,7 +672,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "core",
@@ -695,7 +689,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "default",
@@ -727,7 +721,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "devops",
@@ -754,7 +748,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "fullstack",
@@ -787,7 +781,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "maintainer",
@@ -817,7 +811,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "preload-template",
@@ -833,7 +827,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "refactorer",
@@ -861,7 +855,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     },
     {
       "slug": "writer",
@@ -887,7 +881,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-23"
+      "updated": "2026-03-28"
     }
   ]
 }
