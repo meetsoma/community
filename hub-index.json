@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generated": "2026-03-28T13:26:41.030Z",
-  "count": 40,
+  "generated": "2026-03-28T18:03:00.697Z",
+  "count": 42,
   "items": [
     {
       "slug": "breath-cycle",
       "name": "breath-cycle",
       "type": "protocol",
-      "description": "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. Write preload with resume point + orient targets before rotating.",
+      "description": "Sessions have a rhythm: inhale (boot loads everything), hold (you work), exhale (you save state for next time). Auto-breathe watches context and nudges at 50%/70%/85% — don't fight it, ride it. The preload you write at exhale IS the next session's memory. Make it count: resume point, what shipped, exact files to read. A preload that says \"continued working\" is a preload that wastes the next session's first 10 minutes. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`.",
       "author": "Curtis Mercier",
       "version": "2.0.0",
       "heatDefault": "warm",
@@ -72,7 +72,7 @@
       "slug": "detection-triggers",
       "name": "detection-triggers",
       "type": "protocol",
-      "description": "Capture on: corrections, preferences, 3+ repeated patterns, knowledge gaps. Skip one-time instructions. Bubble-up: session log → muscle → protocol → core.",
+      "description": "Not everything the user says is worth remembering. Capture corrections (they're telling you what you got wrong), preferences (they're telling you who they are), and patterns that repeat 3+ times (that's a signal, not noise). Skip one-off instructions — those are for this session, not your identity. When something sticks, bubble it up: session log first, then muscle if it recurs, then protocol if it's fundamental.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -94,7 +94,7 @@
       "slug": "frontmatter-standard",
       "name": "frontmatter-standard",
       "type": "protocol",
-      "description": "Every `.md` file needs YAML frontmatter: `type`, `status`, `created`, `updated`. Protocols get `## TL;DR`; muscles get `<!-- digest:start/end -->`.",
+      "description": "Frontmatter is how Soma discovers and classifies your content. Every `.md` file needs at minimum: `type`, `status`, `created`, `updated`. Without it, the file is invisible to heat tracking, boot discovery, and the hub. Protocols get a `## TL;DR` section (that's what loads into the prompt). Muscles get `<!-- digest:start/end -->` blocks (compact summary for warm loading). Skip this and your content silently disappears from the system.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
       "heatDefault": "warm",
@@ -112,10 +112,34 @@
       "updated": "2026-03-28"
     },
     {
+      "slug": "git-identity",
+      "name": "git-identity",
+      "type": "protocol",
+      "description": "Soma's guard checks git identity on every commit. Configure expected email in settings.json — mismatches trigger warnings. This behavior is built into soma-guard.ts.",
+      "author": "Curtis Mercier",
+      "version": "2.0.0",
+      "breadcrumb": "Soma's guard checks git identity on every commit. Configure expected email in settings.json — mismatches trigger warnings. This behavior is built into soma-guard.ts.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "git"
+      ],
+      "tier": "core",
+      "tags": [
+        "git",
+        "attribution",
+        "identity",
+        "guard",
+        "settings"
+      ],
+      "status": "active",
+      "created": "2026-03-09",
+      "updated": "2026-03-22"
+    },
+    {
       "slug": "heat-tracking",
       "name": "heat-tracking",
       "type": "protocol",
-      "description": "Cold (0-2): skipped. Warm (3-7): TL;DR only. Hot (8+): full body. Heat decays each session, bumps on use. `/pin` heats, `/kill` drops to 0.",
+      "description": "Heat decides what loads into your brain each session. Cold (0-2) content is skipped entirely — you won't see it. Warm (3-7) loads just the TL;DR summary. Hot (8+) loads the full body. Heat decays each session you don't use something, and bumps when you do. This means your prompt naturally evolves: frequently-used content stays visible, stale content fades. `/pin` forces something hot. `/kill` drops it to 0 immediately.",
       "author": "Curtis Mercier",
       "version": "2.0.0",
       "heatDefault": "warm",
@@ -132,6 +156,30 @@
       "status": "active",
       "created": "2026-03-09",
       "updated": "2026-03-28"
+    },
+    {
+      "slug": "hub-sharing",
+      "name": "hub-sharing",
+      "type": "protocol",
+      "description": "How Soma handles /hub share. This behavior is built into the hub extension — this protocol helps you understand what's happening. Not loaded into the system prompt.",
+      "author": "Curtis Mercier",
+      "version": "1.0.0",
+      "breadcrumb": "How Soma handles /hub share. This behavior is built into the hub extension — this protocol helps you understand what's happening. Not loaded into the system prompt.",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "hub",
+        "share",
+        "privacy",
+        "community",
+        "public"
+      ],
+      "status": "active",
+      "created": "2026-03-22",
+      "updated": "2026-03-22"
     },
     {
       "slug": "maps",
@@ -161,7 +209,7 @@
       "slug": "pattern-evolution",
       "name": "pattern-evolution",
       "type": "protocol",
-      "description": "Maturation: Skills → Muscles → Protocols → Automations. Born from gaps and repeated friction. Not every pattern climbs the full ladder.",
+      "description": "Patterns mature: a skill you use once becomes a muscle after the third time, a protocol after you build a system around it, an automation when it should run without thinking. Not everything climbs the full ladder — most patterns stay as muscles. The signal to promote is friction: if you keep reaching for the same muscle and wishing it did more, it's ready to grow. If you keep forgetting to run something, it's ready to become automatic.",
       "author": "Curtis Mercier",
       "version": "1.4.0",
       "heatDefault": "warm",
@@ -199,7 +247,7 @@
       "slug": "pre-flight",
       "name": "pre-flight",
       "type": "protocol",
-      "description": "Before building anything new, check if it exists. Grep codebase, scan `.soma/`, verify need. Catch duplication before executing.",
+      "description": "Before building anything new, check if it already exists. This is the most common mistake: spending 30 minutes building something that's already in the codebase under a different name. Grep the codebase. Scan `.soma/`. Check the kanban. When the user asks for something that's already there, say so immediately — \"we already have X, want to extend it?\" This is how senior engineers prevent duplication.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -220,7 +268,7 @@
       "slug": "quality-standards",
       "name": "quality-standards",
       "type": "protocol",
-      "description": "Never delete — move or archive. Clean atomic commits with descriptive messages. Push when ready. Know which branch deploys. Confirm before touching critical files. Close the loop — when fixing a bug, fix the system that allowed it. Tests match shipped code, not planned features. Use conventional commit format: `type(scope): description`.",
+      "description": "Never delete — move or archive. You can always recover from an archive; you can't recover from a delete. Clean atomic commits with `type(scope): description`. Push when ready, not before. Know which branch deploys — pushing to the wrong branch is how you ship half-finished work. When you fix a bug, fix the system that allowed it — closing the loop is the difference between a fix and a patch. Tests match shipped code, not planned features.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -264,7 +312,7 @@
       "slug": "session-checkpoints",
       "name": "session-checkpoints",
       "type": "protocol",
-      "description": "Two git tracks: `.soma/` auto-commits on exhale (diff-on-boot), project code gets checkpoint commits (squash before push). Settings: `checkpoints.*`.",
+      "description": "Two git tracks run in parallel. `.soma/` auto-commits on exhale — that's how boot sees what changed between sessions (the diff in the boot message). Project code gets regular checkpoint commits as you work — squash them before pushing. This means you can commit freely during a session without worrying about messy history. Settings: `checkpoints.*`.",
       "author": "Curtis Mercier",
       "version": "2.0.0",
       "heatDefault": "warm",
@@ -286,7 +334,7 @@
       "slug": "task-tracking",
       "name": "task-tracking",
       "type": "protocol",
-      "description": "One board: `.soma/_kanban.md`. Four lanes: Active, In Progress, Done, Parked. Move cards in real time. Verify board on exhale.",
+      "description": "One board, one truth: `.soma/_kanban.md`. Four lanes: Active, In Progress, Done, Parked. Move cards as you work, not at the end — if the board doesn't reflect reality right now, it's not a board, it's fiction. Verify on exhale. When something's blocked, park it with a reason. When something's done, move it — don't leave completed work in Active where it clutters the view.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
       "heatDefault": "warm",
