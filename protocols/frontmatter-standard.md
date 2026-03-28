@@ -9,7 +9,7 @@ applies-to: [always]
 scope: bundled
 tier: core
 created: 2026-03-09
-updated: 2026-03-23
+updated: 2026-03-28
 version: 1.1.0
 author: Curtis Mercier
 license: CC BY 4.0

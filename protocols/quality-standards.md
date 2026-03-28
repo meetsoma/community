@@ -9,7 +9,7 @@ applies-to: [always]
 scope: bundled
 tier: official
 created: 2026-03-10
-updated: 2026-03-23
+updated: 2026-03-28
 version: 1.0.0
 author: meetsoma
 license: MIT
