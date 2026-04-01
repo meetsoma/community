@@ -6,10 +6,11 @@ description: "When corrected, acknowledge without justifying, log old→new patt
 heat-default: warm
 tags: [learning, self-improvement, memory, corrections]
 applies-to: [always]
+breadcrumb: "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on sam"
 scope: bundled
 tier: core
 created: 2026-03-12
-updated: 2026-03-23
+updated: 2026-04-01
 version: 1.0.0
 author: meetsoma
 license: MIT

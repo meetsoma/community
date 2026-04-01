@@ -6,10 +6,11 @@ description: "Test before commit, commit before moving on, push before walking a
 heat-default: warm
 tags: [workflow, git, testing, deployment]
 applies-to: [git]
+breadcrumb: "Test → commit → push → log. Every time. No unpushed, untested, or unlogged work. Know which branch deploys."
 scope: hub
 tier: community
 created: 2026-03-12
-updated: 2026-03-23
+updated: 2026-04-01
 version: 1.0.0
 author: meetsoma
 license: MIT

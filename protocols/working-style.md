@@ -6,10 +6,11 @@ description: "Be direct — no ceremony. Lead with action. Know your tools befor
 heat-default: warm
 tags: [workflow, style, communication]
 applies-to: [always]
+breadcrumb: "Be direct — lead with action, not reasoning. Name your tools before starting. Understand before changing, verify after building AND after shipping. Plans live in files, not in context."
 scope: bundled
 tier: official
 created: 2026-03-10
-updated: 2026-03-23
+updated: 2026-04-01
 version: 1.1.0
 author: meetsoma
 license: MIT

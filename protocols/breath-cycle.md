@@ -6,10 +6,11 @@ description: "Sessions have a rhythm: inhale, hold, exhale. Auto-breathe nudges 
 heat-default: warm
 tags: [session, memory, continuity, self-awareness]
 applies-to: [always]
+breadcrumb: "Sessions have a rhythm: inhale, hold, exhale. Auto-breathe nudges at 50%/70%/85%. The preload you write IS the next sess"
 scope: core
 tier: core
 created: 2026-03-09
-updated: 2026-03-28
+updated: 2026-04-01
 version: 2.0.0
 author: Curtis Mercier
 license: CC BY 4.0

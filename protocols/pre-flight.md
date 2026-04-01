@@ -6,10 +6,11 @@ description: "Check what exists before creating. Verify assumptions before build
 heat-default: warm
 tags: [workflow, safety, verification]
 applies-to: [always]
+breadcrumb: "Check what exists before creating. Verify assumptions before building."
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-03-28
+updated: 2026-04-01
 version: 1.0.0
 author: meetsoma
 license: MIT
