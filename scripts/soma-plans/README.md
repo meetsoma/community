@@ -15,19 +15,31 @@ updated: 2026-04-01
 
 # soma-plans
 
+<!-- digest:start -->
+**`soma-plans.sh` — plan hygiene.** Plans rot. This tool helps you catch it. Use `status` to check your active plan count (≤12 recommended). Use `stale` to find plans nobody's touched in a week. Use `overlap` to catch duplicate efforts. Run on exhale to verify plan state. When you're about to create a new plan — check here first.
+<!-- digest:end -->
+
 Manages the plan lifecycle — lists active plans, checks for stale or completed plans, and helps with archival. Works with the plan-hygiene protocol.
+
+## Commands
+
+- **`status`** — Active plan count + budget check (≤12 recommended).
+- **`scan`** — List all plans with status, line count, last updated.
+- **`stale [--days N]`** — Find plans not updated in N days (default: 7).
+- **`overlap`** — Detect plans with overlapping topics.
+- **`archive <plan>`** — Archive a completed plan.
 
 ## Usage
 
 ```bash
-# List all plans with status
-soma-plans.sh
+# Quick health check
+soma-plans.sh status
 
-# Check for stale plans (no updates in 7+ days)
-soma-plans.sh --stale
+# Find plans going stale
+soma-plans.sh stale
 
-# Show plan budget (≤12 active recommended)
-soma-plans.sh --budget
+# Before creating a new plan — check for overlap
+soma-plans.sh overlap
 ```
 
 ## Install

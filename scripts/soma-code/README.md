@@ -15,48 +15,53 @@ updated: 2026-04-01
 
 # soma-code
 
+<!-- digest:start -->
+**`soma-code.sh` — your codebase eyes.** Use `map` before editing any file — it gives you the function index. Use `refs` before renaming anything — it classifies DEF vs USE. Use `blast` to see how many files a change touches before you start. Use `find` instead of raw `grep`. Default target: project root. When you're reaching for grep, sed, or find — stop and use soma-code instead.
+<!-- digest:end -->
+
 Fast codebase navigator built for AI agents. Replaces scattered `grep`, `find`, and `cat` commands with structured, line-numbered output that's immediately actionable.
 
 ## Commands
 
-| Command | What it does |
-|---------|-------------|
-| `find <pattern> [path] [ext]` | Grep with `file:line` format — clickable in terminal |
-| `lines <file> <start> [end]` | Show exact line range with line numbers |
-| `map <file\|dir>` | Function/class/interface map for TS/JS/Bash/CSS/Astro |
-| `refs <symbol> [path]` | Find all references — classifies DEF vs IMP vs USE |
-| `blast <symbol> [path]` | Blast radius — files × risk assessment |
-| `replace <file> <ln> <old> <new>` | Line-specific find & replace |
-| `structure [path]` | File tree with sizes |
-| `tsc-errors [path]` | TypeScript errors with context lines |
-| `physics [path]` | Find all physics/animation code |
-| `events [path]` | Find all event listeners and dispatchers |
-| `css-vars [path]` | CSS custom property definitions and usage count |
-| `config [path]` | Find config/options/settings objects |
+- **`find <pattern> [path] [ext]`** — Grep with `file:line` format, clickable in terminal. Optional extension filter.
+- **`lines <file> <start> [end]`** — Show exact line range with line numbers.
+- **`map <file|dir>`** — Function/class/interface map for TS/JS/Bash/CSS/Astro. The first thing to run before editing.
+- **`refs <symbol> [path]`** — Find all references — classifies as DEF, IMP, or USE.
+- **`blast <symbol> [path]`** — Blast radius — how many files × risk level. Run before renaming or deleting.
+- **`replace <file> <ln> <old> <new>`** — Line-specific find & replace. Safer than sed.
+- **`structure [path]`** — File tree with sizes. Quick orientation.
+- **`tsc-errors [path]`** — TypeScript errors with surrounding context lines.
+- **`physics [path]`** — Find all physics/animation/spring code.
+- **`events [path]`** — Find all event listeners and dispatchers.
+- **`css-vars [path]`** — CSS custom property definitions and usage count.
+- **`config [path]`** — Find config/options/settings objects.
 
 ## Usage
 
 ```bash
-# Find all references to a function
-soma-code.sh refs loadSettings
-
-# See blast radius before renaming
-soma-code.sh blast findPreload extensions/
-
-# Map a file before editing
+# Map a file before editing — see what's where
 soma-code.sh map src/core/identity.ts
 
-# Grep with file:line format
+# Find all references to a function before renaming
+soma-code.sh refs loadSettings
+
+# Check blast radius before a refactor
+soma-code.sh blast findPreload extensions/
+
+# Grep with file:line format (better than raw grep)
 soma-code.sh find "session_start" extensions/ ts
+
+# See project structure
+soma-code.sh structure src/
 ```
 
 ## v2.0.0 Changes
 
-- Added `blast` command — blast radius analysis with risk scoring
-- Added `tsc-errors` command — TypeScript errors with surrounding context
-- Improved `refs` output — DEF/IMP/USE classification
-- Improved `find` — optional extension filter, suggestion on no results
-- Better help output with colored formatting
+- Added `blast` — blast radius analysis with risk scoring (low/med/high per file)
+- Added `tsc-errors` — TypeScript errors with surrounding context
+- Improved `refs` — DEF/IMP/USE classification
+- Improved `find` — optional extension filter, suggestions on no results
+- Better `--help` output with colored formatting
 
 ## Install
 

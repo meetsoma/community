@@ -733,7 +733,6 @@ audit_upstream() {
   if [[ -z "$upstream_repo" ]]; then
     # Check common locations
     for candidate in \
-      "$HOME/Gravicity/lab/pi-mono" \
       "$PROJECT_ROOT/../lab/pi-mono" \
       "$PROJECT_ROOT/pi-mono"; do
       if [[ -d "$candidate/.git" ]]; then
@@ -1278,88 +1277,6 @@ audit_range() {
   fi
 }
 
-# ─── ANCESTORS ─────────────────────────────────────────────────────────────
-
-# Vault agent locations
-VAULT_PATH="${VAULT_PATH:-$HOME/Gravicity/.vault}"
-VAULT_AGENTS=(
-  "nova:$VAULT_PATH/agents/core/nova:Nova — personal assistant, voice-enabled, heartbeat protocol"
-  "zenith:$VAULT_PATH/agents/dev/openclaw-dev:Zenith (openclaw-dev) — dev lead, vault refactorer, soma's daddy"
-  "sage:$VAULT_PATH/agents/core/sage:Sage — architect, genesis ceremonies, feedback loops"
-  "recall:$VAULT_PATH/agents/memory/recall:Recall — archaeologist, memory management"
-)
-
-# Pi session directories for ancestors
-PI_SESSIONS="$HOME/.pi/agent/sessions"
-
-ancestors() {
-  local term="${1:?Usage: soma-seam.sh ancestors <term>}"
-  echo -e "${BOLD}═══ Ancestors: \"$term\" ═══${RESET}"
-  echo ""
-
-  # Search vault agent memories
-  echo -e "${CYAN}── Vault Agents ──${RESET}"
-  local agent_hits=0
-  for entry in "${VAULT_AGENTS[@]}"; do
-    IFS=':' read -r name path desc <<< "$entry"
-    [[ ! -d "$path" ]] && continue
-
-    local hits=$(grep -rli "$term" "$path" --include="*.md" 2>/dev/null | wc -l | tr -d ' ')
-    if [[ "$hits" -gt 0 ]]; then
-      echo -e "  ${BOLD}$name${RESET} ${DIM}($desc)${RESET}"
-      echo -e "  ${DIM}$hits files match${RESET}"
-      grep -rn "$term" "$path" --include="*.md" 2>/dev/null | head -3 | while IFS= read -r match; do
-        local file=$(echo "$match" | cut -d: -f1 | sed "s|$VAULT_PATH/||")
-        local linenum=$(echo "$match" | cut -d: -f2)
-        local content=$(echo "$match" | cut -d: -f3- | sed 's/^[ ]*//' | cut -c1-80)
-        echo -e "    ${DIM}→ $file:$linenum: $content${RESET}"
-      done
-      agent_hits=$((agent_hits + 1))
-      echo ""
-    fi
-  done
-  [[ $agent_hits -eq 0 ]] && echo -e "  ${DIM}(no matches in vault agents)${RESET}"
-
-  # Search Pi JSONL sessions for the term
-  echo -e "${CYAN}── Pi Sessions ──${RESET}"
-  local session_hits=0
-  if [[ -d "$PI_SESSIONS" ]]; then
-    for dir in "$PI_SESSIONS"/*/; do
-      local dirname=$(basename "$dir")
-      for jsonl in "$dir"*.jsonl; do
-        [[ ! -f "$jsonl" ]] && continue
-        if grep -qli "$term" "$jsonl" 2>/dev/null; then
-          local fname=$(basename "$jsonl" | cut -c1-25)
-          local size=$(du -h "$jsonl" | cut -f1)
-          local mtime=$(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$jsonl" 2>/dev/null || stat -c "%y" "$jsonl" 2>/dev/null | cut -c1-16)
-          echo -e "  ${BOLD}$mtime${RESET} | ${DIM}$dirname${RESET} | $fname ($size)"
-          session_hits=$((session_hits + 1))
-        fi
-      done
-    done
-  fi
-  echo -e "  ${DIM}($session_hits Pi sessions match)${RESET}"
-  echo ""
-
-  # Search Claude Code sessions
-  echo -e "${CYAN}── Claude Sessions ──${RESET}"
-  local claude_hits=0
-  local claude_base="$HOME/.claude/projects"
-  if [[ -d "$claude_base" ]]; then
-    for jsonl in "$claude_base"/*/*.jsonl; do
-      [[ ! -f "$jsonl" ]] && continue
-      if grep -qli "$term" "$jsonl" 2>/dev/null; then
-        local proj=$(basename "$(dirname "$jsonl")" | cut -c1-30)
-        local fname=$(basename "$jsonl" | cut -c1-12)
-        local mtime=$(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$jsonl" 2>/dev/null || echo "?")
-        echo -e "  ${BOLD}$mtime${RESET} | ${DIM}$proj${RESET} | $fname"
-        claude_hits=$((claude_hits + 1))
-      fi
-    done
-  fi
-  echo -e "  ${DIM}($claude_hits Claude sessions match)${RESET}"
-}
-
 # ─── HELP ─────────────────────────────────────────────────────────────────
 
 case "$CMD" in
@@ -1372,7 +1289,6 @@ case "$CMD" in
   timeline) timeline "$@" ;;
   web) web "$@" ;;
   audit) audit "$@" ;;
-  ancestors) ancestors "$@" ;;
   help|--help|-h)
     echo ""
     echo -e "${SOMA_BOLD}σ soma-seam${SOMA_NC} ${SOMA_DIM}— trace concepts through memory, code, and sessions${SOMA_NC}"
@@ -1387,7 +1303,6 @@ case "$CMD" in
     echo -e "  ${SOMA_BOLD}web${SOMA_NC} <term> [-o FILE]      ${SOMA_DIM}generate markdown web${SOMA_NC}"
     echo -e "  ${SOMA_BOLD}audit${SOMA_NC} [range|file]        ${SOMA_DIM}code health + commit context${SOMA_NC}"
     echo -e "  ${SOMA_BOLD}audit upstream${SOMA_NC} [range]    ${SOMA_DIM}cross-reference upstream vs our imports${SOMA_NC}"
-    echo -e "  ${SOMA_BOLD}ancestors${SOMA_NC} <term>           ${SOMA_DIM}trace through vault agents + Pi/Claude sessions${SOMA_NC}"
     echo ""
     echo -e "  ${SOMA_DIM}BSL 1.1 © Curtis Mercier — open source 2027${SOMA_NC}"
     echo ""
