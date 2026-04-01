@@ -1,16 +1,16 @@
 ---
 type: script
 name: soma-code
-version: 1.0.0
+version: 2.0.0
 status: active
 author: meetsoma
 license: MIT
 language: bash
-description: Fast codebase navigator — find, map, refs, structure, and more
-tags: [navigation, search, code, grep, map, refactor]
+description: Fast codebase navigator — find, map, refs, blast radius, structure, and more
+tags: [navigation, search, code, grep, map, refactor, blast-radius]
 requires: [bash 4+, grep, sed, awk]
 created: 2026-03-15
-updated: 2026-03-21
+updated: 2026-04-01
 ---
 
 # soma-code
@@ -21,46 +21,47 @@ Fast codebase navigator built for AI agents. Replaces scattered `grep`, `find`, 
 
 | Command | What it does |
 |---------|-------------|
-| `find <pattern> [path] [ext]` | Grep with `file:line:col` format — clickable in terminal |
+| `find <pattern> [path] [ext]` | Grep with `file:line` format — clickable in terminal |
 | `lines <file> <start> [end]` | Show exact line range with line numbers |
-| `map <file>` | Function/class/interface map — see the structure before editing |
-| `refs <symbol> [path]` | Find all references (definitions vs. usage) |
+| `map <file\|dir>` | Function/class/interface map for TS/JS/Bash/CSS/Astro |
+| `refs <symbol> [path]` | Find all references — classifies DEF vs IMP vs USE |
+| `blast <symbol> [path]` | Blast radius — files × risk assessment |
 | `replace <file> <ln> <old> <new>` | Line-specific find & replace |
 | `structure [path]` | File tree with sizes |
+| `tsc-errors [path]` | TypeScript errors with context lines |
 | `physics [path]` | Find all physics/animation code |
-| `events [path]` | Find all event listeners/dispatchers |
-| `css-vars [path]` | CSS custom property audit |
-| `config [path]` | Config/options objects |
-| `tsc-errors [path]` | TypeScript errors with surrounding code context |
+| `events [path]` | Find all event listeners and dispatchers |
+| `css-vars [path]` | CSS custom property definitions and usage count |
+| `config [path]` | Find config/options/settings objects |
 
 ## Usage
 
 ```bash
-# Map a file before editing it
-soma-code.sh map src/core/prompt.ts
-
 # Find all references to a function
-soma-code.sh refs buildPrompt
+soma-code.sh refs loadSettings
 
-# Search for a pattern, scoped to .ts files
-soma-code.sh find "heat" src/ ts
+# See blast radius before renaming
+soma-code.sh blast findPreload extensions/
 
-# See the project structure
-soma-code.sh structure
+# Map a file before editing
+soma-code.sh map src/core/identity.ts
+
+# Grep with file:line format
+soma-code.sh find "session_start" extensions/ ts
 ```
 
-## Why
+## v2.0.0 Changes
 
-Agents waste turns on exploratory grep commands that return too much or too little. `soma-code map` gives you the function layout in one call. `soma-code find` returns clickable `file:line:col` output. `soma-code refs` distinguishes definitions from usage. Every command is designed to give the agent exactly what it needs to make the next edit confidently.
+- Added `blast` command — blast radius analysis with risk scoring
+- Added `tsc-errors` command — TypeScript errors with surrounding context
+- Improved `refs` output — DEF/IMP/USE classification
+- Improved `find` — optional extension filter, suggestion on no results
+- Better help output with colored formatting
 
 ## Install
 
 ```bash
-cp soma-code.sh ~/.soma/amps/scripts/soma-code.sh
-chmod +x ~/.soma/amps/scripts/soma-code.sh
+soma hub install script soma-code
 ```
 
-Or use the Soma CLI:
-```bash
-soma install script soma-code
-```
+Or copy `soma-code.sh` to your project and run directly.

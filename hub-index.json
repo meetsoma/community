@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-03-28T18:03:00.697Z",
-  "count": 42,
+  "generated": "2026-04-01T18:28:30.799Z",
+  "count": 47,
   "items": [
     {
       "slug": "breath-cycle",
@@ -617,9 +617,9 @@
       "slug": "soma-code",
       "name": "soma-code",
       "type": "script",
-      "description": "Fast codebase navigator — find, map, refs, structure, and more",
+      "description": "Fast codebase navigator — find, map, refs, blast radius, structure, and more",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "tier": "community",
       "tags": [
         "navigation",
@@ -627,7 +627,8 @@
         "code",
         "grep",
         "map",
-        "refactor"
+        "refactor",
+        "blast-radius"
       ],
       "language": "bash",
       "requires": [
@@ -638,7 +639,110 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-03-21"
+      "updated": "2026-04-01"
+    },
+    {
+      "slug": "soma-focus",
+      "name": "soma-focus",
+      "type": "script",
+      "description": "Set boot focus — primes the next session to load relevant MAPs, plans, and context for a keyword",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "focus",
+        "boot",
+        "maps",
+        "context",
+        "workflow"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed"
+      ],
+      "status": "active",
+      "created": "2026-03-21",
+      "updated": "2026-04-01"
+    },
+    {
+      "slug": "soma-plans",
+      "name": "soma-plans",
+      "type": "script",
+      "description": "Plan lifecycle management — list, check, archive, and audit plans",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "plans",
+        "lifecycle",
+        "audit",
+        "workflow",
+        "hygiene"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed",
+        "awk"
+      ],
+      "status": "active",
+      "created": "2026-03-21",
+      "updated": "2026-04-01"
+    },
+    {
+      "slug": "soma-query",
+      "name": "soma-query",
+      "type": "script",
+      "description": "Search and explore across the entire Soma ecosystem — docs, code, sessions, and git",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "search",
+        "query",
+        "explore",
+        "sessions",
+        "frontmatter"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed",
+        "awk"
+      ],
+      "status": "active",
+      "created": "2026-03-21",
+      "updated": "2026-04-01"
+    },
+    {
+      "slug": "soma-reflect",
+      "name": "soma-reflect",
+      "type": "script",
+      "description": "Parse session logs for observations, gaps, and recurring patterns",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "memory",
+        "reflection",
+        "patterns",
+        "session-logs",
+        "observations"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed",
+        "awk"
+      ],
+      "status": "active",
+      "created": "2026-03-21",
+      "updated": "2026-04-01"
     },
     {
       "slug": "soma-scrape",
@@ -665,6 +769,34 @@
       "status": "active",
       "created": "2026-03-17",
       "updated": "2026-03-21"
+    },
+    {
+      "slug": "soma-seam",
+      "name": "soma-seam",
+      "type": "script",
+      "description": "Trace concepts through memory, code, and sessions — the connective tissue of your .soma/",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "community",
+      "tags": [
+        "memory",
+        "trace",
+        "search",
+        "connections",
+        "seam",
+        "graph",
+        "timeline"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash 4+",
+        "grep",
+        "sed",
+        "awk"
+      ],
+      "status": "active",
+      "created": "2026-03-15",
+      "updated": "2026-04-01"
     },
     {
       "slug": "soma-spell",
@@ -720,7 +852,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     },
     {
       "slug": "core",
@@ -737,7 +869,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     },
     {
       "slug": "default",
@@ -769,7 +901,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-22"
     },
     {
       "slug": "devops",
@@ -796,7 +928,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     },
     {
       "slug": "fullstack",
@@ -829,7 +961,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     },
     {
       "slug": "maintainer",
@@ -859,7 +991,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     },
     {
       "slug": "preload-template",
@@ -875,7 +1007,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-22"
     },
     {
       "slug": "refactorer",
@@ -903,7 +1035,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     },
     {
       "slug": "writer",
@@ -929,7 +1061,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-28"
+      "updated": "2026-03-14"
     }
   ]
 }
