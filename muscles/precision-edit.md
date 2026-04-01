@@ -4,11 +4,16 @@ type: muscle
 status: active
 description: "the match must be verified by `read` first."
 heat: 0
+heat-default: warm
+tier: official
+license: MIT
+author: meetsoma
+version: 1.0.0
 triggers: [edit, replace, sed, line, surgical, precise, oldtext, exact, match, whitespace, editing, precision, code]
 tags: [editing, workflow, copy, website]
 applies-to: [any]
 created: 2026-03-14
-updated: 2026-03-23
+updated: 2026-04-01
 tools: []
 scripts: [soma-verify.sh copy, soma-verify-styles.sh]
 ---

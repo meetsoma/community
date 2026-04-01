@@ -6,9 +6,12 @@ tier: official
 heat-default: warm
 status: active
 created: 2026-03-12
-updated: 2026-03-28
+updated: 2026-04-01
 scope: bundled
+license: MIT
+author: meetsoma
 breadcrumb: "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale."
+tags: [plans, hygiene, workflow, archival]
 applies-to: [always]
 ---
 
@@ -34,8 +37,12 @@ status: active          # draft | active | blocked | complete | archived
 created: 2026-03-13
 updated: 2026-03-14     # always update on any change
 scope: bundled
+license: MIT
+author: meetsoma
 owner: curtis + soma
 scope: [auto-breathe, notifications]
+license: MIT
+author: meetsoma
 remaining:              # brief list of what's left — empty when complete
   - research API for new feature
   - implement core logic

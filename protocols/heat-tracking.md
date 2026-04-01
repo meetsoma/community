@@ -6,10 +6,11 @@ description: "Soma loads protocols and muscles by temperature: cold (skip), warm
 heat-default: warm
 tags: [memory, loading, performance, self-awareness]
 applies-to: [always]
+breadcrumb: "Soma loads protocols and muscles by temperature: cold (skip), warm (breadcrumb), hot (full). Heat auto-adjusts from usag"
 scope: core
 tier: core
 created: 2026-03-09
-updated: 2026-03-28
+updated: 2026-04-01
 version: 2.0.0
 author: Curtis Mercier
 license: CC BY 4.0

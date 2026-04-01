@@ -6,10 +6,11 @@ description: "Deletion is irreversible — move or archive. Tests cover NEW code
 heat-default: warm
 tags: [quality, safety, git, workflow]
 applies-to: [always]
+breadcrumb: "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — fi"
 scope: bundled
 tier: official
 created: 2026-03-10
-updated: 2026-03-28
+updated: 2026-04-01
 version: 1.0.0
 author: meetsoma
 license: MIT

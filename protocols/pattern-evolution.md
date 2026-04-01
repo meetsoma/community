@@ -6,10 +6,11 @@ description: "Maturation: Skills → Muscles → Protocols → Automations. Born
 heat-default: warm
 tags: [learning, patterns, growth]
 applies-to: [always]
+breadcrumb: "Maturation: Skills → Muscles → Protocols → Automations. Born from gaps and repeated friction. Not every pattern climbs t"
 scope: bundled
 tier: core
 created: 2026-03-09
-updated: 2026-03-28
+updated: 2026-04-01
 version: 1.4.0
 author: Curtis Mercier
 license: CC BY 4.0

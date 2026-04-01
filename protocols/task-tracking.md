@@ -6,10 +6,11 @@ description: "One board: .soma/_kanban.md. Move cards in real time. Verify on ex
 heat-default: warm
 tags: [workflow, planning, continuity, kanban]
 applies-to: [always]
+breadcrumb: "One board: .soma/_kanban.md. Move cards in real time. Verify on exhale. A stale board is worse than no board."
 scope: bundled
 tier: core
 created: 2026-03-12
-updated: 2026-03-28
+updated: 2026-04-01
 version: 1.0.0
 author: Curtis Mercier
 license: CC BY 4.0

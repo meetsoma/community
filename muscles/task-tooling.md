@@ -3,12 +3,17 @@ name: task-tooling
 type: muscle
 status: active
 description: "Before touching code, name your tools. Map scripts, muscles, and MAPs for each phase of the task. Gaps are worth building for."
-heat: 9
+heat: 0
+heat-default: warm
+tier: official
+license: MIT
+author: meetsoma
+version: 1.0.0
 triggers: [scripts, muscles, tools, tooling, plan, implementation, gap, extend, planning, meta]
 tags: [workflow, planning, tools, scripts, awareness]
 applies-to: [any]
 created: 2026-03-13
-updated: 2026-03-23
+updated: 2026-04-01
 tools: [soma-query.sh, soma-find.sh, soma-plans.sh]
 ---
 

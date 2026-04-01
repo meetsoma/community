@@ -6,10 +6,11 @@ description: "Soma can auto-commit .soma/ state on every exhale and surface git 
 heat-default: warm
 tags: [session, git, continuity, self-awareness]
 applies-to: [git]
+breadcrumb: "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never "
 scope: core
 tier: core
 created: 2026-03-10
-updated: 2026-03-28
+updated: 2026-04-01
 version: 2.0.0
 author: Curtis Mercier
 license: CC BY 4.0

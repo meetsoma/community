@@ -6,10 +6,11 @@ description: "Capture on corrections, preferences, 3+ patterns, knowledge gaps. 
 heat-default: warm
 tags: [learning, self-improvement, memory, awareness]
 applies-to: [always]
+breadcrumb: "Capture on corrections, preferences, 3+ patterns, knowledge gaps. Bubble-up: log → muscle → protocol → core."
 scope: bundled
 tier: core
 created: 2026-03-12
-updated: 2026-03-28
+updated: 2026-04-01
 version: 1.0.0
 author: Curtis Mercier
 license: CC BY 4.0

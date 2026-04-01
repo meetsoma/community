@@ -4,13 +4,15 @@ name: maps
 version: 1.1.0
 status: active
 heat-default: warm
+tier: official
 created: 2026-03-16
-updated: 2026-03-28
+updated: 2026-04-01
 author: Curtis Mercier
 breadcrumb: "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use."
 tags: [workflow, process, navigation, amps, efficiency]
 applies-to: [always]
 scope: bundled
+license: MIT
 ---
 
 # MAPS — My Automation Protocol Scripts
@@ -86,6 +88,7 @@ status: active
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 scope: bundled
+license: MIT
 triggers: [keyword1, keyword2]
 reads:
   muscles: [relevant-muscles]
