@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-02T09:52:33.815Z",
+  "generated": "2026-04-02T09:52:48.370Z",
   "count": 49,
   "items": [
     {
@@ -917,7 +917,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     },
     {
       "slug": "core",
@@ -934,7 +934,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     },
     {
       "slug": "default",
@@ -966,7 +966,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "devops",
@@ -993,7 +993,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     },
     {
       "slug": "fullstack",
@@ -1026,7 +1026,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     },
     {
       "slug": "maintainer",
@@ -1056,7 +1056,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     },
     {
       "slug": "preload-template",
@@ -1072,7 +1072,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "refactorer",
@@ -1100,7 +1100,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     },
     {
       "slug": "writer",
@@ -1126,7 +1126,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-02"
     }
   ]
 }
