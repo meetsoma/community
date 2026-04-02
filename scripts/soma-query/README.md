@@ -5,6 +5,7 @@ version: 1.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: official
 language: bash
 description: Search and explore across the entire Soma ecosystem — docs, code, sessions, and git
 tags: [search, query, explore, sessions, frontmatter]

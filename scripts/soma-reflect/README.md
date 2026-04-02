@@ -5,6 +5,7 @@ version: 1.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: official
 language: bash
 description: Parse session logs for observations, gaps, and recurring patterns
 tags: [memory, reflection, patterns, session-logs, observations]

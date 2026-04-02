@@ -5,12 +5,13 @@ version: 1.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: official
 language: bash
 description: Intelligent doc discovery and scraping for SDK research
 tags: [documentation, scraping, research, sdk, npm, github]
 requires: [bash 4+, curl, jq]
 created: 2026-03-17
-updated: 2026-03-21
+updated: 2026-04-01
 ---
 
 # soma-scrape
