@@ -9,7 +9,7 @@ triggers: [doc-hygiene, plans-rot, stale-docs, context-hygiene, plan-lifecycle, 
 scope: hub
 tier: official
 created: 2026-03-14
-updated: 2026-03-23
+updated: 2026-04-02
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -18,9 +18,9 @@ loads: 0
 
 # Doc Hygiene
 
-<!-- digest:start -->
-> **Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.
-<!-- digest:end -->
+## TL;DR
+
+**Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.
 
 ## Plan Lifecycle
 

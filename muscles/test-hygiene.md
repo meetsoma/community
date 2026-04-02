@@ -9,7 +9,7 @@ triggers: [test, stale, dead-code, cleanup, validation, ci, suite, coverage, hyg
 scope: hub
 tier: official
 created: 2026-03-09
-updated: 2026-03-23
+updated: 2026-04-02
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -18,9 +18,9 @@ loads: 0
 
 # Test Hygiene
 
-<!-- digest:start -->
+## TL;DR
+
 Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — they create false confidence.
-<!-- digest:end -->
 
 ## When to Trigger
 

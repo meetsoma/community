@@ -13,10 +13,14 @@ estimated-turns: 5-15
 requires: [a system or workflow to analyse]
 produces: [ASCII flow diagram, gap list with severity, fix recommendations, E2E test results]
 created: 2026-03-19
-updated: 2026-03-22
+updated: 2026-04-02
 ---
 
 # Visual Gap Analysis
+
+## TL;DR
+
+Draw the flow as an ASCII sequence diagram → label every arrow with what actually travels → mark each handoff with questions (auth? format? error handling?) → find gaps where assumptions replace tests → write E2E tests for the full path. The diagram finds bugs by forcing you to name every step. The tests prove the fixes.
 
 Map any workflow end-to-end as an ASCII diagram. Identify every handoff, every external dependency, every place where things can fail. Then TEST it — diagrams find bugs, E2E tests prove fixes.
 

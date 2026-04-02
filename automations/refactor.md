@@ -13,10 +13,14 @@ estimated-turns: 15-30
 requires: [identified extraction target, validated plan]
 produces: [refactored code, updated tests, updated references]
 created: 2026-03-16
-updated: 2026-03-22
+updated: 2026-04-02
 ---
 
 # Refactor
+
+## TL;DR
+
+Scan blast radius → map functions → graph dependencies → plan changes → execute one concern per commit → keep backward compat during transition → run tests after every file change. Before deleting anything, search for references. Export from both old and new locations temporarily. Delete old only after full verification.
 
 Extract, move, or restructure code safely. Follows an incremental pattern — scan first, plan the blast radius, execute one concern at a time, verify after every change.
 

@@ -6,9 +6,10 @@ status: active
 heat-default: warm
 tier: official
 created: 2026-03-16
-updated: 2026-04-01
+updated: 2026-04-02
 author: Curtis Mercier
 breadcrumb: "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use."
+description: "MAPs connect AMPS into repeatable processes. Check for a MAP before any task. Build one after repeating a task twice."
 tags: [workflow, process, navigation, amps, efficiency]
 applies-to: [always]
 scope: bundled
