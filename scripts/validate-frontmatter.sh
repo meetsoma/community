@@ -60,9 +60,11 @@ ok()    { echo -e "  ${GRN}✓${RST} $1"; }
 SHARED_REQUIRED=(type name status version author license created updated)
 
 # Per-type required fields
-PROTOCOL_REQUIRED=(heat-default breadcrumb applies-to tier tags)
-MUSCLE_REQUIRED=(heat-default breadcrumb tier topic keywords heat loads)
-AUTOMATION_REQUIRED=(breadcrumb tier topic)
+# v0.8.1: description replaces breadcrumb, triggers replaces topic+keywords
+# Both old and new accepted — warn on old-only
+PROTOCOL_REQUIRED=(heat-default applies-to tier tags)
+MUSCLE_REQUIRED=(heat-default tier heat)
+AUTOMATION_REQUIRED=(tier tags)
 # Templates use template.json for most metadata — identity.md has minimal frontmatter
 
 # Per-type valid statuses
@@ -143,9 +145,21 @@ validate_file() {
           error "muscle missing: ${field}"
         fi
       done
-      # Muscles should have digest block
-      if ! grep -q '<!-- digest:start -->' "$file"; then
-        warn "muscle has no <!-- digest:start/end --> block"
+      # Muscles should have TL;DR (preferred) or digest block (legacy)
+      if grep -q '## TL;DR' "$file"; then
+        ok "has ## TL;DR"
+      elif grep -q '<!-- digest:start -->' "$file"; then
+        warn "uses <!-- digest --> (migrate to ## TL;DR)"
+      else
+        warn "muscle has no ## TL;DR or digest block"
+      fi
+      # description or breadcrumb required
+      if ! has_field "$file" "description" && ! has_field "$file" "breadcrumb"; then
+        error "muscle missing: description (or breadcrumb)"
+      fi
+      # tags or keywords required
+      if ! has_field "$file" "tags" && ! has_field "$file" "keywords"; then
+        warn "muscle has no tags or keywords"
       fi
       # Heat should be numeric
       local heat_val
@@ -160,6 +174,14 @@ validate_file() {
           error "automation missing: ${field}"
         fi
       done
+      # description or breadcrumb required
+      if ! has_field "$file" "description" && ! has_field "$file" "breadcrumb"; then
+        error "automation missing: description (or breadcrumb)"
+      fi
+      # TL;DR recommended for warm loading
+      if ! grep -q '## TL;DR' "$file"; then
+        warn "automation has no ## TL;DR (warm loading will use short description only)"
+      fi
       ;;
     identity)
       # Template identity files are install-time placeholders — different schema

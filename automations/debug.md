@@ -13,10 +13,14 @@ estimated-turns: 3-10
 requires: [reproducible error or error message]
 produces: [identified root cause, fix, test verification]
 created: 2026-03-16
-updated: 2026-03-22
+updated: 2026-04-02
 ---
 
 # Debug
+
+## TL;DR
+
+Contain → scope → locate → fix → verify. Start from `git diff`, not the whole file. Classify the error pattern (undefined, null access, module not found, type error) to pick the right action. Minimal fix only — no refactoring during debug. Run ALL tests, not just the related one. Log what wasted time so you don't repeat it.
 
 Systematic approach to finding and fixing bugs. Optimized to avoid common agent traps: guessing, naive text analysis, and chasing false leads.
 

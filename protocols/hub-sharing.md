@@ -7,12 +7,13 @@ heat-default: warm
 applies-to: [always]
 scope: core
 breadcrumb: "How Soma handles /hub share. This behavior is built into the hub extension — this protocol helps you understand what's happening. Not loaded into the system prompt."
+description: "How Soma manages the /hub share flow — privacy checks, _public/ staging, and submission to the community hub."
 author: Curtis Mercier
 license: MIT
 tier: core
 tags: [hub, share, privacy, community, public]
 created: 2026-03-22
-updated: 2026-03-22
+updated: 2026-04-02
 ---
 
 # Hub Sharing

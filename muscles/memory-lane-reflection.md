@@ -12,13 +12,13 @@ author: meetsoma
 license: MIT
 tags: [reflection, memory, patterns, introspection, preload]
 created: 2026-03-16
-updated: 2026-04-01
+updated: 2026-04-02
 tools: [soma-seam.sh, soma-reflect.sh]
 ---
 
-<!-- digest:start -->
-> **Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memory → follow where it ends → ask what's at the dead end → trace BACKWARDS with the new perception → notice what you missed on the way up → write the insight → repeat. Run 3-5 cycles minimum. Use `soma-seam.sh trace` and `web` to ground the reflection in actual files. The preload comes LAST — after the reflection has surfaced connections the tactical mind missed. Best done above 70% context when the full session is loaded and associative reach is maximum.
-<!-- digest:end -->
+## TL;DR
+
+**Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memory → follow where it ends → ask what's at the dead end → trace BACKWARDS with the new perception → notice what you missed on the way up → write the insight → repeat. Run 3-5 cycles minimum. Use `soma-seam.sh trace` and `web` to ground the reflection in actual files. The preload comes LAST — after the reflection has surfaced connections the tactical mind missed. Best done above 70% context when the full session is loaded and associative reach is maximum.
 
 ## When to Trigger
 

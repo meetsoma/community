@@ -18,6 +18,10 @@ updated: 2026-04-02
 
 # Migration Cycle
 
+## TL;DR
+
+Detect version gap (settings.json vs agent package.json) → find phase files (`phases/v{from}-to-v{to}.md`) → chain in order → execute each phase (read, check, apply, bump version) → report what was added/updated/skipped. Never delete user content. Never overwrite customized files. Merge settings (add keys, preserve values). Version bump last.
+
 > This is the MAP that ships with Soma core (`migrations/cycle.md`).
 > It orchestrates version-to-version migration phases. Each phase file is self-contained.
 > Run `soma doctor` to trigger it, or load it as a MAP for agent-guided migration.

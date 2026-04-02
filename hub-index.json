@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-02T09:47:16.766Z",
+  "generated": "2026-04-02T09:52:33.815Z",
   "count": 49,
   "items": [
     {
@@ -138,7 +138,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "heat-tracking",
@@ -185,7 +185,7 @@
       ],
       "status": "active",
       "created": "2026-03-22",
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "maps",
@@ -209,7 +209,7 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "pattern-evolution",
@@ -254,7 +254,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "pre-flight",
@@ -321,7 +321,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "session-checkpoints",
@@ -441,33 +441,33 @@
       "slug": "doc-hygiene",
       "name": "doc-hygiene",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing. <!-- digest:end",
+      "description": "**Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
       "tier": "official",
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-23"
+      "updated": "2026-04-02"
     },
     {
       "slug": "icon-audit",
       "name": "icon-audit",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc). <!--",
+      "description": "**Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc).",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
       "tier": "official",
       "status": "active",
       "created": "2026-03-11",
-      "updated": "2026-03-23"
+      "updated": "2026-04-02"
     },
     {
       "slug": "incremental-refactor",
       "name": "incremental-refactor",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh",
+      "description": "**Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabilities), (3) plan → write change list with exact file:line targets, (4) execute → one file at a time, backward-compatible, (5) validate → run tests + `soma-refactor.sh verify` after each file, (6) commit → atomic commit per logical unit. Before starting: run `soma-refactor.sh scan` to generate the dependency graph. After each change: verify call sites still compile. Keep old paths/names working during transition (accept both, prefer new). Delete old only after full verification pass. Follow `refactor` workflow for full checklist including AMPS interconnect updates.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -477,13 +477,13 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "memory-lane-reflection",
       "name": "memory-lane-reflection",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memo",
+      "description": "**Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memory → follow where it ends → ask what's at the dead end → trace BACKWARDS with the new perception → notice what you missed on the way up → write the insight → repeat. Run 3-5 cycles minimum. Use `soma-seam.sh trace` and `web` to ground the reflection in actual files. The preload comes LAST — after the reflection has surfaced connections the tactical mind missed. Best done above 70% context when the full session is loaded and associative reach is maximum.",
       "author": "meetsoma",
       "version": "1.0.0",
       "appliesTo": [
@@ -499,26 +499,26 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhal",
+      "description": "**Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "hot",
       "tier": "official",
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-03-23"
+      "updated": "2026-04-02"
     },
     {
       "slug": "precision-edit",
       "name": "precision-edit",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`",
+      "description": "**Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`) to find issues. (2) `grep -n` the target patterns to get exact line numbers. (3) `read --offset --limit` the exact ranges to see surrounding whitespace. (4) Plan all edits as a line-numbered checklist before touching anything. (5) Edit with exact whitespace matches. Never `edit` blind — the match must be verified by `read` first.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -534,13 +534,13 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "safe-file-ops",
       "name": "safe-file-ops",
       "type": "muscle",
-      "description": "## Digest <!-- digest:start --> Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never ",
+      "description": "Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never `find ~` or broad find without timeout — use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never create a file without `ls`ing the directory first — duplicates rot into false context. (4) **Precision edit**: before any multi-line edit, `read` the exact range first, verify whitespace matches, plan edits as a checklist before touching anything. The `edit` tool's `oldText` must match exactly — verify by reading first. (5) Never delete without scanning dependencies — `soma-refactor.sh scan` or `soma-code.sh refs` to check blast radius. (6) After edits, verify — re-run the check that found the issue.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -557,13 +557,13 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "task-tooling",
       "name": "task-tooling",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so ",
+      "description": "**Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so — that's a gap worth building for. The agent who maps tools before starting finishes faster than the agent who reaches for raw grep mid-task. Check: `ls .soma/amps/scripts/*.sh`, `grep -rl \"<keyword>\" .soma/amps/muscles/`, `ls .soma/amps/automations/maps/`. If a MAP exists, read it first. If a muscle matches, load it with `/pin`. If no script covers it, consider building one — scripts survive across sessions, memory doesn't.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -580,26 +580,26 @@
       ],
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "test-hygiene",
       "name": "test-hygiene",
       "type": "muscle",
-      "description": "<!-- digest:start --> Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — ",
+      "description": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — they create false confidence.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
       "tier": "official",
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-03-23"
+      "updated": "2026-04-02"
     },
     {
       "slug": "debug",
       "name": "debug",
       "type": "automation",
-      "description": "Systematic approach to finding and fixing bugs. Optimized to avoid common agent traps: guessing, naive text analysis, and chasing false leads.",
+      "description": "Contain → scope → locate → fix → verify. Start from `git diff`, not the whole file. Classify the error pattern (undefined, null access, module not found, type error) to pick the right action. Minimal fix only — no refactoring during debug. Run ALL tests, not just the related one. Log what wasted time so you don't repeat it. Systematic approach to finding and fixing bugs. Optimized to avoid common agent traps: guessing, naive text analysis, and chasing false leads.",
       "author": "meetsoma",
       "version": "1.1.0",
       "tier": "official",
@@ -614,13 +614,13 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "refactor",
       "name": "refactor",
       "type": "automation",
-      "description": "Extract, move, or restructure code safely. Follows an incremental pattern — scan first, plan the blast radius, execute one concern at a time, verify after every change.",
+      "description": "Scan blast radius → map functions → graph dependencies → plan changes → execute one concern per commit → keep backward compat during transition → run tests after every file change. Before deleting anything, search for references. Export from both old and new locations temporarily. Delete old only after full verification. Extract, move, or restructure code safely. Follows an incremental pattern — scan first, plan the blast radius, execute one concern at a time, verify after every change.",
       "author": "meetsoma",
       "version": "1.0.0",
       "tier": "official",
@@ -635,13 +635,13 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "update",
       "name": "update",
       "type": "automation",
-      "description": "> This is the MAP that ships with Soma core (`migrations/cycle.md`). > It orchestrates version-to-version migration phases. Each phase file is self-contained. > Run `soma doctor` to trigger it, or loa",
+      "description": "Detect version gap (settings.json vs agent package.json) → find phase files (`phases/v{from}-to-v{to}.md`) → chain in order → execute each phase (read, check, apply, bump version) → report what was added/updated/skipped. Never delete user content. Never overwrite customized files. Merge settings (add keys, preserve values). Version bump last. > This is the MAP that ships with Soma core (`migrations/cycle.md`). > It orchestrates version-to-version migration phases. Each phase file is self-contained.",
       "author": "meetsoma",
       "version": "1.0.0",
       "tier": "official",
@@ -660,7 +660,7 @@
       "slug": "visual-gap-analysis",
       "name": "visual-gap-analysis",
       "type": "automation",
-      "description": "Map any workflow end-to-end as an ASCII diagram. Identify every handoff, every external dependency, every place where things can fail. Then TEST it — diagrams find bugs, E2E tests prove fixes.",
+      "description": "Draw the flow as an ASCII sequence diagram → label every arrow with what actually travels → mark each handoff with questions (auth? format? error handling?) → find gaps where assumptions replace tests → write E2E tests for the full path. The diagram finds bugs by forcing you to name every step. The tests prove the fixes. Map any workflow end-to-end as an ASCII diagram. Identify every handoff, every external dependency, every place where things can fail. Then TEST it — diagrams find bugs, E2E tests prove fixes.",
       "author": "meetsoma",
       "version": "1.0.0",
       "tier": "official",
@@ -676,7 +676,7 @@
       ],
       "status": "active",
       "created": "2026-03-19",
-      "updated": "2026-03-22"
+      "updated": "2026-04-02"
     },
     {
       "slug": "soma-code",
@@ -917,7 +917,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "core",
@@ -934,7 +934,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "default",
@@ -966,7 +966,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-22"
     },
     {
       "slug": "devops",
@@ -993,7 +993,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "fullstack",
@@ -1026,7 +1026,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "maintainer",
@@ -1056,7 +1056,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "preload-template",
@@ -1072,7 +1072,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-22"
     },
     {
       "slug": "refactorer",
@@ -1100,7 +1100,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "writer",
@@ -1126,7 +1126,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     }
   ]
 }
