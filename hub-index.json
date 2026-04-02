@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-02T02:45:35.826Z",
-  "count": 47,
+  "generated": "2026-04-02T03:02:55.558Z",
+  "count": 48,
   "items": [
     {
       "slug": "breath-cycle",
@@ -477,6 +477,28 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-13",
+      "updated": "2026-04-01"
+    },
+    {
+      "slug": "memory-lane-reflection",
+      "name": "memory-lane-reflection",
+      "type": "muscle",
+      "description": "<!-- digest:start --> > **Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memo",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "appliesTo": [
+        "any"
+      ],
+      "tier": "official",
+      "tags": [
+        "reflection",
+        "memory",
+        "patterns",
+        "introspection",
+        "preload"
+      ],
+      "status": "active",
+      "created": "2026-03-16",
       "updated": "2026-04-01"
     },
     {
