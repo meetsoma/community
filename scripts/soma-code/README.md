@@ -5,6 +5,7 @@ version: 2.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: core
 language: bash
 description: Fast codebase navigator — find, map, refs, blast radius, structure, and more
 tags: [navigation, search, code, grep, map, refactor, blast-radius]

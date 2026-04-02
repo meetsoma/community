@@ -5,6 +5,7 @@ version: 1.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: official
 language: bash
 description: Plan lifecycle management — list, check, archive, and audit plans
 tags: [plans, lifecycle, audit, workflow, hygiene]

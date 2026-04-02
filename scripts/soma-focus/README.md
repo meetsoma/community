@@ -5,6 +5,7 @@ version: 1.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: core
 language: bash
 description: Set boot focus — primes the next session to load relevant MAPs, plans, and context for a keyword
 tags: [focus, boot, maps, context, workflow]

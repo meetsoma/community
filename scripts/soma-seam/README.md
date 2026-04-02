@@ -5,6 +5,7 @@ version: 1.0.0
 status: active
 author: meetsoma
 license: MIT
+tier: core
 language: bash
 description: Trace concepts through memory, code, and sessions — the connective tissue of your .soma/
 tags: [memory, trace, search, connections, seam, graph, timeline]
