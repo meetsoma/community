@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-02T03:02:55.558Z",
-  "count": 48,
+  "generated": "2026-04-02T09:46:38.653Z",
+  "count": 49,
   "items": [
     {
       "slug": "breath-cycle",
@@ -638,6 +638,25 @@
       "updated": "2026-03-22"
     },
     {
+      "slug": "update",
+      "name": "update",
+      "type": "automation",
+      "description": "> This is the MAP that ships with Soma core (`migrations/cycle.md`). > It orchestrates version-to-version migration phases. Each phase file is self-contained. > Run `soma doctor` to trigger it, or loa",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "update",
+        "migrate",
+        "doctor",
+        "version",
+        "upgrade"
+      ],
+      "status": "active",
+      "created": "2026-04-02",
+      "updated": "2026-04-02"
+    },
+    {
       "slug": "visual-gap-analysis",
       "name": "visual-gap-analysis",
       "type": "automation",
@@ -898,7 +917,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "core",
@@ -915,7 +934,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "default",
@@ -947,7 +966,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-22"
     },
     {
       "slug": "devops",
@@ -974,7 +993,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "fullstack",
@@ -1007,7 +1026,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "maintainer",
@@ -1037,7 +1056,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "preload-template",
@@ -1053,7 +1072,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-22"
     },
     {
       "slug": "refactorer",
@@ -1081,7 +1100,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     },
     {
       "slug": "writer",
@@ -1107,7 +1126,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-03-14"
     }
   ]
 }
