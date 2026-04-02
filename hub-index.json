@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-01T18:59:23.511Z",
+  "generated": "2026-04-02T02:45:35.826Z",
   "count": 47,
   "items": [
     {
@@ -404,7 +404,7 @@
       "appliesTo": [
         "git"
       ],
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "workflow",
         "git",
@@ -644,7 +644,7 @@
       "description": "Fast codebase navigator — find, map, refs, blast radius, structure, and more",
       "author": "meetsoma",
       "version": "2.0.0",
-      "tier": "community",
+      "tier": "core",
       "tags": [
         "navigation",
         "search",
@@ -672,7 +672,7 @@
       "description": "Set boot focus — primes the next session to load relevant MAPs, plans, and context for a keyword",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "core",
       "tags": [
         "focus",
         "boot",
@@ -697,7 +697,7 @@
       "description": "Plan lifecycle management — list, check, archive, and audit plans",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "plans",
         "lifecycle",
@@ -723,7 +723,7 @@
       "description": "Search and explore across the entire Soma ecosystem — docs, code, sessions, and git",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "search",
         "query",
@@ -749,7 +749,7 @@
       "description": "Parse session logs for observations, gaps, and recurring patterns",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "memory",
         "reflection",
@@ -775,7 +775,7 @@
       "description": "Intelligent doc discovery and scraping for SDK research",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "documentation",
         "scraping",
@@ -792,7 +792,7 @@
       ],
       "status": "active",
       "created": "2026-03-17",
-      "updated": "2026-03-21"
+      "updated": "2026-04-01"
     },
     {
       "slug": "soma-seam",
@@ -801,7 +801,7 @@
       "description": "Trace concepts through memory, code, and sessions — the connective tissue of your .soma/",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "core",
       "tags": [
         "memory",
         "trace",
@@ -829,7 +829,7 @@
       "description": "Canadian English spelling checker and fixer with project dictionary",
       "author": "meetsoma",
       "version": "1.0.0",
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "spelling",
         "grammar",
@@ -845,7 +845,7 @@
       ],
       "status": "active",
       "created": "2026-03-18",
-      "updated": "2026-03-21"
+      "updated": "2026-04-01"
     },
     {
       "slug": "architect",
@@ -876,7 +876,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "core",
@@ -893,7 +893,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "default",
@@ -925,7 +925,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "devops",
@@ -952,7 +952,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "fullstack",
@@ -985,7 +985,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "maintainer",
@@ -1015,7 +1015,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "preload-template",
@@ -1031,7 +1031,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "refactorer",
@@ -1059,7 +1059,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "writer",
@@ -1085,7 +1085,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     }
   ]
 }
