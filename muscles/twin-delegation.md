@@ -9,7 +9,7 @@ applies-to: [development, writing, research]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-03
+updated: 2026-04-02
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -88,15 +88,22 @@ bash soma-cmux.sh split right
 bash soma-cmux.sh run surface:N "cd ~/path/to/project && soma inhale preload-<task>-<date>"
 ```
 
-### 4. Monitor
+### 4. Monitor and steer
 
 ```bash
 # Check on them
 bash soma-cmux.sh capture surface:N 15
 
-# Send instructions mid-flight
-bash soma-cmux.sh run surface:N "Your feedback or course correction here"
+# Short feedback — single line only
+bash soma-cmux.sh run surface:N "Adjust X, the path should be Y"
+
+# Multi-line instructions — cmux splits newlines into separate messages!
+# NEVER send multi-line text via cmux send. Write to a file instead:
+write /tmp/twin-task.md   # your instructions
+bash soma-cmux.sh run surface:N "Read /tmp/twin-task.md and follow those instructions"
 ```
+
+**Critical:** `cmux send` splits on newlines. Each line becomes a separate queued user message. The twin sees 6 "Steering:" fragments instead of one coherent instruction. Always: one-liner commands, or file + read.
 
 ### 5. Completion
 
