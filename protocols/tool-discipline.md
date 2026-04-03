@@ -6,11 +6,10 @@ description: "Scripts first, then raw commands. Read before edit. Check .soma/am
 heat-default: warm
 tags: [tools, safety, self-awareness, scripts]
 applies-to: [always]
-breadcrumb: "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice, make a script."
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-04-01
+updated: 2026-04-02
 version: 3.0.0
 author: meetsoma
 license: MIT

@@ -18,9 +18,9 @@ loads: 0
 
 # Icon Audit — Muscle
 
-## TL;DR
-
-**Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc).
+<!-- digest:start -->
+> **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc).
+<!-- digest:end -->
 
 ## Workflow
 

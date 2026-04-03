@@ -18,9 +18,9 @@ loads: 0
 
 # Test Hygiene
 
-## TL;DR
-
+<!-- digest:start -->
 Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — they create false confidence.
+<!-- digest:end -->
 
 ## When to Trigger
 

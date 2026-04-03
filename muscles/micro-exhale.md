@@ -18,9 +18,9 @@ loads: 0
 
 # Micro-Exhale — Muscle
 
-## TL;DR
-
-**Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.
+<!-- digest:start -->
+> **Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.
+<!-- digest:end -->
 
 ## When to Write
 

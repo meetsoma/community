@@ -6,11 +6,10 @@ description: "Deletion is irreversible — move or archive. Tests cover NEW code
 heat-default: warm
 tags: [quality, safety, git, workflow]
 applies-to: [always]
-breadcrumb: "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — fi"
 scope: bundled
 tier: official
 created: 2026-03-10
-updated: 2026-04-01
+updated: 2026-04-02
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -21,7 +20,8 @@ license: MIT
 Guardrails for safe, reliable work. These protect against destructive operations and sloppy git hygiene. Verification lives in tool-discipline. Pattern recognition lives in pattern-evolution.
 
 ## TL;DR
-Never delete — move or archive. You can always recover from an archive; you can't recover from a delete. Clean atomic commits with `type(scope): description`. Push when ready, not before. Know which branch deploys — pushing to the wrong branch is how you ship half-finished work. When you fix a bug, fix the system that allowed it — closing the loop is the difference between a fix and a patch. Tests match shipped code, not planned features.
+
+Never delete — move or archive. Clean atomic commits with descriptive messages. Push when ready. Know which branch deploys. Confirm before touching critical files. Close the loop — when fixing a bug, fix the system that allowed it. Tests match shipped code, not planned features. Use conventional commit format: `type(scope): description`.
 
 ## When to Apply
 

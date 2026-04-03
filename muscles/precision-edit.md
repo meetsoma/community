@@ -4,11 +4,6 @@ type: muscle
 status: active
 description: "the match must be verified by `read` first."
 heat: 0
-heat-default: warm
-tier: official
-license: MIT
-author: meetsoma
-version: 1.0.0
 triggers: [edit, replace, sed, line, surgical, precise, oldtext, exact, match, whitespace, editing, precision, code]
 tags: [editing, workflow, copy, website]
 applies-to: [any]
@@ -20,9 +15,9 @@ scripts: [soma-verify.sh copy, soma-verify-styles.sh]
 
 # Precision Edit
 
-## TL;DR
-
-**Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`) to find issues. (2) `grep -n` the target patterns to get exact line numbers. (3) `read --offset --limit` the exact ranges to see surrounding whitespace. (4) Plan all edits as a line-numbered checklist before touching anything. (5) Edit with exact whitespace matches. Never `edit` blind — the match must be verified by `read` first.
+<!-- digest:start -->
+> **Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`) to find issues. (2) `grep -n` the target patterns to get exact line numbers. (3) `read --offset --limit` the exact ranges to see surrounding whitespace. (4) Plan all edits as a line-numbered checklist before touching anything. (5) Edit with exact whitespace matches. Never `edit` blind — the match must be verified by `read` first.
+<!-- digest:end -->
 
 ## The Pattern
 
