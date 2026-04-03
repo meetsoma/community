@@ -10,7 +10,7 @@ Community **AMPS** — **A**utomations, **M**uscles, **P**rotocols, **S**kills �
 
 Soma validates your content before submitting:
 
-1. **Finds the file** — searches your `.soma/amps/` directory (including `_public/` staging)
+1. **Finds the file** — searches your `.soma/amps/` directory (including `public/` staging)
 2. **Parses metadata** — extracts frontmatter or script headers
 3. **Privacy scan** — blocks personal paths, API keys, secrets
 4. **Quality check** — scores 0-100%, flags missing fields, missing `--help` for scripts, missing `## TL;DR` for protocols, missing digest blocks for muscles
