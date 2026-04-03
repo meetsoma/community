@@ -138,6 +138,18 @@ validate_file() {
           error "protocol missing: ${field}"
         fi
       done
+      # Protocols should have ## TL;DR (preferred) or digest block (legacy)
+      if grep -q '## TL;DR' "$file"; then
+        ok "has ## TL;DR"
+      elif grep -q '<!-- digest:start -->' "$file"; then
+        warn "uses <!-- digest --> (migrate to ## TL;DR)"
+      else
+        warn "protocol has no ## TL;DR section"
+      fi
+      # description or breadcrumb required
+      if ! has_field "$file" "description" && ! has_field "$file" "breadcrumb"; then
+        warn "protocol has no description (or breadcrumb)"
+      fi
       ;;
     muscle)
       for field in "${MUSCLE_REQUIRED[@]}"; do
@@ -178,8 +190,12 @@ validate_file() {
       if ! has_field "$file" "description" && ! has_field "$file" "breadcrumb"; then
         error "automation missing: description (or breadcrumb)"
       fi
-      # TL;DR recommended for warm loading
-      if ! grep -q '## TL;DR' "$file"; then
+      # Automations should have ## TL;DR (preferred) or digest block (legacy)
+      if grep -q '## TL;DR' "$file"; then
+        ok "has ## TL;DR"
+      elif grep -q '<!-- digest:start -->' "$file"; then
+        warn "uses <!-- digest --> (migrate to ## TL;DR)"
+      else
         warn "automation has no ## TL;DR (warm loading will use short description only)"
       fi
       ;;
