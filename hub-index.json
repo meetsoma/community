@@ -1,16 +1,15 @@
 {
   "version": 1,
-  "generated": "2026-04-02T09:52:48.370Z",
-  "count": 49,
+  "generated": "2026-04-03T01:53:34.261Z",
+  "count": 57,
   "items": [
     {
       "slug": "breath-cycle",
       "name": "breath-cycle",
       "type": "protocol",
-      "description": "Sessions have a rhythm: inhale, hold, exhale. Auto-breathe nudges at 50%/70%/85%. The preload you write IS the next sess",
+      "description": "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. Write preload with resume point + orient targets before rotating.",
       "author": "Curtis Mercier",
       "version": "2.0.0",
-      "breadcrumb": "Sessions have a rhythm: inhale, hold, exhale. Auto-breathe nudges at 50%/70%/85%. The preload you write IS the next sess",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -24,16 +23,15 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "community-safe",
       "name": "community-safe",
       "type": "protocol",
-      "description": "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol",
+      "description": "> How Soma keeps private data out of public content. The channel-guard script catches leaks mechanically — this protocol covers the judgment that prevents creating them.",
       "author": "meetsoma",
       "version": "2.0.0",
-      "breadcrumb": "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -46,16 +44,15 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "correction-capture",
       "name": "correction-capture",
       "type": "protocol",
-      "description": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on sam",
+      "description": "When corrected, the old behavior was wrong. Don't explain why you did it — learn why it was wrong. Log `old → new`. First time: adjust behavior. Second time: write a muscle so it sticks. Third time: it becomes protocol or identity — something that shapes every session, not just this one. The \"use your tools\" correction happened 4+ times before it stuck. More text didn't fix it. What fixed it was making the tools fit the task. When a correction keeps recurring, the fix isn't discipline — it's architecture. Own mistakes with honesty, not submission.",
       "author": "meetsoma",
-      "version": "1.0.0",
-      "breadcrumb": "When corrected, acknowledge without justifying, log old→new pattern, write a muscle if repeated. Third correction on sam",
+      "version": "1.1.0",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -69,16 +66,37 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
+    },
+    {
+      "slug": "deep-recall",
+      "name": "deep-recall",
+      "type": "protocol",
+      "description": "The preload tells you WHAT happened. Deep recall tells you HOW and WHY. When continuing work across sessions, the preload is your surface memory — read it first. Then use your tools to reconstruct working memory: trace the topic through seam, check session logs for the detailed path, scan for patterns you noticed before. The goal: arrive at the same depth of understanding the previous session had, without burning context re-reading everything manually.",
+      "author": "meetsoma",
+      "version": "1.1.0",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "official",
+      "tags": [
+        "memory",
+        "context",
+        "continuity",
+        "recall"
+      ],
+      "status": "active",
+      "created": "2026-03-15",
+      "updated": "2026-04-03"
     },
     {
       "slug": "detection-triggers",
       "name": "detection-triggers",
       "type": "protocol",
-      "description": "Capture on corrections, preferences, 3+ patterns, knowledge gaps. Bubble-up: log → muscle → protocol → core.",
+      "description": "Capture on: corrections, preferences, 3+ repeated patterns, knowledge gaps. Skip one-time instructions. Bubble-up: session log → muscle → protocol → core.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "Capture on corrections, preferences, 3+ patterns, knowledge gaps. Bubble-up: log → muscle → protocol → core.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -92,16 +110,15 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "frontmatter-standard",
       "name": "frontmatter-standard",
       "type": "protocol",
-      "description": "Every .md file needs frontmatter: type, status, created, updated. Protocols get TL;DR; muscles get digest.",
+      "description": "Every `.md` file needs YAML frontmatter: `type`, `status`, `created`, `updated`. Protocols get `## TL;DR`; muscles get `<!-- digest:start/end -->`.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
-      "breadcrumb": "Every .md file needs frontmatter: type, status, created, updated. Protocols get TL;DR; muscles get digest.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -114,7 +131,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "git-identity",
@@ -144,10 +161,9 @@
       "slug": "heat-tracking",
       "name": "heat-tracking",
       "type": "protocol",
-      "description": "Soma loads protocols and muscles by temperature: cold (skip), warm (breadcrumb), hot (full). Heat auto-adjusts from usag",
+      "description": "Cold (0-2): skipped. Warm (3-7): TL;DR only. Hot (8+): full body. Heat decays each session, bumps on use. `/pin` heats, `/kill` drops to 0.",
       "author": "Curtis Mercier",
       "version": "2.0.0",
-      "breadcrumb": "Soma loads protocols and muscles by temperature: cold (skip), warm (breadcrumb), hot (full). Heat auto-adjusts from usag",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -161,7 +177,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "hub-sharing",
@@ -191,15 +207,14 @@
       "slug": "maps",
       "name": "maps",
       "type": "protocol",
-      "description": "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use.",
-      "author": "Curtis Mercier",
+      "description": "Read the MAP before starting. Not skim — **read**. The MAP has scar tissue from sessions where you made the exact mistake you're about to make. The Gaps and Lessons Learned sections exist because something went wrong and someone wrote it down so you wouldn't repeat it. In v0.6.2: skipped the refactor MAP → broke the ship pipeline. Skipped the test-hygiene muscle → hid a real bug. Both were in the MAP. When you feel confident enough to skip the MAP, that's exactly when you need it most. Build a new MAP after the second time you do something manually. `soma focus <keyword>` finds relevant MAPs automatically.",
+      "author": "meetsoma",
       "version": "1.1.0",
-      "breadcrumb": "MAPS — My Automation Protocol Scripts. Before any task, check for a MAP. After any repeated task, build one. MAPS connect AMPS into repeatable processes. Refine on every use.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
       ],
-      "tier": "official",
+      "tier": "community",
       "tags": [
         "workflow",
         "process",
@@ -215,10 +230,9 @@
       "slug": "pattern-evolution",
       "name": "pattern-evolution",
       "type": "protocol",
-      "description": "Maturation: Skills → Muscles → Protocols → Automations. Born from gaps and repeated friction. Not every pattern climbs t",
+      "description": "Maturation: Skills → Muscles → Protocols → Automations. Born from gaps and repeated friction. Not every pattern climbs the full ladder.",
       "author": "Curtis Mercier",
       "version": "1.4.0",
-      "breadcrumb": "Maturation: Skills → Muscles → Protocols → Automations. Born from gaps and repeated friction. Not every pattern climbs t",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -231,39 +245,36 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "plan-hygiene",
       "name": "plan-hygiene",
       "type": "protocol",
-      "description": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
+      "description": "Plans rot. Frontmatter needs `status`, `remaining`, `tooling`. Empty remaining = complete → archive. Budget: ≤12 active. Use `soma-plans.sh`. Verify on exhale.",
       "author": "meetsoma",
       "version": "1.0.0",
-      "breadcrumb": "Plans rot. Frontmatter needs status, remaining, tooling. Empty remaining = complete → archive. Budget: ≤12 active. Verify on exhale.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
       ],
       "tier": "official",
       "tags": [
-        "plans",
-        "hygiene",
         "workflow",
-        "archival"
+        "planning",
+        "documentation"
       ],
       "status": "active",
-      "created": "2026-03-12",
+      "created": "2026-03-14",
       "updated": "2026-04-02"
     },
     {
       "slug": "pre-flight",
       "name": "pre-flight",
       "type": "protocol",
-      "description": "Check what exists before creating. Verify assumptions before building.",
+      "description": "Before building anything new, check if it exists. Grep codebase, scan `.soma/`, verify need. Catch duplication before executing.",
       "author": "meetsoma",
       "version": "1.0.0",
-      "breadcrumb": "Check what exists before creating. Verify assumptions before building.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -276,16 +287,15 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "quality-standards",
       "name": "quality-standards",
       "type": "protocol",
-      "description": "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — fi",
+      "description": "Never delete — move or archive. Clean atomic commits with descriptive messages. Push when ready. Know which branch deploys. Confirm before touching critical files. Close the loop — when fixing a bug, fix the system that allowed it. Tests match shipped code, not planned features. Use conventional commit format: `type(scope): description`.",
       "author": "meetsoma",
       "version": "1.0.0",
-      "breadcrumb": "Deletion is irreversible — move or archive. Tests cover NEW code, not just pass on old. Blast radius before editing — fi",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -299,7 +309,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "response-style",
@@ -327,10 +337,9 @@
       "slug": "session-checkpoints",
       "name": "session-checkpoints",
       "type": "protocol",
-      "description": "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never ",
+      "description": "Two git tracks: `.soma/` auto-commits on exhale (diff-on-boot), project code gets checkpoint commits (squash before push). Settings: `checkpoints.*`.",
       "author": "Curtis Mercier",
       "version": "2.0.0",
-      "breadcrumb": "Soma can auto-commit .soma/ state on every exhale and surface git diffs on boot. Two tracks: .soma/ internal git (never ",
       "heatDefault": "warm",
       "appliesTo": [
         "git"
@@ -344,16 +353,15 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "task-tracking",
       "name": "task-tracking",
       "type": "protocol",
-      "description": "One board: .soma/_kanban.md. Move cards in real time. Verify on exhale. A stale board is worse than no board.",
+      "description": "One board: `.soma/_kanban.md`. Four lanes: Active, In Progress, Done, Parked. Move cards in real time. Verify board on exhale.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "One board: .soma/_kanban.md. Move cards in real time. Verify on exhale. A stale board is worse than no board.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -367,16 +375,15 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "tool-discipline",
       "name": "tool-discipline",
       "type": "protocol",
-      "description": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice, make a script.",
+      "description": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice manually, make a script. Guard auto-blocks dangerous bash. The agent that builds its own tools gets faster every session.",
       "author": "meetsoma",
       "version": "3.0.0",
-      "breadcrumb": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice, make a script.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -390,21 +397,20 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "workflow",
       "name": "workflow",
       "type": "protocol",
-      "description": "Test → commit → push → log. Every time. No unpushed, untested, or unlogged work. Know which branch deploys.",
+      "description": "**Test before commit.** Run the relevant test suite before staging. Don't commit code you haven't verified. **Know your deploy branch.** Identify which branch triggers deployment (`main`, `production`, `release/*`) before your first push. Ask if unsure. **Never leave unpushed commits.** Unpushed work is invisible to teammates, CI, and backups. If you're done working, push. If you're not ready to push, you're not done.",
       "author": "meetsoma",
       "version": "1.0.0",
-      "breadcrumb": "Test → commit → push → log. Every time. No unpushed, untested, or unlogged work. Know which branch deploys.",
       "heatDefault": "warm",
       "appliesTo": [
         "git"
       ],
-      "tier": "official",
+      "tier": "community",
       "tags": [
         "workflow",
         "git",
@@ -413,16 +419,15 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
     },
     {
       "slug": "working-style",
       "name": "working-style",
       "type": "protocol",
-      "description": "Be direct — lead with action, not reasoning. Name your tools before starting. Understand before changing, verify after building AND after shipping. Plans live in files, not in context.",
+      "description": "Test → commit → push → log. No unpushed, untested, or unlogged work. `soma-code.sh map` before editing any file. `soma-refactor.sh scan` before deleting or renaming anything. `soma-verify.sh` after structural changes. `soma-ship.sh` after every commit to agent. Plans live in files, not in context — write it down, link it, move on. When you catch a bug, fix the system that allowed it. When a test fails, trace BOTH the test and the code — don't change the test to make it pass without understanding why it failed. Be direct. Lead with action. No ceremony.",
       "author": "meetsoma",
       "version": "1.1.0",
-      "breadcrumb": "Be direct — lead with action, not reasoning. Name your tools before starting. Understand before changing, verify after building AND after shipping. Plans live in files, not in context.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -435,13 +440,34 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-01"
+      "updated": "2026-04-02"
+    },
+    {
+      "slug": "code-navigator",
+      "name": "code-navigator",
+      "type": "muscle",
+      "description": "<!-- digest:start --> > **`soma-code.sh` — fast codebase navigator.** 11 commands: `find` (grep with file:line), `lines` (exact line range), `map` (function/class index for TS/JS/Bash/CSS), `refs` (de",
+      "author": "Unknown",
+      "version": "1.0.0",
+      "appliesTo": [
+        "any"
+      ],
+      "tier": "community",
+      "tags": [
+        "tooling",
+        "search",
+        "refactor",
+        "shell"
+      ],
+      "status": "active",
+      "created": "2026-03-15",
+      "updated": "2026-03-23"
     },
     {
       "slug": "doc-hygiene",
       "name": "doc-hygiene",
       "type": "muscle",
-      "description": "**Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.",
+      "description": "<!-- digest:start --> > **Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing. <!-- digest:end",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -454,7 +480,7 @@
       "slug": "icon-audit",
       "name": "icon-audit",
       "type": "muscle",
-      "description": "**Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc).",
+      "description": "<!-- digest:start --> > **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc). <!--",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -467,14 +493,13 @@
       "slug": "incremental-refactor",
       "name": "incremental-refactor",
       "type": "muscle",
-      "description": "**Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabilities), (3) plan → write change list with exact file:line targets, (4) execute → one file at a time, backward-compatible, (5) validate → run tests + `soma-refactor.sh verify` after each file, (6) commit → atomic commit per logical unit. Before starting: run `soma-refactor.sh scan` to generate the dependency graph. After each change: verify call sites still compile. Keep old paths/names working during transition (accept both, prefer new). Delete old only after full verification pass. Follow `refactor` workflow for full checklist including AMPS interconnect updates.",
-      "author": "meetsoma",
+      "description": "<!-- digest:start --> > **Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh",
+      "author": "Unknown",
       "version": "1.0.0",
-      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "official",
+      "tier": "community",
       "status": "active",
       "created": "2026-03-13",
       "updated": "2026-04-02"
@@ -483,7 +508,7 @@
       "slug": "memory-lane-reflection",
       "name": "memory-lane-reflection",
       "type": "muscle",
-      "description": "**Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memory → follow where it ends → ask what's at the dead end → trace BACKWARDS with the new perception → notice what you missed on the way up → write the insight → repeat. Run 3-5 cycles minimum. Use `soma-seam.sh trace` and `web` to ground the reflection in actual files. The preload comes LAST — after the reflection has surfaced connections the tactical mind missed. Best done above 70% context when the full session is loaded and associative reach is maximum.",
+      "description": "<!-- digest:start --> > **Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memo",
       "author": "meetsoma",
       "version": "1.0.0",
       "appliesTo": [
@@ -505,7 +530,7 @@
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
-      "description": "**Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.",
+      "description": "<!-- digest:start --> > **Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhal",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "hot",
@@ -515,17 +540,69 @@
       "updated": "2026-04-02"
     },
     {
-      "slug": "precision-edit",
-      "name": "precision-edit",
+      "slug": "plan-lifecycle",
+      "name": "plan-lifecycle",
       "type": "muscle",
-      "description": "**Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`) to find issues. (2) `grep -n` the target patterns to get exact line numbers. (3) `read --offset --limit` the exact ranges to see surrounding whitespace. (4) Plan all edits as a line-numbered checklist before touching anything. (5) Edit with exact whitespace matches. Never `edit` blind — the match must be verified by `read` first.",
-      "author": "meetsoma",
+      "description": "<!-- digest:start --> > **Plan Lifecycle** — end-to-end flow from idea to shipped to consolidated. (1) **Idea** → capture in `docs/ideas/`, link from kanban. (2) **Revise** → read against current stat",
+      "author": "Unknown",
       "version": "1.0.0",
-      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "official",
+      "tier": "community",
+      "status": "active",
+      "created": "2026-03-14",
+      "updated": "2026-03-14"
+    },
+    {
+      "slug": "post-fix-learning",
+      "name": "post-fix-learning",
+      "type": "muscle",
+      "description": "<!-- digest:start --> After fixing something hard, don't just move on. Document: (1) what the fix was, (2) why it wasn't caught earlier, (3) what led you down the wrong path, (4) a 1-3 sentence rule t",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "cold",
+      "appliesTo": [
+        "development",
+        "debugging"
+      ],
+      "tier": "core",
+      "tags": [
+        "learning",
+        "debugging",
+        "post-mortem",
+        "corrections"
+      ],
+      "status": "active",
+      "created": "2026-04-03",
+      "updated": "2026-04-03"
+    },
+    {
+      "slug": "pre-flight-check",
+      "name": "pre-flight-check",
+      "type": "muscle",
+      "description": "<!-- digest:start --> > **Pre-Flight Check** — before building anything new (command, feature, module, script), check if it already exists. Read your project state file. Grep the codebase. When the us",
+      "author": "Unknown",
+      "version": "1.0.0",
+      "appliesTo": [
+        "any"
+      ],
+      "tier": "community",
+      "status": "active",
+      "created": "2026-03-12",
+      "updated": "2026-03-19"
+    },
+    {
+      "slug": "precision-edit",
+      "name": "precision-edit",
+      "type": "muscle",
+      "description": "<!-- digest:start --> > **Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`",
+      "author": "Unknown",
+      "version": "1.0.0",
+      "appliesTo": [
+        "any"
+      ],
+      "tier": "community",
       "tags": [
         "editing",
         "workflow",
@@ -537,17 +614,39 @@
       "updated": "2026-04-02"
     },
     {
+      "slug": "ripple-awareness",
+      "name": "ripple-awareness",
+      "type": "muscle",
+      "description": "<!-- digest:start --> When X changes, what else must update? Before committing: grep for references, check cross-file dependencies, update docs that mention the changed thing. The commit that changes ",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "cold",
+      "appliesTo": [
+        "development",
+        "refactoring"
+      ],
+      "tier": "core",
+      "tags": [
+        "quality",
+        "dependencies",
+        "cross-reference",
+        "blast-radius"
+      ],
+      "status": "active",
+      "created": "2026-04-03",
+      "updated": "2026-04-03"
+    },
+    {
       "slug": "safe-file-ops",
       "name": "safe-file-ops",
       "type": "muscle",
-      "description": "Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never `find ~` or broad find without timeout — use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never create a file without `ls`ing the directory first — duplicates rot into false context. (4) **Precision edit**: before any multi-line edit, `read` the exact range first, verify whitespace matches, plan edits as a checklist before touching anything. The `edit` tool's `oldText` must match exactly — verify by reading first. (5) Never delete without scanning dependencies — `soma-refactor.sh scan` or `soma-code.sh refs` to check blast radius. (6) After edits, verify — re-run the check that found the issue.",
-      "author": "meetsoma",
+      "description": "## Digest <!-- digest:start --> Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never ",
+      "author": "Unknown",
       "version": "1.0.0",
-      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "official",
+      "tier": "community",
       "tags": [
         "safety",
         "files",
@@ -560,17 +659,38 @@
       "updated": "2026-04-02"
     },
     {
+      "slug": "scope-discipline",
+      "name": "scope-discipline",
+      "type": "muscle",
+      "description": "<!-- digest:start --> Do what was asked. A bug fix doesn't need surrounding code cleaned up. A simple feature doesn't need extra configurability. Three similar lines beat a premature abstraction. Stop",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "cold",
+      "appliesTo": [
+        "development"
+      ],
+      "tier": "core",
+      "tags": [
+        "quality",
+        "scope",
+        "discipline",
+        "anti-gold-plating"
+      ],
+      "status": "active",
+      "created": "2026-04-03",
+      "updated": "2026-04-03"
+    },
+    {
       "slug": "task-tooling",
       "name": "task-tooling",
       "type": "muscle",
-      "description": "**Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so — that's a gap worth building for. The agent who maps tools before starting finishes faster than the agent who reaches for raw grep mid-task. Check: `ls .soma/amps/scripts/*.sh`, `grep -rl \"<keyword>\" .soma/amps/muscles/`, `ls .soma/amps/automations/maps/`. If a MAP exists, read it first. If a muscle matches, load it with `/pin`. If no script covers it, consider building one — scripts survive across sessions, memory doesn't.",
-      "author": "meetsoma",
+      "description": "<!-- digest:start --> > **Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so ",
+      "author": "Unknown",
       "version": "1.0.0",
-      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "official",
+      "tier": "community",
       "tags": [
         "workflow",
         "planning",
@@ -586,7 +706,7 @@
       "slug": "test-hygiene",
       "name": "test-hygiene",
       "type": "muscle",
-      "description": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — they create false confidence.",
+      "description": "<!-- digest:start --> Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — ",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
@@ -594,6 +714,29 @@
       "status": "active",
       "created": "2026-03-09",
       "updated": "2026-04-02"
+    },
+    {
+      "slug": "verification-instinct",
+      "name": "verification-instinct",
+      "type": "muscle",
+      "description": "<!-- digest:start --> Before reporting done, run it. Reading code is not verification. \"Looks correct\" is not verified. Recognize the rationalizations you reach for when you want to skip checks — thos",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "cold",
+      "appliesTo": [
+        "development",
+        "shipping"
+      ],
+      "tier": "core",
+      "tags": [
+        "quality",
+        "verification",
+        "anti-patterns",
+        "discipline"
+      ],
+      "status": "active",
+      "created": "2026-04-03",
+      "updated": "2026-04-03"
     },
     {
       "slug": "debug",
@@ -917,7 +1060,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "core",
@@ -934,7 +1077,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "default",
@@ -966,7 +1109,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "devops",
@@ -993,7 +1136,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "fullstack",
@@ -1026,7 +1169,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "maintainer",
@@ -1056,7 +1199,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "preload-template",
@@ -1072,7 +1215,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "refactorer",
@@ -1100,7 +1243,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     },
     {
       "slug": "writer",
@@ -1126,7 +1269,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-02"
+      "updated": "2026-04-03"
     }
   ]
 }
