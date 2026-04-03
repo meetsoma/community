@@ -18,9 +18,9 @@ loads: 0
 
 # Doc Hygiene
 
-## TL;DR
-
-**Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.
+<!-- digest:start -->
+> **Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.
+<!-- digest:end -->
 
 ## Plan Lifecycle
 

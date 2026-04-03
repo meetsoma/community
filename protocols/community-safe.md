@@ -6,11 +6,10 @@ description: "Community/public content must never contain private data. The chan
 heat-default: warm
 tags: [privacy, safety, self-awareness]
 applies-to: [always]
-breadcrumb: "Community/public content must never contain private data. The channel-guard script catches leaks pre-push. This protocol"
 scope: hub
 tier: core
 created: 2026-03-10
-updated: 2026-04-01
+updated: 2026-04-02
 version: 2.0.0
 author: meetsoma
 license: MIT
