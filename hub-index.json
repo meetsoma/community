@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-03T02:30:39.762Z",
+  "generated": "2026-04-03T02:37:17.009Z",
   "count": 58,
   "items": [
     {
@@ -183,10 +183,9 @@
       "slug": "hub-sharing",
       "name": "hub-sharing",
       "type": "protocol",
-      "description": "How Soma handles /hub share. This behavior is built into the hub extension — this protocol helps you understand what's happening. Not loaded into the system prompt.",
+      "description": "How Soma manages the `/hub share` flow. Your original content stays untouched — Soma creates a clean `public/` copy with private data stripped, and that's what gets submitted to the community hub. Secrets block sharing entirely. Paths are auto-fixed. Quality issues are surfaced so Soma can help you improve before submitting.",
       "author": "Curtis Mercier",
       "version": "1.0.0",
-      "breadcrumb": "How Soma handles /hub share. This behavior is built into the hub extension — this protocol helps you understand what's happening. Not loaded into the system prompt.",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -738,7 +737,7 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-03"
+      "updated": "2026-04-02"
     },
     {
       "slug": "verification-instinct",
