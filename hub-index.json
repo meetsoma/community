@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-03T02:21:15.874Z",
-  "count": 57,
+  "generated": "2026-04-03T02:30:39.762Z",
+  "count": 58,
   "items": [
     {
       "slug": "breath-cycle",
@@ -714,6 +714,31 @@
       "status": "active",
       "created": "2026-03-09",
       "updated": "2026-04-02"
+    },
+    {
+      "slug": "twin-delegation",
+      "name": "twin-delegation",
+      "type": "muscle",
+      "description": "<!-- digest:start --> Spawn twin Soma sessions for parallel work. Write a preload (engineer their context), open a terminal pane via `soma-cmux.sh`, launch `soma inhale <preload-name>`, send instructi",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "cold",
+      "appliesTo": [
+        "development",
+        "writing",
+        "research"
+      ],
+      "tier": "core",
+      "tags": [
+        "multi-agent",
+        "delegation",
+        "twins",
+        "cmux",
+        "coordination"
+      ],
+      "status": "active",
+      "created": "2026-04-03",
+      "updated": "2026-04-03"
     },
     {
       "slug": "verification-instinct",
