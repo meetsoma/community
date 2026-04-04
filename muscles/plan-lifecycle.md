@@ -11,6 +11,11 @@ updated: 2026-04-04
 tools: [soma-plans.sh]
 loads: 64
 seams: [s01-3498d3]
+version: 1.0.0
+author: meetsoma
+license: MIT
+heat-default: warm
+tier: official
 ---
 # Plan Lifecycle
 

@@ -10,6 +10,11 @@ applies-to: [any]
 created: 2026-03-10
 updated: 2026-04-04
 tools: [soma-refactor.sh, soma-code.sh, soma-verify.sh]
+version: 1.0.0
+author: meetsoma
+license: MIT
+heat-default: warm
+tier: official
 ---
 
 # Safe File Operations

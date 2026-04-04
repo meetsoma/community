@@ -8,9 +8,11 @@ tags: [workflow, process, navigation, amps, efficiency]
 applies-to: [always]
 scope: bundled
 created: 2026-03-16
-updated: 2026-04-02
+updated: 2026-04-04
 version: 1.1.0
 author: meetsoma
+license: MIT
+tier: official
 ---
 
 # MAPS — My Automation Protocol Scripts

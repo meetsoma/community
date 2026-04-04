@@ -13,6 +13,7 @@ updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
+heat: 0
 ---
 
 # Verification Instinct
@@ -72,4 +73,5 @@ Match rigor to impact:
 - **Shipping a release**: full test suite + manual smoke test + version check.
 - **Touching auth/payments/data**: everything above + adversarial probes.
 
+heat: 0
 ---

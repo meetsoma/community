@@ -12,6 +12,11 @@ loads: 47
 tools: [soma-refactor.sh, soma-code.sh]
 seams: [s01-7631fc, s01-3498d3]
 trust-note: "soma-refactor.sh scan/refs/routes/verify — these are YOUR tools. Use them BEFORE raw grep. Verified working s01-7631fc."
+version: 1.0.0
+author: meetsoma
+license: MIT
+heat-default: warm
+tier: official
 ---
 
 # Incremental Refactor
