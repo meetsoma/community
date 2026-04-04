@@ -9,7 +9,7 @@ applies-to: [development, debugging]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-03
+updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -17,9 +17,8 @@ license: MIT
 
 # Post-Fix Learning
 
-<!-- digest:start -->
+## TL;DR
 After fixing something hard, don't just move on. Document: (1) what the fix was, (2) why it wasn't caught earlier, (3) what led you down the wrong path, (4) a 1-3 sentence rule to prevent it next time. The fix is ephemeral. The lesson is permanent.
-<!-- digest:end -->
 
 ## When This Fires
 

@@ -11,14 +11,13 @@ description: Trace concepts through memory, code, and sessions — the connectiv
 tags: [memory, trace, search, connections, seam, graph, timeline]
 requires: [bash 4+, grep, sed, awk]
 created: 2026-03-15
-updated: 2026-04-01
+updated: 2026-04-04
 ---
 
 # soma-seam
 
-<!-- digest:start -->
+## TL;DR
 **`soma-seam.sh` — your memory thread-puller.** Use `trace` to follow a concept across sessions, plans, muscles, and code. Use `web` to generate a full connection map. Use `timeline` to see how something evolved. When you need to understand how an idea became a feature — or where a decision is documented — this is the tool. Think of it as grep that understands your `.soma/` workspace.
-<!-- digest:end -->
 
 Traces concepts through your entire `.soma/` workspace — memory, code, sessions, plans, and protocols. Shows how ideas connect, evolve, and where they live.
 

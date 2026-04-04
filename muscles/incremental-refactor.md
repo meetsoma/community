@@ -7,7 +7,7 @@ heat: 11
 triggers: [migration, paths, rename, dependency, incremental, refactoring, code-quality]
 applies-to: [any]
 created: 2026-03-13
-updated: 2026-04-02
+updated: 2026-04-04
 loads: 47
 tools: [soma-refactor.sh, soma-code.sh]
 seams: [s01-7631fc, s01-3498d3]
@@ -16,9 +16,8 @@ trust-note: "soma-refactor.sh scan/refs/routes/verify — these are YOUR tools. 
 
 # Incremental Refactor
 
-<!-- digest:start -->
-> **Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabilities), (3) plan → write change list with exact file:line targets, (4) execute → one file at a time, backward-compatible, (5) validate → run tests + `soma-refactor.sh verify` after each file, (6) commit → atomic commit per logical unit. Before starting: run `soma-refactor.sh scan` to generate the dependency graph. After each change: verify call sites still compile. Keep old paths/names working during transition (accept both, prefer new). Delete old only after full verification pass. Follow `refactor` workflow for full checklist including AMPS interconnect updates.
-<!-- digest:end -->
+## TL;DR
+**Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabilities), (3) plan → write change list with exact file:line targets, (4) execute → one file at a time, backward-compatible, (5) validate → run tests + `soma-refactor.sh verify` after each file, (6) commit → atomic commit per logical unit. Before starting: run `soma-refactor.sh scan` to generate the dependency graph. After each change: verify call sites still compile. Keep old paths/names working during transition (accept both, prefer new). Delete old only after full verification pass. Follow `refactor` workflow for full checklist including AMPS interconnect updates.
 
 ## The Pattern (proven session 12)
 

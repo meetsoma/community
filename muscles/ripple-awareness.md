@@ -9,7 +9,7 @@ applies-to: [development, refactoring]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-03
+updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -17,9 +17,8 @@ license: MIT
 
 # Ripple Awareness
 
-<!-- digest:start -->
+## TL;DR
 When X changes, what else must update? Before committing: grep for references, check cross-file dependencies, update docs that mention the changed thing. The commit that changes code but not its docs is a debt bomb.
-<!-- digest:end -->
 
 ## The Instinct
 

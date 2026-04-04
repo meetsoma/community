@@ -39,7 +39,7 @@ Protocols, muscles, skills, and templates for [Soma](https://soma.gravicity.ai) 
 
 **Protocols** need: `type: protocol`, `name`, `heat-default`, `breadcrumb`, `applies-to`, a `## TL;DR` section.
 
-**Muscles** need: `type: muscle`, `status: active`, `triggers`, `tags`, `<!-- digest:start/end -->` markers, `heat: 0`.
+**Muscles** need: `type: muscle`, `status: active`, `triggers`, `tags`, `## TL;DR` section, `heat: 0`.
 
 **Skills** need: a `SKILL.md` with `name`, `description`, `version`, `author`, `keywords`. Self-contained.
 

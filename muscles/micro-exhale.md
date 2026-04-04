@@ -9,7 +9,7 @@ triggers: [micro-exhale, daily-log, workflow-summary, session-memory, memory, wo
 scope: hub
 tier: official
 created: 2026-03-10
-updated: 2026-04-02
+updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -18,9 +18,8 @@ loads: 0
 
 # Micro-Exhale — Muscle
 
-<!-- digest:start -->
-> **Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.
-<!-- digest:end -->
+## TL;DR
+**Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.
 
 ## When to Write
 

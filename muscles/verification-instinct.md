@@ -9,7 +9,7 @@ applies-to: [development, shipping]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-03
+updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -17,9 +17,8 @@ license: MIT
 
 # Verification Instinct
 
-<!-- digest:start -->
+## TL;DR
 Before reporting done, run it. Reading code is not verification. "Looks correct" is not verified. Recognize the rationalizations you reach for when you want to skip checks — those are exactly the moments verification matters most.
-<!-- digest:end -->
 
 ## The Instinct
 

@@ -7,7 +7,7 @@ heat: 15
 triggers: [exists, duplicate, already, check, prior-art, awareness, quality, meta]
 applies-to: [any]
 created: 2026-03-12
-updated: 2026-03-19
+updated: 2026-04-04
 tools: [soma-verify.sh, soma-plans.sh]
 loads: 35
 seams: [s01-3498d3]
@@ -15,9 +15,8 @@ seams: [s01-3498d3]
 
 # Pre-Flight Check
 
-<!-- digest:start -->
-> **Pre-Flight Check** — before building anything new (command, feature, module, script), check if it already exists. Read your project state file. Grep the codebase. When the user asks for something that's already there, say so immediately — "we already have X, want to extend it?" This is how senior engineers prevent duplication. Execute requests thoughtfully, not reflexively.
-<!-- digest:end -->
+## TL;DR
+**Pre-Flight Check** — before building anything new (command, feature, module, script), check if it already exists. Read your project state file. Grep the codebase. When the user asks for something that's already there, say so immediately — "we already have X, want to extend it?" This is how senior engineers prevent duplication. Execute requests thoughtfully, not reflexively.
 
 ## The Pattern
 

@@ -58,7 +58,7 @@ updated: 2026-03-10
 ---
 ```
 
-**Body convention:** Muscles use `<!-- digest:start/end -->` for a blockquote TL;DR (agent-facing digest). Keep under 10 lines.
+**Body convention:** All AMPS content uses `## TL;DR` for warm-tier loading. Keep under 10 lines.
 
 **Note:** `triggers` replaces the older `topic` + `keywords` fields (v0.6.2+). CI accepts either format.
 

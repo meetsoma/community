@@ -9,7 +9,7 @@ applies-to: [development, writing, research]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-02
+updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -17,9 +17,8 @@ license: MIT
 
 # Twin Delegation
 
-<!-- digest:start -->
+## TL;DR
 Spawn twin Soma sessions for parallel work. Write a preload (engineer their context), open a terminal pane via `soma-cmux.sh`, launch `soma inhale <preload-name>`, send instructions, poll for completion. You are the coordinator — delegate what a fresh context would do better than your loaded one.
-<!-- digest:end -->
 
 ## When to Spawn a Twin
 

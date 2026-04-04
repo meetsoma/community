@@ -11,14 +11,13 @@ description: Parse session logs for observations, gaps, and recurring patterns
 tags: [memory, reflection, patterns, session-logs, observations]
 requires: [bash 4+, grep, sed, awk]
 created: 2026-03-21
-updated: 2026-04-01
+updated: 2026-04-04
 ---
 
 # soma-reflect
 
-<!-- digest:start -->
+## TL;DR
 **`soma-reflect.sh` — your pattern detector.** Run at session start to check what past sessions learned. Run mid-session to see if a problem was seen before. Use `--gaps` to find recurring issues. Use `--recurring` to find patterns worth escalating to muscles. The session logs are full of insights — this tool surfaces them so they don't stay buried.
-<!-- digest:end -->
 
 Scans your session logs for observations, gaps, corrections, and recurring patterns. Surfaces insights that would otherwise be buried in conversation history.
 
