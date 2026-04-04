@@ -85,8 +85,9 @@ validate_file() {
   local type
   type=$(get_field "$file" "type")
   
-  # Skip non-content files
+  # Skip non-content files and config/template files
   [[ -z "$type" ]] && return
+  [[ "$type" == "config" || "$type" == "template" ]] && return
 
   echo -e "\n${DIM}── ${rel}${RST}"
   CHECKED=$((CHECKED + 1))
@@ -169,9 +170,9 @@ validate_file() {
       if ! has_field "$file" "description" && ! has_field "$file" "breadcrumb"; then
         error "muscle missing: description (or breadcrumb)"
       fi
-      # tags or keywords required
-      if ! has_field "$file" "tags" && ! has_field "$file" "keywords"; then
-        warn "muscle has no tags or keywords"
+      # tags, keywords, or triggers required (any provides discoverability)
+      if ! has_field "$file" "tags" && ! has_field "$file" "keywords" && ! has_field "$file" "triggers"; then
+        warn "muscle has no tags, keywords, or triggers"
       fi
       # Heat should be numeric
       local heat_val
@@ -214,8 +215,8 @@ validate_file() {
   # Field order check (convention: type first, then name)
   local first_field
   first_field=$(awk '/^---$/{c++;next} c==1{print $1; exit}' "$file" | tr -d ':')
-  if [[ "$first_field" != "type" ]]; then
-    warn "convention: 'type' should be first field (found: '${first_field}')"
+  if [[ "$first_field" != "type" && "$first_field" != "name" ]]; then
+    warn "convention: 'type' or 'name' should be first field (found: '${first_field}')"
   fi
 
   # Breadcrumb should be quoted

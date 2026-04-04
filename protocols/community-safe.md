@@ -9,12 +9,15 @@ applies-to: [always]
 scope: hub
 tier: core
 created: 2026-03-10
-updated: 2026-04-02
+updated: 2026-04-04
 version: 2.0.0
 author: meetsoma
 license: MIT
 ---
 # Community Safe
+
+## TL;DR
+Private data stays private. Channel-guard blocks PII pre-push. Your judgment covers the rest: protocols and muscles must be generic (no emails, paths, project names). When sharing to hub, strip absolute paths and private repo references. Private data belongs in `.soma/secrets/`, identity files, or env vars.
 
 > How Soma keeps private data out of public content. The channel-guard script catches leaks mechanically — this protocol covers the judgment that prevents creating them.
 

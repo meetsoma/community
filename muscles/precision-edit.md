@@ -11,6 +11,11 @@ created: 2026-03-14
 updated: 2026-04-04
 tools: []
 scripts: [soma-verify.sh copy, soma-verify-styles.sh]
+version: 1.0.0
+author: meetsoma
+license: MIT
+heat-default: warm
+tier: official
 ---
 
 # Precision Edit
