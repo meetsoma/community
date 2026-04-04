@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-03T02:53:48.790Z",
-  "count": 58,
+  "generated": "2026-04-04T13:32:35.803Z",
+  "count": 59,
   "items": [
     {
       "slug": "breath-cycle",
@@ -201,6 +201,31 @@
       "status": "active",
       "created": "2026-03-22",
       "updated": "2026-04-02"
+    },
+    {
+      "slug": "inter-agent-inbox",
+      "name": "inter-agent-inbox",
+      "type": "protocol",
+      "description": "Agents communicate asynchronously by dropping markdown files in each other's inbox directories. One topic per message. Frontmatter tracks sender, recipient, date, status, and threading. No automation required — the next session reads them on boot. Archive after 2 weeks. Never delete.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "multi-agent",
+        "teams",
+        "workspaces"
+      ],
+      "tier": "official",
+      "tags": [
+        "communication",
+        "multi-agent",
+        "collaboration",
+        "inbox",
+        "async"
+      ],
+      "status": "active",
+      "created": "2026-03-26",
+      "updated": "2026-04-04"
     },
     {
       "slug": "maps",
@@ -1084,7 +1109,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "core",
@@ -1101,7 +1126,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "default",
@@ -1133,7 +1158,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "devops",
@@ -1160,7 +1185,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "fullstack",
@@ -1193,7 +1218,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "maintainer",
@@ -1223,7 +1248,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "preload-template",
@@ -1239,7 +1264,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "refactorer",
@@ -1267,7 +1292,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "writer",
@@ -1293,7 +1318,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     }
   ]
 }
