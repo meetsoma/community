@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-04T15:00:47.339Z",
+  "generated": "2026-04-04T16:15:03.076Z",
   "count": 59,
   "items": [
     {
@@ -29,7 +29,7 @@
       "slug": "community-safe",
       "name": "community-safe",
       "type": "protocol",
-      "description": "> How Soma keeps private data out of public content. The channel-guard script catches leaks mechanically — this protocol covers the judgment that prevents creating them.",
+      "description": "Private data stays private. Channel-guard blocks PII pre-push. Your judgment covers the rest: protocols and muscles must be generic (no emails, paths, project names). When sharing to hub, strip absolute paths and private repo references. Private data belongs in `.soma/secrets/`, identity files, or env vars. > How Soma keeps private data out of public content. The channel-guard script catches leaks mechanically — this protocol covers the judgment that prevents creating them.",
       "author": "meetsoma",
       "version": "2.0.0",
       "heatDefault": "warm",
@@ -44,7 +44,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "correction-capture",
@@ -238,7 +238,7 @@
       "appliesTo": [
         "always"
       ],
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "workflow",
         "process",
@@ -248,7 +248,7 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "pattern-evolution",
@@ -471,12 +471,13 @@
       "name": "code-navigator",
       "type": "muscle",
       "description": "**`soma-code.sh` — fast codebase navigator.** 11 commands: `find` (grep with file:line), `lines` (exact line range), `map` (function/class index for TS/JS/Bash/CSS), `refs` (def vs use classification), `replace` (line-specific sed), `structure` (file tree + sizes), `tsc-errors` (TypeScript errors with context), `physics` (motion/animation audit), `events` (listeners/dispatchers), `css-vars` (custom property audit), `config` (settings objects). Use `map` before editing any file. Use `refs` before renaming. Use `find` instead of raw `grep -rn`. Default target: project root.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "tooling",
         "search",
@@ -518,12 +519,13 @@
       "name": "incremental-refactor",
       "type": "muscle",
       "description": "**Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabilities), (3) plan → write change list with exact file:line targets, (4) execute → one file at a time, backward-compatible, (5) validate → run tests + `soma-refactor.sh verify` after each file, (6) commit → atomic commit per logical unit. Before starting: run `soma-refactor.sh scan` to generate the dependency graph. After each change: verify call sites still compile. Keep old paths/names working during transition (accept both, prefer new). Delete old only after full verification pass. Follow `refactor` workflow for full checklist including AMPS interconnect updates.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "status": "active",
       "created": "2026-03-13",
       "updated": "2026-04-04"
@@ -535,6 +537,7 @@
       "description": "**Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memory → follow where it ends → ask what's at the dead end → trace BACKWARDS with the new perception → notice what you missed on the way up → write the insight → repeat. Run 3-5 cycles minimum. Use `soma-seam.sh trace` and `web` to ground the reflection in actual files. The preload comes LAST — after the reflection has surfaced connections the tactical mind missed. Best done above 70% context when the full session is loaded and associative reach is maximum.",
       "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
@@ -568,12 +571,13 @@
       "name": "plan-lifecycle",
       "type": "muscle",
       "description": "**Plan Lifecycle** — end-to-end flow from idea to shipped to consolidated. (1) **Idea** → capture in `docs/ideas/`, link from kanban. (2) **Revise** → read against current state, strip what's done/stale, extract surviving kernel. (3) **Plan** → rewrite as version-scoped plan in `plans/` (or `docs/plans/` if cross-cutting), with phases, remaining, tooling. (4) **Pre-flight** → check what exists, verify assumptions, find overlapping plans. (5) **Correct plan** → update phases based on findings. (6) **Kanban tasks** → with `plan: path` and section references. (7) **Targeted preload** → file:line references for the executor session. (8) **Execute** → focused session, tests pass, ship. (9) **Consolidate** → mark plan complete, extract surviving ideas back to `docs/ideas/`, compare against kanban. Loop back to step 2 for next phase.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "status": "active",
       "created": "2026-03-14",
       "updated": "2026-04-04"
@@ -606,12 +610,13 @@
       "name": "pre-flight-check",
       "type": "muscle",
       "description": "**Pre-Flight Check** — before building anything new (command, feature, module, script), check if it already exists. Read your project state file. Grep the codebase. When the user asks for something that's already there, say so immediately — \"we already have X, want to extend it?\" This is how senior engineers prevent duplication. Execute requests thoughtfully, not reflexively.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "status": "active",
       "created": "2026-03-12",
       "updated": "2026-04-04"
@@ -621,12 +626,13 @@
       "name": "precision-edit",
       "type": "muscle",
       "description": "**Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`) to find issues. (2) `grep -n` the target patterns to get exact line numbers. (3) `read --offset --limit` the exact ranges to see surrounding whitespace. (4) Plan all edits as a line-numbered checklist before touching anything. (5) Edit with exact whitespace matches. Never `edit` blind — the match must be verified by `read` first.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "editing",
         "workflow",
@@ -665,12 +671,13 @@
       "name": "safe-file-ops",
       "type": "muscle",
       "description": "Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never `find ~` or broad find without timeout — use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never create a file without `ls`ing the directory first — duplicates rot into false context. (4) **Precision edit**: before any multi-line edit, `read` the exact range first, verify whitespace matches, plan edits as a checklist before touching anything. The `edit` tool's `oldText` must match exactly — verify by reading first. (5) Never delete without scanning dependencies — `soma-refactor.sh scan` or `soma-code.sh refs` to check blast radius. (6) After edits, verify — re-run the check that found the issue.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "safety",
         "files",
@@ -709,12 +716,13 @@
       "name": "task-tooling",
       "type": "muscle",
       "description": "**Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so — that's a gap worth building for. The agent who maps tools before starting finishes faster than the agent who reaches for raw grep mid-task. Check: `ls .soma/amps/scripts/*.sh`, `grep -rl \"<keyword>\" .soma/amps/muscles/`, `ls .soma/amps/automations/maps/`. If a MAP exists, read it first. If a muscle matches, load it with `/pin`. If no script covers it, consider building one — scripts survive across sessions, memory doesn't.",
-      "author": "Unknown",
+      "author": "meetsoma",
       "version": "1.0.0",
+      "heatDefault": "warm",
       "appliesTo": [
         "any"
       ],
-      "tier": "community",
+      "tier": "official",
       "tags": [
         "workflow",
         "planning",
