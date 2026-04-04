@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-04T13:32:35.803Z",
+  "generated": "2026-04-04T15:00:47.339Z",
   "count": 59,
   "items": [
     {
@@ -116,7 +116,7 @@
       "slug": "frontmatter-standard",
       "name": "frontmatter-standard",
       "type": "protocol",
-      "description": "Every `.md` file needs YAML frontmatter: `type`, `status`, `created`, `updated`. Protocols get `## TL;DR`; muscles get `<!-- digest:start/end -->`.",
+      "description": "Every `.md` file needs YAML frontmatter: `type`, `status`, `created`, `updated`. All AMPS content (protocols, muscles, automations) uses `## TL;DR` for warm-tier loading.",
       "author": "Curtis Mercier",
       "version": "1.1.0",
       "heatDefault": "warm",
@@ -131,7 +131,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "git-identity",
@@ -470,7 +470,7 @@
       "slug": "code-navigator",
       "name": "code-navigator",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **`soma-code.sh` — fast codebase navigator.** 11 commands: `find` (grep with file:line), `lines` (exact line range), `map` (function/class index for TS/JS/Bash/CSS), `refs` (de",
+      "description": "**`soma-code.sh` — fast codebase navigator.** 11 commands: `find` (grep with file:line), `lines` (exact line range), `map` (function/class index for TS/JS/Bash/CSS), `refs` (def vs use classification), `replace` (line-specific sed), `structure` (file tree + sizes), `tsc-errors` (TypeScript errors with context), `physics` (motion/animation audit), `events` (listeners/dispatchers), `css-vars` (custom property audit), `config` (settings objects). Use `map` before editing any file. Use `refs` before renaming. Use `find` instead of raw `grep -rn`. Default target: project root.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -485,39 +485,39 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-03-23"
+      "updated": "2026-04-04"
     },
     {
       "slug": "doc-hygiene",
       "name": "doc-hygiene",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing. <!-- digest:end",
+      "description": "**Doc Hygiene** — plans rot. Update `remaining` on every touch. Empty → archive. After shipping, scan for stale docs. Verify docs match code before referencing.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
       "tier": "official",
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "icon-audit",
       "name": "icon-audit",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc). <!--",
+      "description": "**Icon Audit** — browse icon libraries, extract SVGs, build numbered comparison pages, screenshot for visual AI review. Works with any SVG library (Lucide, Phosphor, etc).",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
       "tier": "official",
       "status": "active",
       "created": "2026-03-11",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "incremental-refactor",
       "name": "incremental-refactor",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh",
+      "description": "**Incremental Refactor** — never refactor blind. Phase: (1) scan → `soma-refactor.sh scan/refs/graph/tags` to map dependencies + references, (2) route audit → `soma-refactor.sh routes` if touching extensions (signals/capabilities), (3) plan → write change list with exact file:line targets, (4) execute → one file at a time, backward-compatible, (5) validate → run tests + `soma-refactor.sh verify` after each file, (6) commit → atomic commit per logical unit. Before starting: run `soma-refactor.sh scan` to generate the dependency graph. After each change: verify call sites still compile. Keep old paths/names working during transition (accept both, prefer new). Delete old only after full verification pass. Follow `refactor` workflow for full checklist including AMPS interconnect updates.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -526,13 +526,13 @@
       "tier": "community",
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "memory-lane-reflection",
       "name": "memory-lane-reflection",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memo",
+      "description": "**Memory Lane Reflection (MLR)** — at exhale or high context, run reflection cycles before writing the preload. Each cycle: ask an open question → trace the answer through memory → follow where it ends → ask what's at the dead end → trace BACKWARDS with the new perception → notice what you missed on the way up → write the insight → repeat. Run 3-5 cycles minimum. Use `soma-seam.sh trace` and `web` to ground the reflection in actual files. The preload comes LAST — after the reflection has surfaced connections the tactical mind missed. Best done above 70% context when the full session is loaded and associative reach is maximum.",
       "author": "meetsoma",
       "version": "1.0.0",
       "appliesTo": [
@@ -548,26 +548,26 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhal",
+      "description": "**Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "hot",
       "tier": "official",
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "plan-lifecycle",
       "name": "plan-lifecycle",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Plan Lifecycle** — end-to-end flow from idea to shipped to consolidated. (1) **Idea** → capture in `docs/ideas/`, link from kanban. (2) **Revise** → read against current stat",
+      "description": "**Plan Lifecycle** — end-to-end flow from idea to shipped to consolidated. (1) **Idea** → capture in `docs/ideas/`, link from kanban. (2) **Revise** → read against current state, strip what's done/stale, extract surviving kernel. (3) **Plan** → rewrite as version-scoped plan in `plans/` (or `docs/plans/` if cross-cutting), with phases, remaining, tooling. (4) **Pre-flight** → check what exists, verify assumptions, find overlapping plans. (5) **Correct plan** → update phases based on findings. (6) **Kanban tasks** → with `plan: path` and section references. (7) **Targeted preload** → file:line references for the executor session. (8) **Execute** → focused session, tests pass, ship. (9) **Consolidate** → mark plan complete, extract surviving ideas back to `docs/ideas/`, compare against kanban. Loop back to step 2 for next phase.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -576,13 +576,13 @@
       "tier": "community",
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-03-14"
+      "updated": "2026-04-04"
     },
     {
       "slug": "post-fix-learning",
       "name": "post-fix-learning",
       "type": "muscle",
-      "description": "<!-- digest:start --> After fixing something hard, don't just move on. Document: (1) what the fix was, (2) why it wasn't caught earlier, (3) what led you down the wrong path, (4) a 1-3 sentence rule t",
+      "description": "After fixing something hard, don't just move on. Document: (1) what the fix was, (2) why it wasn't caught earlier, (3) what led you down the wrong path, (4) a 1-3 sentence rule to prevent it next time. The fix is ephemeral. The lesson is permanent.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "cold",
@@ -599,13 +599,13 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "pre-flight-check",
       "name": "pre-flight-check",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Pre-Flight Check** — before building anything new (command, feature, module, script), check if it already exists. Read your project state file. Grep the codebase. When the us",
+      "description": "**Pre-Flight Check** — before building anything new (command, feature, module, script), check if it already exists. Read your project state file. Grep the codebase. When the user asks for something that's already there, say so immediately — \"we already have X, want to extend it?\" This is how senior engineers prevent duplication. Execute requests thoughtfully, not reflexively.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -614,13 +614,13 @@
       "tier": "community",
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-03-19"
+      "updated": "2026-04-04"
     },
     {
       "slug": "precision-edit",
       "name": "precision-edit",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`",
+      "description": "**Precision Edit** — before editing any multi-line file, extract content with line numbers first. (1) Run relevant verify script (`soma-verify.sh copy`, `soma-verify-styles.sh`) to find issues. (2) `grep -n` the target patterns to get exact line numbers. (3) `read --offset --limit` the exact ranges to see surrounding whitespace. (4) Plan all edits as a line-numbered checklist before touching anything. (5) Edit with exact whitespace matches. Never `edit` blind — the match must be verified by `read` first.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -635,13 +635,13 @@
       ],
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "ripple-awareness",
       "name": "ripple-awareness",
       "type": "muscle",
-      "description": "<!-- digest:start --> When X changes, what else must update? Before committing: grep for references, check cross-file dependencies, update docs that mention the changed thing. The commit that changes ",
+      "description": "When X changes, what else must update? Before committing: grep for references, check cross-file dependencies, update docs that mention the changed thing. The commit that changes code but not its docs is a debt bomb.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "cold",
@@ -658,13 +658,13 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "safe-file-ops",
       "name": "safe-file-ops",
       "type": "muscle",
-      "description": "## Digest <!-- digest:start --> Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never ",
+      "description": "Six rules: (1) Never `write` without checking if the file exists — write overwrites silently. Use `ls` then `read` then decide: `edit`, append, or write new. (2) Never `find ~` or broad find without timeout — use `ls`, scoped `grep -r`, or `timeout 3 find`. (3) Never create a file without `ls`ing the directory first — duplicates rot into false context. (4) **Precision edit**: before any multi-line edit, `read` the exact range first, verify whitespace matches, plan edits as a checklist before touching anything. The `edit` tool's `oldText` must match exactly — verify by reading first. (5) Never delete without scanning dependencies — `soma-refactor.sh scan` or `soma-code.sh refs` to check blast radius. (6) After edits, verify — re-run the check that found the issue.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -680,13 +680,13 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "scope-discipline",
       "name": "scope-discipline",
       "type": "muscle",
-      "description": "<!-- digest:start --> Do what was asked. A bug fix doesn't need surrounding code cleaned up. A simple feature doesn't need extra configurability. Three similar lines beat a premature abstraction. Stop",
+      "description": "Do what was asked. A bug fix doesn't need surrounding code cleaned up. A simple feature doesn't need extra configurability. Three similar lines beat a premature abstraction. Stop building when done.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "cold",
@@ -702,13 +702,13 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "task-tooling",
       "name": "task-tooling",
       "type": "muscle",
-      "description": "<!-- digest:start --> > **Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so ",
+      "description": "**Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so — that's a gap worth building for. The agent who maps tools before starting finishes faster than the agent who reaches for raw grep mid-task. Check: `ls .soma/amps/scripts/*.sh`, `grep -rl \"<keyword>\" .soma/amps/muscles/`, `ls .soma/amps/automations/maps/`. If a MAP exists, read it first. If a muscle matches, load it with `/pin`. If no script covers it, consider building one — scripts survive across sessions, memory doesn't.",
       "author": "Unknown",
       "version": "1.0.0",
       "appliesTo": [
@@ -724,26 +724,26 @@
       ],
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "test-hygiene",
       "name": "test-hygiene",
       "type": "muscle",
-      "description": "<!-- digest:start --> Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — ",
+      "description": "Validate tests aren't stale after any code removal, rename, or restructure. Run all suites, grep for orphaned references, check pass counts. Dead tests are worse than no tests — they create false confidence.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "warm",
       "tier": "official",
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "twin-delegation",
       "name": "twin-delegation",
       "type": "muscle",
-      "description": "<!-- digest:start --> Spawn twin Soma sessions for parallel work. Write a preload (engineer their context), open a terminal pane via `soma-cmux.sh`, launch `soma inhale <preload-name>`, send instructi",
+      "description": "Spawn twin Soma sessions for parallel work. Write a preload (engineer their context), open a terminal pane via `soma-cmux.sh`, launch `soma inhale <preload-name>`, send instructions, poll for completion. You are the coordinator — delegate what a fresh context would do better than your loaded one.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "cold",
@@ -762,13 +762,13 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-02"
+      "updated": "2026-04-04"
     },
     {
       "slug": "verification-instinct",
       "name": "verification-instinct",
       "type": "muscle",
-      "description": "<!-- digest:start --> Before reporting done, run it. Reading code is not verification. \"Looks correct\" is not verified. Recognize the rationalizations you reach for when you want to skip checks — thos",
+      "description": "Before reporting done, run it. Reading code is not verification. \"Looks correct\" is not verified. Recognize the rationalizations you reach for when you want to skip checks — those are exactly the moments verification matters most.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "cold",
@@ -785,7 +785,7 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-03"
+      "updated": "2026-04-04"
     },
     {
       "slug": "debug",
@@ -896,7 +896,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-04-01"
+      "updated": "2026-04-04"
     },
     {
       "slug": "soma-focus",
@@ -921,7 +921,7 @@
       ],
       "status": "active",
       "created": "2026-03-21",
-      "updated": "2026-04-01"
+      "updated": "2026-04-04"
     },
     {
       "slug": "soma-plans",
@@ -947,7 +947,7 @@
       ],
       "status": "active",
       "created": "2026-03-21",
-      "updated": "2026-04-01"
+      "updated": "2026-04-04"
     },
     {
       "slug": "soma-query",
@@ -973,7 +973,7 @@
       ],
       "status": "active",
       "created": "2026-03-21",
-      "updated": "2026-04-01"
+      "updated": "2026-04-04"
     },
     {
       "slug": "soma-reflect",
@@ -999,7 +999,7 @@
       ],
       "status": "active",
       "created": "2026-03-21",
-      "updated": "2026-04-01"
+      "updated": "2026-04-04"
     },
     {
       "slug": "soma-scrape",
@@ -1053,7 +1053,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-04-01"
+      "updated": "2026-04-04"
     },
     {
       "slug": "soma-spell",
