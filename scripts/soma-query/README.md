@@ -11,14 +11,13 @@ description: Search and explore across the entire Soma ecosystem — docs, code,
 tags: [search, query, explore, sessions, frontmatter]
 requires: [bash 4+, grep, sed, awk]
 created: 2026-03-21
-updated: 2026-04-01
+updated: 2026-04-04
 ---
 
 # soma-query
 
-<!-- digest:start -->
+## TL;DR
 **`soma-query.sh` — unified search across everything.** Use `topic` for broad searches that span docs, code, sessions, and git history. Use `search --stale` to find content that's rotting. Use `sessions` to search past session logs. Use `related` to find what links to a specific file. When you need to find something and don't know where it lives — start here.
-<!-- digest:end -->
 
 Cross-ecosystem search that spans docs, code, sessions, and git history. Understands frontmatter, tags, and staleness.
 

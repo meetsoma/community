@@ -8,15 +8,14 @@ triggers: [scripts, muscles, tools, tooling, plan, implementation, gap, extend, 
 tags: [workflow, planning, tools, scripts, awareness]
 applies-to: [any]
 created: 2026-03-13
-updated: 2026-04-02
+updated: 2026-04-04
 tools: [soma-query.sh, soma-find.sh, soma-plans.sh]
 ---
 
 # Task Tooling
 
-<!-- digest:start -->
-> **Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so — that's a gap worth building for. The agent who maps tools before starting finishes faster than the agent who reaches for raw grep mid-task. Check: `ls .soma/amps/scripts/*.sh`, `grep -rl "<keyword>" .soma/amps/muscles/`, `ls .soma/amps/automations/maps/`. If a MAP exists, read it first. If a muscle matches, load it with `/pin`. If no script covers it, consider building one — scripts survive across sessions, memory doesn't.
-<!-- digest:end -->
+## TL;DR
+**Before touching code, name your tools.** For each phase of the task, which script handles it? Which muscle applies? Where's the MAP? When there's no tool for a phase, say so — that's a gap worth building for. The agent who maps tools before starting finishes faster than the agent who reaches for raw grep mid-task. Check: `ls .soma/amps/scripts/*.sh`, `grep -rl "<keyword>" .soma/amps/muscles/`, `ls .soma/amps/automations/maps/`. If a MAP exists, read it first. If a muscle matches, load it with `/pin`. If no script covers it, consider building one — scripts survive across sessions, memory doesn't.
 
 ## The Pattern
 

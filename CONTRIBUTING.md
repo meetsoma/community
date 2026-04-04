@@ -111,7 +111,6 @@ updated: YYYY-MM-DD
 ---
 ```
 
-Required: `<!-- digest:start -->` / `<!-- digest:end -->` markers near the top.
 The digest block is what loads into the system prompt — keep it under 10 lines.
 
 ### Skills

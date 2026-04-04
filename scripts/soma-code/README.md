@@ -11,14 +11,13 @@ description: Fast codebase navigator — find, map, refs, blast radius, structur
 tags: [navigation, search, code, grep, map, refactor, blast-radius]
 requires: [bash 4+, grep, sed, awk]
 created: 2026-03-15
-updated: 2026-04-01
+updated: 2026-04-04
 ---
 
 # soma-code
 
-<!-- digest:start -->
+## TL;DR
 **`soma-code.sh` — your codebase eyes.** Use `map` before editing any file — it gives you the function index. Use `refs` before renaming anything — it classifies DEF vs USE. Use `blast` to see how many files a change touches before you start. Use `find` instead of raw `grep`. Default target: project root. When you're reaching for grep, sed, or find — stop and use soma-code instead.
-<!-- digest:end -->
 
 Fast codebase navigator built for AI agents. Replaces scattered `grep`, `find`, and `cat` commands with structured, line-numbered output that's immediately actionable.
 

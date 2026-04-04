@@ -11,14 +11,13 @@ description: Set boot focus — primes the next session to load relevant MAPs, p
 tags: [focus, boot, maps, context, workflow]
 requires: [bash 4+, grep, sed]
 created: 2026-03-21
-updated: 2026-04-01
+updated: 2026-04-04
 ---
 
 # soma-focus
 
-<!-- digest:start -->
+## TL;DR
 **`soma-focus.sh` — session priming.** Run before starting `soma` to focus the next session on a specific topic. It traces the keyword through your `.soma/` workspace, scores relevance, and generates heat overrides so the right muscles, protocols, and MAPs load automatically. Use `dry-run` to preview without committing. Use `clear` between tasks.
-<!-- digest:end -->
 
 Sets a keyword focus for the next Soma boot. When you run `soma` after focusing, the system prompt is primed with relevant MAPs, plans, and AMPS content matching your keyword.
 

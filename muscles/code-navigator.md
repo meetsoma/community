@@ -8,15 +8,14 @@ triggers: [find, map, refs, structure, grep, navigate, codebase, navigation, sea
 tags: [tooling, search, refactor, shell]
 applies-to: [any]
 created: 2026-03-15
-updated: 2026-03-23
+updated: 2026-04-04
 tools: [soma-code.sh]
 related: [incremental-refactor, task-tooling]
 ---
 # Code Navigator
 
-<!-- digest:start -->
-> **`soma-code.sh` — fast codebase navigator.** 11 commands: `find` (grep with file:line), `lines` (exact line range), `map` (function/class index for TS/JS/Bash/CSS), `refs` (def vs use classification), `replace` (line-specific sed), `structure` (file tree + sizes), `tsc-errors` (TypeScript errors with context), `physics` (motion/animation audit), `events` (listeners/dispatchers), `css-vars` (custom property audit), `config` (settings objects). Use `map` before editing any file. Use `refs` before renaming. Use `find` instead of raw `grep -rn`. Default target: project root.
-<!-- digest:end -->
+## TL;DR
+**`soma-code.sh` — fast codebase navigator.** 11 commands: `find` (grep with file:line), `lines` (exact line range), `map` (function/class index for TS/JS/Bash/CSS), `refs` (def vs use classification), `replace` (line-specific sed), `structure` (file tree + sizes), `tsc-errors` (TypeScript errors with context), `physics` (motion/animation audit), `events` (listeners/dispatchers), `css-vars` (custom property audit), `config` (settings objects). Use `map` before editing any file. Use `refs` before renaming. Use `find` instead of raw `grep -rn`. Default target: project root.
 
 ## Commands
 

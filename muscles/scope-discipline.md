@@ -9,7 +9,7 @@ applies-to: [development]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-03
+updated: 2026-04-04
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -17,9 +17,8 @@ license: MIT
 
 # Scope Discipline
 
-<!-- digest:start -->
+## TL;DR
 Do what was asked. A bug fix doesn't need surrounding code cleaned up. A simple feature doesn't need extra configurability. Three similar lines beat a premature abstraction. Stop building when done.
-<!-- digest:end -->
 
 ## The Rule
 

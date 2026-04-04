@@ -7,16 +7,15 @@ heat: 15
 triggers: [plan, idea, pre-flight, kanban, preload, consolidation, lifecycle, planning, execution, preloads]
 applies-to: [any]
 created: 2026-03-14
-updated: 2026-03-14
+updated: 2026-04-04
 tools: [soma-plans.sh]
 loads: 64
 seams: [s01-3498d3]
 ---
 # Plan Lifecycle
 
-<!-- digest:start -->
-> **Plan Lifecycle** — end-to-end flow from idea to shipped to consolidated. (1) **Idea** → capture in `docs/ideas/`, link from kanban. (2) **Revise** → read against current state, strip what's done/stale, extract surviving kernel. (3) **Plan** → rewrite as version-scoped plan in `plans/` (or `docs/plans/` if cross-cutting), with phases, remaining, tooling. (4) **Pre-flight** → check what exists, verify assumptions, find overlapping plans. (5) **Correct plan** → update phases based on findings. (6) **Kanban tasks** → with `plan: path` and section references. (7) **Targeted preload** → file:line references for the executor session. (8) **Execute** → focused session, tests pass, ship. (9) **Consolidate** → mark plan complete, extract surviving ideas back to `docs/ideas/`, compare against kanban. Loop back to step 2 for next phase.
-<!-- digest:end -->
+## TL;DR
+**Plan Lifecycle** — end-to-end flow from idea to shipped to consolidated. (1) **Idea** → capture in `docs/ideas/`, link from kanban. (2) **Revise** → read against current state, strip what's done/stale, extract surviving kernel. (3) **Plan** → rewrite as version-scoped plan in `plans/` (or `docs/plans/` if cross-cutting), with phases, remaining, tooling. (4) **Pre-flight** → check what exists, verify assumptions, find overlapping plans. (5) **Correct plan** → update phases based on findings. (6) **Kanban tasks** → with `plan: path` and section references. (7) **Targeted preload** → file:line references for the executor session. (8) **Execute** → focused session, tests pass, ship. (9) **Consolidate** → mark plan complete, extract surviving ideas back to `docs/ideas/`, compare against kanban. Loop back to step 2 for next phase.
 
 ## The Pipeline
 
