@@ -41,10 +41,10 @@
 set -uo pipefail
 
 # ── Theme ──
-source "$(dirname "$0")/soma-theme.sh" 2>/dev/null || {
-  SOMA_BOLD='\033[1m'; SOMA_DIM='\033[2m'; SOMA_NC='\033[0m'; SOMA_CYAN='\033[0;36m'
-  SOMA_GREEN='\033[0;32m'; SOMA_RED='\033[0;31m'; SOMA_YELLOW='\033[0;33m'; SOMA_MAGENTA='\033[0;35m'
-}
+_sd="$(dirname "$0")"
+if [ -f "$_sd/soma-theme.sh" ]; then source "$_sd/soma-theme.sh"; fi
+SOMA_BOLD="${SOMA_BOLD:-\033[1m}"; SOMA_DIM="${SOMA_DIM:-\033[2m}"; SOMA_NC="${SOMA_NC:-\033[0m}"; SOMA_CYAN="${SOMA_CYAN:-\033[0;36m}"
+SOMA_GREEN="${SOMA_GREEN:-\033[0;32m}"; SOMA_RED="${SOMA_RED:-\033[0;31m}"; SOMA_YELLOW="${SOMA_YELLOW:-\033[0;33m}"; SOMA_MAGENTA="${SOMA_MAGENTA:-\033[0;35m}"
 BOLD="${SOMA_BOLD:-\033[1m}"
 DIM="${SOMA_DIM:-\033[2m}"
 NC="${SOMA_NC:-\033[0m}"
