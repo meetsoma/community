@@ -733,7 +733,6 @@ audit_upstream() {
   if [[ -z "$upstream_repo" ]]; then
     # Check common locations
     for candidate in \
-      "$HOME/Gravicity/lab/pi-mono" \
       "$PROJECT_ROOT/../lab/pi-mono" \
       "$PROJECT_ROOT/pi-mono"; do
       if [[ -d "$candidate/.git" ]]; then
