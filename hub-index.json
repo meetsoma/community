@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-12T06:03:32.475Z",
-  "count": 60,
+  "generated": "2026-04-12T15:45:48.884Z",
+  "count": 58,
   "items": [
     {
       "slug": "breath-cycle",
@@ -1031,60 +1031,6 @@
       "updated": "2026-04-04"
     },
     {
-      "slug": "soma-scrape",
-      "name": "soma-scrape",
-      "type": "script",
-      "description": "Intelligent doc discovery and scraping for SDK research",
-      "author": "meetsoma",
-      "version": "1.0.0",
-      "tier": "official",
-      "tags": [
-        "documentation",
-        "scraping",
-        "research",
-        "sdk",
-        "npm",
-        "github"
-      ],
-      "language": "bash",
-      "requires": [
-        "bash 4+",
-        "curl",
-        "jq"
-      ],
-      "status": "active",
-      "created": "2026-03-17",
-      "updated": "2026-04-01"
-    },
-    {
-      "slug": "soma-seam",
-      "name": "soma-seam",
-      "type": "script",
-      "description": "Trace concepts through memory, code, and sessions — the connective tissue of your .soma/",
-      "author": "meetsoma",
-      "version": "1.0.0",
-      "tier": "core",
-      "tags": [
-        "memory",
-        "trace",
-        "search",
-        "connections",
-        "seam",
-        "graph",
-        "timeline"
-      ],
-      "language": "bash",
-      "requires": [
-        "bash 4+",
-        "grep",
-        "sed",
-        "awk"
-      ],
-      "status": "active",
-      "created": "2026-03-15",
-      "updated": "2026-04-04"
-    },
-    {
       "slug": "soma-spell",
       "name": "soma-spell",
       "type": "script",
@@ -1138,7 +1084,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "core",
@@ -1155,7 +1101,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "default",
@@ -1187,7 +1133,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-22"
     },
     {
       "slug": "devops",
@@ -1214,7 +1160,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "fullstack",
@@ -1247,7 +1193,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "maintainer",
@@ -1277,7 +1223,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "preload-template",
@@ -1293,7 +1239,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-22"
     },
     {
       "slug": "refactorer",
@@ -1321,7 +1267,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     },
     {
       "slug": "writer",
@@ -1347,7 +1293,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-03-14"
     }
   ]
 }
