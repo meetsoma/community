@@ -3,13 +3,13 @@ name: inter-agent-inbox
 type: protocol
 status: active
 description: "File-based messaging between AI agents. Drop a markdown file in the recipient's inbox directory. No automation needed — just files. Enables asynchronous collaboration across sessions and agent systems."
-heat-default: warm
+heat-default: cold
 tags: [communication, multi-agent, collaboration, inbox, async]
 applies-to: [multi-agent, teams, workspaces]
 scope: community
 tier: official
 created: 2026-03-26
-updated: 2026-04-04
+updated: 2026-04-12
 version: 1.0.0
 author: meetsoma
 license: MIT

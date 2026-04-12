@@ -3,7 +3,7 @@ type: protocol
 name: implementation-plans
 status: active
 created: 2026-04-12
-heat-default: warm
+heat-default: cold
 scope: bundled
 description: Write plans your next self can execute without re-reading anything.
 applies-to: [always]
