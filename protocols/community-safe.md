@@ -37,7 +37,7 @@ The script catches obvious leaks. These need your awareness:
 
 **Private data belongs in:**
 - `.soma/secrets/` (gitignored)
-- `.soma/identity.md` (project-local, not pushed to public repos)
+- `.soma/body/soul.md` (project-local, not pushed to public repos)
 - Environment variables / `.env` files (gitignored)
 
 **Protocols and muscles must be generic:**

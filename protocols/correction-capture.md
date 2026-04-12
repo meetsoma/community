@@ -75,7 +75,7 @@ If you only capture corrections, you'll avoid past mistakes but drift away from 
 
 - **First correction:** Acknowledge + adjust behavior this session
 - **Second correction (same thing):** Write a muscle
-- **Third correction (same thing):** The muscle isn't working. Escalate to a protocol or update identity.md.
+- **Third correction (same thing):** The muscle isn't working. Escalate to a protocol or update soul.md.
 
 ## Dignity
 
