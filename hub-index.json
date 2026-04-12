@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-10T10:11:27.953Z",
-  "count": 59,
+  "generated": "2026-04-12T03:25:38.569Z",
+  "count": 60,
   "items": [
     {
       "slug": "breath-cycle",
@@ -201,6 +201,27 @@
       "status": "active",
       "created": "2026-03-22",
       "updated": "2026-04-02"
+    },
+    {
+      "slug": "implementation-plans",
+      "name": "implementation-plans",
+      "type": "protocol",
+      "description": "Every plan must be executable by a future self with ZERO context. Include file:line references, the current code, the changed code, verify commands, and the reasoning. A plan that says \"update the template\" is useless. A plan that says \"edit `core/body.ts` line 846, replace the hardcoded string with a file read, verify with `npm test`\" is executable.",
+      "author": "Unknown",
+      "version": "1.0.0",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "community",
+      "tags": [
+        "planning",
+        "execution",
+        "continuity",
+        "amnesia-proof"
+      ],
+      "status": "active",
+      "created": "2026-04-12"
     },
     {
       "slug": "inter-agent-inbox",
@@ -1117,7 +1138,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "core",
@@ -1134,7 +1155,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "default",
@@ -1166,7 +1187,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "devops",
@@ -1193,7 +1214,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "fullstack",
@@ -1226,7 +1247,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "maintainer",
@@ -1256,7 +1277,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "preload-template",
@@ -1272,7 +1293,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "refactorer",
@@ -1300,7 +1321,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     },
     {
       "slug": "writer",
@@ -1326,7 +1347,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-04-12"
     }
   ]
 }
