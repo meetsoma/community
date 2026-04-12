@@ -149,11 +149,11 @@ subject: "{{scripts_table}} missing from default _mind.md"
 # Scripts Discovered But Never Rendered
 
 The boot step `scripts` discovers all scripts but `{{scripts_table}}`
-isn't in `body/_public/_mind.md`. Every project has invisible scripts.
+isn't in `templates/default/_mind.md`. Every project has invisible scripts.
 
 **Root cause:** Variable exists in body.ts but not in the template.
 **Fix:** Add `{{scripts_table}}` between `{{muscle_digests}}` and `{{tools_section}}`.
-**Files:** soma-boot.ts:502-575, body.ts:83, body/_public/_mind.md
+**Files:** soma-boot.ts:502-575, body.ts:83, templates/default/_mind.md
 ```
 
 ### FYI / Knowledge Share
