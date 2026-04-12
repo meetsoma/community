@@ -18,15 +18,15 @@ Protocols, muscles, skills, and templates for [Soma](https://soma.gravicity.ai) 
 
 | Directory | What | How it loads |
 |---|---|---|
-| `protocols/` | Behavioral rules | `/install protocol <name>` |
-| `muscles/` | Learned patterns | `/install muscle <name>` |
-| `skills/` | Domain expertise | `/install skill <name>` |
+| `protocols/` | Behavioral rules | `/hub install protocol <name>` |
+| `muscles/` | Learned patterns | `/hub install muscle <name>` |
+| `skills/` | Domain expertise | `/hub install skill <name>` |
 | `templates/` | Full agent configs | `soma init --template <name>` |
 
 ```bash
 # From inside a Soma session:
-/install protocol breath-cycle
-/install muscle docker-deploy
+/hub install protocol breath-cycle
+/hub install muscle docker-deploy
 /list remote                      # browse everything
 ```
 
