@@ -1,5 +1,5 @@
 ---
-type: identity
+type: content
 agent: soma
 template: devops
 project: "{{PROJECT_NAME}}"

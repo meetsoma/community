@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-12T15:46:42.451Z",
-  "count": 58,
+  "generated": "2026-04-12T15:50:05.065Z",
+  "count": 61,
   "items": [
     {
       "slug": "breath-cycle",
@@ -1084,7 +1084,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-12"
     },
     {
       "slug": "core",
@@ -1107,9 +1107,9 @@
       "slug": "default",
       "name": "default",
       "type": "template",
-      "description": "Standard Soma setup — core protocols for session management, heat tracking, and workflow.",
+      "description": "Standard Soma setup — core protocols, session management, heat tracking, and workflow.",
       "author": "meetsoma",
-      "version": "0.6.3",
+      "version": "1.0.0",
       "tier": "official",
       "tags": [],
       "requires": {
@@ -1130,10 +1130,14 @@
           "tool-discipline",
           "working-style"
         ],
-        "muscles": [],
+        "muscles": [
+          "safe-file-ops",
+          "pre-flight-check",
+          "code-navigator"
+        ],
         "skills": []
       },
-      "updated": "2026-03-22"
+      "updated": "2026-04-12"
     },
     {
       "slug": "devops",
@@ -1160,7 +1164,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-12"
     },
     {
       "slug": "fullstack",
@@ -1193,7 +1197,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-12"
     },
     {
       "slug": "maintainer",
@@ -1223,7 +1227,35 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-12"
+    },
+    {
+      "slug": "nextjs",
+      "name": "nextjs",
+      "type": "template",
+      "description": "Next.js App Router specialist — RSC, server actions, route groups, middleware, ISR/SSG/SSR, Tailwind, Vercel deploy",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "tool-discipline",
+          "quality-standards",
+          "working-style",
+          "pre-flight",
+          "correction-capture"
+        ],
+        "muscles": [
+          "precision-edit",
+          "safe-file-ops",
+          "test-hygiene",
+          "code-navigator"
+        ],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-04-12"
     },
     {
       "slug": "preload-template",
@@ -1240,6 +1272,33 @@
         "skills": []
       },
       "updated": "2026-03-22"
+    },
+    {
+      "slug": "python-ml",
+      "name": "python-ml",
+      "type": "template",
+      "description": "Python ML/Data specialist — notebooks, experiment tracking, data pipelines, model evaluation, reproducibility",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "tool-discipline",
+          "quality-standards",
+          "working-style",
+          "pre-flight",
+          "correction-capture"
+        ],
+        "muscles": [
+          "precision-edit",
+          "safe-file-ops",
+          "code-navigator"
+        ],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-04-12"
     },
     {
       "slug": "refactorer",
@@ -1267,7 +1326,35 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-12"
+    },
+    {
+      "slug": "rust",
+      "name": "rust",
+      "type": "template",
+      "description": "Rust systems specialist — ownership, lifetimes, error handling, cargo workspace, unsafe discipline, performance-aware",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [],
+      "requires": {
+        "protocols": [
+          "tool-discipline",
+          "quality-standards",
+          "working-style",
+          "pre-flight",
+          "correction-capture"
+        ],
+        "muscles": [
+          "precision-edit",
+          "safe-file-ops",
+          "incremental-refactor",
+          "code-navigator"
+        ],
+        "skills": [],
+        "automations": []
+      },
+      "updated": "2026-04-12"
     },
     {
       "slug": "writer",
@@ -1293,7 +1380,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-04-12"
     }
   ]
 }
