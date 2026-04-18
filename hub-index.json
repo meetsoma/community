@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-18T08:03:05.818Z",
+  "generated": "2026-04-18T08:41:25.619Z",
   "count": 60,
   "items": [
     {
@@ -207,13 +207,13 @@
       "name": "implementation-plans",
       "type": "protocol",
       "description": "Every plan must be executable by a future self with ZERO context. Include file:line references, the current code, the changed code, verify commands, and the reasoning. A plan that says \"update the template\" is useless. A plan that says \"edit `core/body.ts` line 846, replace the hardcoded string with a file read, verify with `npm test`\" is executable.",
-      "author": "Unknown",
+      "author": "Curtis Mercier",
       "version": "1.0.0",
       "heatDefault": "cold",
       "appliesTo": [
         "always"
       ],
-      "tier": "community",
+      "tier": "core",
       "tags": [
         "planning",
         "execution",
@@ -221,7 +221,8 @@
         "amnesia-proof"
       ],
       "status": "active",
-      "created": "2026-04-12"
+      "created": "2026-04-12",
+      "updated": "2026-04-18"
     },
     {
       "slug": "inter-agent-inbox",
@@ -507,7 +508,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "doc-hygiene",
@@ -549,7 +550,7 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "memory-lane-reflection",
@@ -572,7 +573,7 @@
       ],
       "status": "active",
       "created": "2026-03-16",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "micro-exhale",
@@ -601,7 +602,7 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "post-fix-learning",
@@ -640,7 +641,7 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "precision-edit",
@@ -708,7 +709,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "scope-discipline",
@@ -753,7 +754,7 @@
       ],
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-04"
+      "updated": "2026-04-18"
     },
     {
       "slug": "test-hygiene",
