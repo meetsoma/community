@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-12T15:50:36.317Z",
+  "generated": "2026-04-18T08:03:05.818Z",
   "count": 60,
   "items": [
     {
@@ -1058,7 +1058,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "core",
@@ -1075,7 +1075,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "default",
@@ -1111,7 +1111,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "devops",
@@ -1138,7 +1138,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "fullstack",
@@ -1171,7 +1171,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "maintainer",
@@ -1201,7 +1201,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "nextjs",
@@ -1229,7 +1229,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "preload-template",
@@ -1245,7 +1245,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "python-ml",
@@ -1272,7 +1272,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "refactorer",
@@ -1300,7 +1300,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "rust",
@@ -1328,7 +1328,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     },
     {
       "slug": "writer",
@@ -1354,7 +1354,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-12"
+      "updated": "2026-04-18"
     }
   ]
 }
