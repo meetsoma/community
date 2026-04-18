@@ -1,7 +1,7 @@
 {
   "version": 1,
   "generated": "2026-04-12T15:50:36.317Z",
-  "count": 61,
+  "count": 60,
   "items": [
     {
       "slug": "breath-cycle",
@@ -966,32 +966,6 @@
         "audit",
         "workflow",
         "hygiene"
-      ],
-      "language": "bash",
-      "requires": [
-        "bash 4+",
-        "grep",
-        "sed",
-        "awk"
-      ],
-      "status": "active",
-      "created": "2026-03-21",
-      "updated": "2026-04-04"
-    },
-    {
-      "slug": "soma-query",
-      "name": "soma-query",
-      "type": "script",
-      "description": "Search and explore across the entire Soma ecosystem — docs, code, sessions, and git",
-      "author": "meetsoma",
-      "version": "1.0.0",
-      "tier": "official",
-      "tags": [
-        "search",
-        "query",
-        "explore",
-        "sessions",
-        "frontmatter"
       ],
       "language": "bash",
       "requires": [
