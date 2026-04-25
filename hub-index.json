@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-20T06:34:10.733Z",
-  "count": 60,
+  "generated": "2026-04-25T16:39:36.815Z",
+  "count": 64,
   "items": [
     {
       "slug": "breath-cycle",
@@ -901,6 +901,30 @@
       "updated": "2026-04-02"
     },
     {
+      "slug": "git-identity-hook",
+      "name": "git-identity-hook",
+      "type": "script",
+      "description": "Pre-commit hook that validates git user.email before allowing commits. Lightweight safety net for multi-account workflows.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "git",
+        "hooks",
+        "identity",
+        "safety",
+        "multi-account"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash",
+        "git"
+      ],
+      "status": "active",
+      "created": "2026-04-25",
+      "updated": "2026-04-25"
+    },
+    {
       "slug": "soma-code",
       "name": "soma-code",
       "type": "script",
@@ -927,6 +951,31 @@
       "status": "active",
       "created": "2026-03-15",
       "updated": "2026-04-04"
+    },
+    {
+      "slug": "soma-compat",
+      "name": "soma-compat",
+      "type": "script",
+      "description": "Detects overlap, redundancy, and conflicting directives across protocols and muscles. Outputs a compatibility score.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "audit",
+        "compatibility",
+        "protocols",
+        "muscles",
+        "hygiene"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash",
+        "awk",
+        "grep"
+      ],
+      "status": "active",
+      "created": "2026-04-25",
+      "updated": "2026-04-25"
     },
     {
       "slug": "soma-focus",
@@ -1006,6 +1055,29 @@
       "updated": "2026-04-04"
     },
     {
+      "slug": "soma-snapshot",
+      "name": "soma-snapshot",
+      "type": "script",
+      "description": "Rolling zip snapshots of project directories. Respects .zipignore (or .gitignore), keeps last 3 per project, syncs to external drive if mounted.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "backup",
+        "snapshot",
+        "archive",
+        "recovery"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash",
+        "zip"
+      ],
+      "status": "active",
+      "created": "2026-04-25",
+      "updated": "2026-04-25"
+    },
+    {
       "slug": "soma-spell",
       "name": "soma-spell",
       "type": "script",
@@ -1029,6 +1101,31 @@
       "status": "active",
       "created": "2026-03-18",
       "updated": "2026-04-01"
+    },
+    {
+      "slug": "validate-content",
+      "name": "validate-content",
+      "type": "script",
+      "description": "Validate AMPS content files (protocols, muscles, automations) before submitting a PR to the hub. Checks frontmatter, breadcrumb, TL;DR, naming, PII patterns.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "tier": "official",
+      "tags": [
+        "validation",
+        "hub",
+        "contributing",
+        "frontmatter",
+        "ci"
+      ],
+      "language": "bash",
+      "requires": [
+        "bash",
+        "awk",
+        "grep"
+      ],
+      "status": "active",
+      "created": "2026-04-25",
+      "updated": "2026-04-25"
     },
     {
       "slug": "architect",
@@ -1059,7 +1156,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "core",
@@ -1076,7 +1173,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "default",
@@ -1112,7 +1209,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "devops",
@@ -1139,7 +1236,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "fullstack",
@@ -1172,7 +1269,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "maintainer",
@@ -1202,7 +1299,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "nextjs",
@@ -1230,7 +1327,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "preload-template",
@@ -1246,7 +1343,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "python-ml",
@@ -1273,7 +1370,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "refactorer",
@@ -1301,7 +1398,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "rust",
@@ -1329,7 +1426,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     },
     {
       "slug": "writer",
@@ -1355,7 +1452,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-20"
+      "updated": "2026-04-25"
     }
   ]
 }
