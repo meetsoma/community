@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-25T16:39:36.815Z",
+  "generated": "2026-05-11T08:17:29.289Z",
   "count": 64,
   "items": [
     {
@@ -800,7 +800,7 @@
       "type": "muscle",
       "description": "Before reporting done, run it. Reading code is not verification. \"Looks correct\" is not verified. Recognize the rationalizations you reach for when you want to skip checks — those are exactly the moments verification matters most.",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "heatDefault": "cold",
       "appliesTo": [
         "development",
@@ -815,7 +815,7 @@
       ],
       "status": "active",
       "created": "2026-04-03",
-      "updated": "2026-04-04"
+      "updated": "2026-05-11"
     },
     {
       "slug": "debug",
@@ -1156,7 +1156,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "core",
@@ -1173,7 +1173,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "default",
@@ -1209,7 +1209,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "devops",
@@ -1236,7 +1236,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "fullstack",
@@ -1269,7 +1269,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "maintainer",
@@ -1299,7 +1299,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "nextjs",
@@ -1327,7 +1327,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "preload-template",
@@ -1343,7 +1343,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "python-ml",
@@ -1370,7 +1370,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "refactorer",
@@ -1398,7 +1398,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "rust",
@@ -1426,7 +1426,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     },
     {
       "slug": "writer",
@@ -1452,7 +1452,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-25"
+      "updated": "2026-05-11"
     }
   ]
 }
