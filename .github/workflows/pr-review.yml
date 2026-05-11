@@ -78,7 +78,7 @@ jobs:
         id: token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: 3043971
+          app-id: 3108591
           private-key: ${{ secrets.SOMA_APP_PEM }}
 
       - name: Approve and merge
