@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "generated": "2026-04-10T09:02:26.617Z",
-  "count": 59,
+  "generated": "2026-06-10T04:24:48.416Z",
+  "count": 61,
   "items": [
     {
       "slug": "breath-cycle",
       "name": "breath-cycle",
       "type": "protocol",
-      "description": "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. Write preload with resume point + orient targets before rotating.",
+      "description": "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. **Rotation is self-initiated** — a natural-language wrap-up phrase (\"wrap up\", \"wind down\", \"let's call it\") fires the exhale; the user never lists the steps. **The exhale is a complete checklist** (verify → ship-completeness → reflect → promote → preload → log), and the preload is the *last* step, never the only one.",
       "author": "Curtis Mercier",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -23,7 +23,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-04-02"
+      "updated": "2026-06-10"
     },
     {
       "slug": "community-safe",
@@ -203,6 +203,27 @@
       "updated": "2026-04-02"
     },
     {
+      "slug": "implementation-plans",
+      "name": "implementation-plans",
+      "type": "protocol",
+      "description": "Every plan must be executable by a future self with ZERO context. Include file:line references, the current code, the changed code, verify commands, and the reasoning. A plan that says \"update the template\" is useless. A plan that says \"edit `core/body.ts` line 846, replace the hardcoded string with a file read, verify with `npm test`\" is executable.",
+      "author": "Unknown",
+      "version": "1.0.0",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "community",
+      "tags": [
+        "planning",
+        "execution",
+        "continuity",
+        "amnesia-proof"
+      ],
+      "status": "active",
+      "created": "2026-04-12"
+    },
+    {
       "slug": "inter-agent-inbox",
       "name": "inter-agent-inbox",
       "type": "protocol",
@@ -249,6 +270,30 @@
       "status": "active",
       "created": "2026-03-16",
       "updated": "2026-04-04"
+    },
+    {
+      "slug": "meta-workflow",
+      "name": "meta-workflow",
+      "type": "protocol",
+      "description": "Three nested loops: **BREATH** (a session — `breath-cycle`) → **ARC** (a feature/cycle, 7 stages) → **EVOLUTION** (the cadence amends itself from observations). The ARC loop: **GROUND → DECIDE → PLAN → BUILD → VERIFY → CONSOLIDATE → REFLECT.** Each stage has a gate (\"done = …\"). Never skip GROUND or REFLECT. **Process-by-evidence, not by vibe:** every amendment to how you work cites the observation(s) that drove it.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "warm",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "core",
+      "tags": [
+        "workflow",
+        "cadence",
+        "cycles",
+        "evolution",
+        "context-engineering",
+        "multi-project"
+      ],
+      "status": "active",
+      "created": "2026-06-10",
+      "updated": "2026-06-10"
     },
     {
       "slug": "pattern-evolution",
@@ -1117,7 +1162,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     },
     {
       "slug": "core",
@@ -1134,7 +1179,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-03-14"
     },
     {
       "slug": "default",
@@ -1166,7 +1211,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     },
     {
       "slug": "devops",
@@ -1193,7 +1238,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     },
     {
       "slug": "fullstack",
@@ -1226,7 +1271,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     },
     {
       "slug": "maintainer",
@@ -1256,7 +1301,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     },
     {
       "slug": "preload-template",
@@ -1272,7 +1317,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-03-22"
     },
     {
       "slug": "refactorer",
@@ -1300,7 +1345,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     },
     {
       "slug": "writer",
@@ -1326,7 +1371,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-04-10"
+      "updated": "2026-06-10"
     }
   ]
 }
