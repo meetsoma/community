@@ -6,11 +6,13 @@ description: "The operating cadence — how work flows in a project. Three neste
 heat-default: warm
 tags: [workflow, cadence, cycles, evolution, context-engineering, multi-project]
 applies-to: [always]
+requires:
+  protocols: [breath-cycle]
 scope: bundled
 tier: core
 created: 2026-06-10
 updated: 2026-06-10
-version: 1.0.0
+version: 1.1.0
 author: meetsoma
 license: CC BY 4.0
 ---
@@ -166,10 +168,88 @@ live in its always-loaded breadcrumb, not only in its body. When you add a caden
 
 ## Instantiate it in your project
 
-This protocol is the **shape**. To use it, give the project a living **`META_WORKFLOW.md`** that holds
-the *content*: its own Observation Ledger, its own Decision Register, its cycles. Treat it as the
-project's operating system, written by the COO who keeps the incident log — never "done," every arc
-leaves it a little truer. The protocol ships with Soma; the instance is yours.
+This protocol is the **shape**. Installing it (bundled, or `soma install protocol meta-workflow`)
+delivers the shape — but the shape is **inert until you instantiate it**. To use it, give the project
+a living **`META_WORKFLOW.md`** that holds the *content*: its own Observation Ledger, its own Decision
+Register, its cycles. Treat it as the project's operating system, written by the COO who keeps the
+incident log — never "done," every arc leaves it a little truer. The protocol ships with Soma; the
+instance is yours.
+
+**Adoption (an existing project).** Just ask Soma — *"set up the meta-workflow cadence"* — and it runs
+these steps. The two-layer rule applies: the cadence only *fires* if an eager surface points at the
+instance (step 2). `breath-cycle` already carries the rotation triggers eagerly, so you only wire the
+pointer.
+
+1. **Scaffold `META_WORKFLOW.md`** from the starter below. Default location: **`.soma/META_WORKFLOW.md`**
+   (or `.soma/cycles/META_WORKFLOW.md` if you keep a `cycles/` board). **Put it at the `.soma/` root or
+   in `cycles/` — NOT in `amps/protocols/` or `amps/muscles/`.** Those AMPS dirs are compiled into the
+   system prompt at boot; the instance is a living doc you *read on demand* (via the step-2 breadcrumb),
+   not a rule to inject every boot. Map the 7 ARC stages to *your* real tools; leave the Ledger and
+   Register empty — they fill from real arcs.
+2. **Wire the breadcrumb** — add one line to an eager body file (e.g. `body/body.md`): *"Operating
+   cadence → `META_WORKFLOW.md`; read it unprompted at boot / rotation / stage transition / before
+   scoping new work."* This is what makes the doc actually get opened.
+3. **(optional) Lean the preload** — point your `_memory.md` exhale steps at `breath-cycle`'s checklist
+   instead of duplicating them, and have the preload carry the arc+stage, open Decision-Register forks,
+   and 1–3 observations (the cadence-specific carries, see §The preload contract).
+4. **(optional) Body parts** — for each service/infra the project depends on, add a `body/<part>.md`
+   that **indexes live source + the tool to read it fresh** (see §Body parts), not a cache of doc-prose.
+
+That's it — the cadence is now running. From here it's self-maintaining: every REFLECT appends to the
+Ledger, every fork goes in the Register, and recurring observations amend the doc (citing their evidence).
+
+### Starter `META_WORKFLOW.md`
+
+Copy this, fill the two bracketed spots, delete the rest of the brackets. It **points** at this
+protocol for the loop definitions (PCE — don't restate the shape); it holds only your project's content.
+
+```markdown
+---
+type: meta-workflow
+domain: [what this project IS — one line]
+status: living (v0 — self-evolving from observations)
+created: [date]
+instantiates: meta-workflow protocol (the shipped shape; this is this project's instance)
+---
+
+# META_WORKFLOW — the [project] operating cadence
+
+> The **cadence** (how an idea becomes shipped, verified, consolidated work — the HOW), which
+> **amends itself** from observations. The generic shape lives in the `meta-workflow` protocol; this
+> holds the content. Determinism rule: every amendment cites the observation(s) that drove it.
+
+## The ARC loop mapped to [project] (the 7 stages → real tools)
+Generic shape: `meta-workflow` protocol §The ARC loop. Here's how each stage cashes out here:
+
+| # | Stage | [project] tooling |
+|---|---|---|
+| 1 | GROUND     | [how you read real state / survey prior art here] |
+| 2 | DECIDE     | surface forks → the Decision Register ↓ |
+| 3 | PLAN       | [where plans live — a cycle doc, a tracker] |
+| 4 | BUILD      | [your build/test/commit discipline] |
+| 5 | VERIFY     | [how you prove it on the real artifact] |
+| 6 | CONSOLIDATE| [what you update — docs/index/body] |
+| 7 | REFLECT    | `breath-cycle` exhale checklist → ledger + preload |
+
+## EVOLUTION — the Observation Ledger (append-only; newest first)
+At REFLECT, log 1–3 honest notes (`worked`/`didn't`/`gap`/`infra`). Recurs ≥2× or high-impact → amendment, citing the id.
+
+| id | session | type | observation | → amendment |
+|----|---------|------|-------------|-------------|
+| O1 |         |      |             |             |
+
+## The Decision Register (open forks — surface in preloads until built)
+Status: `open` · `scoped` · `built`. Detail in the owning doc; this is the index.
+
+| id | decision | status | owner doc |
+|----|----------|--------|-----------|
+| D1 |          |        |           |
+
+## Cycles (the work, indexed)
+| cycle | status | what |
+|-------|--------|------|
+|       |        |      |
+```
 
 ## When to Apply
 
