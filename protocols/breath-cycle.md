@@ -60,6 +60,8 @@ The most common failure is an exhale that fires correctly but only writes a prel
 
 > **The exhale is steps 1–6, not step 5 alone.** If all you wrote was a preload, you skipped the exhale.
 
+This applies identically to an **auto-fired** exhale — the 85% safety net and keepalive exhaustion run all six steps, not just the preload.
+
 ## Ship-completeness
 
 A feature isn't done when the code works — it's done when **the user can find it and a test guards it.** For every feature / surface / endpoint / command shipped this session:

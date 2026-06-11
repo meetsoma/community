@@ -27,7 +27,7 @@ license: CC BY 4.0
 - The ARC loop: **GROUND → DECIDE → PLAN → BUILD → VERIFY → CONSOLIDATE → REFLECT.** Each stage has a gate ("done = …"). Never skip GROUND or REFLECT.
 - **Process-by-evidence, not by vibe:** every amendment to how you work cites the observation(s) that drove it.
 - **Docs index the source, they don't duplicate it** (PCE). A stale duplicate is worse than a pointer.
-- Instantiate this in a project as a living **`META_WORKFLOW.md`** (its own ledger, register, cycles). This protocol is the *shape*; the instance holds the *content*. A project can run many; a workspace navigates project ↔ parent scope.
+- Instantiate this in a project as a living **`META_WORKFLOW.md`** (its own ledger, register, cycles). This protocol is the *shape*; the instance holds the *content*. A project can run many cycles under one META_WORKFLOW; a workspace navigates project ↔ parent scope.
 
 ## The three nested loops
 
@@ -72,7 +72,7 @@ ledger). An arc that ships code but skips CONSOLIDATE/REFLECT leaves debt: drift
 ## The EVOLUTION loop — the cadence rewrites itself
 
 The cadence is **living**: it describes what you actually do that works, and amends itself from
-observations. This is the determinism Curtis named: *process-by-evidence, not process-by-vibe.*
+observations. This is the determinism the cadence is built on: *process-by-evidence, not process-by-vibe.*
 
 - **Observation Ledger** (append-only). At REFLECT, log 1–3 honest notes, each typed
   `worked` / `didn't` / `gap` / `infra`.
@@ -129,8 +129,20 @@ A body part is an **index to live source + the tool to read it fresh**, never a 
 doc-prose (platforms and docs drift — a cached "what I read once" is the costliest stale). Per topic,
 write the **source of truth + how to fetch it** (a doc URL + `browser`, a config path + `read`, a
 probe command); keep inline only your **durable, hard-won specifics** (your instance, your traps,
-your patterns) — those aren't in anyone's docs. See the `DNA` body doc, §Lazy-vs-Eager, for the
-convention and the canonical shape (a *Resources → source-of-truth → how-to-fetch* table, read first).
+your patterns) — those aren't in anyone's docs.
+
+The canonical shape is a **Resources table, read first** — per need, name the source of truth + the
+tool that fetches it fresh:
+
+| Need | Source of truth | How to fetch |
+|---|---|---|
+| Docs / API / versions | the platform's live docs | `browser` — navigate the doc URL |
+| Our IDs / config / secrets | the config / secrets file | `read` the file — never trust a pasted value |
+| How it actually behaves | the source / repo | `read` the source |
+| Why it's built this way | the owning cycle | open `cycles/<x>` |
+
+Keep inline only the durable specifics not in any of those sources. (The `DNA` body doc's
+§Lazy-vs-Eager covers the eager-vs-lazy *loading* mechanism this rides on.)
 
 **Multi-project:** one `.soma` per project; the project's body = its context; shared identity and
 method live up at the parent/workspace scope, project specifics live local. The body chain walks
@@ -138,12 +150,19 @@ child → parent, so child files load first. A project may run its own META_WORK
 
 ## The preload contract
 
-The preload is REFLECT's output — the session handoff that survives amnesia. It must carry: the
-**arc + stage** (where to resume in the loop, not just what happened) · **what shipped** (roadmap
-form: ordered steps, commits, synthesized — not a transcript) · **start-here** (present-imperative,
-exact commands) · the **open Decision Register forks** · 1–3 **observations** for the ledger · **open
-loops/traps** (file:line + next command) · and **who you were** (the self before the worker). Format
-details: `breath-cycle` §Preload Quality.
+The preload is REFLECT's output — the session handoff that survives amnesia. It follows `breath-cycle`
+§Preload Quality (resume point · what shipped · orient-from · next steps), plus three **cadence-specific**
+carries: the **arc + stage** (where to resume in the loop, not just what happened) · the **open Decision
+Register forks** (surfaced until built) · and 1–3 **observations** for the ledger.
+
+## Why a cadence rule fires — the two-layer rule
+
+A cadence rule only fires if two layers exist: (a) the **procedure**, written once in the cadence doc
+(this protocol; your project's `META_WORKFLOW.md`), and (b) an **eager trigger** carried in the boot
+prompt — a warm protocol breadcrumb, an identity line — that binds the user's intent to it. A procedure
+with no eager trigger is inert no matter how well written: that's why `breath-cycle`'s rotation triggers
+live in its always-loaded breadcrumb, not only in its body. When you add a cadence rule that must
+*fire*, give it both layers.
 
 ## Instantiate it in your project
 
