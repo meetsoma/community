@@ -1,5 +1,5 @@
 ---
-type: identity
+type: content
 agent: soma
 template: architect
 project: "{{PROJECT_NAME}}"

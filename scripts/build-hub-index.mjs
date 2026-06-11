@@ -167,11 +167,14 @@ function loadTemplates() {
 
 		const json = JSON.parse(fs.readFileSync(manifest, "utf-8"));
 
-		// Try to read identity.md for richer description
+		// Try to read identity content for richer description
 		let body = "";
-		const identity = path.join(tplDir, "identity.md");
-		if (fs.existsSync(identity)) {
-			const { body: idBody } = parseFrontmatter(fs.readFileSync(identity, "utf-8"));
+		const soulPath = path.join(tplDir, "soul.md");
+		const somaPath = path.join(tplDir, "SOMA.md");
+		const identityPath = path.join(tplDir, "identity.md");
+		const idFile = fs.existsSync(soulPath) ? soulPath : fs.existsSync(somaPath) ? somaPath : identityPath;
+		if (fs.existsSync(idFile)) {
+			const { body: idBody } = parseFrontmatter(fs.readFileSync(idFile, "utf-8"));
 			body = idBody;
 		}
 

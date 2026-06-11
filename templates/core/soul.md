@@ -1,5 +1,5 @@
 ---
-type: identity
+type: content
 agent: soma
 template: core
 project: "{{PROJECT_NAME}}"
