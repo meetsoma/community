@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-06-11T02:47:40.094Z",
+  "generated": "2026-06-11T02:54:41.772Z",
   "count": 65,
   "items": [
     {
@@ -1197,7 +1197,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-03-14"
+      "updated": "2026-06-11"
     },
     {
       "slug": "default",
@@ -1367,7 +1367,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-03-22"
+      "updated": "2026-06-11"
     },
     {
       "slug": "python-ml",
