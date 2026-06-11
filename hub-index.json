@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-06-11T02:54:41.772Z",
+  "generated": "2026-06-11T03:53:49.573Z",
   "count": 65,
   "items": [
     {
@@ -278,7 +278,7 @@
       "type": "protocol",
       "description": "Three nested loops: **BREATH** (a session — `breath-cycle`) → **ARC** (a feature/cycle, 7 stages) → **EVOLUTION** (the cadence amends itself from observations). The ARC loop: **GROUND → DECIDE → PLAN → BUILD → VERIFY → CONSOLIDATE → REFLECT.** Each stage has a gate (\"done = …\"). Never skip GROUND or REFLECT. **Process-by-evidence, not by vibe:** every amendment to how you work cites the observation(s) that drove it.",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
