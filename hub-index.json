@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-06-11T08:38:12.689Z",
+  "generated": "2026-06-15T07:56:38.986Z",
   "count": 65,
   "items": [
     {
@@ -278,7 +278,7 @@
       "type": "protocol",
       "description": "Three nested loops: **BREATH** (a session — `breath-cycle`) → **ARC** (a feature/cycle, 7 stages) → **EVOLUTION** (the cadence amends itself from observations). The ARC loop: **GROUND → DECIDE → PLAN → BUILD → VERIFY → CONSOLIDATE → REFLECT.** Each stage has a gate (\"done = …\"). Never skip GROUND or REFLECT. **Process-by-evidence, not by vibe:** every amendment to how you work cites the observation(s) that drove it.",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -294,7 +294,7 @@
       ],
       "status": "active",
       "created": "2026-06-10",
-      "updated": "2026-06-10"
+      "updated": "2026-06-15"
     },
     {
       "slug": "pattern-evolution",
@@ -1180,7 +1180,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "core",
@@ -1197,7 +1197,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "default",
@@ -1233,7 +1233,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "devops",
@@ -1260,7 +1260,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "fullstack",
@@ -1293,7 +1293,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "maintainer",
@@ -1323,7 +1323,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "nextjs",
@@ -1351,7 +1351,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "preload-template",
@@ -1367,7 +1367,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "python-ml",
@@ -1394,7 +1394,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "refactorer",
@@ -1422,7 +1422,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "rust",
@@ -1450,7 +1450,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     },
     {
       "slug": "writer",
@@ -1476,7 +1476,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-11"
+      "updated": "2026-06-15"
     }
   ]
 }
