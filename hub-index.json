@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-06-15T14:51:28.230Z",
+  "generated": "2026-08-07T01:51:38.494Z",
   "count": 65,
   "items": [
     {
@@ -495,7 +495,7 @@
       "slug": "working-style",
       "name": "working-style",
       "type": "protocol",
-      "description": "Test → commit → push → log. No unpushed, untested, or unlogged work. `soma-code.sh map` before editing any file. `soma-refactor.sh scan` before deleting or renaming anything. `soma-verify.sh` after structural changes. `soma-ship.sh` after every commit to agent. Plans live in files, not in context — write it down, link it, move on. When you catch a bug, fix the system that allowed it. When a test fails, trace BOTH the test and the code — don't change the test to make it pass without understanding why it failed. Be direct. Lead with action. No ceremony.",
+      "description": "Test → commit → push → log. No unpushed, untested, or unlogged work. `soma:code.map` before editing any file. `soma:code.blast` before deleting, `soma:code.refs` before renaming. Plans live in files, not in context — write it down, link it, move on. When you catch a bug, fix the system that allowed it. When a test fails, trace BOTH the test and the code — don't change the test to make it pass without understanding why it failed. Be direct. Lead with action. No ceremony.",
       "author": "meetsoma",
       "version": "1.1.0",
       "heatDefault": "warm",
@@ -510,7 +510,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-02"
+      "updated": "2026-08-06"
     },
     {
       "slug": "code-navigator",
@@ -1180,7 +1180,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "core",
@@ -1197,7 +1197,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "default",
@@ -1233,7 +1233,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "devops",
@@ -1260,7 +1260,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "fullstack",
@@ -1293,7 +1293,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "maintainer",
@@ -1323,7 +1323,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "nextjs",
@@ -1351,7 +1351,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "preload-template",
@@ -1367,7 +1367,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "python-ml",
@@ -1394,7 +1394,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "refactorer",
@@ -1422,7 +1422,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "rust",
@@ -1450,7 +1450,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     },
     {
       "slug": "writer",
@@ -1476,7 +1476,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-06-15"
+      "updated": "2026-08-07"
     }
   ]
 }
