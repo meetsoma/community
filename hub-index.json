@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "generated": "2026-08-07T05:41:37.959Z",
+  "generated": "2026-08-09T11:00:57.946Z",
   "count": 65,
   "items": [
     {
       "slug": "breath-cycle",
       "name": "breath-cycle",
       "type": "protocol",
-      "description": "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. **Rotation is self-initiated** — a natural-language wrap-up phrase (\"wrap up\", \"wind down\", \"let's call it\") fires the exhale; the user never lists the steps. **The exhale is a complete checklist** (verify → ship-completeness → reflect → promote → preload → log), and the preload is the *last* step, never the only one.",
+      "description": "Inhale → hold → exhale. Auto-breathe at 50%/70%/85%. Commands: `/exhale`, `/breathe`, `/rest`, `/inhale`. **Rotation is self-initiated** — a natural-language wrap-up phrase (\"wrap up\", \"wind down\", \"let's call it\") fires the exhale; the user never lists the steps. **The exhale is a complete checklist** (verify → ship-completeness → reflect → promote → log → preload), and the preload is the *last* step, never the only one — writing it can trigger rotation, so nothing may be left until after it.",
       "author": "Curtis Mercier",
-      "version": "3.0.0",
+      "version": "3.0.1",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -23,7 +23,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-06-11"
+      "updated": "2026-08-09"
     },
     {
       "slug": "community-safe",
@@ -1180,7 +1180,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "core",
@@ -1197,7 +1197,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "default",
@@ -1233,7 +1233,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "devops",
@@ -1260,7 +1260,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "fullstack",
@@ -1293,7 +1293,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "maintainer",
@@ -1323,7 +1323,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "nextjs",
@@ -1351,7 +1351,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "preload-template",
@@ -1367,7 +1367,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "python-ml",
@@ -1394,7 +1394,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "refactorer",
@@ -1422,7 +1422,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "rust",
@@ -1450,7 +1450,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     },
     {
       "slug": "writer",
@@ -1476,7 +1476,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-07"
+      "updated": "2026-08-09"
     }
   ]
 }
