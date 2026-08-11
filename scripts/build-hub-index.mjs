@@ -12,6 +12,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -188,11 +189,27 @@ function loadTemplates() {
 			tier: json.tier || "community",
 			tags: json.tags || [],
 			requires: json.requires || [],
-			updated: fs.statSync(manifest).mtime.toISOString().split("T")[0],
+			updated: json.updated || lastCommitDate(manifest) || undefined,
 		});
 	}
 
 	return items;
+}
+
+// A file's mtime is a property of WHEN THE REPO WAS CLONED, not of the file. This used to be
+// `fs.statSync(manifest).mtime`, which made every template report the CI checkout date — all 11 of
+// them stamped with the same build day, while the same build run locally reported dates months
+// earlier. A same-value stamp across a whole class is a broken probe, not a result.
+// Git knows when the file actually changed; ask it, and emit NOTHING rather than a fabricated date.
+function lastCommitDate(file) {
+	try {
+		const out = execFileSync("git", ["log", "-1", "--format=%cs", "--", file], {
+			cwd: path.dirname(file), encoding: "utf-8", stdio: ["ignore", "pipe", "ignore"],
+		}).trim();
+		return /^\d{4}-\d{2}-\d{2}$/.test(out) ? out : undefined;
+	} catch {
+		return undefined;
+	}
 }
 
 function buildItem(type, slug, meta, body) {
