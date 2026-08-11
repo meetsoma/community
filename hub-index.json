@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-08-11T02:04:38.351Z",
+  "generated": "2026-08-11T03:43:51.885Z",
   "count": 65,
   "items": [
     {
@@ -453,7 +453,7 @@
       "type": "protocol",
       "description": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice manually, make a script. Guard auto-blocks dangerous bash. The agent that builds its own tools gets faster every session.",
       "author": "meetsoma",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "heatDefault": "cold",
       "appliesTo": [
         "always"
