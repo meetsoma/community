@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-08-11T01:02:11.983Z",
+  "generated": "2026-08-11T01:53:42.747Z",
   "count": 65,
   "items": [
     {
@@ -118,7 +118,7 @@
       "type": "protocol",
       "description": "Every `.md` file needs YAML frontmatter: `type`, `status`, `created`, `updated`. All AMPS content (protocols, muscles, automations) uses `## TL;DR` for warm-tier loading.",
       "author": "Curtis Mercier",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "heatDefault": "cold",
       "appliesTo": [
         "always"
@@ -131,7 +131,7 @@
       ],
       "status": "active",
       "created": "2026-03-09",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     {
       "slug": "git-identity",
@@ -453,7 +453,7 @@
       "type": "protocol",
       "description": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice manually, make a script. Guard auto-blocks dangerous bash. The agent that builds its own tools gets faster every session.",
       "author": "meetsoma",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "heatDefault": "cold",
       "appliesTo": [
         "always"
@@ -467,7 +467,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-08-06"
+      "updated": "2026-08-10"
     },
     {
       "slug": "workflow",
@@ -497,7 +497,7 @@
       "type": "protocol",
       "description": "Test → commit → push → log. No unpushed, untested, or unlogged work. `soma:code.map` before editing any file. `soma:code.blast` before deleting, `soma:code.refs` before renaming. Plans live in files, not in context — write it down, link it, move on. When you catch a bug, fix the system that allowed it. When a test fails, trace BOTH the test and the code — don't change the test to make it pass without understanding why it failed. Be direct. Lead with action. No ceremony.",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "heatDefault": "warm",
       "appliesTo": [
         "always"
@@ -510,7 +510,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-08-06"
+      "updated": "2026-08-10"
     },
     {
       "slug": "code-navigator",
