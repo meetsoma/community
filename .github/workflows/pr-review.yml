@@ -14,6 +14,13 @@ on:
       # scanner's find, so an executable extension triggered zero CI. Every gated type
       # was inert markdown; the one type that EXECUTES was ungated.
       - 'extensions/**'
+      # 🔴 .github/scripts/** — THE GATE MUST GATE ITSELF. Without this, a PR that edits
+      # injection-scan.sh or privacy-scan.sh does not trigger the workflow that RUNS them:
+      # someone could weaken or no-op a scanner and no scanner would run on the change.
+      # main-guard.yml already lists it (:22); pr-review did not. Same shape as the hole
+      # closed earlier in this session — the gated set did not include the thing doing the
+      # gating — found by an assertion audit of that very fix. (s01-2e87ae)
+      - '.github/scripts/**'
 
 permissions:
   contents: read
