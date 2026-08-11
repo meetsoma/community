@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-08-09T11:00:57.946Z",
+  "generated": "2026-08-11T00:20:13.112Z",
   "count": 65,
   "items": [
     {
@@ -29,9 +29,9 @@
       "slug": "community-safe",
       "name": "community-safe",
       "type": "protocol",
-      "description": "Private data stays private. Channel-guard blocks PII pre-push. Your judgment covers the rest: protocols and muscles must be generic (no emails, paths, project names). When sharing to hub, strip absolute paths and private repo references. Private data belongs in `.soma/secrets/`, identity files, or env vars. > How Soma keeps private data out of public content. The channel-guard script catches leaks mechanically — this protocol covers the judgment that prevents creating them.",
-      "author": "meetsoma",
-      "version": "2.0.0",
+      "description": "Private data stays private. 🔴 **The channel guard does NOT block PII** — it blocks pro/private keywords and credential file shapes; emails, API keys and IP addresses pass straight through. **Run a PII check yourself before publishing.** Protocols and muscles must be generic (no emails, paths, project names). When sharing to the hub, strip absolute paths and private repo references. Private data belongs in `.soma/secrets/`, identity files, or env vars. > How Soma keeps private data out of public content. The guard catches a NARROW mechanical class — > this protocol covers the judgment, and names the check the guard will not run for you.",
+      "author": "Curtis Mercier",
+      "version": "2.1.0",
       "heatDefault": "cold",
       "appliesTo": [
         "always"
@@ -44,7 +44,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-12"
+      "updated": "2026-08-10"
     },
     {
       "slug": "correction-capture",
@@ -1180,7 +1180,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "core",
@@ -1197,7 +1197,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "default",
@@ -1233,7 +1233,7 @@
         ],
         "skills": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "devops",
@@ -1260,7 +1260,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "fullstack",
@@ -1293,7 +1293,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "maintainer",
@@ -1323,7 +1323,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "nextjs",
@@ -1351,7 +1351,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "preload-template",
@@ -1367,7 +1367,7 @@
         "muscles": [],
         "skills": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "python-ml",
@@ -1394,7 +1394,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "refactorer",
@@ -1422,7 +1422,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "rust",
@@ -1450,7 +1450,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     },
     {
       "slug": "writer",
@@ -1476,7 +1476,7 @@
         "skills": [],
         "automations": []
       },
-      "updated": "2026-08-09"
+      "updated": "2026-08-11"
     }
   ]
 }
