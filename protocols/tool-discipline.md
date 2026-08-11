@@ -6,11 +6,36 @@ description: "Scripts first, then raw commands. Read before edit. Check .soma/am
 heat-default: cold
 tags: [tools, safety, self-awareness, scripts]
 applies-to: [always]
+gates:
+  - command: "\\| *(tail|head|grep|sort|uniq|wc)[^;]*; *echo\\b[^;]*\\$\\?"
+    mode: remind
+    rule: "That exit code is the PIPE's last command, not yours — including when you wrap it in a label like echo \"rc=$?\". Run the command bare and read $? immediately; this has reported exit=0 over a FAILED git push."
+  - command: "\\bpgrep\\s+-f\\s+(?:'[^']*'|\"[^\"]*\"|\\S+)\\s*\\|\\s*head\\b"
+    mode: remind
+    rule: "`pgrep -f X | head` returns A matching process, not THE one holding the resource — it can hand back a days-old zombie while the port is held by something else. Ask who holds the resource instead: `lsof -nP -iTCP:<port> -sTCP:LISTEN`."
+  - command: "\\b(perl|sed|awk)\\b[^|;]*\\s-[a-zA-Z0-9]*i[a-zA-Z0-9]*\\b[^|;]*\\.md\\b"
+    mode: remind
+    rule: "Do NOT in-place edit .md with perl/sed/awk — without explicit UTF-8 layers they re-encode the WHOLE file, not just your match, and break YAML frontmatter silently. Use the edit tool."
+  - command: "python3?[\\s\\S]*?(?:open\\([^)]*\\.md[^)]*[\"']w[\"']|\\.md[\"']\\)\\.write_text)"
+    mode: block
+    rule: "Do NOT write .md with python — open(p,'w') truncates BEFORE it can fail, so a UnicodeEncodeError on emoji or box-drawing leaves a 0-byte file. No encoding argument fixes it. Use the edit tool."
+  - command: "(?<!['\"])\\b(grep|egrep|zgrep) +(-[a-zA-Z]*[rR]|--recursive\\b|--[a-zA-Z-]+=?[^ ]* +-[a-zA-Z]*[rR])"
+    mode: block
+    rule: "Don't grep -r a tree. WHICH tool depends on the QUESTION: 'where is this string / symbol / file?' -> soma:code.find (respects .gitignore, ~10x faster, ranked). 'where did this IDEA come from, who said it, how did it evolve?' -> soma:seam.trace (walks sessions + preloads + journal as ONE corpus; code.find CANNOT see that and will hand you literal hits while the answer sits in a session log). Scoped to one known dir, `grep -l` with explicit globs is fine."
+  - command: "\\bfind +(~|\\$HOME|/Users/[^/]+) "
+    mode: remind
+    rule: "Never run find above a project dir — it walks node_modules and caches (measured once at 663s). Use soma:code.find, or find INSIDE one known dir with -maxdepth."
+  - command: "\\bsleep +(26[1-9]|2[7-9][0-9]|[3-9][0-9][0-9]|[0-9]{4,})\\b"
+    mode: remind
+    rule: "Never sleep longer than 260 seconds — it burns the prompt cache. Chain shorter sleeps across turns, or do other work between polls."
+  - command: "(^|[;|&(]\\s*|\\bthen\\s+|\\bdo\\s+|\\bsudo\\s+)\\s*(timeout|gtimeout|setsid)\\s"
+    mode: remind
+    rule: "macOS has no timeout/gtimeout/setsid — the command will fail. Bound it another way: run the process in the background and poll, or use a language-level timeout."
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-08-06
-version: 3.0.0
+updated: 2026-08-10
+version: 3.1.0
 author: meetsoma
 license: MIT
 ---
