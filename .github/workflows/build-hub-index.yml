@@ -19,6 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          # REQUIRED, not tidiness: build-hub-index.mjs dates each template from
+          # `git log -1 -- <file>`. The default shallow checkout (depth 1) has one commit,
+          # so every file untouched by it reports NO history and loses its `updated:`.
+          # The field this replaced used file mtime, which in a fresh clone is the CLONE
+          # TIME — every template stamped with the build day. Shallow-checkout here would
+          # reproduce that class of defect in a new spelling.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v6
         with:
