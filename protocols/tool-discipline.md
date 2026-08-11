@@ -99,11 +99,11 @@ The `soma-guard.ts` extension intercepts bash commands and flags dangerous patte
 - **Batch independent calls** — if two reads don't depend on each other, do them in one turn
 - **Verify claims against code** — don't say "this is broken" without checking. Run it. Read the output.
 - **Blast radius with multiple tools** — one tool isn't enough. Before changing a function or type:
-  1. `grep -rn "name" src/` — find code references
-  2. `grep -rn "name" tests/` — find test coverage (if nothing, you need to add tests)
-  3. `grep -rn "name" docs/` — find doc references to update
-  4. Check scripts that might reference it
-  A single grep misses things. Use 3-4 searches across different directories to catch the full blast radius.
+  1. `soma:code.blast` — the one call that answers "what breaks if I change this"
+  2. `soma:code.refs` — every reference site, ranked
+  3. `soma:code.find` scoped to `tests/` — test coverage (if nothing, you need to add tests)
+  4. Check scripts and docs that might reference it
+  A single search misses things. Use 3-4 across different scopes to catch the full blast radius.
 
 ## Shipped Tools
 
