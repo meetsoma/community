@@ -5,13 +5,30 @@
 set -uo pipefail
 
 FAIL=0
+# 🔴 Dirs + types must track pr-review.yml's `paths:`. See injection-scan.sh for the
+# full note: `scripts/**` fired CI while both scanners enumerated *.md only, so every
+# .sh on the hub was scanned by nothing. A hardcoded path secret leaks the same way
+# from a script as from a protocol — more easily, since scripts hold real commands.
+SCAN_DIRS="protocols/ muscles/ skills/ templates/ automations/ scripts/ extensions/"
 # Exclude files that teach about privacy patterns (they contain examples by definition)
-FILES=$(find protocols/ muscles/ skills/ templates/ automations/ -name "*.md" -type f 2>/dev/null | grep -v "community-safe")
+FILES=$(find $SCAN_DIRS \
+  \( -name "*.md" -o -name "*.sh" -o -name "*.bash" -o -name "*.mjs" -o -name "*.js" \
+     -o -name "*.ts" -o -name "*.py" \) -type f 2>/dev/null | grep -v "community-safe")
 
+# 🔴 An empty list is NOT a pass — it used to exit 0 with a ✓, so a broken find looked
+# identical to a clean repo.
 if [ -z "$FILES" ]; then
-  echo "✓ No files to scan"
+  present=0
+  for d in $SCAN_DIRS; do [ -d "$d" ] && present=1; done
+  if [ "$present" = "0" ]; then
+    echo "FAIL: none of the scan dirs exist — run this from the repo root (cwd: $PWD)"
+    exit 1
+  fi
+  echo "⚠ scan dirs exist but matched 0 files — check the -name filters before trusting this"
   exit 0
 fi
+
+echo "scanning $(echo "$FILES" | grep -c .) file(s) across: $SCAN_DIRS"
 
 # === Email addresses ===
 if grep -rnE '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}' $FILES | grep -v "^.*:.*author:" | grep -v "example\.com" | grep -v "you@" | grep -v "company\.com" | grep -v "@example" | grep -v "email>"; then

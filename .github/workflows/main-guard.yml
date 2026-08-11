@@ -17,6 +17,8 @@ on:
       - 'scripts/**'
       - 'templates/**'
       - 'automations/**'
+      # extensions/** — see pr-review.yml. Post-merge fallback must cover the same set.
+      - 'extensions/**'
       - '.github/scripts/**'
 
 permissions:

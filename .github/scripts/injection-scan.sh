@@ -5,12 +5,36 @@
 set -uo pipefail
 
 FAIL=0
-FILES=$(find protocols/ muscles/ skills/ templates/ automations/ -name "*.md" -type f 2>/dev/null)
 
+# 🔴 SCAN DIRS AND TYPES MUST TRACK THE WORKFLOW'S `paths:` FILTER.
+# Until 2026-08-11 this enumerated *.md across five dirs, while pr-review.yml also
+# fired on `scripts/**` — which holds 10 .sh + 1 .mjs. So every script on the hub
+# triggered CI and was then scanned by NOTHING: the workflow said it ran, this said
+# "✓ No files to scan", and both were telling the truth. `extensions/**` was in
+# neither list. The gated types were all inert markdown; the types that EXECUTE were
+# ungated. Protection was inversely proportional to risk.
+SCAN_DIRS="protocols/ muscles/ skills/ templates/ automations/ scripts/ extensions/"
+FILES=$(find $SCAN_DIRS \
+  \( -name "*.md" -o -name "*.sh" -o -name "*.bash" -o -name "*.mjs" -o -name "*.js" \
+     -o -name "*.ts" -o -name "*.py" \) -type f 2>/dev/null)
+
+# 🔴 An empty list is NOT a pass. This used to `exit 0` with a ✓, so a broken find,
+# a renamed dir, or a bad glob produced a green check that inspected zero files —
+# indistinguishable from a clean scan. If none of the scan dirs exist we are not in
+# the repo root and the caller must know; if they exist but hold nothing, say so
+# loudly rather than approvingly.
 if [ -z "$FILES" ]; then
-  echo "✓ No files to scan"
+  present=0
+  for d in $SCAN_DIRS; do [ -d "$d" ] && present=1; done
+  if [ "$present" = "0" ]; then
+    echo "FAIL: none of the scan dirs exist — run this from the repo root (cwd: $PWD)"
+    exit 1
+  fi
+  echo "⚠ scan dirs exist but matched 0 files — check the -name filters before trusting this"
   exit 0
 fi
+
+echo "scanning $(echo "$FILES" | grep -c .) file(s) across: $SCAN_DIRS"
 
 # === Hidden HTML/CSS (invisible text) ===
 if grep -rnEi '(display:\s*none|visibility:\s*hidden|font-size:\s*0|position:\s*absolute.*left:\s*-9999|opacity:\s*0[^.]|class="hidden")' $FILES; then

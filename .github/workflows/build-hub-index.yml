@@ -10,6 +10,9 @@ on:
       - 'scripts/**'
       - 'templates/**'
       - 'automations/**'
+      # extensions/** — without this a committed extension never reaches hub-index.json,
+      # so `dev:hub.list` cannot see it. The shelf was empty by construction.
+      - 'extensions/**'
 
 permissions:
   contents: write

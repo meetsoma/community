@@ -10,6 +10,10 @@ on:
       - 'scripts/**'
       - 'templates/**'
       - 'automations/**'
+      # extensions/** added s01-2e87ae: it was in NO workflow's paths AND in neither
+      # scanner's find, so an executable extension triggered zero CI. Every gated type
+      # was inert markdown; the one type that EXECUTES was ungated.
+      - 'extensions/**'
 
 permissions:
   contents: read
