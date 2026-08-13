@@ -9,12 +9,10 @@ applies-to: [multi-agent, teams, workspaces]
 scope: community
 tier: official
 created: 2026-03-26
-updated: 2026-04-12
+updated: 2026-08-12
 version: 1.0.0
 author: meetsoma
 license: MIT
-origin: s01-6641b5
-seeded-from: meetsoma/.soma/inbox/README.md
 ---
 
 ## TL;DR
