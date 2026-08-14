@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-08-11T03:43:51.885Z",
+  "generated": "2026-08-14T04:55:09.798Z",
   "count": 65,
   "items": [
     {
@@ -233,9 +233,7 @@
       "version": "1.0.0",
       "heatDefault": "cold",
       "appliesTo": [
-        "multi-agent",
-        "teams",
-        "workspaces"
+        "multi-repo"
       ],
       "tier": "official",
       "tags": [
@@ -247,7 +245,7 @@
       ],
       "status": "active",
       "created": "2026-03-26",
-      "updated": "2026-04-12"
+      "updated": "2026-08-14"
     },
     {
       "slug": "maps",
