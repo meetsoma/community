@@ -2,15 +2,21 @@
 name: rotation-discipline
 type: protocol
 status: active
-description: "Blocks writing a preload until this checklist is read — the only mechanical gate on rotation discipline that ships to the community distribution. breath-cycle names the exhale checklist; this is what enforces it with primitives that actually ship here."
+description: "Surfaces the rotation checklist at the moment you write a preload — the only mechanical gate on rotation discipline that ships to the community distribution. breath-cycle names the exhale checklist; this is what puts it in front of you, using primitives that actually ship here."
 heat-default: cold
 tags: [session, rotation, exhale, memory, continuity]
 applies-to: [always]
 gates:
+  # mode: remind, NOT block — deliberately. `remind` interrupts the first attempt, prints this rule,
+  # and lets the next attempt through; `block` would hold the write until this file is read.
+  # The gated action is the LAST step of a rotation, which is exactly where a session is most
+  # likely to be low on context and least able to recover from a refusal — a gate that can strand a
+  # handoff would cause the failure it exists to prevent. Reminding costs one line; blocking can
+  # cost the session.
   - paths: ["memory/preloads/"]
-    mode: block
+    mode: remind
     tool: write
-    rule: "CLEARS BY READING: protocols/rotation-discipline.md (this file). A preload written without a session log, a git-state check, and — above 70% context — a reflection pass loses the session. The checklist is short; read it once."
+    rule: "Rotation checklist, in order: (1) git status in every touched repo — unpushed work described as shipped is a lie the next session believes; (2) write the session log FIRST, the preload points into it; (3) above ~70% context run a memory-lane-reflection pass BEFORE this write; (4) preload last. Full checklist: protocols/rotation-discipline.md."
 scope: bundled
 tier: official
 created: 2026-08-14
@@ -23,7 +29,7 @@ license: MIT
 # Rotation Discipline
 
 ## TL;DR
-Before writing a preload: verify git state, write or append the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **blocks the preload write** until this file has been read once this session. It cannot verify the checklist was actually followed — only that it was seen.
+Before writing a preload: verify git state, write or append the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **interrupts the first preload write of the session** and prints that checklist; the next attempt goes through. It cannot verify the checklist was followed — only that it was put in front of you at the moment it mattered.
 
 ## When to Apply
 At `/exhale`, `/breathe`, or any natural-language wrap-up phrase (see `breath-cycle`) — specifically at the LAST step of that checklist, the preload write.
@@ -32,7 +38,7 @@ At `/exhale`, `/breathe`, or any natural-language wrap-up phrase (see `breath-cy
 
 `breath-cycle` names a multi-step exhale checklist and warns that a faithful trigger with an incomplete checklist still loses the session — but `breath-cycle` itself carries no enforcement (`scope: core`, zero `gates:`). The deeper discipline some Soma deployments run — a structured pre-reflection interrogation, a mechanical link/reference audit before trusting a preload, an explicit handoff to a successor session — is real, but **none of it ships to this distribution.** Community installs get `protocols/`, `muscles/`, `automations/`, `templates/`, and `scripts/` — nothing that depends on a skills layer.
 
-This protocol closes part of that gap using only what's here: a `mode: block` gate on `memory/preloads/`, the same mechanism `working-style` uses to remind after a commit and `changelog-style` uses to block an undocumented CHANGELOG edit (see that pattern in `meetsoma`'s own `.soma/amps/protocols/`). It fires on the first `write` under `memory/preloads/` each session and stays shut until this file has been read.
+This protocol closes part of that gap using only what's here: a `mode: remind` gate on `memory/preloads/`, the same protocol-frontmatter mechanism `working-style` uses to remind you after a commit. It fires on the first `write` under `memory/preloads/` each session, prints the checklist, and lets the next attempt through.
 
 ## The Checklist (what ships)
 
@@ -42,20 +48,21 @@ This protocol closes part of that gap using only what's here: a `mode: block` ga
 4. **Write the preload last** — use `preload-template` if installed, or the built-in default. Resume point, what shipped, orient-from, next steps. Not a summary — a briefing for an amnesiac reader.
 
 ## What This Gate CAN Enforce
-- That this file has been READ before the preload write completes, once per session — the same trip-wire `changelog-style` uses for `CHANGELOG.md`.
-- That the reminder fires on every session that writes a preload, not only the ones where someone remembers to check a doc.
+- That the checklist is put in front of you at the exact moment it applies — the first preload write of the session — rather than in a doc you would have to remember to open.
+- That this fires on every session that writes a preload, not only the ones where someone thinks to check.
 
 ## What This Gate CANNOT Enforce
-- **Content.** A `paths:` gate sees that you wrote to `memory/preloads/`; it cannot see whether you ran the reflection, wrote the log first, or checked git state. Reading this file clears the gate whether or not the checklist above was actually followed.
+- **Content.** A `paths:` gate sees that you wrote to `memory/preloads/`; it cannot see whether you ran the reflection, wrote the log first, or checked git state. **The gate is a reminder, not a proof** — the second attempt goes through whether or not you did any of it.
 - **A structured pre-reflection interrogation.** There is no shipped set of standing diagnostic questions to answer before reflecting — only the `memory-lane-reflection` muscle's open-ended cycle.
 - **A mechanical link/reference audit.** Nothing here resolves every file reference and commit hash in a preload before trusting it. A dead pointer in a community preload will not be caught by this gate.
 - **Successor handoff.** There is no shipped mechanism for spawning or notifying a next agent session — that assumes an orchestrator topology this distribution doesn't have. A community session ends; it doesn't hand off between panes.
-- **A second preload write in the same session.** The gate clears for the whole session on the first read — a later preload write (after amending or re-exhaling) is not re-gated.
+- **A second preload write in the same session.** It fires once; a later write (after amending or re-exhaling) passes silently.
 
 ## Settings
 
 Turn this gate off like any protocol gate: `/gates off rotation-discipline`, or add `"rotation-discipline"` to `guard.gatesOff` in `.soma/settings.json`.
 
 ## Source
-- Gate mechanism: `soma-guard` extension → protocol frontmatter `gates:` (`mode: block` on a `paths:` pattern, cleared by reading the owning doc)
+- Gate mechanism: `soma-guard` extension → protocol frontmatter `gates:` (`mode: remind` on a `paths:` pattern, narrowed to writes by `tool: write`)
 - Pattern precedent, same repo: `protocols/working-style.md` (`after:` commit/push reminders)
+- Turn it off: `/gates off rotation-discipline`, or add `"rotation-discipline"` to `guard.gatesOff` in `.soma/settings.json`
