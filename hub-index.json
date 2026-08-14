@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-08-14T09:40:26.439Z",
-  "count": 65,
+  "generated": "2026-08-14T09:50:12.255Z",
+  "count": 66,
   "items": [
     {
       "slug": "breath-cycle",
@@ -400,6 +400,29 @@
       "status": "active",
       "created": "2026-03-15",
       "updated": "2026-04-12"
+    },
+    {
+      "slug": "rotation-discipline",
+      "name": "rotation-discipline",
+      "type": "protocol",
+      "description": "Before writing a preload: verify git state, write or append the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **blocks the preload write** until this file has been read once this session. It cannot verify the checklist was actually followed — only that it was seen.",
+      "author": "meetsoma",
+      "version": "1.0.0",
+      "heatDefault": "cold",
+      "appliesTo": [
+        "always"
+      ],
+      "tier": "official",
+      "tags": [
+        "session",
+        "rotation",
+        "exhale",
+        "memory",
+        "continuity"
+      ],
+      "status": "active",
+      "created": "2026-08-14",
+      "updated": "2026-08-14"
     },
     {
       "slug": "session-checkpoints",
