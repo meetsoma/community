@@ -20,7 +20,7 @@ gates:
 scope: bundled
 tier: official
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-09-01
 version: 1.0.0
 author: meetsoma
 license: MIT
@@ -29,7 +29,7 @@ license: MIT
 # Rotation Discipline
 
 ## TL;DR
-Before writing a preload: verify git state, write or append the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **interrupts the first preload write of the session** and prints that checklist; the next attempt goes through. It cannot verify the checklist was followed — only that it was put in front of you at the moment it mattered.
+Before writing a preload: verify git state, write or fold into the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **interrupts the first preload write of the session** and prints that checklist; the next attempt goes through. It cannot verify the checklist was followed — only that it was put in front of you at the moment it mattered.
 
 ## When to Apply
 At `/exhale`, `/breathe`, or any natural-language wrap-up phrase (see `breath-cycle`) — specifically at the LAST step of that checklist, the preload write.
@@ -43,7 +43,7 @@ This protocol closes part of that gap using only what's here: a `mode: remind` g
 ## The Checklist (what ships)
 
 1. **Verify state** — `git status` in every touched repo. Unpushed work described as shipped in a preload is a lie the next session will believe.
-2. **Log the session** — append to today's session log using the `micro-exhale` muscle's format (`## HH:MM` sections, one file per day, read first, never overwrite). This is the durable record; the preload is a pointer into it, not a replacement for it.
+2. **Log the session** — checkpoint today's session log using the `micro-exhale` muscle's format (`## HH:MM` sections, one file per day, read first, fold into existing sections before appending new ones). This is the durable record; the preload is a pointer into it, not a replacement for it.
 3. **Reflect, if context is high** — above roughly 70% context, run the `memory-lane-reflection` muscle (3-5 cycles) BEFORE the preload. It surfaces connections the tactical mind skipped; writing the preload first forecloses that.
 4. **Write the preload last** — use `preload-template` if installed, or the built-in default. Resume point, what shipped, orient-from, next steps. Not a summary — a briefing for an amnesiac reader.
 

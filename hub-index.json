@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-08-16T06:53:38.116Z",
+  "generated": "2026-09-01T17:58:37.211Z",
   "count": 66,
   "items": [
     {
@@ -405,7 +405,7 @@
       "slug": "rotation-discipline",
       "name": "rotation-discipline",
       "type": "protocol",
-      "description": "Before writing a preload: verify git state, write or append the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **interrupts the first preload write of the session** and prints that checklist; the next attempt goes through. It cannot verify the checklist was followed — only that it was put in front of you at the moment it mattered.",
+      "description": "Before writing a preload: verify git state, write or fold into the session log (`micro-exhale` muscle format), and — above ~70% context — run a `memory-lane-reflection` pass. This protocol's gate **interrupts the first preload write of the session** and prints that checklist; the next attempt goes through. It cannot verify the checklist was followed — only that it was put in front of you at the moment it mattered.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "cold",
@@ -422,7 +422,7 @@
       ],
       "status": "active",
       "created": "2026-08-14",
-      "updated": "2026-08-14"
+      "updated": "2026-09-01"
     },
     {
       "slug": "session-checkpoints",
@@ -624,14 +624,14 @@
       "slug": "micro-exhale",
       "name": "micro-exhale",
       "type": "muscle",
-      "description": "**Micro-Exhale** — after major completions, append `## HH:MM` summary to session log. One file per day, read first, never overwrite. Checkpoint within session, not a full exhale.",
+      "description": "**Micro-Exhale** — after major completions, checkpoint the session log: read it first, FOLD into the section that already covers this thread, append a new `## HH:MM` only for genuinely new work. One file per day. Checkpoint within session, not a full exhale.",
       "author": "meetsoma",
       "version": "1.0.0",
       "heatDefault": "hot",
       "tier": "official",
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-04-04"
+      "updated": "2026-09-01"
     },
     {
       "slug": "plan-lifecycle",
