@@ -5,9 +5,23 @@ set -euo pipefail
 
 FAIL=0
 
+# Print ONLY the frontmatter block — between the opening `---` and the next `---`.
+#
+# 🔴 WHY THIS EXISTS: every check below used `head -40`, a hardcoded window. When a protocol's
+# frontmatter legitimately grew past 40 lines (tool-discipline.md carries an inline `gates:` block
+# and ends at line 48), its version/author/license/created/updated/tier all sat BELOW the window —
+# so a completely valid file was reported as missing six required fields, and Main Branch Guard has
+# been RED since 2026-08-14 for a defect in the checker rather than in any content.
+#
+# A gate can be wrong in the FAILING direction, and that is the more corrosive way round: a gate
+# that is red for everybody teaches contributors to ignore it, and it gets "fixed" by loosening.
+# Note that `get_field()` below already walked the block correctly — the right technique was in
+# this file the whole time, next to the wrong one.
+fm() { awk 'NR==1 && /^---$/{c=1;next} c==1 && /^---$/{exit} c==1{print}' "$1"; }
+
 check_field() {
   local file="$1" field="$2"
-  if ! head -40 "$file" | grep -q "^${field}:"; then
+  if ! fm "$file" | grep -q "^${field}:"; then
     echo "FAIL: $file — missing required field: $field"
     FAIL=1
   fi
@@ -59,8 +73,8 @@ for f in protocols/*.md; do
   [ -f "$f" ] || continue
   check_field "$f" "heat-default"
   # breadcrumb OR description — accept either (v0.12.2+, protocols migrated to description)
-  has_breadcrumb=$(head -40 "$f" | grep -c "^breadcrumb:" || true)
-  has_description=$(head -40 "$f" | grep -c "^description:" || true)
+  has_breadcrumb=$(fm "$f" | grep -c "^breadcrumb:" || true)
+  has_description=$(fm "$f" | grep -c "^description:" || true)
   if [ "$has_breadcrumb" -eq 0 ] && [ "$has_description" -eq 0 ]; then
     echo "FAIL: $f — missing breadcrumb: or description: field"
     FAIL=1
@@ -73,17 +87,17 @@ done
 for f in muscles/*.md; do
   [ -f "$f" ] || continue
   # triggers / topic / tags — accept any (v0.12.2+, several muscles use tags only)
-  has_triggers=$(head -40 "$f" | grep -c "^triggers:" || true)
-  has_topic=$(head -40 "$f" | grep -c "^topic:" || true)
-  has_tags=$(head -40 "$f" | grep -c "^tags:" || true)
+  has_triggers=$(fm "$f" | grep -c "^triggers:" || true)
+  has_topic=$(fm "$f" | grep -c "^topic:" || true)
+  has_tags=$(fm "$f" | grep -c "^tags:" || true)
   if [ "$has_triggers" -eq 0 ] && [ "$has_topic" -eq 0 ] && [ "$has_tags" -eq 0 ]; then
     echo "FAIL: $f — missing discoverability field (triggers / topic / tags)"
     FAIL=1
   fi
   check_field "$f" "heat-default"
   # breadcrumb OR description — accept either
-  has_breadcrumb=$(head -40 "$f" | grep -c "^breadcrumb:" || true)
-  has_description=$(head -40 "$f" | grep -c "^description:" || true)
+  has_breadcrumb=$(fm "$f" | grep -c "^breadcrumb:" || true)
+  has_description=$(fm "$f" | grep -c "^description:" || true)
   if [ "$has_breadcrumb" -eq 0 ] && [ "$has_description" -eq 0 ]; then
     echo "FAIL: $f — missing breadcrumb: or description: field"
     FAIL=1
@@ -108,15 +122,15 @@ done
 for f in automations/*.md; do
   [ -f "$f" ] || continue
   # breadcrumb OR description — accept either
-  has_breadcrumb=$(head -40 "$f" | grep -c "^breadcrumb:" || true)
-  has_description=$(head -40 "$f" | grep -c "^description:" || true)
+  has_breadcrumb=$(fm "$f" | grep -c "^breadcrumb:" || true)
+  has_description=$(fm "$f" | grep -c "^description:" || true)
   if [ "$has_breadcrumb" -eq 0 ] && [ "$has_description" -eq 0 ]; then
     echo "FAIL: $f — missing breadcrumb: or description: field"
     FAIL=1
   fi
   # triggers OR topic — accept either
-  has_triggers=$(head -40 "$f" | grep -c "^triggers:" || true)
-  has_topic=$(head -40 "$f" | grep -c "^topic:" || true)
+  has_triggers=$(fm "$f" | grep -c "^triggers:" || true)
+  has_topic=$(fm "$f" | grep -c "^topic:" || true)
   if [ "$has_triggers" -eq 0 ] && [ "$has_topic" -eq 0 ]; then
     echo "FAIL: $f — missing triggers: (or legacy topic:) field"
     FAIL=1
