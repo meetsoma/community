@@ -9,8 +9,8 @@ applies-to: [always]
 scope: bundled
 tier: core
 created: 2026-03-09
-updated: 2026-08-10
-version: 1.2.0
+updated: 2026-09-19
+version: 1.2.1
 author: Curtis Mercier
 license: CC BY 4.0
 upstream: core
@@ -34,7 +34,7 @@ Every Markdown document in an agent-managed workspace MUST have YAML frontmatter
 | `type` | string | Document type (see below) |
 | `status` | string | Lifecycle state (see below) |
 | `created` | date | ISO date of creation |
-| `updated` | date | ISO date of last meaningful update |
+| `updated` | date | ISO date of last meaningful update. **In a git tree this is maintained FOR you by the pre-commit hook — do not hand-edit it (see below).** |
 
 ### Optional Fields
 
@@ -58,6 +58,27 @@ manufactures false precision. With it, a reader — and a validator — can tell
 
 ⚠ **A missing `updated:` is visibly unknown; a fabricated one is not.** Never write this field with an
 invented date: if there is no git ground truth (non-git trees), leave `updated:` absent and report it.
+
+#### `updated:` is auto-maintained in a git tree — do not author it
+
+🔴 A **pre-commit hook** rewrites `updated:` to the day of the commit, for every staged, **modified**
+`.md` that has frontmatter. In a git-managed workspace `updated:` is therefore **derived, not
+editorial**: a hand-written value is overwritten at the next commit.
+
+```bash
+TODAY=$(date +%Y-%m-%d)   # the COMMIT day, in the machine's LOCAL timezone — not the file's mtime
+```
+
+Three consequences worth knowing:
+
+- **A newly *added* `.md` is not stamped on its first commit.** The hook filters on *modified*, so a new
+  file keeps your authored value until a later commit touches it.
+- **`created:` is yours; `updated:` is not.** Authoring `created:` from a UTC clock while the hook stamps
+  in local time publishes `created: 2026-09-18` / `updated: 2026-09-17` — an impossible pair. Take both
+  from the same day.
+- **`updated_source:` is a *different* mechanism.** Backfill commits write it; the hook does not. So an
+  `updated:` with no marker may still be machine-written — treat it as *"the file was committed"*, not
+  *"the work advanced"*.
 
 ### Scope: Internal
 
@@ -86,7 +107,7 @@ matches keywords and credential shapes will not catch this: it never reads front
 
 - Creating any new `.md` file → add frontmatter
 - Editing a file missing frontmatter → add it
-- Updating content → bump `updated` date
+- Updating content → the pre-commit hook maintains `updated:` for you; **do not hand-edit it** (above)
 - Reviewing docs → check for `stale` status (not updated in 30+ days)
 
 ## When NOT to Apply
