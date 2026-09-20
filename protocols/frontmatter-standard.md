@@ -34,7 +34,7 @@ Every Markdown document in an agent-managed workspace MUST have YAML frontmatter
 | `type` | string | Document type (see below) |
 | `status` | string | Lifecycle state (see below) |
 | `created` | date | ISO date of creation |
-| `updated` | date | ISO date of last meaningful update. **In a git tree this is maintained FOR you by the pre-commit hook — do not hand-edit it (see below).** |
+| `updated` | date | ISO date of last meaningful update. **Where the pre-commit hook is installed it is maintained FOR you — check, then do not hand-edit it (see below).** |
 
 ### Optional Fields
 
@@ -59,15 +59,26 @@ manufactures false precision. With it, a reader — and a validator — can tell
 ⚠ **A missing `updated:` is visibly unknown; a fabricated one is not.** Never write this field with an
 invented date: if there is no git ground truth (non-git trees), leave `updated:` absent and report it.
 
-#### `updated:` is auto-maintained in a git tree — do not author it
+#### `updated:` is auto-maintained where the hook is installed — check before relying on it
 
-🔴 A **pre-commit hook** rewrites `updated:` to the day of the commit, for every staged, **modified**
-`.md` that has frontmatter. In a git-managed workspace `updated:` is therefore **derived, not
-editorial**: a hand-written value is overwritten at the next commit.
+🔴 **Where this hook is installed**, it rewrites `updated:` to the day of the commit for every staged,
+**modified** `.md` that has frontmatter — so `updated:` is **derived, not editorial**, and a hand-written
+value is overwritten at the next commit.
 
 ```bash
 TODAY=$(date +%Y-%m-%d)   # the COMMIT day, in the machine's LOCAL timezone — not the file's mtime
 ```
+
+⚠ **It is NOT installed everywhere, and it fails SILENTLY** — a repo without it simply keeps whatever
+you wrote, so there is no error to tell you which world you are in. Two commands settle it:
+
+```bash
+ls -la .git/hooks/pre-commit          # a symlink is fine — git runs it
+ git config core.hooksPath            # ⚠ if this names a PATH, git IGNORES .git/hooks/ ENTIRELY
+```
+
+Measured 2026-09-19 across four repos: **two run it** · **one has an unrelated hook** · **one has the
+hook but `core.hooksPath` points elsewhere, so it had never once run**.
 
 Three consequences worth knowing:
 
@@ -107,7 +118,7 @@ matches keywords and credential shapes will not catch this: it never reads front
 
 - Creating any new `.md` file → add frontmatter
 - Editing a file missing frontmatter → add it
-- Updating content → the pre-commit hook maintains `updated:` for you; **do not hand-edit it** (above)
+- Updating content → where the hook is installed, it maintains `updated:` for you; **do not hand-edit it** (above)
 - Reviewing docs → check for `stale` status (not updated in 30+ days)
 
 ## When NOT to Apply
