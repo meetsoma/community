@@ -34,14 +34,14 @@ gates:
     rule: "Never run find above a project dir — it walks node_modules and caches (measured once at 663s). Use soma:code.find, or find INSIDE one known dir with -maxdepth."
   - command: "\\bsleep +(26[1-9]|2[7-9][0-9]|[3-9][0-9][0-9]|[0-9]{4,})\\b"
     mode: remind
-    rule: "Never sleep longer than 260 seconds — it burns the prompt cache. Chain shorter sleeps across turns, or do other work between polls."
+    rule: "Don't sleep to wait. Check once; not done → other work, or end the turn with the status."
   - command: "(^|[;|&(]\\s*|\\bthen\\s+|\\bdo\\s+|\\bsudo\\s+)\\s*(timeout|gtimeout|setsid)\\s"
     mode: remind
-    rule: "macOS has no timeout/gtimeout/setsid — the command will fail. Bound it another way: run the process in the background and poll, or use a language-level timeout."
+    rule: "macOS has no timeout/gtimeout/setsid. Use: soma-bound.sh run <secs> <cmd> (124 = timed out). Never a sleep-poll."
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-08-10
+updated: 2026-10-02
 version: 3.2.0
 author: meetsoma
 license: MIT

@@ -8,7 +8,7 @@ triggers: [write, delete, file-ops, overwrite, safety, file-operations, read, ed
 tags: [safety, files, editing, guard, precision]
 applies-to: [any]
 created: 2026-03-10
-updated: 2026-04-18
+updated: 2026-10-02
 tools: [soma-refactor.sh, soma-code.sh, soma-verify.sh]
 version: 1.0.0
 author: meetsoma
@@ -32,16 +32,16 @@ Six rules: (1) Never `write` without checking if the file exists — write overw
 
 ### ✅ Instead
 1. **Start with `ls`** — if you know the general area, just list it.
-2. **`grep -r` in known dirs** — faster, scoped, and finds content not just names.
+2. **`soma:code.find`, or `grep -l` in ONE known dir** — never `grep -r` a tree (guard-blocked).
 3. **`fd` if available** — respects .gitignore by default, much faster.
-4. **`find` with timeout** — `timeout 3 find <dir> -maxdepth 2 -name "pattern"` — caps damage.
+4. **Bounded `find`** — `soma-bound.sh run 3 find <dir> -maxdepth 2 -name "pattern"` (macOS has no `timeout`).
 5. **Narrow the scope** — use project knowledge to pick the right starting directory.
 
 ### Escalation Pattern
 ```
 ls <known-dir>/           # first: just look
-grep -r "term" <dir>/     # second: search content in known scope
-timeout 3 find <dir> -maxdepth 2 -name "pattern"  # third: broader but bounded
+grep -l "term" <dir>/*.md   # second: content, one known dir (or soma:code.find)
+soma-bound.sh run 3 find <dir> -maxdepth 2 -name "pattern"  # third: broader but bounded
 ```
 
 ### Before Using Write — Always Check First
