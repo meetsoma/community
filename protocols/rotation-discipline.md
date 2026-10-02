@@ -7,20 +7,16 @@ heat-default: cold
 tags: [session, rotation, exhale, memory, continuity]
 applies-to: [always]
 gates:
-  # mode: remind, NOT block — deliberately. `remind` interrupts the first attempt, prints this rule,
-  # and lets the next attempt through; `block` would hold the write until this file is read.
-  # The gated action is the LAST step of a rotation, which is exactly where a session is most
-  # likely to be low on context and least able to recover from a refusal — a gate that can strand a
-  # handoff would cause the failure it exists to prevent. Reminding costs one line; blocking can
-  # cost the session.
+  # mode: advise — the preload is a whole-file write at the END of a session (lowest context). Any block,
+  # even remind's once, makes the model resend the entire preload; advise lands it and attaches the rule.
   - paths: ["memory/preloads/"]
-    mode: remind
+    mode: advise
     tool: write
-    rule: "Rotation checklist, in order: (1) git status in every touched repo — unpushed work described as shipped is a lie the next session believes; (2) write the session log FIRST, the preload points into it; (3) above ~70% context run a memory-lane-reflection pass BEFORE this write; (4) preload last. Full checklist: protocols/rotation-discipline.md."
+    rule: "Preload is LAST: every touched repo pushed (git status), session log written first, MLR done above ~70% context. Missed one? Do it now, then fix the preload."
 scope: bundled
 tier: official
 created: 2026-08-14
-updated: 2026-09-01
+updated: 2026-10-02
 version: 1.0.0
 author: meetsoma
 license: MIT
