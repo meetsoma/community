@@ -1,7 +1,7 @@
 ---
 name: twin-delegation
 type: muscle
-status: active
+status: deprecated
 description: "Spawn and coordinate twin Soma sessions via cmux. Write preloads, open panes, send commands, poll for completion. The coordinator pattern — no framework, just preloads and a shared filesystem."
 heat-default: cold
 tags: [multi-agent, delegation, twins, cmux, coordination]
@@ -9,7 +9,7 @@ applies-to: [development, writing, research]
 scope: bundled
 tier: core
 created: 2026-04-03
-updated: 2026-04-04
+updated: 2026-10-04
 version: 1.0.0
 author: meetsoma
 license: MIT

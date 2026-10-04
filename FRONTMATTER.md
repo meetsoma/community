@@ -163,7 +163,7 @@ Skills live in folders: `skills/{name}/SKILL.md` + supporting files.
 |-------|----------|--------|-------|
 | `type` | ✅ | `protocol`, `muscle`, `skill`, `automation`, `identity` | Always first field |
 | `name` | ✅ | kebab-case | Matches filename |
-| `status` | ✅ | `draft`, `active`, `stable`, `dormant`, `archived`, `deprecated` | |
+| `status` | ✅ | `draft`, `active`, `stable`, `dormant`, `archived`, `deprecated` | On the hub (soma.gravicity.ai/hub): `deprecated` / `dormant` = listed with a **legacy** badge (kept for existing users, not recommended for new installs); `draft` / `archived` = **not listed** (the item page still resolves by URL); `active` / `stable` = listed. |
 | `description` | ✅* | Quoted string | Quoted one-liner for hub card + skill loader |
 | `version` | ✅ | semver | |
 | `author` | ✅ | Name or handle | |
