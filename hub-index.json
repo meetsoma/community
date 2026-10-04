@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-04T12:42:37.059Z",
+  "generated": "2026-10-04T12:59:05.551Z",
   "count": 66,
   "items": [
     {
@@ -495,7 +495,7 @@
       "type": "protocol",
       "description": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice manually, make a script. Guard auto-blocks dangerous bash. The agent that builds its own tools gets faster every session.",
       "author": "meetsoma",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "license": "MIT",
       "heatDefault": "cold",
       "appliesTo": [
@@ -510,7 +510,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-08-10"
+      "updated": "2026-10-04"
     },
     {
       "slug": "workflow",
