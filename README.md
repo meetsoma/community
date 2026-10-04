@@ -51,14 +51,17 @@ Community protocols are operational derivatives of formal specs in [curtismercie
 
 ## License
 
+**Each item carries its author's licence** in its frontmatter (`license:`), and the hub shows it. That licence wins:
+we never relicense or strip it. An item without one is MIT, like the repo itself ([LICENSE](LICENSE)).
+
 Protocols and concepts: **CC BY 4.0** — [Curtis Mercier](https://github.com/curtismercier).
 <br>
-Community contributions follow CC BY 4.0 unless specified otherwise in frontmatter.
+Other community contributions: the licence in their frontmatter, else MIT.
 
 ---
 
 <div align="center">
 
-<sub>BSL 1.1 © Curtis Mercier — open source 2027</sub>
+<sub>MIT © Curtis Mercier — each item keeps its author's licence</sub>
 
 </div>
