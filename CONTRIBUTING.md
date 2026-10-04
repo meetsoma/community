@@ -238,4 +238,5 @@ To update an existing contribution: open a PR against the file, bump the `versio
 
 ## License
 
-By contributing, you agree your submission is MIT licensed (unless specified otherwise in frontmatter). Soma always attributes the author.
+Your submission carries the licence you put in its frontmatter (`license:`, an SPDX id such as `MIT` or `CC-BY-4.0`),
+and the hub shows it. Without one it is MIT, like the repo. We never relicense your work, and Soma always attributes the author.
