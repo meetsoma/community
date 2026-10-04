@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-04T12:41:38.494Z",
+  "generated": "2026-10-04T12:42:37.059Z",
   "count": 66,
   "items": [
     {
@@ -623,7 +623,7 @@
       "tier": "official",
       "status": "deprecated",
       "created": "2026-03-13",
-      "updated": "2026-04-18"
+      "updated": "2026-10-04"
     },
     {
       "slug": "memory-lane-reflection",
@@ -877,7 +877,7 @@
       ],
       "status": "deprecated",
       "created": "2026-04-03",
-      "updated": "2026-04-04"
+      "updated": "2026-10-04"
     },
     {
       "slug": "verification-instinct",
