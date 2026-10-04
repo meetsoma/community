@@ -22,6 +22,12 @@ gates:
   - command: "python3?[\\s\\S]*?(?:open\\([^)]*\\.md[^)]*[\"']w[\"']|\\.md[\"']\\)\\.write_text)"
     mode: block
     rule: "Do NOT write .md with python — open(p,'w') truncates BEFORE it can fail, so a UnicodeEncodeError on emoji or box-drawing leaves a 0-byte file. No encoding argument fixes it. Use the edit tool."
+  # Secrets live in shell profiles and .env files; a content search over them prints whole lines.
+  # Measured: an unanchored `rg "PI_|SOMA_" ~/.zshrc` matched `API_` inside two *_API_KEY lines and
+  # printed both values into an agent transcript. Allowed: -l / -c, or a pipe through sed 's/=.*/=<redacted>/'.
+  - command: "^(?!.*(?:sed +'s/=\\.\\*|\\s-[lc]\\b)).*\\b(rg|grep|egrep|cat|head|tail|less|bat)\\b[^;]*(?:\\.zshrc|\\.zshenv|\\.zprofile|\\.bashrc|\\.bash_profile|/\\.profile|/\\.env)\\b"
+    mode: block
+    rule: "Shell profiles and .env files hold secrets, and a content search prints the WHOLE line (an unanchored `PI_` matches `API_KEY=`). Names only: `rg '^export [A-Z_]+' <file> | sed 's/=.*/=<redacted>/'`, or `-l` / `-c`. To use a value, read it into a variable and reference the variable; never print it."
   # Two carve-outs, each a case where recursive grep is the CORRECT tool:
   #  1. Command position, not quote adjacency — so prose about the rule never trips it.
   #  2. `.git/` `node_modules/` `/etc/` `/usr/` `/var/` — territory a gitignore-respecting,
@@ -41,8 +47,8 @@ gates:
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-08-10
-version: 3.2.0
+updated: 2026-10-04
+version: 3.3.0
 author: meetsoma
 license: MIT
 ---
