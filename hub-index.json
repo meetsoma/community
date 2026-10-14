@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-14T03:00:08.387Z",
+  "generated": "2026-10-14T03:04:28.103Z",
   "count": 66,
   "items": [
     {
@@ -77,7 +77,7 @@
       "type": "protocol",
       "description": "The preload tells you WHAT happened. Deep recall tells you HOW and WHY. When continuing work across sessions, the preload is your surface memory — read it first. Then use your tools to reconstruct working memory: trace the topic through memory (`soma:seam.trace` if installed, else `rg -n '<term>' .soma/memory/`), check session logs for the detailed path, scan for patterns you noticed before. The goal: arrive at the same depth of understanding the previous session had, without burning context re-reading everything manually.",
       "author": "meetsoma",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "license": "MIT",
       "heatDefault": "cold",
       "appliesTo": [
@@ -379,7 +379,7 @@
       "type": "protocol",
       "description": "Never delete — move or archive. Clean atomic commits with descriptive messages. Push when ready. Know which branch deploys. Confirm before touching critical files. Close the loop — when fixing a bug, fix the system that allowed it. Tests match shipped code, not planned features. Use conventional commit format: `type(scope): description`.",
       "author": "meetsoma",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "license": "MIT",
       "heatDefault": "cold",
       "appliesTo": [
@@ -495,7 +495,7 @@
       "type": "protocol",
       "description": "Scripts first, raw commands second. Read before edit. Build tools for yourself — when you do the same thing twice manually, make a script. Guard auto-blocks dangerous bash. The agent that builds its own tools gets faster every session.",
       "author": "meetsoma",
-      "version": "3.3.0",
+      "version": "3.3.1",
       "license": "MIT",
       "heatDefault": "cold",
       "appliesTo": [
