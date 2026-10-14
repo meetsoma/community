@@ -34,7 +34,7 @@ gates:
   #     project-scoped index cannot reach. There, recursive grep is the only thing that works.
   - command: "^(?!.*(?:\\.git/|node_modules/|/etc/|/usr/|/var/))(?:.*[;&|(]\\s*|\\s*)(grep|egrep|zgrep) +(-[a-zA-Z]*[rR]|--recursive\\b|--[a-zA-Z-]+=?[^ ]* +-[a-zA-Z]*[rR])"
     mode: block
-    rule: "Don't grep -r a tree. WHICH tool depends on the QUESTION: 'where is this string / symbol / file?' -> soma:code.find (respects .gitignore, ~10x faster, ranked). 'where did this IDEA come from, who said it, how did it evolve?' -> soma:seam.trace (walks sessions + preloads + journal as ONE corpus; code.find CANNOT see that and will hand you literal hits while the answer sits in a session log). Scoped to one known dir, `grep -l` with explicit globs is fine."
+    rule: "Don't grep -r a tree. WHICH tool depends on the QUESTION: 'where is this string / symbol / file?' -> soma:code.find (respects .gitignore, ~10x faster, ranked). 'where did this IDEA come from, who said it, how did it evolve?' -> soma:seam.trace if installed (walks sessions + preloads + journal as ONE corpus; code.find CANNOT see that and will hand you literal hits while the answer sits in a session log); otherwise rg -n over .soma/memory/ and read the session logs by hand. Scoped to one known dir, `grep -l` with explicit globs is fine."
   - command: "\\bfind +(~|\\$HOME|/Users/[^/]+) "
     mode: remind
     rule: "Never run find above a project dir — it walks node_modules and caches (measured once at 663s). Use soma:code.find, or find INSIDE one known dir with -maxdepth."
@@ -47,7 +47,7 @@ gates:
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-10-04
+updated: 2026-10-13
 version: 3.3.0
 author: meetsoma
 license: MIT
@@ -125,7 +125,7 @@ Install from the community hub to extend your toolkit:
 | Task | Script | Install |
 |------|--------|---------|
 | Navigate codebase (find, map, refs, structure) | `soma-code` | `/hub install script soma-code` |
-| Doc discovery + SDK research | `soma:refdocs.*` | built in — `refdocs.find` / `.fetch` / `.tree` |
+| Doc discovery + SDK research | `soma:refdocs.*` if installed; else the platform's `llms.txt` / markdown docs | add-on, not bundled: `refdocs.find` / `.fetch` / `.tree` when present |
 | Spelling + grammar checking | `soma-spell` | `/hub install script soma-spell` |
 
 Browse all available scripts: `/hub list --remote script`

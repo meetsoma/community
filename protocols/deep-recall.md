@@ -2,21 +2,21 @@
 name: deep-recall
 type: protocol
 status: active
-description: "Preloads are surface memory. On continued sessions, deepen context: soma:seam.trace the work topic, soma-reflect for past patterns, scan recent session logs."
+description: "Preloads are surface memory. On continued sessions, deepen context: trace the work topic through memory (soma:seam.trace if installed, else rg over .soma/memory/), soma-reflect for past patterns, scan recent session logs."
 heat-default: cold
 tags: [memory, context, continuity, recall]
 applies-to: [always]
 scope: bundled
 tier: official
 created: 2026-03-15
-updated: 2026-08-06
+updated: 2026-10-13
 version: 1.1.0
 author: meetsoma
 license: MIT
 ---
 
 ## TL;DR
-The preload tells you WHAT happened. Deep recall tells you HOW and WHY. When continuing work across sessions, the preload is your surface memory — read it first. Then use your tools to reconstruct working memory: trace the topic through seam, check session logs for the detailed path, scan for patterns you noticed before. The goal: arrive at the same depth of understanding the previous session had, without burning context re-reading everything manually.
+The preload tells you WHAT happened. Deep recall tells you HOW and WHY. When continuing work across sessions, the preload is your surface memory — read it first. Then use your tools to reconstruct working memory: trace the topic through memory (`soma:seam.trace` if installed, else `rg -n '<term>' .soma/memory/`), check session logs for the detailed path, scan for patterns you noticed before. The goal: arrive at the same depth of understanding the previous session had, without burning context re-reading everything manually.
 ## When to Trigger
 - **Every continued session** (`soma inhale`, `soma -c`, or when preload loads)
 - **When the user says what they want to work on** — that's your keyword for deep recall
@@ -33,8 +33,8 @@ The preload gives you:
 When the user describes what they want to do next, run a quick recall cycle:
 ```bash
 # 1. Trace the topic through memory
-soma:seam.trace {query:"<keyword>"}
-# → Shows: related muscles, protocols, MAPs, sessions, seeds
+soma:seam.trace {query:"<keyword>"}   # if installed; else: rg -n "<keyword>" .soma/memory/
+# → With seam trace: related muscles, protocols, MAPs, sessions, seeds. Without it: raw matches only
 # 2. Check recent session logs for the detailed path
 soma-reflect.sh --since <last-session-date>
 # → Shows: observations, gaps, recurring patterns
@@ -42,7 +42,7 @@ soma-reflect.sh --since <last-session-date>
 # The focus system may have already loaded it — check the boot message
 ```
 ### Phase 3: Targeted Deep-Load (when specific context is needed)
-If the seam trace or session logs reveal important context that's NOT in the preload:
+If the topic trace or session logs reveal important context that's NOT in the preload:
 ```bash
 # Read a specific session log for the detailed work path
 soma-code.sh lines <session-log> <start> <end>
@@ -63,7 +63,7 @@ System prompt (identity, protocols, muscles)  ← always loaded, general
          ↓
 Preload (resume point, warnings, decisions)   ← loaded on inhale, session-specific
          ↓  
-Deep recall (seam traces, session logs, MAPs) ← loaded on demand, work-specific
+Deep recall (topic traces, session logs, MAPs) ← loaded on demand, work-specific
          ↓
 JSONL logs (every tool call, every result)    ← raw feed, searchable
 ```
@@ -75,7 +75,7 @@ With deep recall: the agent reads the preload (500 tokens), traces the specific 
 ## Tools Reference
 | Need | Tool | What it returns |
 |------|------|----------------|
-| What's connected to this topic? | `soma:seam.trace` | Related muscles, protocols, MAPs, sessions |
+| What's connected to this topic? | `soma:seam.trace` if installed; else `rg -n '<term>' .soma/memory/` | Related muscles, protocols, MAPs, sessions (seam); raw matches only (rg) |
 | What patterns did I notice before? | `soma-reflect.sh --search <term>` | Past observations, gaps, corrections |
 | What did I specifically do last session? | Read session log directly | Commits, decisions, timestamps |
 | What tools did I use for this? | `/scan-logs tools <pattern>` | Tool calls from JSONL logs |
