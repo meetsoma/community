@@ -10,7 +10,7 @@ scope: bundled
 tier: official
 created: 2026-03-15
 updated: 2026-10-13
-version: 1.1.0
+version: 1.1.1
 author: meetsoma
 license: MIT
 ---

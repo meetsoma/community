@@ -48,7 +48,7 @@ scope: bundled
 tier: core
 created: 2026-03-10
 updated: 2026-10-13
-version: 3.3.0
+version: 3.3.1
 author: meetsoma
 license: MIT
 ---
