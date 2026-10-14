@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-04T12:59:05.551Z",
+  "generated": "2026-10-14T03:00:08.387Z",
   "count": 66,
   "items": [
     {
@@ -75,7 +75,7 @@
       "slug": "deep-recall",
       "name": "deep-recall",
       "type": "protocol",
-      "description": "The preload tells you WHAT happened. Deep recall tells you HOW and WHY. When continuing work across sessions, the preload is your surface memory — read it first. Then use your tools to reconstruct working memory: trace the topic through seam, check session logs for the detailed path, scan for patterns you noticed before. The goal: arrive at the same depth of understanding the previous session had, without burning context re-reading everything manually.",
+      "description": "The preload tells you WHAT happened. Deep recall tells you HOW and WHY. When continuing work across sessions, the preload is your surface memory — read it first. Then use your tools to reconstruct working memory: trace the topic through memory (`soma:seam.trace` if installed, else `rg -n '<term>' .soma/memory/`), check session logs for the detailed path, scan for patterns you noticed before. The goal: arrive at the same depth of understanding the previous session had, without burning context re-reading everything manually.",
       "author": "meetsoma",
       "version": "1.1.0",
       "license": "MIT",
@@ -92,7 +92,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-08-06"
+      "updated": "2026-10-13"
     },
     {
       "slug": "detection-triggers",
@@ -394,7 +394,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-08-07"
+      "updated": "2026-10-13"
     },
     {
       "slug": "response-style",
@@ -510,7 +510,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-10-04"
+      "updated": "2026-10-13"
     },
     {
       "slug": "workflow",
