@@ -32,8 +32,28 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       tier_review_needed: ${{ steps.tier.outputs.review_needed }}
+      gate_review_needed: ${{ steps.gates.outputs.review_needed }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # A change that EXECUTES on every user's machine (a protocol's gates: block, a script, an extension) gets a
+      # human reader even from a trusted author: auto-merge is for prose. The gate's own regex cannot be reviewed by a scanner.
+      - name: Executable-content guard
+        id: gates
+        run: |
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD)
+          NEEDS=false
+          for f in $CHANGED; do
+            case "$f" in
+              scripts/*|extensions/*|.github/*) NEEDS=true ;;
+              *.md) [ -f "$f" ] && grep -qE '^gates:' "$f" && NEEDS=true ;;
+            esac
+          done
+          echo "review_needed=$NEEDS" >> $GITHUB_OUTPUT
+          echo "Executable content changed: $NEEDS"
         with:
           fetch-depth: 0
 
@@ -93,7 +113,7 @@ jobs:
           private-key: ${{ secrets.SOMA_APP_PEM }}
 
       - name: Approve and merge
-        if: steps.check.outputs.eligible == 'true' && needs.validate.outputs.tier_review_needed != 'true'
+        if: steps.check.outputs.eligible == 'true' && needs.validate.outputs.tier_review_needed != 'true' && needs.validate.outputs.gate_review_needed != 'true'
         run: |
           gh pr review ${{ github.event.pull_request.number }} --approve \
             --body "σ All checks passed. Auto-merging for trusted ${{ steps.check.outputs.role }}: ${{ steps.check.outputs.author }}"
@@ -102,12 +122,14 @@ jobs:
           GH_TOKEN: ${{ steps.token.outputs.token }}
 
       - name: Label for manual review
-        if: steps.check.outputs.eligible != 'true'
+        if: steps.check.outputs.eligible != 'true' || needs.validate.outputs.gate_review_needed == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             const labels = ['needs-review'];
             const tierReview = '${{ needs.validate.outputs.tier_review_needed }}' === 'true';
+            const gateReview = '${{ needs.validate.outputs.gate_review_needed }}' === 'true';
+            if (gateReview) labels.push('executable-content');
             if (tierReview) labels.push('tier-review');
             
             await github.rest.issues.addLabels({
