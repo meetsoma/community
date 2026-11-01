@@ -19,9 +19,14 @@ gates:
   - command: "\\b(perl|sed|awk)\\b[^|;]*\\s-[a-zA-Z0-9]*i[a-zA-Z0-9]*\\b[^|;]*\\.md\\b"
     mode: remind
     rule: "Do NOT in-place edit .md with perl/sed/awk — without explicit UTF-8 layers they re-encode the WHOLE file, not just your match, and break YAML frontmatter silently. Use the edit tool."
-  - command: "python3?[\\s\\S]*?(?:open\\([^)]*\\.md[^)]*[\"']w[\"']|\\.md[\"']\\)\\.write_text)"
+  # The hazard is a write that TRUNCATES a .md in place and then fails: 0 bytes, then the auto-commit records the empty file.
+  # Measured: encoding='utf-8' cures emoji/box-drawing; it does not cure a lone surrogate, and nothing cures a write that fails
+  # after the truncate (a full disk). The atomic route (temp file + os.replace) cures both, so it passes. One pattern covers the
+  # literal path, a path held in a plain VARIABLE (a loop's list, a Path assignment), and .write_text; a subscript such as open(d['k'],'w') is not covered.
+  # Not ignore-quoted: the payload this gate exists to catch lives inside quotes (python3 -c "open('x.md','w')").
+  - command: "(?<![\\s\\S])(?![\\s\\S]*\\b(?:os\\.replace|os\\.rename|soma-md-write)\\b)(?:[\\s\\S]*?\\bpython3?\\b[\\s\\S]*?(?:open\\([^)\\n]*\\.md\\b(?!\\.tmp)[^)\\n]*[\"']w|\\.md[\"']\\)\\.write_text\\()|(?=[\\s\\S]*(?<!\\bopen\\(\\s*)[\"'][^\"'\\n]*\\.md[\"'])[\\s\\S]*?\\bpython3?\\b[\\s\\S]*?(?:\\bopen\\(\\s*[A-Za-z_]\\w*\\s*,\\s*[\"']w|\\b[A-Za-z_]\\w*\\.write_text\\())"
     mode: block
-    rule: "Do NOT write .md with python — open(p,'w') truncates BEFORE it can fail, so a UnicodeEncodeError on emoji or box-drawing leaves a 0-byte file. No encoding argument fixes it. Use the edit tool."
+    rule: "Do NOT write .md with python — this write truncates the .md before it can fail: a lone surrogate (half of an escaped emoji) or a full disk leaves 0 bytes, with or without encoding=. Write it atomically: in python, write a temp file beside the target and os.replace(tmp, path). One anchored change: the edit tool."
   # Secrets live in shell profiles and .env files; a content search over them prints whole lines.
   # Measured: an unanchored `rg "PI_|SOMA_" ~/.zshrc` matched `API_` inside two *_API_KEY lines and
   # printed both values into an agent transcript. Allowed: -l / -c, or a pipe through sed 's/=.*/=<redacted>/'.
@@ -32,7 +37,9 @@ gates:
   #  1. Command position, not quote adjacency — so prose about the rule never trips it.
   #  2. `.git/` `node_modules/` `/etc/` `/usr/` `/var/` — territory a gitignore-respecting,
   #     project-scoped index cannot reach. There, recursive grep is the only thing that works.
-  - command: "^(?!.*(?:\\.git/|node_modules/|/etc/|/usr/|/var/))(?:.*[;&|(]\\s*|\\s*)(grep|egrep|zgrep) +(-[a-zA-Z]*[rR]|--recursive\\b|--[a-zA-Z-]+=?[^ ]* +-[a-zA-Z]*[rR])"
+  #  3. grep's OWN argv only: a token stops at a paren or backtick, so find's -newer/-regex/-print inside $( ... ) is
+  #     not grep's -r, and the flag is a whole option cluster (measured on 147 real commands: 6 false fires -> 0, 60/60 kept).
+  - command: "^(?!.*(?:\\.git/|node_modules/|/etc/|/usr/|/var/))(?:.*[;&|(]\\s*|\\s*)(?:grep|egrep|zgrep)(?:[ \\t]+(?:\\$\\([^()\\n]*\\)|[^\\s|;&()`]+))*?[ \\t]+(?:-[a-zA-Z0-9]*[rR][a-zA-Z0-9]*|--recursive|--dereference-recursive)(?=[\\s=]|$)"
     mode: block
     rule: "Don't grep -r a tree. WHICH tool depends on the QUESTION: 'where is this string / symbol / file?' -> soma:code.find (respects .gitignore, ~10x faster, ranked). 'where did this IDEA come from, who said it, how did it evolve?' -> soma:seam.trace if installed (walks sessions + preloads + journal as ONE corpus; code.find CANNOT see that and will hand you literal hits while the answer sits in a session log); otherwise rg -n over .soma/memory/ and read the session logs by hand. Scoped to one known dir, `grep -l` with explicit globs is fine."
   - command: "\\bfind +(~|\\$HOME|/Users/[^/]+) "
@@ -47,8 +54,8 @@ gates:
 scope: bundled
 tier: core
 created: 2026-03-10
-updated: 2026-10-13
-version: 3.3.1
+updated: 2026-11-01
+version: 3.3.2
 author: meetsoma
 license: MIT
 ---
