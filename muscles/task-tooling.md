@@ -8,7 +8,7 @@ triggers: [scripts, muscles, tools, tooling, plan, implementation, gap, extend, 
 tags: [workflow, planning, tools, scripts, awareness]
 applies-to: [any]
 created: 2026-03-13
-updated: 2026-04-18
+updated: 2026-11-03
 tools: [soma-query.sh, soma-find.sh, soma-plans.sh]
 version: 1.0.0
 author: meetsoma
@@ -87,7 +87,7 @@ The tooling map goes into:
 | Build a new script when an existing one needs a flag | Extend first, create only when domains differ |
 | Only mention scripts, ignore muscles | Scripts = mechanical, muscles = behavioral. Both matter. |
 
-## Trust Through Verification (from MLR Cycle 1, s01-7631fc)
+## Trust Through Verification (from MLR Cycle 1)
 
 Tools you built but don't use are tools you don't trust. Trust comes from VERIFIED USEFULNESS — not from being told "use this." At session start, when you load this muscle, remember:
 
@@ -96,7 +96,7 @@ Tools you built but don't use are tools you don't trust. Trust comes from VERIFI
 - You reach for manual GitHub API calls. `soma-pr.sh` wraps the entire token + PR flow.
 - You reach for `grep -r` across .soma/. `soma-seam.sh trace` does this AND follows frontmatter connections.
 
-The tools work. They were verified (s01-7631fc, 11/11). Use them FIRST. If they don't cover the case, EXTEND them — don't abandon them for raw alternatives.
+The tools work. They were verified (11/11 checks). Use them FIRST. If they don't cover the case, EXTEND them — don't abandon them for raw alternatives.
 
 ## The Deeper Point
 

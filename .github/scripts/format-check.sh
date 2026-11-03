@@ -26,8 +26,8 @@ for f in protocols/*.md; do
       FAIL=1
     fi
     if ! grep -qE "^## (When to Apply|When This Fires)" "$f"; then
-      # Downgraded to WARN (s01-419457) — existing protocols predate this requirement.
-      # Upgrade back to FAIL once content sweep lands (SX-477).
+      # Downgraded to WARN — existing protocols predate this requirement.
+      # Upgrade back to FAIL once content sweep lands.
       echo "WARN: $f — missing ## When to Apply section (upgrading to FAIL after content sweep)"
     fi
     if ! grep -q "^## When NOT to Apply" "$f"; then
@@ -39,7 +39,7 @@ done
 # === Muscles must have ## TL;DR (unified AMPS format per frontmatter-standard) ===
 # Digest markers (<!-- digest:start/end -->) were DEPRECATED in favor of ## TL;DR
 # for warm-tier loading. All AMPS content (protocols, muscles, automations) now
-# uses ## TL;DR. Community muscles: verified 17/17 migrated as of s01-419457.
+# uses ## TL;DR. Community muscles: verified 17/17 migrated.
 for f in muscles/*.md; do
   [ -f "$f" ] || continue
   if ! grep -q "^## TL;DR" "$f"; then

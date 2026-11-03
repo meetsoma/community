@@ -9,11 +9,15 @@ FAIL=0
 # full note: `scripts/**` fired CI while both scanners enumerated *.md only, so every
 # .sh on the hub was scanned by nothing. A hardcoded path secret leaks the same way
 # from a script as from a protocol — more easily, since scripts hold real commands.
-SCAN_DIRS="protocols/ muscles/ skills/ templates/ automations/ scripts/ extensions/"
+SCAN_DIRS="protocols/ muscles/ skills/ templates/ automations/ scripts/ extensions/ .github/"
 # Exclude files that teach about privacy patterns (they contain examples by definition)
 FILES=$(find $SCAN_DIRS \
   \( -name "*.md" -o -name "*.sh" -o -name "*.bash" -o -name "*.mjs" -o -name "*.js" \
-     -o -name "*.ts" -o -name "*.py" \) -type f 2>/dev/null | grep -v "community-safe")
+     -o -name "*.ts" -o -name "*.py" -o -name "*.yml" -o -name "*.yaml" \) -type f 2>/dev/null \
+  | grep -vE "community-safe|\.github/scripts/privacy-scan\.sh")
+# Two files are excluded, for the same reason: they hold the leak PATTERNS themselves, so they always
+# match their own rules. community-safe.md teaches by example; privacy-scan.sh IS the detector. Every
+# other file under .github/ is scanned — workflows are where an id or a path leaks into a public log.
 
 # 🔴 An empty list is NOT a pass — it used to exit 0 with a ✓, so a broken find looked
 # identical to a clean repo.
@@ -40,9 +44,28 @@ fi
 # These identify specific users/machines or private infrastructure.
 # Documentation examples like '~/.soma/' or '~/projects/' are OK (users follow
 # the pattern). Only block identifying specifics.
-if grep -rnE '(~/Gravicity|/Users/user/|/Users/curtis|\$GRAVICITY|~/\.vault\b|VAULT_PATH=)' $FILES; then
+# 🔴 Matched by SHAPE, never by naming the author: a literal `/Users/<realname>` in this file would
+#   put that username in the public repo — the exact thing the rule exists to prevent.
+if grep -rnE '(~/Gravicity|/Users/[a-z][a-z0-9._-]*/|\$GRAVICITY|~/\.vault\b|VAULT_PATH=)' $FILES; then
   echo "FAIL: Private-path identifiers found (user/machine specific)"
   FAIL=1
+fi
+
+# === Session and child ids — FAIL ===
+# A hub asset is read by strangers: `s01-abc123` in a protocol is provenance they cannot resolve, and
+# in a preload it is a pointer into a memory they do not have. Ruled 2026-11-03 (Curtis): session ids
+# are SCRUBBED from published content, never allowlisted. Synthetic placeholders (s01-abc123,
+# s01-abcdef, child-cafe01 …) are how a doc TEACHES the shape, so they pass — the rule below drops a
+# line only when nothing but a synthetic id remains in it.
+if [ -n "$(printf '%s\n' "$FILES" | grep .)" ]; then
+  idhits=$(printf '%s\n' "$FILES" | tr '\n' '\0' \
+    | xargs -0 grep -HnE 's01-[0-9a-f]{6}|SX-[0-9]+|child-[0-9a-f]{6}' 2>/dev/null \
+    | grep -vE '(s01|child)-(aaaaaa|abcdef|abc123|a1b2c3|fff[0-9]{3}|cafe[0-9]{2}|f0000[0-9])' || true)
+  if [ -n "$idhits" ]; then
+    printf '%s\n' "$idhits" | head -10 | sed 's/^/        /'
+    echo "FAIL: Session/child ids found — scrub them, do not allowlist (a reader cannot resolve them)"
+    FAIL=1
+  fi
 fi
 
 # === Generic home references — WARN only ===

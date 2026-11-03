@@ -2,7 +2,7 @@
 # ═══════════════════════════════════════════════════════════════════════════
 # soma-refactor.sh — Smart dependency mapper, validator, and refactor helper
 #
-# MLR breadcrumb (s01-7631fc):
+# MLR breadcrumb:
 # Use `routes` before touching extensions — it shows phantom signals (documented but never wired).
 # Use `verify --file` after editing — it checks imports resolve.
 # Use `risk` before renaming — it scores impact across the codebase.
@@ -12,7 +12,7 @@
 #   changing. After changes, verify nothing broke. For large refactors, use
 #   `scan` → `plan` → execute → `verify` loop.
 #
-# Fixed s01-414477: string references grep now excludes node_modules, .git, dist/
+# Fixed: string references grep now excludes node_modules, .git, dist/
 # Previously `scan` on broad terms returned 91 files (mostly deps) instead of 4 (our code).
 #
 # TODO: integrate scan results into test coverage check — "these 4 files reference
