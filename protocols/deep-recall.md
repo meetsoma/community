@@ -9,7 +9,7 @@ applies-to: [always]
 scope: bundled
 tier: official
 created: 2026-03-15
-updated: 2026-10-13
+updated: 2026-11-03
 version: 1.1.1
 author: meetsoma
 license: MIT
@@ -82,7 +82,7 @@ With deep recall: the agent reads the preload (500 tokens), traces the specific 
 | What MAP should I follow? | `soma focus <keyword>` (or check boot message) | Loaded MAPs with prompt-config |
 ## Prior Session References
 When writing a preload, always include:
-- **Session ID chain:** `s01-74a9be → s01-cce740 → s01-758528` so the next agent knows the lineage
+- **Session ID chain:** `s01-abc123 → s01-abcdef → s01-a1b2c3` (replace with your own) so the next agent knows the lineage
 - **Key preload files:** list earlier preloads that contain deeper context
 - **Session log locations:** for the detailed work path
 This way, deep recall can follow the chain back as far as needed.

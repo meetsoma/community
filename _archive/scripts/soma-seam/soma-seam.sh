@@ -6,7 +6,7 @@
 # Graph query layer over .soma/ flat files. Follows seams, tags, seeds,
 # and code references to build a connection matrix.
 #
-# MLR breadcrumb (s01-7631fc):
+# MLR breadcrumb:
 # This script was born from gap-wanting — the need existed before the tool did.
 # It went from gap → idea → script in one session (fastest spiral possible).
 # Currently at spiral level 2 (scripted). Next revolution: level 3 (persistent —

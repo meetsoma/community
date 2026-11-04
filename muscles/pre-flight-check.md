@@ -7,10 +7,9 @@ heat: 0
 triggers: [exists, duplicate, already, check, prior-art, awareness, quality, meta]
 applies-to: [any]
 created: 2026-03-12
-updated: 2026-04-18
+updated: 2026-11-03
 tools: [soma-verify.sh, soma-plans.sh]
 loads: 0
-seams: [s01-3498d3]
 version: 1.0.0
 author: meetsoma
 license: MIT

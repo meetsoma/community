@@ -1,6 +1,6 @@
 name: Main Branch Guard
 
-# SX-472: runs privacy + injection + frontmatter scans on every push to main.
+# Runs privacy + injection + frontmatter scans on every push to main.
 # Redundant with pr-review.yml — intentional. Fallback for when pre-push hooks
 # drift (they did Mar 18 → Apr 18 and allowed a real leak through).
 #
