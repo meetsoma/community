@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-14T03:04:28.103Z",
+  "generated": "2026-11-04T03:50:45.376Z",
   "count": 66,
   "items": [
     {
@@ -46,7 +46,7 @@
       ],
       "status": "active",
       "created": "2026-03-10",
-      "updated": "2026-08-16"
+      "updated": "2026-11-03"
     },
     {
       "slug": "correction-capture",
@@ -92,7 +92,7 @@
       ],
       "status": "active",
       "created": "2026-03-15",
-      "updated": "2026-10-13"
+      "updated": "2026-11-03"
     },
     {
       "slug": "detection-triggers",
@@ -533,7 +533,7 @@
       ],
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-08-16"
+      "updated": "2026-11-03"
     },
     {
       "slug": "working-style",
@@ -623,7 +623,7 @@
       "tier": "official",
       "status": "deprecated",
       "created": "2026-03-13",
-      "updated": "2026-10-04"
+      "updated": "2026-11-03"
     },
     {
       "slug": "memory-lane-reflection",
@@ -678,7 +678,7 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-14",
-      "updated": "2026-04-18"
+      "updated": "2026-11-03"
     },
     {
       "slug": "post-fix-learning",
@@ -719,7 +719,7 @@
       "tier": "official",
       "status": "active",
       "created": "2026-03-12",
-      "updated": "2026-04-18"
+      "updated": "2026-11-03"
     },
     {
       "slug": "precision-edit",
@@ -837,7 +837,7 @@
       ],
       "status": "active",
       "created": "2026-03-13",
-      "updated": "2026-04-18"
+      "updated": "2026-11-03"
     },
     {
       "slug": "test-hygiene",
